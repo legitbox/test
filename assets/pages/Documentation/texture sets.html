@@ -29,7 +29,7 @@
         
 <div class="container" id="title">
         <div class="object_name">
-<div class="object_inline_name"><h1 style="font-size: null; text-align: center">Texture Sets</h1></div>
+<div class="object_inline_name"><h1 id="TextureSets" style="font-size: null; text-align: center">Texture Sets</h1></div>
             <div class="object_description">
                 <p></p>
             </div>
@@ -38,7 +38,7 @@
 
 <div class="container" id="node_head_0_1">
         <div class="object_name">
-<div class="object_inline_name"><h1 style="font-size: null; text-align: left">Texture Sets</h1></div>
+<div class="object_inline_name"><h1 id="TextureSets" style="font-size: null; text-align: left">Texture Sets</h1></div>
             <div class="object_description">
                 <p><p>Minecraft supports a Physically Based Rendering (PBR) color pipeline (e.g. used for Ray Tracing). 		This uses more texture data than simply ‘color’ to enable richer, more realistic visuals. 		With the PBR approach, you can have layers for different specular reflections, emissivity, normal maps, etc. which goes beyond the Classic color pipeline for Vanilla Minecraft. 		Texture Sets have been added as the feature for defining multiple PBR layers for a texture resource. Texture sets are data driven from json files.</p>
 </p>
@@ -48,7 +48,7 @@
 
 <div class="container" id="node_head_0_2">
         <div class="object_name">
-<div class="object_inline_name"><h2 style="font-size: null; text-align: left">Texture Set Json Schema</h2></div>
+<div class="object_inline_name"><h2 id="TextureSetJsonSchema" style="font-size: null; text-align: left">Texture Set Json Schema</h2></div>
             <div class="object_description">
                 <p><pre><code>
 --------
@@ -89,7 +89,7 @@
 
 <div class="container" id="node_head_1_2">
         <div class="object_name">
-<div class="object_inline_name"><h2 style="font-size: null; text-align: left">Layers</h2></div>
+<div class="object_inline_name"><h2 id="Layers" style="font-size: null; text-align: left">Layers</h2></div>
             <div class="object_description">
                 <p><p>A texture_set.json file may specify several layers.</p>
 <p>Layers are references to texture image resources. they can also be defined in .json as values for uniform solid values as an alternative to referencing texture images in a pack.</p>
@@ -100,7 +100,7 @@
 
 <div class="container" id="node_head_0_3">
         <div class="object_name">
-<div class="object_inline_name"><h3 style="font-size: null; text-align: left">Color</h3></div>
+<div class="object_inline_name"><h3 id="Color" style="font-size: null; text-align: left">Color</h3></div>
             <div class="object_description">
                 <p><ul>
 <li>
@@ -123,7 +123,7 @@
 
 <div class="container" id="node_head_1_3">
         <div class="object_name">
-<div class="object_inline_name"><h3 style="font-size: null; text-align: left">Normal</h3></div>
+<div class="object_inline_name"><h3 id="Normal" style="font-size: null; text-align: left">Normal</h3></div>
             <div class="object_description">
                 <p><ul>
 <li>
@@ -140,7 +140,7 @@
 
 <div class="container" id="node_head_2_3">
         <div class="object_name">
-<div class="object_inline_name"><h3 style="font-size: null; text-align: left">Heightmap</h3></div>
+<div class="object_inline_name"><h3 id="Heightmap" style="font-size: null; text-align: left">Heightmap</h3></div>
             <div class="object_description">
                 <p><ul>
 <li>
@@ -157,7 +157,7 @@
 
 <div class="container" id="node_head_3_3">
         <div class="object_name">
-<div class="object_inline_name"><h3 style="font-size: null; text-align: left">Metalness_emissive_roughness</h3></div>
+<div class="object_inline_name"><h3 id="Metalness_emissive_roughness" style="font-size: null; text-align: left">Metalness_emissive_roughness</h3></div>
             <div class="object_description">
                 <p><ul>
 <li>
@@ -174,7 +174,7 @@
 
 <div class="container" id="node_head_2_2">
         <div class="object_name">
-<div class="object_inline_name"><h2 style="font-size: null; text-align: left">Specifying uniform values</h2></div>
+<div class="object_inline_name"><h2 id="Specifyinguniformvalues" style="font-size: null; text-align: left">Specifying uniform values</h2></div>
             <div class="object_description">
                 <p><p>Instead of referencing a texture image for a Texture Set layer, values can instead be specified in the *texture_set.json file,			which is effectively the equivalent to referencing a texture image filled uniformly with that value or values for the respective channels.</p>
 <p>The values in the json can be specified in any of the following formats:</p>
@@ -193,7 +193,7 @@
 
 <div class="container" id="node_head_3_2">
         <div class="object_name">
-<div class="object_inline_name"><h2 style="font-size: null; text-align: left">Examples of *.texture_set.json files</h2></div>
+<div class="object_inline_name"><h2 id="Examplesof*.texture_set.jsonfiles" style="font-size: null; text-align: left">Examples of *.texture_set.json files</h2></div>
             <div class="object_description">
                 <p></p>
             </div>
@@ -201,7 +201,7 @@
         </div>
 
 <div class="container" id="node_example_3_0_2">
-  <h2 class="object_name">{ All the layer values can be mixed and match with references to image textures, hexadecimal and numerical values.
+  <h2 class="object_name" id="Allthelayervaluescanbemixedandmatchwithreferencestoimagetextures,hexadecimalandnumericalvalues.">{ All the layer values can be mixed and match with references to image textures, hexadecimal and numerical values.
  }</h2>
   <div style="margin-left: 1.5vw">
     <link rel="stylesheet" href="/assets/styles/github-dark.css">
@@ -220,7 +220,7 @@
 </div>
 
 <div class="container" id="node_example_3_1_2">
-  <h2 class="object_name">{ This example uses referenced images that exist in the same folder. It uses a normal and MER map.
+  <h2 class="object_name" id="Thisexampleusesreferencedimagesthatexistinthesamefolder.ItusesanormalandMERmap.">{ This example uses referenced images that exist in the same folder. It uses a normal and MER map.
  }</h2>
   <div style="margin-left: 1.5vw">
     <link rel="stylesheet" href="/assets/styles/github-dark.css">
@@ -239,7 +239,7 @@
 </div>
 
 <div class="container" id="node_example_3_2_2">
-  <h2 class="object_name">{ You could also specify values of textures using numerical or hexadecimal values.
+  <h2 class="object_name" id="Youcouldalsospecifyvaluesoftexturesusingnumericalorhexadecimalvalues.">{ You could also specify values of textures using numerical or hexadecimal values.
  }</h2>
   <div style="margin-left: 1.5vw">
     <link rel="stylesheet" href="/assets/styles/github-dark.css">
@@ -258,7 +258,7 @@
 
 <div class="container" id="node_head_4_2">
         <div class="object_name">
-<div class="object_inline_name"><h2 style="font-size: null; text-align: left">Invalid *.texture_set.json</h2></div>
+<div class="object_inline_name"><h2 id="Invalid*.texture_set.json" style="font-size: null; text-align: left">Invalid *.texture_set.json</h2></div>
             <div class="object_description">
                 <p><p>If a Texture Set is invalid, we’ll log a CONTENT_ERROR and the Texture Set will not be used.</p>
 <p>A Texture Set is invalid if:</p>
@@ -294,7 +294,7 @@
 
 <div class="container" id="node_head_5_2">
         <div class="object_name">
-<div class="object_inline_name"><h2 style="font-size: null; text-align: left">Resource Stack Behaviour</h2></div>
+<div class="object_inline_name"><h2 id="ResourceStackBehaviour" style="font-size: null; text-align: left">Resource Stack Behaviour</h2></div>
             <div class="object_description">
                 <p><ul>
 <li>
@@ -314,7 +314,7 @@
 
 <div class="container" id="node_head_6_2">
         <div class="object_name">
-<div class="object_inline_name"><h2 style="font-size: null; text-align: left">Referencing Texture Resources</h2></div>
+<div class="object_inline_name"><h2 id="ReferencingTextureResources" style="font-size: null; text-align: left">Referencing Texture Resources</h2></div>
             <div class="object_description">
                 <p><p>The priority of file extensions, in case you have duplicate image references, is: .tga &gt; .png &gt; .jpg &gt; .jpeg. For example: 			if grass.png and grass.tga both exist in the folder, grass.tga will be chosen. This also applies to other data driven files, like actor json referencing a texture resource.</p>
 </p>

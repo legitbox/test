@@ -26,7 +26,7 @@
         
 <div class="container" id="title">
         <div class="object_name">
-<div class="object_inline_name"><h1 style="font-size: null; text-align: center">Fogs</h1></div>
+<div class="object_inline_name"><h1 id="Fogs" style="font-size: null; text-align: center">Fogs</h1></div>
             <div class="object_description">
                 <p></p>
             </div>
@@ -35,7 +35,7 @@
 
 <div class="container" id="node_head_0_1">
         <div class="object_name">
-<div class="object_inline_name"><h1 style="font-size: null; text-align: left">Fog Definitions</h1></div>
+<div class="object_inline_name"><h1 id="FogDefinitions" style="font-size: null; text-align: left">Fog Definitions</h1></div>
             <div class="object_description">
                 <p></p><p>Fogs are setup in Json files under the resource_packs, /‘name of pack’/, fogs directory.</p>
 <p></p>
@@ -45,7 +45,7 @@
 
 <div class="container" id="node_head_0_2">
         <div class="object_name">
-<div class="object_inline_name"><h2 style="font-size: null; text-align: left">Fog Schema</h2></div>
+<div class="object_inline_name"><h2 id="FogSchema" style="font-size: null; text-align: left">Fog Schema</h2></div>
             <div class="object_description">
                 <p></p><pre><code>
 --------
@@ -458,7 +458,7 @@
 
 <div class="container" id="node_head_1_1">
         <div class="object_name">
-<div class="object_inline_name"><h1 style="font-size: null; text-align: left">Active Fog Stack</h1></div>
+<div class="object_inline_name"><h1 id="ActiveFogStack" style="font-size: null; text-align: left">Active Fog Stack</h1></div>
             <div class="object_description">
                 <p></p><p>The active fog stack is used to determine which fog setting to use at any given time in the game. Each player has a unique fog stack.</p>
 <p>Whenever the game needs to determine the values for the fog, it will start at the top of the fog stack and check down it until it has found a value for the current setting type. So, if a fog setting on the stack does not not have the setting it’s looking for, then it will continue down the stack and check in. If it finds no such setting, it will instead use the defaults defined by the engine.</p>
@@ -484,7 +484,7 @@
 
 <div class="container" id="node_head_0_2">
         <div class="object_name">
-<div class="object_inline_name"><h2 style="font-size: null; text-align: left">Biomes</h2></div>
+<div class="object_inline_name"><h2 id="Biomes" style="font-size: null; text-align: left">Biomes</h2></div>
             <div class="object_description">
                 <p></p><p>The biome layer is an average of all the settings defined by the biomes around the player’s position. The biome settings are defined in “biomes_client.json” as well for each individual biome.</p>
 <p></p>
@@ -494,7 +494,7 @@
 
 <div class="container" id="node_head_1_2">
         <div class="object_name">
-<div class="object_inline_name"><h2 style="font-size: null; text-align: left">Command</h2></div>
+<div class="object_inline_name"><h2 id="Command" style="font-size: null; text-align: left">Command</h2></div>
             <div class="object_description">
                 <p></p><p>The command layer is all the settings set by the “/fog” command and evaluated it as one stack from top to bottom. More detail in the “Fog Command” section.</p>
 <p></p>
@@ -504,7 +504,7 @@
 
 <div class="container" id="node_head_2_2">
         <div class="object_name">
-<div class="object_inline_name"><h2 style="font-size: null; text-align: left">Data Default</h2></div>
+<div class="object_inline_name"><h2 id="DataDefault" style="font-size: null; text-align: left">Data Default</h2></div>
             <div class="object_description">
                 <p></p><p>Defined in “biomes_client.json” under “default” if it references a fog definition via “fog_identifier”.</p>
 <p></p>
@@ -514,7 +514,7 @@
 
 <div class="container" id="node_head_3_2">
         <div class="object_name">
-<div class="object_inline_name"><h2 style="font-size: null; text-align: left">Engine Default</h2></div>
+<div class="object_inline_name"><h2 id="EngineDefault" style="font-size: null; text-align: left">Engine Default</h2></div>
             <div class="object_description">
                 <p></p><p>Hard coded values in case there are no data driven values; the implicit bottom of the stack.</p>
 <p></p>
@@ -524,7 +524,7 @@
 
 <div class="container" id="node_head_2_1">
         <div class="object_name">
-<div class="object_inline_name"><h1 style="font-size: null; text-align: left">Biomes</h1></div>
+<div class="object_inline_name"><h1 id="Biomes" style="font-size: null; text-align: left">Biomes</h1></div>
             <div class="object_description">
                 <p></p><p>Fog settings can be determined for the biomes with “biomes_client.json”. In each biome entry, you can have a variable called “fog_identifier” and set a name that matches the fog setting you want to use with this biome.</p>
 <p>The “default” entry can also be set this way and will be used underneath the biomes entries in the active fog <a href="http://stack.So">stack.So</a>, a biome’s fog setting does not completely replace the default’s setting, but instead the biome is read on top of the default as described in the “Active Fog Stack” section.</p>
@@ -541,7 +541,7 @@
 
 <div class="container" id="node_head_3_1">
         <div class="object_name">
-<div class="object_inline_name"><h1 style="font-size: null; text-align: left">Fog Command</h1></div>
+<div class="object_inline_name"><h1 id="FogCommand" style="font-size: null; text-align: left">Fog Command</h1></div>
             <div class="object_description">
                 <p></p><p>“/fog” can be used to manage fog settings in this layer of the active fog stack for each player.</p>
 <p>Fog settings in this layer are ordered via the “push”, “pop”, “remove” modes of the “/fog” command described below.</p>
@@ -554,7 +554,7 @@
 
 <div class="container" id="node_head_0_2">
         <div class="object_name">
-<div class="object_inline_name"><h2 style="font-size: null; text-align: left">Pop</h2></div>
+<div class="object_inline_name"><h2 id="Pop" style="font-size: null; text-align: left">Pop</h2></div>
             <div class="object_description">
                 <p></p><p>Removes the top-most fog setting, from selected player(s), that matches the user provided ID (i.e. as provided previously via a “/fog push” command).</p>
 <p></p>
@@ -564,7 +564,7 @@
 
 <div class="container" id="node_head_1_2">
         <div class="object_name">
-<div class="object_inline_name"><h2 style="font-size: null; text-align: left">Push</h2></div>
+<div class="object_inline_name"><h2 id="Push" style="font-size: null; text-align: left">Push</h2></div>
             <div class="object_description">
                 <p></p><p>Pushes a new fog setting, to specified player(s), along with a user provided ID, onto the top of the Fog Command layers of the players’ active fog stacks.</p>
 <p></p>
@@ -574,7 +574,7 @@
 
 <div class="container" id="node_head_2_2">
         <div class="object_name">
-<div class="object_inline_name"><h2 style="font-size: null; text-align: left">Remove</h2></div>
+<div class="object_inline_name"><h2 id="Remove" style="font-size: null; text-align: left">Remove</h2></div>
             <div class="object_description">
                 <p></p><p>Removes all matching fog settings, from the selected player(s), that matches the user-provided ID (i.e. as provided previously via one or more “/fog push” commands).</p>
 <p></p>

@@ -29,7 +29,7 @@
         
 <div class="container" id="title">
         <div class="object_name">
-<div class="object_inline_name"><h1 style="font-size: null; text-align: center">Entity Timeline Events</h1></div>
+<div class="object_inline_name"><h1 id="EntityTimelineEvents" style="font-size: null; text-align: center">Entity Timeline Events</h1></div>
             <div class="object_description">
                 <p></p>
             </div>
@@ -38,7 +38,7 @@
 
 <div class="container" id="node_head_0_1">
         <div class="object_name">
-<div class="object_inline_name"><h1 style="font-size: null; text-align: left">Animation Controller Events</h1></div>
+<div class="object_inline_name"><h1 id="AnimationControllerEvents" style="font-size: null; text-align: left">Animation Controller Events</h1></div>
             <div class="object_description">
                 <p><p>Animation controllers can trigger events on entry or exit of a state.  Events to trigger on state entry go in the “on_entry” section, those on exit go in the “on_exit” section.</p>
 </p>
@@ -47,7 +47,7 @@
         </div>
 
 <div class="container" id="node_example_0_0_1">
-  <h2 class="object_name">{ Example }</h2>
+  <h2 class="object_name" id="Example">{ Example }</h2>
   <div style="margin-left: 1.5vw">
     <link rel="stylesheet" href="/assets/styles/github-dark.css">
     <script src="/assets/libraries/highlight.min.js"></script>
@@ -77,7 +77,7 @@
 
 <div class="container" id="node_head_1_1">
         <div class="object_name">
-<div class="object_inline_name"><h1 style="font-size: null; text-align: left">Animation Events</h1></div>
+<div class="object_inline_name"><h1 id="AnimationEvents" style="font-size: null; text-align: left">Animation Events</h1></div>
             <div class="object_description">
                 <p><p>Animations can have a timeline dedicated to events. The “timeline” section contains the event timeline list.  Below there are various examples where particular times can trigger a single event, or an array of events:</p>
 </p>
@@ -86,7 +86,7 @@
         </div>
 
 <div class="container" id="node_example_1_0_1">
-  <h2 class="object_name">{ Example }</h2>
+  <h2 class="object_name" id="Example">{ Example }</h2>
   <div style="margin-left: 1.5vw">
     <link rel="stylesheet" href="/assets/styles/github-dark.css">
     <script src="/assets/libraries/highlight.min.js"></script>
@@ -127,7 +127,7 @@
 
 <div class="container" id="node_head_2_1">
         <div class="object_name">
-<div class="object_inline_name"><h1 style="font-size: null; text-align: left">Animation Notes</h1></div>
+<div class="object_inline_name"><h1 id="AnimationNotes" style="font-size: null; text-align: left">Animation Notes</h1></div>
             <div class="object_description">
                 <p><p>Entity events occur in animations, which normally occur on the client (via resource packs), but can also occur on the server (via behavior packs). As the server side of the game has no visual aspects to it, obviously no bone-based animations can occur.  However, a traditional animation is basically a timeline of events, with the events being bone positions for an animated visual rig that moves the entity’s visual shape around.  The mechanisms for the Bedrock animation system are state machines (Animation Controllers), and timelines (Animations).  These concepts apply directly to the triggering of events, thus the animation system can execute on the server (minus the visual aspects), with the intent of driving entity events.</p>
 <p>To use entity events on the server (in a behavior pack), add animation controllers and animations to a behavior pack just as you would to a resource pack.  Add animation and animation controllers to an “animations” section in the description field of an entity.  These animations and animation controllers will run on the server just as if they were on the client in a resource pack.  Add the “scripts” section with an “animate” subsection to specify which animations/animation-controllers to have run.</p>
@@ -138,7 +138,7 @@
         </div>
 
 <div class="container" id="node_example_2_0_1">
-  <h2 class="object_name">{ Example }</h2>
+  <h2 class="object_name" id="Example">{ Example }</h2>
   <div style="margin-left: 1.5vw">
     <link rel="stylesheet" href="/assets/styles/github-dark.css">
     <script src="/assets/libraries/highlight.min.js"></script>
@@ -175,7 +175,7 @@
 
 <div class="container" id="node_head_3_1">
         <div class="object_name">
-<div class="object_inline_name"><h1 style="font-size: null; text-align: left">Events</h1></div>
+<div class="object_inline_name"><h1 id="Events" style="font-size: null; text-align: left">Events</h1></div>
             <div class="object_description">
                 <p><p>Events consist of three categories, all represented by a string:</p>
 <ul>
@@ -199,7 +199,7 @@
         </div>
 
 <div class="container" id="node_example_3_0_1">
-  <h2 class="object_name">{ Example }</h2>
+  <h2 class="object_name" id="Example">{ Example }</h2>
   <div style="margin-left: 1.5vw">
     <link rel="stylesheet" href="/assets/styles/github-dark.css">
     <script src="/assets/libraries/highlight.min.js"></script>
@@ -218,7 +218,7 @@
 
 <div class="container" id="node_head_4_1">
         <div class="object_name">
-<div class="object_inline_name"><h1 style="font-size: null; text-align: left">General Notes</h1></div>
+<div class="object_inline_name"><h1 id="GeneralNotes" style="font-size: null; text-align: left">General Notes</h1></div>
             <div class="object_description">
                 <p><p>This document contains details for driving various events via entity .json data.  Entity events can go in both behavior and resource packs.  Behavior packs use the same animations and animation controllers setup that are used in resource packs, albeit with a different method in the entity .json itself to activate the animations.</p>
 <p>Entity events are a way to drive gameplay and entity state changes in the Bedrock engine.  These events can typically include slash commands (behavior packs only), entity events (e.g. become an adult), and Molang expressions (e.g. set the Molang variable “variable.foo” to 3 on a particular entity).  Animations and Animation controllers provide a method for driving state machines and timelines for an entity.  For example, a particular animation controller could be in a particular state, and running a particular animation, and we want events triggered when entering/exiting that state.  Alternately, an “animation” could be running, and we wish to fire off events during that animation.  The entity event timeline mechanic makes this possible.</p>
