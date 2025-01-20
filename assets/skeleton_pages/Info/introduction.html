@@ -66,7 +66,10 @@
   <div style="margin-left: 1.5vw">
     <link rel="stylesheet" href="/assets/styles/github-dark.css">
     <script defer="" src="/assets/libraries/highlight.min.js"></script>
-    <script defer="">hljs.highlightAll();</script>
+    <script defer="">
+    document.addEventListener("DOMContentLoaded", function() {
+    hljs.highlightAll();
+});</script>
     <pre><code>defmodule SimpleCalculator do
   def start do
     IO.puts("Welcome to the Elixir Calculator!")
@@ -110,7 +113,8 @@ SimpleCalculator.start()
   <p style="margin-left: 1vw">This component allows players to determine the density cap limits for the specified mob type.</p>
   <div id="wrapper" style="overflow-x: scroll; scrollbar-width: none;"></div>
 <script defer="">
-  new gridjs.Grid({
+  document.addEventListener("DOMContentLoaded", function() {
+        new gridjs.Grid({
     data: [["surface","Integer","","This is the maximum number of mobs of this type spawnable on the surface"],["underground","Integer","","This is the maximum number of mobs of this type spawnable underground"]],
     columns: ["Name","Type","Default Value","Description"],
     search: true,
@@ -122,6 +126,7 @@ SimpleCalculator.start()
       },
     }
   }).render(document.getElementById("wrapper"));
+});
 </script>
 
 </div>

@@ -49,7 +49,8 @@
   <p style="margin-left: 1vw"></p>
   <div id="wrapper" style="overflow-x: scroll; scrollbar-width: none;"></div>
 <script defer="">
-  new gridjs.Grid({
+  document.addEventListener("DOMContentLoaded", function() {
+        new gridjs.Grid({
     data: [["input","item names","Items used as input for the furnace recipe."],["output","item names","Items used as output for the furnace recipe."]],
     columns: ["Name","Type","Description"],
     search: true,
@@ -61,6 +62,7 @@
       },
     }
   }).render(document.getElementById("wrapper"));
+});
 </script>
 
 </div>
@@ -70,7 +72,10 @@
   <div style="margin-left: 1.5vw">
     <link rel="stylesheet" href="/assets/styles/github-dark.css">
     <script defer="" src="/assets/libraries/highlight.min.js"></script>
-    <script defer="">hljs.highlightAll();</script>
+    <script defer="">
+    document.addEventListener("DOMContentLoaded", function() {
+    hljs.highlightAll();
+});</script>
     <pre><code>{
 "format_version": "1.12",
 "minecraft:recipe_furnace": {
@@ -105,7 +110,8 @@
   <p style="margin-left: 1vw"></p>
   <div id="wrapper" style="overflow-x: scroll; scrollbar-width: none;"></div>
 <script defer="">
-  new gridjs.Grid({
+  document.addEventListener("DOMContentLoaded", function() {
+        new gridjs.Grid({
     data: [["input","potion","input potion used in the brewing container recipe."],["output","potion","output potion from the brewing container recipe."],["reagent","item","item used in the brewing container recipe with the input potion."],["tags","array of strings","Item used in a Brewing Container Recipe."]],
     columns: ["Name","Type","Description"],
     search: true,
@@ -117,6 +123,7 @@
       },
     }
   }).render(document.getElementById("wrapper"));
+});
 </script>
 
 </div>
@@ -126,7 +133,10 @@
   <div style="margin-left: 1.5vw">
     <link rel="stylesheet" href="/assets/styles/github-dark.css">
     <script defer="" src="/assets/libraries/highlight.min.js"></script>
-    <script defer="">hljs.highlightAll();</script>
+    <script defer="">
+    document.addEventListener("DOMContentLoaded", function() {
+    hljs.highlightAll();
+});</script>
     <pre><code>{
 "format_version": "1.12",
 "minecraft:recipe_brewing_container": {
@@ -160,7 +170,8 @@
   <p style="margin-left: 1vw"></p>
   <div id="wrapper" style="overflow-x: scroll; scrollbar-width: none;"></div>
 <script defer="">
-  new gridjs.Grid({
+  document.addEventListener("DOMContentLoaded", function() {
+        new gridjs.Grid({
     data: [["input","potion","input potion used on the brewing stand."],["output","potion","output potion from mixing the input potion with the reagent on the brewing stand."],["reagent","item","item used to mix with the input potion."],["tags","array of strings","Item used to make a brewing mix."]],
     columns: ["Name","Type","Description"],
     search: true,
@@ -172,6 +183,7 @@
       },
     }
   }).render(document.getElementById("wrapper"));
+});
 </script>
 
 </div>
@@ -181,7 +193,10 @@
   <div style="margin-left: 1.5vw">
     <link rel="stylesheet" href="/assets/styles/github-dark.css">
     <script defer="" src="/assets/libraries/highlight.min.js"></script>
-    <script defer="">hljs.highlightAll();</script>
+    <script defer="">
+    document.addEventListener("DOMContentLoaded", function() {
+    hljs.highlightAll();
+});</script>
     <pre><code>{
 "format_version": "1.12",
 "minecraft:recipe_brewing_mix": {
@@ -216,7 +231,8 @@
   <p style="margin-left: 1vw"></p>
   <div id="wrapper" style="overflow-x: scroll; scrollbar-width: none;"></div>
 <script defer="">
-  new gridjs.Grid({
+  document.addEventListener("DOMContentLoaded", function() {
+        new gridjs.Grid({
     data: [["assume_symmetry","boolean","true","determines if the recipe should assume symmetry or not."],["key","array of key and item pairs","patten key character mapped to item names."],["pattern","array of strings","characters that represent a pattern to be defined by keys."],["priority","integer","Item used as output for the furnace recipe."],["result","array of item names","when input items match the pattern then these items are the result."],["tags","array of strings","Item used as input for the furnace recipe."]],
     columns: ["Name","Type","Description"],
     search: true,
@@ -228,6 +244,7 @@
       },
     }
   }).render(document.getElementById("wrapper"));
+});
 </script>
 
 </div>
@@ -237,7 +254,10 @@
   <div style="margin-left: 1.5vw">
     <link rel="stylesheet" href="/assets/styles/github-dark.css">
     <script defer="" src="/assets/libraries/highlight.min.js"></script>
-    <script defer="">hljs.highlightAll();</script>
+    <script defer="">
+    document.addEventListener("DOMContentLoaded", function() {
+    hljs.highlightAll();
+});</script>
     <pre><code>{
 "format_version": "1.12",
 "minecraft:recipe_shaped": {
@@ -283,7 +303,8 @@
   <p style="margin-left: 1vw"></p>
   <div id="wrapper" style="overflow-x: scroll; scrollbar-width: none;"></div>
 <script defer="">
-  new gridjs.Grid({
+  document.addEventListener("DOMContentLoaded", function() {
+        new gridjs.Grid({
     data: [["ingredients","array of item names","items used as input (without a shape) for the recipe."],["priority","integer","Item used as output for the furnace recipe."],["result","array of item names","these items are the result."],["tags","array of strings","Item used as input for the furnace recipe."]],
     columns: ["Name","Type","Description"],
     search: true,
@@ -295,6 +316,7 @@
       },
     }
   }).render(document.getElementById("wrapper"));
+});
 </script>
 
 </div>
@@ -304,7 +326,10 @@
   <div style="margin-left: 1.5vw">
     <link rel="stylesheet" href="/assets/styles/github-dark.css">
     <script defer="" src="/assets/libraries/highlight.min.js"></script>
-    <script defer="">hljs.highlightAll();</script>
+    <script defer="">
+    document.addEventListener("DOMContentLoaded", function() {
+    hljs.highlightAll();
+});</script>
     <pre><code>{
 "format_version": "1.12",
 "minecraft:recipe_shapeless": {
@@ -343,7 +368,8 @@
   <p style="margin-left: 1vw"></p>
   <div id="wrapper" style="overflow-x: scroll; scrollbar-width: none;"></div>
 <script defer="">
-  new gridjs.Grid({
+  document.addEventListener("DOMContentLoaded", function() {
+        new gridjs.Grid({
     data: [["addition","item name","The material needed to perform the transform operation. In case of stackable items, only 1 item is consumed. The only accepted item is \"minecraft:netherite_ingot\". Items must have the \"minecraft:transform_materials\" tag to be accepted into the respective UI slot."],["base","item name","The item to transform. Its properties will be copied to \"result\". The only accepted items are armor and tools. Items must have the \"minecraft:transformable_items\" tag to be accepted into the respective UI slot."],["result","item name","The item to transform to."],["tags","array of strings","The crafting stations the recipe is compatible with. The only accepted value is \"smithing_table\"."],["template","item name","The template needed to perform the transform operation. In case of stackable items, only 1 item is consumed. Items must have the \"minecraft:transform_templates\" tag to be accepted into the respective UI slot."]],
     columns: ["Name","Type","Description"],
     search: true,
@@ -355,6 +381,7 @@
       },
     }
   }).render(document.getElementById("wrapper"));
+});
 </script>
 
 </div>
@@ -364,7 +391,10 @@
   <div style="margin-left: 1.5vw">
     <link rel="stylesheet" href="/assets/styles/github-dark.css">
     <script defer="" src="/assets/libraries/highlight.min.js"></script>
-    <script defer="">hljs.highlightAll();</script>
+    <script defer="">
+    document.addEventListener("DOMContentLoaded", function() {
+    hljs.highlightAll();
+});</script>
     <pre><code>{
  "format_version": "1.12",
  "minecraft:recipe_smithing_transform": {
@@ -400,7 +430,8 @@
   <p style="margin-left: 1vw"></p>
   <div id="wrapper" style="overflow-x: scroll; scrollbar-width: none;"></div>
 <script defer="">
-  new gridjs.Grid({
+  document.addEventListener("DOMContentLoaded", function() {
+        new gridjs.Grid({
     data: [["addition","item name or item tag","The material needed to perform the trim operation. It defines the color in which the pattern will be applied to the item. In case of stackable items, only 1 item is consumed. Items must have the \"minecraft:trim_materials\" tag to be accepted into the respective UI slot."],["base","item name or item tag","The item to trim. Its properties will be preserved. The only accepted items are armors. Items must have the \"minecraft:trimmable_armors\" tag to be accepted into the respective UI slot."],["tags","array of strings","The crafting stations the recipe is compatible with. The only accepted value is \"smithing_table\"."],["template","item name or item tag","The template needed to perform the trim operation. It defines the pattern which will be applied to the item. In case of stackable items, only 1 item is consumed. Items must have the \"minecraft:trim_templates\" tag to be accepted into the respective UI slot."]],
     columns: ["Name","Type","Description"],
     search: true,
@@ -412,6 +443,7 @@
       },
     }
   }).render(document.getElementById("wrapper"));
+});
 </script>
 
 </div>
@@ -421,7 +453,10 @@
   <div style="margin-left: 1.5vw">
     <link rel="stylesheet" href="/assets/styles/github-dark.css">
     <script defer="" src="/assets/libraries/highlight.min.js"></script>
-    <script defer="">hljs.highlightAll();</script>
+    <script defer="">
+    document.addEventListener("DOMContentLoaded", function() {
+    hljs.highlightAll();
+});</script>
     <pre><code>{
  "format_version": "1.12",
  "minecraft:recipe_smithing_trim": {
