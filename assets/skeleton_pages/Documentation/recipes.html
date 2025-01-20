@@ -33,17 +33,6 @@
         </div>
         </div>
 
-<div class="container" id="node_head_0_1">
-        <div class="object_name">
-<div class="object_inline_name"><h1 id="Recipes" style="font-size: null; text-align: left">Recipes</h1></div>
-            <div class="object_description">
-                <p></p><p>Recipes are setup in Json files under the behavior_packs /‘name of pack’/ recipes directory.</p>
-<p>Recipe JSON files have different structures dependent on their type.</p>
-<p></p>
-            </div>
-        </div>
-        </div>
-
 <div class="container" id="node_head_0_2">
         <div class="object_name">
 <div class="object_inline_name"><h2 id="FurnaceRecipe" style="font-size: null; text-align: left">Furnace Recipe</h2></div>
@@ -54,6 +43,28 @@
         </div>
         </div>
 
+<div class="container" id="node_table_0_3">
+  <script src="/assets/libraries/gridjs.umd.js"></script>
+  <h3 id="Parameters" style="padding: 10px">Parameters</h3>
+  <p style="margin-left: 1vw"></p>
+  <div id="wrapper" style="overflow-x: scroll; scrollbar-width: none;"></div>
+<script>
+  new gridjs.Grid({
+    data: [["input","item names","Items used as input for the furnace recipe."],["output","item names","Items used as output for the furnace recipe."]],
+    columns: ["Name","Type","Description"],
+    search: true,
+    height:'100%',
+    width:'100%',
+    style: {
+      table: {
+        width: '30vw',
+      },
+    }
+  }).render(document.getElementById("wrapper"));
+</script>
+
+</div>
+    
 <div class="container" id="node_example_0_0_2">
   <h2 class="object_name" id="FurnaceRecipeExample:">{ Furnace Recipe Example: }</h2>
   <div style="margin-left: 1.5vw">
@@ -78,35 +89,6 @@
   </div>
 </div>
 
-<div class="container" id="node_head_0_3">
-        <div class="object_name">
-<div class="object_inline_name"><h3 id="Parameters" style="font-size: null; text-align: left">Parameters</h3></div>
-            <div class="object_description">
-                <p></p>
-            </div>
-        </div>
-        </div>
-
-<div class="container" id="node_head_0_4">
-        <div class="object_name">
-<div class="object_inline_name"><h4 id="input" style="font-size: null; text-align: left">input</h4></div>
-            <div class="object_description">
-                <p></p><p>Items used as input for the furnace recipe.</p>
-<p></p>
-            </div>
-        </div>
-        </div>
-
-<div class="container" id="node_head_1_4">
-        <div class="object_name">
-<div class="object_inline_name"><h4 id="output" style="font-size: null; text-align: left">output</h4></div>
-            <div class="object_description">
-                <p></p><p>Items used as output for the furnace recipe.</p>
-<p></p>
-            </div>
-        </div>
-        </div>
-
 <div class="container" id="node_head_1_2">
         <div class="object_name">
 <div class="object_inline_name"><h2 id="PotionBrewingContainerRecipe" style="font-size: null; text-align: left">Potion Brewing Container Recipe</h2></div>
@@ -117,6 +99,28 @@
         </div>
         </div>
 
+<div class="container" id="node_table_0_3">
+  <script src="/assets/libraries/gridjs.umd.js"></script>
+  <h3 id="Parameters" style="padding: 10px">Parameters</h3>
+  <p style="margin-left: 1vw"></p>
+  <div id="wrapper" style="overflow-x: scroll; scrollbar-width: none;"></div>
+<script>
+  new gridjs.Grid({
+    data: [["input","potion","input potion used in the brewing container recipe."],["output","potion","output potion from the brewing container recipe."],["reagent","item","item used in the brewing container recipe with the input potion."],["tags","array of strings","Item used in a Brewing Container Recipe."]],
+    columns: ["Name","Type","Description"],
+    search: true,
+    height:'100%',
+    width:'100%',
+    style: {
+      table: {
+        width: '30vw',
+      },
+    }
+  }).render(document.getElementById("wrapper"));
+</script>
+
+</div>
+    
 <div class="container" id="node_example_1_0_2">
   <h2 class="object_name" id="PotionBrewingContainerRecipeExample:">{ Potion Brewing Container Recipe Example: }</h2>
   <div style="margin-left: 1.5vw">
@@ -140,55 +144,6 @@
   </div>
 </div>
 
-<div class="container" id="node_head_0_3">
-        <div class="object_name">
-<div class="object_inline_name"><h3 id="Parameters" style="font-size: null; text-align: left">Parameters</h3></div>
-            <div class="object_description">
-                <p></p>
-            </div>
-        </div>
-        </div>
-
-<div class="container" id="node_head_0_4">
-        <div class="object_name">
-<div class="object_inline_name"><h4 id="input" style="font-size: null; text-align: left">input</h4></div>
-            <div class="object_description">
-                <p></p><p>input potion used in the brewing container recipe.</p>
-<p></p>
-            </div>
-        </div>
-        </div>
-
-<div class="container" id="node_head_1_4">
-        <div class="object_name">
-<div class="object_inline_name"><h4 id="output" style="font-size: null; text-align: left">output</h4></div>
-            <div class="object_description">
-                <p></p><p>output potion from the brewing container recipe.</p>
-<p></p>
-            </div>
-        </div>
-        </div>
-
-<div class="container" id="node_head_2_4">
-        <div class="object_name">
-<div class="object_inline_name"><h4 id="reagent" style="font-size: null; text-align: left">reagent</h4></div>
-            <div class="object_description">
-                <p></p><p>item used in the brewing container recipe with the input potion.</p>
-<p></p>
-            </div>
-        </div>
-        </div>
-
-<div class="container" id="node_head_3_4">
-        <div class="object_name">
-<div class="object_inline_name"><h4 id="tags" style="font-size: null; text-align: left">tags</h4></div>
-            <div class="object_description">
-                <p></p><p>Item used in a Brewing Container Recipe.</p>
-<p></p>
-            </div>
-        </div>
-        </div>
-
 <div class="container" id="node_head_2_2">
         <div class="object_name">
 <div class="object_inline_name"><h2 id="PotionBrewingMix" style="font-size: null; text-align: left">Potion Brewing Mix</h2></div>
@@ -199,6 +154,28 @@
         </div>
         </div>
 
+<div class="container" id="node_table_0_3">
+  <script src="/assets/libraries/gridjs.umd.js"></script>
+  <h3 id="Parameters" style="padding: 10px">Parameters</h3>
+  <p style="margin-left: 1vw"></p>
+  <div id="wrapper" style="overflow-x: scroll; scrollbar-width: none;"></div>
+<script>
+  new gridjs.Grid({
+    data: [["input","potion","input potion used on the brewing stand."],["output","potion","output potion from mixing the input potion with the reagent on the brewing stand."],["reagent","item","item used to mix with the input potion."],["tags","array of strings","Item used to make a brewing mix."]],
+    columns: ["Name","Type","Description"],
+    search: true,
+    height:'100%',
+    width:'100%',
+    style: {
+      table: {
+        width: '30vw',
+      },
+    }
+  }).render(document.getElementById("wrapper"));
+</script>
+
+</div>
+    
 <div class="container" id="node_example_2_0_2">
   <h2 class="object_name" id="PotionBrewingMixExample:">{ Potion Brewing Mix Example: }</h2>
   <div style="margin-left: 1.5vw">
@@ -222,55 +199,6 @@
   </div>
 </div>
 
-<div class="container" id="node_head_0_3">
-        <div class="object_name">
-<div class="object_inline_name"><h3 id="Parameters" style="font-size: null; text-align: left">Parameters</h3></div>
-            <div class="object_description">
-                <p></p>
-            </div>
-        </div>
-        </div>
-
-<div class="container" id="node_head_0_4">
-        <div class="object_name">
-<div class="object_inline_name"><h4 id="input" style="font-size: null; text-align: left">input</h4></div>
-            <div class="object_description">
-                <p></p><p>input potion used on the brewing stand.</p>
-<p></p>
-            </div>
-        </div>
-        </div>
-
-<div class="container" id="node_head_1_4">
-        <div class="object_name">
-<div class="object_inline_name"><h4 id="output" style="font-size: null; text-align: left">output</h4></div>
-            <div class="object_description">
-                <p></p><p>output potion from mixing the input potion with the reagent on the brewing stand.</p>
-<p></p>
-            </div>
-        </div>
-        </div>
-
-<div class="container" id="node_head_2_4">
-        <div class="object_name">
-<div class="object_inline_name"><h4 id="reagent" style="font-size: null; text-align: left">reagent</h4></div>
-            <div class="object_description">
-                <p></p><p>item used to mix with the input potion.</p>
-<p></p>
-            </div>
-        </div>
-        </div>
-
-<div class="container" id="node_head_3_4">
-        <div class="object_name">
-<div class="object_inline_name"><h4 id="tags" style="font-size: null; text-align: left">tags</h4></div>
-            <div class="object_description">
-                <p></p><p>Item used to make a brewing mix.</p>
-<p></p>
-            </div>
-        </div>
-        </div>
-
 <div class="container" id="node_head_3_2">
         <div class="object_name">
 <div class="object_inline_name"><h2 id="ShapedRecipe" style="font-size: null; text-align: left">Shaped Recipe</h2></div>
@@ -282,6 +210,28 @@
         </div>
         </div>
 
+<div class="container" id="node_table_0_3">
+  <script src="/assets/libraries/gridjs.umd.js"></script>
+  <h3 id="Parameters" style="padding: 10px">Parameters</h3>
+  <p style="margin-left: 1vw"></p>
+  <div id="wrapper" style="overflow-x: scroll; scrollbar-width: none;"></div>
+<script>
+  new gridjs.Grid({
+    data: [["assume_symmetry","boolean","true","determines if the recipe should assume symmetry or not."],["key","array of key and item pairs","patten key character mapped to item names."],["pattern","array of strings","characters that represent a pattern to be defined by keys."],["priority","integer","Item used as output for the furnace recipe."],["result","array of item names","when input items match the pattern then these items are the result."],["tags","array of strings","Item used as input for the furnace recipe."]],
+    columns: ["Name","Type","Description"],
+    search: true,
+    height:'100%',
+    width:'100%',
+    style: {
+      table: {
+        width: '30vw',
+      },
+    }
+  }).render(document.getElementById("wrapper"));
+</script>
+
+</div>
+    
 <div class="container" id="node_example_3_0_2">
   <h2 class="object_name" id="ShapedRecipeExample:">{ Shaped Recipe Example: }</h2>
   <div style="margin-left: 1.5vw">
@@ -317,75 +267,6 @@
   </div>
 </div>
 
-<div class="container" id="node_head_0_3">
-        <div class="object_name">
-<div class="object_inline_name"><h3 id="Parameters" style="font-size: null; text-align: left">Parameters</h3></div>
-            <div class="object_description">
-                <p></p>
-            </div>
-        </div>
-        </div>
-
-<div class="container" id="node_head_0_4">
-        <div class="object_name">
-<div class="object_inline_name"><h4 id="assume_symmetry" style="font-size: null; text-align: left">assume_symmetry</h4></div>
-            <div class="object_description">
-                <p></p><p>determines if the recipe should assume symmetry or not.</p>
-<p></p>
-            </div>
-        </div>
-        </div>
-
-<div class="container" id="node_head_1_4">
-        <div class="object_name">
-<div class="object_inline_name"><h4 id="key" style="font-size: null; text-align: left">key</h4></div>
-            <div class="object_description">
-                <p></p><p>patten key character mapped to item names.</p>
-<p></p>
-            </div>
-        </div>
-        </div>
-
-<div class="container" id="node_head_2_4">
-        <div class="object_name">
-<div class="object_inline_name"><h4 id="pattern" style="font-size: null; text-align: left">pattern</h4></div>
-            <div class="object_description">
-                <p></p><p>characters that represent a pattern to be defined by keys.</p>
-<p></p>
-            </div>
-        </div>
-        </div>
-
-<div class="container" id="node_head_3_4">
-        <div class="object_name">
-<div class="object_inline_name"><h4 id="priority" style="font-size: null; text-align: left">priority</h4></div>
-            <div class="object_description">
-                <p></p><p>Item used as output for the furnace recipe.</p>
-<p></p>
-            </div>
-        </div>
-        </div>
-
-<div class="container" id="node_head_4_4">
-        <div class="object_name">
-<div class="object_inline_name"><h4 id="result" style="font-size: null; text-align: left">result</h4></div>
-            <div class="object_description">
-                <p></p><p>when input items match the pattern then these items are the result.</p>
-<p></p>
-            </div>
-        </div>
-        </div>
-
-<div class="container" id="node_head_5_4">
-        <div class="object_name">
-<div class="object_inline_name"><h4 id="tags" style="font-size: null; text-align: left">tags</h4></div>
-            <div class="object_description">
-                <p></p><p>Item used as input for the furnace recipe.</p>
-<p></p>
-            </div>
-        </div>
-        </div>
-
 <div class="container" id="node_head_4_2">
         <div class="object_name">
 <div class="object_inline_name"><h2 id="ShapelessRecipe" style="font-size: null; text-align: left">Shapeless Recipe</h2></div>
@@ -396,6 +277,28 @@
         </div>
         </div>
 
+<div class="container" id="node_table_0_3">
+  <script src="/assets/libraries/gridjs.umd.js"></script>
+  <h3 id="Parameters" style="padding: 10px">Parameters</h3>
+  <p style="margin-left: 1vw"></p>
+  <div id="wrapper" style="overflow-x: scroll; scrollbar-width: none;"></div>
+<script>
+  new gridjs.Grid({
+    data: [["ingredients","array of item names","items used as input (without a shape) for the recipe."],["priority","integer","Item used as output for the furnace recipe."],["result","array of item names","these items are the result."],["tags","array of strings","Item used as input for the furnace recipe."]],
+    columns: ["Name","Type","Description"],
+    search: true,
+    height:'100%',
+    width:'100%',
+    style: {
+      table: {
+        width: '30vw',
+      },
+    }
+  }).render(document.getElementById("wrapper"));
+</script>
+
+</div>
+    
 <div class="container" id="node_example_4_0_2">
   <h2 class="object_name" id="ShapelessRecipeExample:">{ Shapeless Recipe Example: }</h2>
   <div style="margin-left: 1.5vw">
@@ -423,55 +326,6 @@
   </div>
 </div>
 
-<div class="container" id="node_head_0_3">
-        <div class="object_name">
-<div class="object_inline_name"><h3 id="Parameters" style="font-size: null; text-align: left">Parameters</h3></div>
-            <div class="object_description">
-                <p></p>
-            </div>
-        </div>
-        </div>
-
-<div class="container" id="node_head_0_4">
-        <div class="object_name">
-<div class="object_inline_name"><h4 id="ingredients" style="font-size: null; text-align: left">ingredients</h4></div>
-            <div class="object_description">
-                <p></p><p>items used as input (without a shape) for the recipe.</p>
-<p></p>
-            </div>
-        </div>
-        </div>
-
-<div class="container" id="node_head_1_4">
-        <div class="object_name">
-<div class="object_inline_name"><h4 id="priority" style="font-size: null; text-align: left">priority</h4></div>
-            <div class="object_description">
-                <p></p><p>Item used as output for the furnace recipe.</p>
-<p></p>
-            </div>
-        </div>
-        </div>
-
-<div class="container" id="node_head_2_4">
-        <div class="object_name">
-<div class="object_inline_name"><h4 id="result" style="font-size: null; text-align: left">result</h4></div>
-            <div class="object_description">
-                <p></p><p>these items are the result.</p>
-<p></p>
-            </div>
-        </div>
-        </div>
-
-<div class="container" id="node_head_3_4">
-        <div class="object_name">
-<div class="object_inline_name"><h4 id="tags" style="font-size: null; text-align: left">tags</h4></div>
-            <div class="object_description">
-                <p></p><p>Item used as input for the furnace recipe.</p>
-<p></p>
-            </div>
-        </div>
-        </div>
-
 <div class="container" id="node_head_5_2">
         <div class="object_name">
 <div class="object_inline_name"><h2 id="SmithingTransformRecipe" style="font-size: null; text-align: left">Smithing Transform Recipe</h2></div>
@@ -483,6 +337,28 @@
         </div>
         </div>
 
+<div class="container" id="node_table_0_3">
+  <script src="/assets/libraries/gridjs.umd.js"></script>
+  <h3 id="Parameters" style="padding: 10px">Parameters</h3>
+  <p style="margin-left: 1vw"></p>
+  <div id="wrapper" style="overflow-x: scroll; scrollbar-width: none;"></div>
+<script>
+  new gridjs.Grid({
+    data: [["addition","item name","The material needed to perform the transform operation. In case of stackable items, only 1 item is consumed. The only accepted item is \"minecraft:netherite_ingot\". Items must have the \"minecraft:transform_materials\" tag to be accepted into the respective UI slot."],["base","item name","The item to transform. Its properties will be copied to \"result\". The only accepted items are armor and tools. Items must have the \"minecraft:transformable_items\" tag to be accepted into the respective UI slot."],["result","item name","The item to transform to."],["tags","array of strings","The crafting stations the recipe is compatible with. The only accepted value is \"smithing_table\"."],["template","item name","The template needed to perform the transform operation. In case of stackable items, only 1 item is consumed. Items must have the \"minecraft:transform_templates\" tag to be accepted into the respective UI slot."]],
+    columns: ["Name","Type","Description"],
+    search: true,
+    height:'100%',
+    width:'100%',
+    style: {
+      table: {
+        width: '30vw',
+      },
+    }
+  }).render(document.getElementById("wrapper"));
+</script>
+
+</div>
+    
 <div class="container" id="node_example_5_0_2">
   <h2 class="object_name" id="SmithingTransformRecipeExample:">{ Smithing Transform Recipe Example: }</h2>
   <div style="margin-left: 1.5vw">
@@ -507,65 +383,6 @@
   </div>
 </div>
 
-<div class="container" id="node_head_0_3">
-        <div class="object_name">
-<div class="object_inline_name"><h3 id="Parameters" style="font-size: null; text-align: left">Parameters</h3></div>
-            <div class="object_description">
-                <p></p>
-            </div>
-        </div>
-        </div>
-
-<div class="container" id="node_head_0_4">
-        <div class="object_name">
-<div class="object_inline_name"><h4 id="addition" style="font-size: null; text-align: left">addition</h4></div>
-            <div class="object_description">
-                <p></p><p>The material needed to perform the transform operation. In case of stackable items, only 1 item is consumed. The only accepted item is “minecraft:netherite_ingot”. Items must have the “minecraft:transform_materials” tag to be accepted into the respective UI slot.</p>
-<p></p>
-            </div>
-        </div>
-        </div>
-
-<div class="container" id="node_head_1_4">
-        <div class="object_name">
-<div class="object_inline_name"><h4 id="base" style="font-size: null; text-align: left">base</h4></div>
-            <div class="object_description">
-                <p></p><p>The item to transform. Its properties will be copied to “result”. The only accepted items are armor and tools. Items must have the “minecraft:transformable_items” tag to be accepted into the respective UI slot.</p>
-<p></p>
-            </div>
-        </div>
-        </div>
-
-<div class="container" id="node_head_2_4">
-        <div class="object_name">
-<div class="object_inline_name"><h4 id="result" style="font-size: null; text-align: left">result</h4></div>
-            <div class="object_description">
-                <p></p><p>The item to transform to.</p>
-<p></p>
-            </div>
-        </div>
-        </div>
-
-<div class="container" id="node_head_3_4">
-        <div class="object_name">
-<div class="object_inline_name"><h4 id="tags" style="font-size: null; text-align: left">tags</h4></div>
-            <div class="object_description">
-                <p></p><p>The crafting stations the recipe is compatible with. The only accepted value is “smithing_table”.</p>
-<p></p>
-            </div>
-        </div>
-        </div>
-
-<div class="container" id="node_head_4_4">
-        <div class="object_name">
-<div class="object_inline_name"><h4 id="template" style="font-size: null; text-align: left">template</h4></div>
-            <div class="object_description">
-                <p></p><p>The template needed to perform the transform operation. In case of stackable items, only 1 item is consumed. Items must have the “minecraft:transform_templates” tag to be accepted into the respective UI slot.</p>
-<p></p>
-            </div>
-        </div>
-        </div>
-
 <div class="container" id="node_head_6_2">
         <div class="object_name">
 <div class="object_inline_name"><h2 id="SmithingTrimRecipe" style="font-size: null; text-align: left">Smithing Trim Recipe</h2></div>
@@ -577,6 +394,28 @@
         </div>
         </div>
 
+<div class="container" id="node_table_0_3">
+  <script src="/assets/libraries/gridjs.umd.js"></script>
+  <h3 id="Parameters" style="padding: 10px">Parameters</h3>
+  <p style="margin-left: 1vw"></p>
+  <div id="wrapper" style="overflow-x: scroll; scrollbar-width: none;"></div>
+<script>
+  new gridjs.Grid({
+    data: [["addition","item name or item tag","The material needed to perform the trim operation. It defines the color in which the pattern will be applied to the item. In case of stackable items, only 1 item is consumed. Items must have the \"minecraft:trim_materials\" tag to be accepted into the respective UI slot."],["base","item name or item tag","The item to trim. Its properties will be preserved. The only accepted items are armors. Items must have the \"minecraft:trimmable_armors\" tag to be accepted into the respective UI slot."],["tags","array of strings","The crafting stations the recipe is compatible with. The only accepted value is \"smithing_table\"."],["template","item name or item tag","The template needed to perform the trim operation. It defines the pattern which will be applied to the item. In case of stackable items, only 1 item is consumed. Items must have the \"minecraft:trim_templates\" tag to be accepted into the respective UI slot."]],
+    columns: ["Name","Type","Description"],
+    search: true,
+    height:'100%',
+    width:'100%',
+    style: {
+      table: {
+        width: '30vw',
+      },
+    }
+  }).render(document.getElementById("wrapper"));
+</script>
+
+</div>
+    
 <div class="container" id="node_example_6_0_2">
   <h2 class="object_name" id="SmithingTrimRecipeExample:">{ Smithing Trim Recipe Example: }</h2>
   <div style="margin-left: 1.5vw">
@@ -599,39 +438,6 @@
 }</code></pre>
   </div>
 </div>
-
-<div class="container" id="node_head_0_3">
-        <div class="object_name">
-<div class="object_inline_name"><h3 id="Parameters" style="font-size: null; text-align: left">Parameters</h3></div>
-            <div class="object_description">
-                <p></p>
-            </div>
-        </div>
-        </div>
-
-<div class="container" id="node_head_0_4">
-        <div class="object_name">
-<div class="object_inline_name"><h4 id="addition" style="font-size: null; text-align: left">addition</h4></div>
-            <div class="object_description">
-                <p></p><p>The material needed to perform the trim operation. It defines the color in which the pattern will be applied to the item. In case of stackable items, only 1 item is consumed. Items must have the “minecraft:trim_materials” tag to be accepted into the respective UI slot.</p>
-<p></p>
-            </div>
-        </div>
-        </div>
-
-<div class="container" id="node_head_1_4">
-        <div class="object_name">
-<div class="object_inline_name"><h4 id="base" style="font-size: null; text-align: left">base</h4></div>
-            <div class="object_description">
-                <p></p><p>The item to trim. Its properties will be preserved. The only accepted items are armors. Items must have the “minecraft:trimmable_armors” tag to be accepted into the respective UI slot.</p>
-<p></p>
-            </div>
-        </div>
-        </div>
-
-
-
-
 
     <script src="/assets/js/LanguageHandler.js"></script>
         <script src="/assets/js/occlusionPilot.js"></script>
@@ -690,4 +496,46 @@
                 };
                 </script>
                 </div>
+                <div class="loading_thingy_container" style="
+      position: sticky;
+      left: 50%;
+      bottom: 50%;
+      display: flex;
+      justify-content: center;
+      opacity: 0;
+    "><div class="loading_thingy"></div></div>
+        <style>
+        .loading_thingy {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      position: relative;
+      animation: rotate 1s linear infinite
+    }
+    .loading_thingy::before,
+    .loading_thingy::after {
+      content: "";
+      box-sizing: border-box;
+      position: absolute;
+      inset: 0px;
+      border-radius: 50%;
+      border: 5px solid rgba(207,207,207,0.53);
+      animation: prixClipFix 2s linear infinite ;
+    }
+    .loading_thingy::after {
+      inset: 8px;
+      transform: rotate3d(90, 90, 0, 180deg );
+      border-color: rgba(255,140,140,0.56);
+    }
+
+    @keyframes rotate {
+      0%   {transform: rotate(0deg)}
+      100%   {transform: rotate(360deg)}
+    }
+    @keyframes prixClipFix {
+      0%   {clip-path:polygon(50% 50%,0 0,0 0,0 0,0 0,0 0)}
+      50%  {clip-path:polygon(50% 50%,0 0,100% 0,100% 0,100% 0,100% 0)}
+      75%, 100%  {clip-path:polygon(50% 50%,0 0,100% 0,100% 100%,100% 100%,100% 100%)}
+    }
+</style>
         </body></html>

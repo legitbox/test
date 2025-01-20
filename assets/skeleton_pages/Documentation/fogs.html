@@ -33,16 +33,6 @@
         </div>
         </div>
 
-<div class="container" id="node_head_0_1">
-        <div class="object_name">
-<div class="object_inline_name"><h1 id="FogDefinitions" style="font-size: null; text-align: left">Fog Definitions</h1></div>
-            <div class="object_description">
-                <p></p><p>Fogs are setup in Json files under the resource_packs, /‘name of pack’/, fogs directory.</p>
-<p></p>
-            </div>
-        </div>
-        </div>
-
 <div class="container" id="node_head_0_2">
         <div class="object_name">
 <div class="object_inline_name"><h2 id="FogSchema" style="font-size: null; text-align: left">Fog Schema</h2></div>
@@ -456,32 +446,6 @@
         </div>
         </div>
 
-<div class="container" id="node_head_1_1">
-        <div class="object_name">
-<div class="object_inline_name"><h1 id="ActiveFogStack" style="font-size: null; text-align: left">Active Fog Stack</h1></div>
-            <div class="object_description">
-                <p></p><p>The active fog stack is used to determine which fog setting to use at any given time in the game. Each player has a unique fog stack.</p>
-<p>Whenever the game needs to determine the values for the fog, it will start at the top of the fog stack and check down it until it has found a value for the current setting type. So, if a fog setting on the stack does not not have the setting it’s looking for, then it will continue down the stack and check in. If it finds no such setting, it will instead use the defaults defined by the engine.</p>
-<p>The fog stack initially is setup as follows. Starting at the bottom:</p>
-<ul>
-<li>
-<p>Engine Default: hard code values.</p>
-</li>
-<li>
-<p>Data Default: The default data driven settings.</p>
-</li>
-<li>
-<p>Biomes: The settings defined to be on each biome.</p>
-</li>
-<li>
-<p>Command: The settings set on the player by server commands.</p>
-</li>
-</ul>
-<p></p>
-            </div>
-        </div>
-        </div>
-
 <div class="container" id="node_head_0_2">
         <div class="object_name">
 <div class="object_inline_name"><h2 id="Biomes" style="font-size: null; text-align: left">Biomes</h2></div>
@@ -517,36 +481,6 @@
 <div class="object_inline_name"><h2 id="EngineDefault" style="font-size: null; text-align: left">Engine Default</h2></div>
             <div class="object_description">
                 <p></p><p>Hard coded values in case there are no data driven values; the implicit bottom of the stack.</p>
-<p></p>
-            </div>
-        </div>
-        </div>
-
-<div class="container" id="node_head_2_1">
-        <div class="object_name">
-<div class="object_inline_name"><h1 id="Biomes" style="font-size: null; text-align: left">Biomes</h1></div>
-            <div class="object_description">
-                <p></p><p>Fog settings can be determined for the biomes with “biomes_client.json”. In each biome entry, you can have a variable called “fog_identifier” and set a name that matches the fog setting you want to use with this biome.</p>
-<p>The “default” entry can also be set this way and will be used underneath the biomes entries in the active fog <a href="http://stack.So">stack.So</a>, a biome’s fog setting does not completely replace the default’s setting, but instead the biome is read on top of the default as described in the “Active Fog Stack” section.</p>
-<p>The “default” biome entry has the tag “remove_all_prior_fog” that is defaulted to “false”.</p>
-<p>While set to false (or if the tag is not entered), missing fog definitions will be filled in by any lower resource pack that does have the definition filled.</p>
-<p>When set to true, all previous fog definitions in resource packs before the current pack that enabled it will be cleared, effectively making the current resource pack the new starting point for all fogs.</p>
-<p>In each biome (including “default”) there is the tag “inherit_from_prior_fog” that is also defaulted to “false”.</p>
-<p>While set to false (or if the tag is not entered), the current resource pack’s biome will overwrite the currently stored “fog_identifier” tag with its own.</p>
-<p>When set to true, the “fog_identifier” tags from all matching biomes will be added together and create a new merged fog definition for that biome.</p>
-<p></p>
-            </div>
-        </div>
-        </div>
-
-<div class="container" id="node_head_3_1">
-        <div class="object_name">
-<div class="object_inline_name"><h1 id="FogCommand" style="font-size: null; text-align: left">Fog Command</h1></div>
-            <div class="object_description">
-                <p></p><p>“/fog” can be used to manage fog settings in this layer of the active fog stack for each player.</p>
-<p>Fog settings in this layer are ordered via the “push”, “pop”, “remove” modes of the “/fog” command described below.</p>
-<p>Fog Settings are evaluated top-to bottom in the active fog stack which includes top-to-bottom in this layer first.</p>
-<p>Fog settings in this layer are saved and then restored on world load per player. In this way a fog setting that is pushed before a world save, will still apply after a world load and can then be popped.</p>
 <p></p>
             </div>
         </div>
@@ -639,4 +573,46 @@
                 };
                 </script>
                 </div>
+                <div class="loading_thingy_container" style="
+      position: sticky;
+      left: 50%;
+      bottom: 50%;
+      display: flex;
+      justify-content: center;
+      opacity: 0;
+    "><div class="loading_thingy"></div></div>
+        <style>
+        .loading_thingy {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      position: relative;
+      animation: rotate 1s linear infinite
+    }
+    .loading_thingy::before,
+    .loading_thingy::after {
+      content: "";
+      box-sizing: border-box;
+      position: absolute;
+      inset: 0px;
+      border-radius: 50%;
+      border: 5px solid rgba(207,207,207,0.53);
+      animation: prixClipFix 2s linear infinite ;
+    }
+    .loading_thingy::after {
+      inset: 8px;
+      transform: rotate3d(90, 90, 0, 180deg );
+      border-color: rgba(255,140,140,0.56);
+    }
+
+    @keyframes rotate {
+      0%   {transform: rotate(0deg)}
+      100%   {transform: rotate(360deg)}
+    }
+    @keyframes prixClipFix {
+      0%   {clip-path:polygon(50% 50%,0 0,0 0,0 0,0 0,0 0)}
+      50%  {clip-path:polygon(50% 50%,0 0,100% 0,100% 0,100% 0,100% 0)}
+      75%, 100%  {clip-path:polygon(50% 50%,0 0,100% 0,100% 100%,100% 100%,100% 100%)}
+    }
+</style>
         </body></html>

@@ -11,13 +11,15 @@ function loadHTMLData() {
             console.error('Error fetching HTML:', error);
         });
 }
-
 async function main() {
     /// data setup
     const skeletonPageData = document.getElementsByClassName("scroll");
     const skeletonPageDataContainers = document.getElementsByClassName("container");
     let skeletonPageDataContainersLen = skeletonPageDataContainers.length;
 
+    function sleep(ms) {
+        return new Promise(resolve => setTimeout(resolve, ms));
+    }
 
     let el = skeletonPageData[0].querySelectorAll(
 
@@ -46,44 +48,47 @@ async function main() {
         currentIndex = nextLimit;
     }
 
-    const observer = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
+    document.addEventListener("DOMContentLoaded", function() {
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
 
-                observer.unobserve(entry.target);
+                    observer.unobserve(entry.target);
 
-                appendContainers();
-                if (currentIndex < skeletonPageDataContainersLen) {
-                    console.log(`observing ${currentIndex}`);
-                    observer.observe(skeletonPageDataContainers[currentIndex]);
-                    el = skeletonPageData[0].querySelectorAll(
-
-                        ".container, .navbar, .index_container, .inline_container",
-                    );
-                } else {
-                    console.log(`${currentIndex} nad ${skeletonPageDataContainersLen}`);
-                    console.log("All containers have been loaded.");
+                    document.querySelector(".loading_thingy_container").style.opacity = 1;
+                    appendContainers();
+                    if (currentIndex < skeletonPageDataContainersLen) {
+                        console.log(`observing ${currentIndex}`);
+                        observer.observe(skeletonPageDataContainers[currentIndex]);
+                        el = skeletonPageData[0].querySelectorAll(
+                            ".container, .navbar, .index_container, .inline_container",
+                        );
+                    } else {
+                        document.querySelector(".loading_thingy_container").style.opacity = 0;
+                        console.log(`${currentIndex} nad ${skeletonPageDataContainersLen}`);
+                        console.log("All containers have been loaded.");
+                    }
                 }
-            }
+            });
         });
-    });
 
-    if (currentIndex <= skeletonPageDataContainers.length) {
-        console.log(`observing ${currentIndex}`);
-        observer.observe(skeletonPageDataContainers[currentIndex]);
-    }
-
-    // occlusion pilot
-    skeletonPageData[0].addEventListener("scroll", function () {
-        for (const item of el) {
-            item.style.backdropFilter = "blur(0px)";
-            clearTimeout(blurTimeout);
+        if (currentIndex <= skeletonPageDataContainers.length) {
+            console.log(`observing ${currentIndex}`);
+            observer.observe(skeletonPageDataContainers[currentIndex]);
         }
-        blurTimeout = setTimeout(() => {
+
+        // occlusion pilot
+        skeletonPageData[0].addEventListener("scroll", function () {
             for (const item of el) {
-                item.style.backdropFilter = "blur(2px)";
+                item.style.backdropFilter = "blur(0px)";
+                clearTimeout(blurTimeout);
             }
-        }, 100);
+            blurTimeout = setTimeout(() => {
+                for (const item of el) {
+                    item.style.backdropFilter = "blur(2px)";
+                }
+            }, 100);
+        });
     });
 }
 main();

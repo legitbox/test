@@ -33,18 +33,6 @@
         </div>
         </div>
 
-<div class="container" id="node_head_0_1">
-        <div class="object_name">
-<div class="object_inline_name"><h1 id="ClientEntityDocumentation" style="font-size: null; text-align: left">Client Entity Documentation</h1></div>
-            <div class="object_description">
-                <p></p><p>Client entity definitions are contained within a Resource Pack.</p>
-<p>To start, create a new folder and name it “entity” inside the root of the Resource Pack. In the entity folder create a JSON file and give it a name.The JSON file needs a format version and minecraft:client_entity information.</p>
-<p>The minecraft:client_entity section contains the description for the entity. Under description there are a number of things that you can set about an entity. Generally, this file is defining what resources a mob requires and gives a friendly name to each, that the other definition files can use.</p>
-<p></p>
-            </div>
-        </div>
-        </div>
-
 <div class="container" id="node_example_0_0_2">
   <h2 class="object_name" id="ExamplecliententitydefinitionsJSONforthepig">{ Example client entity definitions JSON for the pig }</h2>
   <div style="margin-left: 1.5vw">
@@ -337,65 +325,6 @@
   </div>
 </div>
 
-<div class="container" id="node_head_1_1">
-        <div class="object_name">
-<div class="object_inline_name"><h1 id="Data-DrivenSpawning" style="font-size: null; text-align: left">Data-Driven Spawning</h1></div>
-            <div class="object_description">
-                <p></p><p>Data-Driven spawning allows you to adjust the spawn conditions of mobs, including new mobs added to the game to spawn naturally in biomes, add / remove a mob’s spawn egg to the creative inventory and set the mob’s spawn egg, and add / remove a to the / summon command</p>
-<p></p>
-            </div>
-        </div>
-        </div>
-
-<div class="container" id="node_example_1_0_1">
-  <h2 class="object_name" id="ExampleSpawnRulesforthezombie">{ Example Spawn Rules for the zombie }</h2>
-  <div style="margin-left: 1.5vw">
-    <link rel="stylesheet" href="/assets/styles/github-dark.css">
-    <script src="/assets/libraries/highlight.min.js"></script>
-    <script defer="">hljs.highlightAll();</script>
-    <pre><code>"format_version": "1.8.0",
-  "minecraft:spawn_rules": {
-    "description": {
-      "identifier": "minecraft:zombie",
-      "population_control": "monster"
-    },
-    "conditions": [
-      {
-        "minecraft:spawns_on_surface": {},
-        "minecraft:brightness_filter": {
-          "min": 0,
-          "max": 7,
-          "adjust_for_weather": true
-        },
-        "minecraft:difficulty_filter": {
-          "min": "easy",
-          "max": "hard"
-        },
-        "minecraft:weight": {
-          "default": 100
-        },
-        "minecraft:herd": {
-          "min_size": 2,
-          "max_size": 4
-        },
-        "minecraft:permute_type": [
-          {
-            "weight": 95
-          },
-          {
-            "weight": 5,
-            "entity_type": "minecraft:zombie_villager"
-          }
-        ],
-        "minecraft:biome_filter": {
-          "test": "has_biome_tag", "operator": "==", "value": "monster"
-        }
-      }
-    ]
-  }</code></pre>
-  </div>
-</div>
-
 <div class="container" id="node_head_0_2">
         <div class="object_name">
 <div class="object_inline_name"><h2 id="SpawnRules" style="font-size: null; text-align: left">Spawn Rules</h2></div>
@@ -405,636 +334,909 @@
         </div>
         </div>
 
-<div class="container" id="node_head_0_3">
+<div class="container" id="node_table_0_3">
+  <script src="/assets/libraries/gridjs.umd.js"></script>
+  <h3 id="BiomeTags" style="padding: 10px">Biome Tags</h3>
+  <p style="margin-left: 1vw">Each biome in the game has one or more tags. These are used to determine what biomes mobs spawn in. Here is the list of Biome tags that can be used:</p>
+  <div id="wrapper" style="overflow-x: scroll; scrollbar-width: none;"></div>
+<script>
+  new gridjs.Grid({
+    data: [["animal"],["beach"],["birch"],["cold"],["dark_oak"],["deep"],["desert"],["edge"],["extreme_hills"],["flower_forest"],["forest"],["frozen"],["hills"],["ice"],["ice_plains"],["jungle"],["lakes"],["lukewarm"],["mega"],["mesa"],["monster"],["mooshroom_island"],["mountain"],["mutated"],["nether"],["ocean"],["plains"],["plateau"],["river"],["roofed"],["savanna"],["shore"],["stone"],["swamp"],["taiga"],["the_end"],["warm"]],
+    columns: ["Tag"],
+    search: true,
+    height:'100%',
+    width:'100%',
+    style: {
+      table: {
+        width: '30vw',
+      },
+    }
+  }).render(document.getElementById("wrapper"));
+</script>
+
+</div>
+    
+<div class="container" id="node_head_1_3">
         <div class="object_name">
-<div class="object_inline_name"><h3 id="BiomeTags" style="font-size: null; text-align: left">Biome Tags</h3></div>
+<div class="object_inline_name"><h3 id="Conditions" style="font-size: null; text-align: left">Conditions</h3></div>
             <div class="object_description">
-                <p></p><p>Each biome in the game has one or more tags. These are used to determine what biomes mobs spawn in. Here is the list of Biome tags that can be used:</p>
+                <p></p><p>Conditions contain different components that players can use to customize natural biome spawning.</p>
 <p></p>
             </div>
         </div>
         </div>
 
-<div class="container" id="node_head_0_4">
+<div class="container" id="node_table_0_4">
+  <script src="/assets/libraries/gridjs.umd.js"></script>
+  <h4 id="Components" style="padding: 10px">Components</h4>
+  <p style="margin-left: 1vw"></p>
+  <div id="wrapper" style="overflow-x: scroll; scrollbar-width: none;"></div>
+<script>
+  new gridjs.Grid({
+    data: [["minecraft:biome_filter","This component allows the players to specify which biomes the mob spawns in. Check below to see which Biome Tags exist, and what each biome is tagged as."],["minecraft:brightness_filter","This component allows players to set the light level range that causes the mob to spawn."],["minecraft:density_limit","This component allows players to determine the density cap limits for the specified mob type."],["minecraft:difficulty_filter","This component allows players determine what mobs spawn when certain difficulty levels are set."],["minecraft:herd","This component allows players to determine the herd size of animals."],["minecraft:spawns_on_surface","This component allows the mob to spawn on the ground. Adding the component causes it to be true, removing it causes the mob to stop spawning on the surface."],["minecraft:spawns_underwater","This component allows the mob to spawn underwater. Adding the component causes it to be true, removing it causes the mob to stop spawning underwater."],["minecraft:weight","This component allows players to give a priority to how often that mob should spawn. Mobs with lower weight values have a higher chance to spawn than mobs with higher weight values."]],
+    columns: ["Name","Description"],
+    search: true,
+    height:'100%',
+    width:'100%',
+    style: {
+      table: {
+        width: '30vw',
+      },
+    }
+  }).render(document.getElementById("wrapper"));
+</script>
+
+</div>
+    
+<div class="container" id="node_head_2_3">
         <div class="object_name">
-<div class="object_inline_name"><h4 id="animal" style="font-size: null; text-align: left">animal</h4></div>
+<div class="object_inline_name"><h3 id="GettingStarted" style="font-size: null; text-align: left">Getting Started</h3></div>
             <div class="object_description">
-                <p></p>
+                <p></p><p>New Spawn Rules are contained within a Behavior Pack. To begin, create a new folder named “spawn_rules” in the root of the Behavior Pack that you want to add the new biome spawn rules in. In the spawn_rules folder, create a JSON file and give it a name. The JSON file needs a format, description and conditions.Spawn rules contain description and conditionsAll Spawn Rules JSON need to have an ID (located under the description section). Similar to other identifiers, it follows the convention “namespace:name”. The minecraft namespace is reserved for the vanilla Minecraft rules.When changing an existing mob use the ID that appears in the entity JSON for that entity. When creating your own mob, make sure the mobs have the same ID in all the entity’s JSON files.</p>
+<p>Spawn Rules also needs to define the pool that is used for population control.Each pool has their own spawn limit, By setting an entity to a pool it will spawn as long as that pool hasn’t reached the spawn limit.</p>
+<p>There are 3 pools that entities can be assigned to :</p>
+<p>-animal</p>
+<p>-water_animal</p>
+<p>-monster</p>
+<p></p>
             </div>
         </div>
         </div>
 
-<div class="container" id="node_head_1_4">
-        <div class="object_name">
-<div class="object_inline_name"><h4 id="beach" style="font-size: null; text-align: left">beach</h4></div>
-            <div class="object_description">
-                <p></p>
-            </div>
-        </div>
-        </div>
-
-<div class="container" id="node_head_2_4">
-        <div class="object_name">
-<div class="object_inline_name"><h4 id="birch" style="font-size: null; text-align: left">birch</h4></div>
-            <div class="object_description">
-                <p></p>
-            </div>
-        </div>
-        </div>
-
-<div class="container" id="node_head_3_4">
-        <div class="object_name">
-<div class="object_inline_name"><h4 id="cold" style="font-size: null; text-align: left">cold</h4></div>
-            <div class="object_description">
-                <p></p>
-            </div>
-        </div>
-        </div>
-
-<div class="container" id="node_head_4_4">
-        <div class="object_name">
-<div class="object_inline_name"><h4 id="dark_oak" style="font-size: null; text-align: left">dark_oak</h4></div>
-            <div class="object_description">
-                <p></p>
-            </div>
-        </div>
-        </div>
-
-<div class="container" id="node_head_5_4">
-        <div class="object_name">
-<div class="object_inline_name"><h4 id="deep" style="font-size: null; text-align: left">deep</h4></div>
-            <div class="object_description">
-                <p></p>
-            </div>
-        </div>
-        </div>
-
-<div class="container" id="node_head_6_4">
-        <div class="object_name">
-<div class="object_inline_name"><h4 id="desert" style="font-size: null; text-align: left">desert</h4></div>
-            <div class="object_description">
-                <p></p>
-            </div>
-        </div>
-        </div>
-
-<div class="container" id="node_head_7_4">
-        <div class="object_name">
-<div class="object_inline_name"><h4 id="edge" style="font-size: null; text-align: left">edge</h4></div>
-            <div class="object_description">
-                <p></p>
-            </div>
-        </div>
-        </div>
-
-<div class="container" id="node_head_8_4">
-        <div class="object_name">
-<div class="object_inline_name"><h4 id="extreme_hills" style="font-size: null; text-align: left">extreme_hills</h4></div>
-            <div class="object_description">
-                <p></p>
-            </div>
-        </div>
-        </div>
-
-<div class="container" id="node_head_9_4">
-        <div class="object_name">
-<div class="object_inline_name"><h4 id="flower_forest" style="font-size: null; text-align: left">flower_forest</h4></div>
-            <div class="object_description">
-                <p></p>
-            </div>
-        </div>
-        </div>
-
-<div class="container" id="node_head_10_4">
-        <div class="object_name">
-<div class="object_inline_name"><h4 id="forest" style="font-size: null; text-align: left">forest</h4></div>
-            <div class="object_description">
-                <p></p>
-            </div>
-        </div>
-        </div>
-
-<div class="container" id="node_head_11_4">
-        <div class="object_name">
-<div class="object_inline_name"><h4 id="frozen" style="font-size: null; text-align: left">frozen</h4></div>
-            <div class="object_description">
-                <p></p>
-            </div>
-        </div>
-        </div>
-
-<div class="container" id="node_head_12_4">
-        <div class="object_name">
-<div class="object_inline_name"><h4 id="hills" style="font-size: null; text-align: left">hills</h4></div>
-            <div class="object_description">
-                <p></p>
-            </div>
-        </div>
-        </div>
+<div class="container" id="node_table_3_3">
+  <script src="/assets/libraries/gridjs.umd.js"></script>
+  <h3 id="TaggedBiomes" style="padding: 10px">Tagged Biomes</h3>
+  <p style="margin-left: 1vw"></p>
+  <div id="wrapper" style="overflow-x: scroll; scrollbar-width: none;"></div>
+<script>
+  new gridjs.Grid({
+    data: [["Beach","monster, beach, warm"],["Birch Forest","animal, monster, birch, forest"],["Birch Forest Hills","animal, monster, birch, forest, hills"],["Birch Forest Hills M","animal, monster, forest, birch, mutated, hills"],["Birch Forest M","animal, monster, forest, birch, mutated"],["Cold Ocean","ocean, cold, monster"],["Cold Taiga M","animal, monster, taiga, cold, mutated"],["Dark Forest","animal, monster, forest, roofed"],["Dark Forest M","animal, monster, roofed, forest, mutated"],["Deep Cold Ocean","ocean, cold, monster, deep"],["Deep Frozen Ocean","ocean, frozen, monster, deep"],["Deep Lukewarm Ocean","ocean, lukewarm, monster, deep"],["Deep Ocean","ocean, monster, deep"],["Deep Warm Ocean","ocean, warm, monster, deep"],["Desert","monster, desert"],["Desert Hills","monster, desert, hills"],["Desert M","monster, desert, mutated"],["Forest","animal, monster, forest"],["Forest Hills","animal, monster, hills"],["Forest M","monster, flower_forest, forest, mutated"],["Frozen Ocean","ocean, frozen, monster"],["Frozen River","river, frozen"],["Giant Tree Taiga","animal, monster, taiga, mega"],["Giant Tree Taiga Hills","animal, monster, taiga, mega, hills"],["Giant Tree Taiga Hills M","animal, monster, taiga, mega, hills, mutated"],["Giant Trees Taiga M","animal, monster, mutated, mega"],["Jungle","animal, monster, jungle"],["Jungle Edge","animal, monster, jungle, edge"],["Jungle Edge M","animal, monster, jungle, edge, mutated"],["Jungle Hills","animal, monster, jungle, hills"],["Jungle M","animal, monster, jungle, mutated"],["Lukewarm Ocean","ocean, lukewarm, monster"],["Mesa","monster"],["Mesa M","animal, monster, mesa, mutated"],["Mesa Plateau","monster, mesa"],["Mesa Plateau M","monster, mesa, plateau, mutated"],["Mesa Plateau Stone","monster, plateau"],["Mesa Plateau Stone M","monster, mesa, plateau, mutated, stone"],["Mountain","animal, monster, extreme_hills"],["Mountain + M","animal, monster, extreme_hills, mutated, forest"],["Mountain Edge","animal, monster, extreme_hills, edge, mountain"],["Mountain M","animal, monster, extreme_hills, mutated"],["Mushroom Fields","mooshroom_island"],["Mushroom Fields Shore","mooshroom_island, shore"],["Nether","nether"],["Ocean","ocean, monster"],["Plains","animal, monster, plains"],["Plains M","animal, monster, plains, mutated"],["River","river"],["Savanna","animal, monster, savanna"],["Savanna M","animal, monster, savanna, mutated"],["Savanna Plateau","animal, monster, savanna"],["Savanna Plateau M","animal, monster, savanna, plateau, mutated"],["Snowy Beach","monster, beach, cold"],["Snowy Mountains","frozen, ice, mountain"],["Snowy Taiga","animal, monster, taiga, cold"],["Snowy Taiga Hills","animal, monster, taiga, cold, hills"],["Snowy Tundra","frozen, ice_plain, ice"],["Snowy Tundra M","monster, frozen, ice_plains, mutated"],["Stone Shore","monster, beach, stone"],["Swamp","animal, monster, swamp"],["Swamp M","animal, monster, swamp, mutated"],["Taiga","animal, monster, taiga"],["Taiga Hills","animal, monster, taiga, hills"],["Taiga M","animal, monster, taiga, mutated"],["The End","the_end"],["Warm Ocean","ocean, warm, monster"],["Wooded Mountain","animal, monster, extreme_hills, forest, mountain"]],
+    columns: ["Biome","Tags"],
+    search: true,
+    height:'100%',
+    width:'100%',
+    style: {
+      table: {
+        width: '30vw',
+      },
+    }
+  }).render(document.getElementById("wrapper"));
+</script>
+
+</div>
+    
+<div class="container" id="node_table_0_2">
+  <script src="/assets/libraries/gridjs.umd.js"></script>
+  <h2 id="actor_health" style="padding: 10px">actor_health</h2>
+  <p style="margin-left: 1vw">Tests the health of the subject.</p>
+  <div id="wrapper" style="overflow-x: scroll; scrollbar-width: none;"></div>
+<script>
+  new gridjs.Grid({
+    data: [["operator","String","equals","(Optional) The comparison to apply with 'value'."],["subject","String","self","(Optional) The subject of this filter test."],["value","Integer","","(Required) An integer value."]],
+    columns: ["Name","Default","Type","Description"],
+    search: true,
+    height:'100%',
+    width:'100%',
+    style: {
+      table: {
+        width: '30vw',
+      },
+    }
+  }).render(document.getElementById("wrapper"));
+</script>
+
+</div>
+    
+<div class="container" id="node_example_0_0_2">
+  <h2 class="object_name" id="Full..">{ Full.. }</h2>
+  <div style="margin-left: 1.5vw">
+    <link rel="stylesheet" href="/assets/styles/github-dark.css">
+    <script src="/assets/libraries/highlight.min.js"></script>
+    <script defer="">hljs.highlightAll();</script>
+    <pre><code>{ "test": "actor_health", "subject": "self", "operator": "equals", "value": "0" }</code></pre>
+  </div>
+</div>
+
+<div class="container" id="node_example_0_1_2">
+  <h2 class="object_name" id="Short(usingDefaults)..">{ Short (using Defaults).. }</h2>
+  <div style="margin-left: 1.5vw">
+    <link rel="stylesheet" href="/assets/styles/github-dark.css">
+    <script src="/assets/libraries/highlight.min.js"></script>
+    <script defer="">hljs.highlightAll();</script>
+    <pre><code>{ "test": "actor_health", "value": "0" }</code></pre>
+  </div>
+</div>
+
+<div class="container" id="node_table_1_2">
+  <script src="/assets/libraries/gridjs.umd.js"></script>
+  <h2 id="all_slots_empty" style="padding: 10px">all_slots_empty</h2>
+  <p style="margin-left: 1vw">Returns true when the designated equipment location for the subject entity is completely empty.</p>
+  <div id="wrapper" style="overflow-x: scroll; scrollbar-width: none;"></div>
+<script>
+  new gridjs.Grid({
+    data: [["operator","String","equals","(Optional) The comparison to apply with 'value'."],["subject","String","self","(Optional) The subject of this filter test."],["value","String","any","(Optional) The equipment location to test"]],
+    columns: ["Name","Default","Type","Description"],
+    search: true,
+    height:'100%',
+    width:'100%',
+    style: {
+      table: {
+        width: '30vw',
+      },
+    }
+  }).render(document.getElementById("wrapper"));
+</script>
+
+</div>
+    
+<div class="container" id="node_example_1_0_2">
+  <h2 class="object_name" id="Full..">{ Full.. }</h2>
+  <div style="margin-left: 1.5vw">
+    <link rel="stylesheet" href="/assets/styles/github-dark.css">
+    <script src="/assets/libraries/highlight.min.js"></script>
+    <script defer="">hljs.highlightAll();</script>
+    <pre><code>{ "test": "all_slots_empty", "subject": "self", "operator": "equals", "value": "any" }</code></pre>
+  </div>
+</div>
+
+<div class="container" id="node_example_1_1_2">
+  <h2 class="object_name" id="Short(usingDefaults)..">{ Short (using Defaults).. }</h2>
+  <div style="margin-left: 1.5vw">
+    <link rel="stylesheet" href="/assets/styles/github-dark.css">
+    <script src="/assets/libraries/highlight.min.js"></script>
+    <script defer="">hljs.highlightAll();</script>
+    <pre><code>{ "test": "all_slots_empty" }</code></pre>
+  </div>
+</div>
+
+<div class="container" id="node_table_2_2">
+  <script src="/assets/libraries/gridjs.umd.js"></script>
+  <h2 id="any_slot_empty" style="padding: 10px">any_slot_empty</h2>
+  <p style="margin-left: 1vw">Returns true when the designated equipment location for the subject entity has any empty slot.</p>
+  <div id="wrapper" style="overflow-x: scroll; scrollbar-width: none;"></div>
+<script>
+  new gridjs.Grid({
+    data: [["operator","String","equals","(Optional) The comparison to apply with 'value'."],["subject","String","self","(Optional) The subject of this filter test."],["value","String","any","(Optional) The equipment location to test"]],
+    columns: ["Name","Default","Type","Description"],
+    search: true,
+    height:'100%',
+    width:'100%',
+    style: {
+      table: {
+        width: '30vw',
+      },
+    }
+  }).render(document.getElementById("wrapper"));
+</script>
+
+</div>
+    
+<div class="container" id="node_example_2_0_2">
+  <h2 class="object_name" id="Full..">{ Full.. }</h2>
+  <div style="margin-left: 1.5vw">
+    <link rel="stylesheet" href="/assets/styles/github-dark.css">
+    <script src="/assets/libraries/highlight.min.js"></script>
+    <script defer="">hljs.highlightAll();</script>
+    <pre><code>{ "test": "any_slot_empty", "subject": "self", "operator": "equals", "value": "any" }</code></pre>
+  </div>
+</div>
+
+<div class="container" id="node_example_2_1_2">
+  <h2 class="object_name" id="Short(usingDefaults)..">{ Short (using Defaults).. }</h2>
+  <div style="margin-left: 1.5vw">
+    <link rel="stylesheet" href="/assets/styles/github-dark.css">
+    <script src="/assets/libraries/highlight.min.js"></script>
+    <script defer="">hljs.highlightAll();</script>
+    <pre><code>{ "test": "any_slot_empty" }</code></pre>
+  </div>
+</div>
+
+<div class="container" id="node_table_3_2">
+  <script src="/assets/libraries/gridjs.umd.js"></script>
+  <h2 id="bool_property" style="padding: 10px">bool_property</h2>
+  <p style="margin-left: 1vw">Returns true when the bool actor property matches the value provided.</p>
+  <div id="wrapper" style="overflow-x: scroll; scrollbar-width: none;"></div>
+<script>
+  new gridjs.Grid({
+    data: [["domain","String","","(Required) The property name to look for"],["operator","String","equals","(Optional) The comparison to apply with 'value'."],["subject","String","self","(Optional) The subject of this filter test."],["value","Boolean","true","(Optional) true or false."]],
+    columns: ["Name","Default","Type","Description"],
+    search: true,
+    height:'100%',
+    width:'100%',
+    style: {
+      table: {
+        width: '30vw',
+      },
+    }
+  }).render(document.getElementById("wrapper"));
+</script>
+
+</div>
+    
+<div class="container" id="node_example_3_0_2">
+  <h2 class="object_name" id="Full..">{ Full.. }</h2>
+  <div style="margin-left: 1.5vw">
+    <link rel="stylesheet" href="/assets/styles/github-dark.css">
+    <script src="/assets/libraries/highlight.min.js"></script>
+    <script defer="">hljs.highlightAll();</script>
+    <pre><code>{ "test": "bool_property", "subject": "self", "domain": "minecraft:can_climb", "operator": "equals", "value": "true" }</code></pre>
+  </div>
+</div>
+
+<div class="container" id="node_example_3_1_2">
+  <h2 class="object_name" id="Short(usingDefaults)..">{ Short (using Defaults).. }</h2>
+  <div style="margin-left: 1.5vw">
+    <link rel="stylesheet" href="/assets/styles/github-dark.css">
+    <script src="/assets/libraries/highlight.min.js"></script>
+    <script defer="">hljs.highlightAll();</script>
+    <pre><code>{ "test": "bool_property", "domain": "minecraft:can_climb" }</code></pre>
+  </div>
+</div>
+
+<div class="container" id="node_table_4_2">
+  <script src="/assets/libraries/gridjs.umd.js"></script>
+  <h2 id="clock_time" style="padding: 10px">clock_time</h2>
+  <p style="margin-left: 1vw">Compares the current time with a float value in the range (0.0, 1.0).
+0.0= Noon
+0.25= Sunset
+0.5= Midnight
+0.75= Sunrise</p>
+  <div id="wrapper" style="overflow-x: scroll; scrollbar-width: none;"></div>
+<script>
+  new gridjs.Grid({
+    data: [["operator","String","equals","(Optional) The comparison to apply with 'value'."],["subject","String","self","(Optional) The subject of this filter test."],["value","Decimal","","(Required) A floating point value."]],
+    columns: ["Name","Default","Type","Description"],
+    search: true,
+    height:'100%',
+    width:'100%',
+    style: {
+      table: {
+        width: '30vw',
+      },
+    }
+  }).render(document.getElementById("wrapper"));
+</script>
+
+</div>
+    
+<div class="container" id="node_example_4_0_2">
+  <h2 class="object_name" id="Full..">{ Full.. }</h2>
+  <div style="margin-left: 1.5vw">
+    <link rel="stylesheet" href="/assets/styles/github-dark.css">
+    <script src="/assets/libraries/highlight.min.js"></script>
+    <script defer="">hljs.highlightAll();</script>
+    <pre><code>{ "test": "clock_time", "subject": "self", "operator": "equals", "value": "0.00" }</code></pre>
+  </div>
+</div>
+
+<div class="container" id="node_example_4_1_2">
+  <h2 class="object_name" id="Short(usingDefaults)..">{ Short (using Defaults).. }</h2>
+  <div style="margin-left: 1.5vw">
+    <link rel="stylesheet" href="/assets/styles/github-dark.css">
+    <script src="/assets/libraries/highlight.min.js"></script>
+    <script defer="">hljs.highlightAll();</script>
+    <pre><code>{ "test": "clock_time", "value": "0.00" }</code></pre>
+  </div>
+</div>
+
+<div class="container" id="node_table_5_2">
+  <script src="/assets/libraries/gridjs.umd.js"></script>
+  <h2 id="distance_to_nearest_player" style="padding: 10px">distance_to_nearest_player</h2>
+  <p style="margin-left: 1vw">Compares the distance to the nearest Player with a float value.</p>
+  <div id="wrapper" style="overflow-x: scroll; scrollbar-width: none;"></div>
+<script>
+  new gridjs.Grid({
+    data: [["operator","String","equals","(Optional) The comparison to apply with 'value'."],["subject","String","self","(Optional) The subject of this filter test."],["value","Decimal","","(Required) A floating point value."]],
+    columns: ["Name","Default","Type","Description"],
+    search: true,
+    height:'100%',
+    width:'100%',
+    style: {
+      table: {
+        width: '30vw',
+      },
+    }
+  }).render(document.getElementById("wrapper"));
+</script>
+
+</div>
+    
+<div class="container" id="node_example_5_0_2">
+  <h2 class="object_name" id="Full..">{ Full.. }</h2>
+  <div style="margin-left: 1.5vw">
+    <link rel="stylesheet" href="/assets/styles/github-dark.css">
+    <script src="/assets/libraries/highlight.min.js"></script>
+    <script defer="">hljs.highlightAll();</script>
+    <pre><code>{ "test": "distance_to_nearest_player", "subject": "self", "operator": "equals", "value": "0.00" }</code></pre>
+  </div>
+</div>
 
-<div class="container" id="node_head_13_4">
-        <div class="object_name">
-<div class="object_inline_name"><h4 id="ice" style="font-size: null; text-align: left">ice</h4></div>
-            <div class="object_description">
-                <p></p>
-            </div>
-        </div>
-        </div>
+<div class="container" id="node_example_5_1_2">
+  <h2 class="object_name" id="Short(usingDefaults)..">{ Short (using Defaults).. }</h2>
+  <div style="margin-left: 1.5vw">
+    <link rel="stylesheet" href="/assets/styles/github-dark.css">
+    <script src="/assets/libraries/highlight.min.js"></script>
+    <script defer="">hljs.highlightAll();</script>
+    <pre><code>{ "test": "distance_to_nearest_player", "value": "0.00" }</code></pre>
+  </div>
+</div>
 
-<div class="container" id="node_head_14_4">
-        <div class="object_name">
-<div class="object_inline_name"><h4 id="ice_plains" style="font-size: null; text-align: left">ice_plains</h4></div>
-            <div class="object_description">
-                <p></p>
-            </div>
-        </div>
-        </div>
+<div class="container" id="node_table_6_2">
+  <script src="/assets/libraries/gridjs.umd.js"></script>
+  <h2 id="enum_property" style="padding: 10px">enum_property</h2>
+  <p style="margin-left: 1vw">Returns true when the enum actor property matches the value provided.</p>
+  <div id="wrapper" style="overflow-x: scroll; scrollbar-width: none;"></div>
+<script>
+  new gridjs.Grid({
+    data: [["domain","String","","(Required) The property name to look for"],["operator","String","equals","(Optional) The comparison to apply with 'value'."],["subject","String","self","(Optional) The subject of this filter test."],["value","String","","(Required) A string value."]],
+    columns: ["Name","Default","Type","Description"],
+    search: true,
+    height:'100%',
+    width:'100%',
+    style: {
+      table: {
+        width: '30vw',
+      },
+    }
+  }).render(document.getElementById("wrapper"));
+</script>
 
-<div class="container" id="node_head_15_4">
-        <div class="object_name">
-<div class="object_inline_name"><h4 id="jungle" style="font-size: null; text-align: left">jungle</h4></div>
-            <div class="object_description">
-                <p></p>
-            </div>
-        </div>
-        </div>
+</div>
+    
 
-<div class="container" id="node_head_16_4">
-        <div class="object_name">
-<div class="object_inline_name"><h4 id="lakes" style="font-size: null; text-align: left">lakes</h4></div>
-            <div class="object_description">
-                <p></p>
-            </div>
-        </div>
-        </div>
 
-<div class="container" id="node_head_17_4">
-        <div class="object_name">
-<div class="object_inline_name"><h4 id="lukewarm" style="font-size: null; text-align: left">lukewarm</h4></div>
-            <div class="object_description">
-                <p></p>
-            </div>
-        </div>
-        </div>
 
-<div class="container" id="node_head_18_4">
-        <div class="object_name">
-<div class="object_inline_name"><h4 id="mega" style="font-size: null; text-align: left">mega</h4></div>
-            <div class="object_description">
-                <p></p>
-            </div>
-        </div>
-        </div>
 
-<div class="container" id="node_head_19_4">
-        <div class="object_name">
-<div class="object_inline_name"><h4 id="mesa" style="font-size: null; text-align: left">mesa</h4></div>
-            <div class="object_description">
-                <p></p>
-            </div>
-        </div>
-        </div>
 
+    
 
 
 
 
 
+    
 
 
 
 
 
+    
 
 
 
 
 
+    
 
 
 
 
 
+    
 
 
 
 
 
+    
 
 
 
 
 
+    
 
 
 
 
 
+    
 
 
 
 
 
+    
 
 
 
 
 
+    
 
 
 
 
 
+    
 
 
 
 
 
+    
 
 
 
 
 
+    
 
 
 
 
 
+    
 
 
 
 
 
+    
 
 
 
 
 
+    
 
 
 
 
 
+    
 
 
 
 
 
+    
 
 
 
 
 
+    
 
 
 
 
 
+    
 
 
 
 
 
+    
 
 
 
 
 
+    
 
 
 
 
 
+    
 
 
 
 
 
+    
 
 
 
 
 
+    
 
 
 
 
 
+    
 
 
 
 
 
+    
 
 
 
 
 
+    
 
 
 
 
 
+    
 
 
 
 
 
+    
 
 
 
 
 
+    
 
 
 
 
 
+    
 
 
 
 
 
+    
 
 
 
 
 
+    
 
 
 
 
 
+    
 
 
 
 
 
+    
 
 
 
 
 
+    
 
 
 
 
 
+    
 
 
 
 
 
+    
 
 
 
 
 
+    
 
 
 
 
 
+    
 
 
 
 
 
+    
 
 
 
 
 
+    
 
 
 
 
 
+    
 
 
 
 
 
+    
 
 
 
 
 
+    
 
 
 
 
 
+    
 
 
 
 
 
+    
 
 
 
 
 
+    
 
 
 
 
 
+    
 
 
 
 
 
+    
 
 
 
 
 
+    
 
 
 
 
 
+    
 
 
 
 
 
+    
 
 
 
 
 
+    
 
 
 
 
 
+    
 
 
 
 
 
+    
 
 
 
 
 
+    
 
 
 
 
 
+    
 
 
 
 
 
+    
 
 
 
 
 
+    
 
 
 
 
 
+    
 
 
 
 
 
+    
 
 
 
 
 
+    
 
 
 
 
 
+    
 
 
 
 
 
+    
 
 
 
 
 
+    
 
 
 
 
 
+    
 
 
 
 
 
+    
 
 
 
 
 
+    
 
 
 
 
 
+    
 
 
 
 
 
+    
 
 
 
 
 
+    
 
 
 
 
 
+    
 
 
 
 
 
+    
 
 
 
 
 
+    
 
 
 
 
 
+    
 
 
 
 
 
+    
 
 
 
 
 
+    
 
 
 
 
 
+    
 
 
 
 
 
+    
 
 
 
 
 
+    
 
 
 
 
 
+    
 
 
 
 
 
+    
 
 
 
 
 
+    
 
 
 
 
 
+    
 
 
 
 
 
+    
 
 
 
 
 
+    
 
 
 
 
 
+    
 
 
 
@@ -1042,31 +1244,49 @@
 
 
 
+    
 
+    
 
+    
 
 
 
+    
 
 
 
+    
 
+    
 
+    
 
+    
 
+    
 
+    
 
+    
 
+    
 
+    
 
+    
 
+    
 
+    
 
 
 
+    
 
 
 
+    
 
 
 
@@ -1074,15 +1294,23 @@
 
 
 
+    
 
 
 
+    
 
+    
 
+    
 
+    
 
+    
 
+    
 
+    
 
 
 
@@ -1090,88 +1318,167 @@
 
 
 
+    
 
+    
 
+    
 
+    
 
+    
 
+    
 
+    
 
+    
 
+    
 
+    
 
+    
 
+    
 
+    
 
+    
 
+    
 
+    
 
+    
 
+    
 
+    
 
+    
 
+    
 
+    
 
+    
 
+    
 
+    
 
+    
 
+    
 
+    
 
+    
 
+    
 
+    
 
+    
 
+    
 
+    
 
 
 
+    
 
+    
 
+    
 
+    
 
+    
 
+    
 
+    
 
+    
 
+    
 
+    
 
+    
 
+    
 
+    
 
+    
 
+    
 
+    
 
+    
 
+    
 
+    
 
+    
 
+    
 
+    
 
+    
 
+    
 
+    
 
+    
 
+    
 
+    
 
+    
 
+    
 
+    
 
+    
 
+    
 
 
 
+    
 
+    
 
+    
 
+    
 
+    
 
+    
 
+    
 
+    
 
+    
 
+    
 
+    
 
+    
 
 
 
@@ -1179,26 +1486,43 @@
 
 
 
+    
 
+    
 
+    
 
+    
 
+    
 
+    
 
+    
 
 
 
 
 
+    
 
+    
 
+    
 
+    
 
+    
 
+    
 
+    
 
+    
 
+    
 
+    
 
 
 
@@ -1210,170 +1534,299 @@
 
 
 
+    
 
+    
 
 
 
+    
 
+    
 
+    
 
+    
 
+    
 
+    
 
+    
 
+    
 
+    
 
+    
 
+    
 
+    
 
+    
 
+    
 
+    
 
+    
 
+    
 
+    
 
+    
 
 
 
 
 
+    
 
+    
 
+    
 
 
 
+    
 
+    
 
+    
 
+    
 
 
 
+    
 
+    
 
+    
 
+    
 
+    
 
+    
 
 
 
+    
 
+    
 
+    
 
 
 
+    
 
+    
 
+    
 
+    
 
+    
 
+    
 
+    
 
+    
 
 
 
 
 
+    
 
+    
 
+    
 
+    
 
+    
 
+    
 
+    
 
+    
 
+    
 
 
 
+    
 
+    
 
+    
 
+    
 
+    
 
+    
 
+    
 
+    
 
+    
 
+    
 
+    
 
+    
 
+    
 
+    
 
+    
 
+    
 
+    
 
+    
 
+    
 
+    
 
+    
 
+    
 
+    
 
+    
 
+    
 
 
 
 
 
+    
 
+    
 
+    
 
 
 
+    
 
+    
 
+    
 
+    
 
+    
 
+    
 
+    
 
+    
 
+    
 
+    
 
+    
 
+    
 
+    
 
+    
 
+    
 
+    
 
+    
 
+    
 
 
 
+    
 
 
 
+    
 
+    
 
+    
 
+    
 
+    
 
+    
 
+    
 
+    
 
+    
 
+    
 
+    
 
+    
 
+    
 
+    
 
+    
 
+    
 
 
 
+    
 
+    
 
+    
 
+    
 
+    
 
+    
 
+    
 
+    
 
+    
 
 
 
+    
 
+    
 
 
 
+    
 
 
 
@@ -1385,23 +1838,37 @@
 
 
 
+    
 
+    
 
+    
 
+    
 
+    
 
+    
 
+    
 
 
 
+    
 
+    
 
+    
 
+    
 
+    
 
+    
 
 
 
+    
 
 
 
@@ -1413,17 +1880,25 @@
 
 
 
+    
 
+    
 
+    
 
+    
 
 
 
 
 
+    
 
+    
 
+    
 
+    
 
 
 
@@ -1433,6 +1908,7 @@
 
 
 
+    
 
 
 
@@ -1454,8891 +1930,53 @@
 
 
 
+    
 
+    
 
+    
 
+    
 
+    
 
 
 
+    
 
+    
 
+    
 
+    
 
+    
 
+    
 
 
 
 
 
+    
 
+    
 
+    
 
+    
 
+    
 
+    
 
+    
 
+    
 
+    
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    
     <script src="/assets/js/LanguageHandler.js"></script>
         <script src="/assets/js/occlusionPilot.js"></script>
         <script src="/assets/js/preloadPilot.js"></script>
@@ -10396,4 +2034,46 @@
                 };
                 </script>
                 </div>
+                <div class="loading_thingy_container" style="
+      position: sticky;
+      left: 50%;
+      bottom: 50%;
+      display: flex;
+      justify-content: center;
+      opacity: 0;
+    "><div class="loading_thingy"></div></div>
+        <style>
+        .loading_thingy {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      position: relative;
+      animation: rotate 1s linear infinite
+    }
+    .loading_thingy::before,
+    .loading_thingy::after {
+      content: "";
+      box-sizing: border-box;
+      position: absolute;
+      inset: 0px;
+      border-radius: 50%;
+      border: 5px solid rgba(207,207,207,0.53);
+      animation: prixClipFix 2s linear infinite ;
+    }
+    .loading_thingy::after {
+      inset: 8px;
+      transform: rotate3d(90, 90, 0, 180deg );
+      border-color: rgba(255,140,140,0.56);
+    }
+
+    @keyframes rotate {
+      0%   {transform: rotate(0deg)}
+      100%   {transform: rotate(360deg)}
+    }
+    @keyframes prixClipFix {
+      0%   {clip-path:polygon(50% 50%,0 0,0 0,0 0,0 0,0 0)}
+      50%  {clip-path:polygon(50% 50%,0 0,100% 0,100% 0,100% 0,100% 0)}
+      75%, 100%  {clip-path:polygon(50% 50%,0 0,100% 0,100% 100%,100% 100%,100% 100%)}
+    }
+</style>
         </body></html>

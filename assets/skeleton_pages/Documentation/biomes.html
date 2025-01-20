@@ -33,389 +33,116 @@
         </div>
         </div>
 
-<div class="container" id="node_head_0_1">
-        <div class="object_name">
-<div class="object_inline_name"><h1 id="Overview" style="font-size: null; text-align: left">Overview</h1></div>
-            <div class="object_description">
-                <p></p><p>Minecraft biomes can have different terrain characteristics. By writing custom biome data you could:</p>
-<ol>
-<li>
-<p>Change the general shape of the terrain.</p>
-</li>
-<li>
-<p>Change the ratio of frequency of biome types.</p>
-</li>
-<li>
-<p>Change the blocks that make up the biome, both at the surface and down below.</p>
-</li>
-<li>
-<p>Change the distribution of decorative features like trees, grass, and flowers.</p>
-</li>
-<li>
-<p>Change the mobs that spawn.</p>
-</li>
-<li>
-<p>Change the climate.</p>
-</li>
-<li>
-<p>…and more!</p>
-</li>
-</ol>
-<p></p>
-            </div>
-        </div>
-        </div>
-
-<div class="container" id="node_head_1_1">
-        <div class="object_name">
-<div class="object_inline_name"><h1 id="JSONFormat" style="font-size: null; text-align: left">JSON Format</h1></div>
-            <div class="object_description">
-                <p></p><p>All biomes should specify the version that they target via the “format_version” field. The remainder of the biome data is divided up into independent JSON sub-objects, or components.</p>
-<p>In general, a component defines what game behaviors a biome participates in, and the component fields define how it participates.</p>
-<p>There are basically two categories of components:</p>
-<ol>
-<li>
-<p>Namespaced components, such as those with a ‘name:’ prefix, that map to specific behaviors in-game. They may have member fields that parameterize that behavior. Only names that have a valid mapping are supported.</p>
-</li>
-<li>
-<p>‘tags’ which are defined under the “minecraft:tags” component. Tags consist of alphanumeric characters, along with ‘.’ and ‘_’. A tag is attached to the biome so that either code or data may check for its existence.</p>
-</li>
-</ol>
-<p></p>
-            </div>
-        </div>
-        </div>
-
-<div class="container" id="node_example_1_0_1">
-  <h2 class="object_name" id="Hereisasamplebiomeschemawithadditionaldetailsandthefulllistofnamespacedcomponents.">{ Here is a sample biome schema with additional details and the full list of namespaced components. }</h2>
-  <div style="margin-left: 1.5vw">
-    <link rel="stylesheet" href="/assets/styles/github-dark.css">
-    <script src="/assets/libraries/highlight.min.js"></script>
-    <script defer="">hljs.highlightAll();</script>
-    <pre><code>{
-  "plains": {
-    "format_version": "1.20.60",
-
-    "minecraft:climate": {
-      "downfall": 0.4,
-      "snow_accumulation": [ 0.0, 0.125 ],
-      "temperature": 0.8
-    },
-    "minecraft:overworld_height": {
-      "noise_type": "lowlands"
-    },
-    "minecraft:surface_parameters": {
-      "sea_floor_depth": 7,
-      "sea_floor_material": "minecraft:gravel",
-      "foundation_material": "minecraft:stone",
-      "mid_material": "minecraft:dirt",
-      "top_material": "minecraft:grass_block"
-    },
-    "minecraft:overworld_generation_rules": {
-      "hills_transformation": [
-        [ "forest_hills", 1 ],
-        [ "forest", 2 ]
-      ],
-      "mutate_transformation": "sunflower_plains",
-      "generate_for_climates": [
-        [ "medium", 3 ],
-        [ "warm", 1 ],
-        [ "cold", 1 ]
-      ]
-    },
-
-    "minecraft:tags": {
-      "tags": [
-        "animal",
-        "monster",
-        "overworld",
-        "plains"
-      ]
+<div class="container" id="node_table_0_2">
+  <script src="/assets/libraries/gridjs.umd.js"></script>
+  <h2 id="BiomeComponents" style="padding: 10px">Biome Components</h2>
+  <p style="margin-left: 1vw">Any components that this Biome uses</p>
+  <div id="wrapper" style="overflow-x: scroll; scrollbar-width: none;"></div>
+<script>
+  new gridjs.Grid({
+    data: [["minecraft:capped_surface","Object","Optional","Generates surface on blocks with non-solid blocks above or below."],["minecraft:climate","Object","Optional","Describes temperature, humidity, precipitation, and similar. Biomes without this component will have default values."],["minecraft:creature_spawn_probability","Object","Optional","Probability that creatures will spawn within the biome when a chunk is generated."],["minecraft:frozen_ocean_surface","Object","Optional","Similar to overworld_surface. Adds icebergs."],["minecraft:mesa_surface","Object","Optional","Similar to overworld_surface. Adds colored strata and optional pillars."],["minecraft:mountain_parameters","Object","Optional","Noise parameters used to drive mountain terrain generation in Overworld."],["minecraft:multinoise_generation_rules","Object","Optional","Controls how this biome is instantiated (and then potentially modified) during world generation of the nether."],["minecraft:overworld_generation_rules","Object","Optional","Controls how this biome is instantiated (and then potentially modified) during world generation of the overworld."],["minecraft:overworld_height","Object","Optional","Noise parameters used to drive terrain height in the Overworld."],["minecraft:surface_material_adjustments","Object","Optional","Specify fine-detail changes to blocks used in terrain generation (based on a noise function)."],["minecraft:surface_parameters","Object","Optional","Controls the blocks used for the default Minecraft Overworld terrain generation."],["minecraft:swamp_surface","Object","Optional","Similar to overworld_surface. Adds swamp surface details."],["minecraft:tags","Object","Optional","Attach arbitrary string tags to this biome."],["minecraft:the_end_surface","Object","Optional","Use default Minecraft End terrain generation."]],
+    columns: ["Name","Required?","Type","Description"],
+    search: true,
+    height:'100%',
+    width:'100%',
+    style: {
+      table: {
+        width: '30vw',
+      },
     }
-  }
-}</code></pre>
-  </div>
+  }).render(document.getElementById("wrapper"));
+</script>
+
 </div>
+    
+<div class="container" id="node_table_1_2">
+  <script src="/assets/libraries/gridjs.umd.js"></script>
+  <h2 id="BiomeDefinition" style="padding: 10px">Biome Definition</h2>
+  <p style="margin-left: 1vw">Contains a description and components to define a Biome.</p>
+  <div id="wrapper" style="overflow-x: scroll; scrollbar-width: none;"></div>
+<script>
+  new gridjs.Grid({
+    data: [["components","Object of type Biome Components","Required","Components for this Biome."],["description","Object of type Biome Description","Required","Non-component settings, including the Biome name."]],
+    columns: ["Name","Required?","Type","Description"],
+    search: true,
+    height:'100%',
+    width:'100%',
+    style: {
+      table: {
+        width: '30vw',
+      },
+    }
+  }).render(document.getElementById("wrapper"));
+</script>
 
-<div class="container" id="node_head_2_1">
-        <div class="object_name">
-<div class="object_inline_name"><h1 id="AddingBiomes" style="font-size: null; text-align: left">Adding Biomes</h1></div>
-            <div class="object_description">
-                <p></p><p>Biomes are read from JSON files in the biomes subfolders of behavior packs. Loading enforces one biome per file; and the file name and the actual biome name must match. Adding a file with a new name to the biome data location will make it available for the game to use, while existing biomes can be overridden using files that match their existing name. Note that if you add a new biome, you’ll need to write component data that allows it to participate in world generation (as shown in the full schema below), or else it won’t show up in your worlds!</p>
-<p></p>
-            </div>
-        </div>
-        </div>
+</div>
+    
+<div class="container" id="node_table_2_2">
+  <script src="/assets/libraries/gridjs.umd.js"></script>
+  <h2 id="BiomeDescription" style="padding: 10px">Biome Description</h2>
+  <p style="margin-left: 1vw">Contains non-component settings for a Biome.</p>
+  <div id="wrapper" style="overflow-x: scroll; scrollbar-width: none;"></div>
+<script>
+  new gridjs.Grid({
+    data: [["identifier","String","Required","The name of the Biome, used by other features like the '/locate biome' command."]],
+    columns: ["Name","Required?","Type","Description"],
+    search: true,
+    height:'100%',
+    width:'100%',
+    style: {
+      table: {
+        width: '30vw',
+      },
+    }
+  }).render(document.getElementById("wrapper"));
+</script>
 
-<div class="container" id="node_head_3_1">
-        <div class="object_name">
-<div class="object_inline_name"><h1 id="Schema" style="font-size: null; text-align: left">Schema</h1></div>
-            <div class="object_description">
-                <p></p>
-            </div>
-        </div>
-        </div>
+</div>
+    
+<div class="container" id="node_table_3_2">
+  <script src="/assets/libraries/gridjs.umd.js"></script>
+  <h2 id="BiomeJSONFile" style="padding: 10px">Biome JSON File</h2>
+  <p style="margin-left: 1vw">Contains a format version and a biome definition</p>
+  <div id="wrapper" style="overflow-x: scroll; scrollbar-width: none;"></div>
+<script>
+  new gridjs.Grid({
+    data: [["format_version","String","Required","Version of the JSON schema used by this file"],["minecraft:biome","Object of type Biome Definition","Required","A single biome definition"]],
+    columns: ["Name","Required?","Type","Description"],
+    search: true,
+    height:'100%',
+    width:'100%',
+    style: {
+      table: {
+        width: '30vw',
+      },
+    }
+  }).render(document.getElementById("wrapper"));
+</script>
 
-<div class="container" id="node_head_0_2">
-        <div class="object_name">
-<div class="object_inline_name"><h2 id="BiomeComponents" style="font-size: null; text-align: left">Biome Components</h2></div>
-            <div class="object_description">
-                <p></p><p>Any components that this Biome uses</p>
-<p></p>
-            </div>
-        </div>
-        </div>
+</div>
+    
+<div class="container" id="node_table_4_2">
+  <script src="/assets/libraries/gridjs.umd.js"></script>
+  <h2 id="BlockSpecifier" style="padding: 10px">Block Specifier</h2>
+  <p style="margin-left: 1vw">Specifies a particular block. Can be a string block name or a JSON object</p>
+  <div id="wrapper" style="overflow-x: scroll; scrollbar-width: none;"></div>
+<script>
+  new gridjs.Grid({
+    data: [["name","String","Required","Name of the block"],["states","Object","Optional","Contains members named after each state, with boolean, integer, or string values."]],
+    columns: ["Name","Required?","Type","Description"],
+    search: true,
+    height:'100%',
+    width:'100%',
+    style: {
+      table: {
+        width: '30vw',
+      },
+    }
+  }).render(document.getElementById("wrapper"));
+</script>
 
-<div class="container" id="node_head_0_3">
-        <div class="object_name">
-<div class="object_inline_name"><h3 id="minecraft:capped_surface" style="font-size: null; text-align: left">minecraft:capped_surface</h3></div>
-            <div class="object_description">
-                <p></p><p>Generates surface on blocks with non-solid blocks above or below.</p>
-<p></p>
-            </div>
-        </div>
-        </div>
-
-<div class="container" id="node_head_1_3">
-        <div class="object_name">
-<div class="object_inline_name"><h3 id="minecraft:climate" style="font-size: null; text-align: left">minecraft:climate</h3></div>
-            <div class="object_description">
-                <p></p><p>Describes temperature, humidity, precipitation, and similar. Biomes without this component will have default values.</p>
-<p></p>
-            </div>
-        </div>
-        </div>
-
-<div class="container" id="node_head_2_3">
-        <div class="object_name">
-<div class="object_inline_name"><h3 id="minecraft:creature_spawn_probability" style="font-size: null; text-align: left">minecraft:creature_spawn_probability</h3></div>
-            <div class="object_description">
-                <p></p><p>Probability that creatures will spawn within the biome when a chunk is generated.</p>
-<p></p>
-            </div>
-        </div>
-        </div>
-
-<div class="container" id="node_head_3_3">
-        <div class="object_name">
-<div class="object_inline_name"><h3 id="minecraft:frozen_ocean_surface" style="font-size: null; text-align: left">minecraft:frozen_ocean_surface</h3></div>
-            <div class="object_description">
-                <p></p><p>Similar to overworld_surface. Adds icebergs.</p>
-<p></p>
-            </div>
-        </div>
-        </div>
-
-<div class="container" id="node_head_4_3">
-        <div class="object_name">
-<div class="object_inline_name"><h3 id="minecraft:mesa_surface" style="font-size: null; text-align: left">minecraft:mesa_surface</h3></div>
-            <div class="object_description">
-                <p></p><p>Similar to overworld_surface. Adds colored strata and optional pillars.</p>
-<p></p>
-            </div>
-        </div>
-        </div>
-
-<div class="container" id="node_head_5_3">
-        <div class="object_name">
-<div class="object_inline_name"><h3 id="minecraft:mountain_parameters" style="font-size: null; text-align: left">minecraft:mountain_parameters</h3></div>
-            <div class="object_description">
-                <p></p><p>Noise parameters used to drive mountain terrain generation in Overworld.</p>
-<p></p>
-            </div>
-        </div>
-        </div>
-
-<div class="container" id="node_head_6_3">
-        <div class="object_name">
-<div class="object_inline_name"><h3 id="minecraft:multinoise_generation_rules" style="font-size: null; text-align: left">minecraft:multinoise_generation_rules</h3></div>
-            <div class="object_description">
-                <p></p><p>Controls how this biome is instantiated (and then potentially modified) during world generation of the nether.</p>
-<p></p>
-            </div>
-        </div>
-        </div>
-
-<div class="container" id="node_head_7_3">
-        <div class="object_name">
-<div class="object_inline_name"><h3 id="minecraft:overworld_generation_rules" style="font-size: null; text-align: left">minecraft:overworld_generation_rules</h3></div>
-            <div class="object_description">
-                <p></p><p>Controls how this biome is instantiated (and then potentially modified) during world generation of the overworld.</p>
-<p></p>
-            </div>
-        </div>
-        </div>
-
-<div class="container" id="node_head_8_3">
-        <div class="object_name">
-<div class="object_inline_name"><h3 id="minecraft:overworld_height" style="font-size: null; text-align: left">minecraft:overworld_height</h3></div>
-            <div class="object_description">
-                <p></p><p>Noise parameters used to drive terrain height in the Overworld.</p>
-<p></p>
-            </div>
-        </div>
-        </div>
-
-<div class="container" id="node_head_9_3">
-        <div class="object_name">
-<div class="object_inline_name"><h3 id="minecraft:surface_material_adjustments" style="font-size: null; text-align: left">minecraft:surface_material_adjustments</h3></div>
-            <div class="object_description">
-                <p></p><p>Specify fine-detail changes to blocks used in terrain generation (based on a noise function).</p>
-<p></p>
-            </div>
-        </div>
-        </div>
-
-<div class="container" id="node_head_10_3">
-        <div class="object_name">
-<div class="object_inline_name"><h3 id="minecraft:surface_parameters" style="font-size: null; text-align: left">minecraft:surface_parameters</h3></div>
-            <div class="object_description">
-                <p></p><p>Controls the blocks used for the default Minecraft Overworld terrain generation.</p>
-<p></p>
-            </div>
-        </div>
-        </div>
-
-<div class="container" id="node_head_11_3">
-        <div class="object_name">
-<div class="object_inline_name"><h3 id="minecraft:swamp_surface" style="font-size: null; text-align: left">minecraft:swamp_surface</h3></div>
-            <div class="object_description">
-                <p></p><p>Similar to overworld_surface. Adds swamp surface details.</p>
-<p></p>
-            </div>
-        </div>
-        </div>
-
-<div class="container" id="node_head_12_3">
-        <div class="object_name">
-<div class="object_inline_name"><h3 id="minecraft:tags" style="font-size: null; text-align: left">minecraft:tags</h3></div>
-            <div class="object_description">
-                <p></p><p>Attach arbitrary string tags to this biome.</p>
-<p></p>
-            </div>
-        </div>
-        </div>
-
-<div class="container" id="node_head_13_3">
-        <div class="object_name">
-<div class="object_inline_name"><h3 id="minecraft:the_end_surface" style="font-size: null; text-align: left">minecraft:the_end_surface</h3></div>
-            <div class="object_description">
-                <p></p><p>Use default Minecraft End terrain generation.</p>
-<p></p>
-            </div>
-        </div>
-        </div>
-
-<div class="container" id="node_head_1_2">
-        <div class="object_name">
-<div class="object_inline_name"><h2 id="BiomeDefinition" style="font-size: null; text-align: left">Biome Definition</h2></div>
-            <div class="object_description">
-                <p></p><p>Contains a description and components to define a Biome.</p>
-<p></p>
-            </div>
-        </div>
-        </div>
-
-<div class="container" id="node_head_0_3">
-        <div class="object_name">
-<div class="object_inline_name"><h3 id="components" style="font-size: null; text-align: left">components</h3></div>
-            <div class="object_description">
-                <p></p><p>Components for this Biome.</p>
-<p></p>
-            </div>
-        </div>
-        </div>
-
-<div class="container" id="node_head_1_3">
-        <div class="object_name">
-<div class="object_inline_name"><h3 id="description" style="font-size: null; text-align: left">description</h3></div>
-            <div class="object_description">
-                <p></p><p>Non-component settings, including the Biome name.</p>
-<p></p>
-            </div>
-        </div>
-        </div>
-
-<div class="container" id="node_head_2_2">
-        <div class="object_name">
-<div class="object_inline_name"><h2 id="BiomeDescription" style="font-size: null; text-align: left">Biome Description</h2></div>
-            <div class="object_description">
-                <p></p><p>Contains non-component settings for a Biome.</p>
-<p></p>
-            </div>
-        </div>
-        </div>
-
-<div class="container" id="node_head_0_3">
-        <div class="object_name">
-<div class="object_inline_name"><h3 id="identifier" style="font-size: null; text-align: left">identifier</h3></div>
-            <div class="object_description">
-                <p></p><p>The name of the Biome, used by other features like the ‘/locate biome’ command.</p>
-<p></p>
-            </div>
-        </div>
-        </div>
-
-<div class="container" id="node_head_3_2">
-        <div class="object_name">
-<div class="object_inline_name"><h2 id="BiomeJSONFile" style="font-size: null; text-align: left">Biome JSON File</h2></div>
-            <div class="object_description">
-                <p></p><p>Contains a format version and a biome definition</p>
-<p></p>
-            </div>
-        </div>
-        </div>
-
-<div class="container" id="node_head_0_3">
-        <div class="object_name">
-<div class="object_inline_name"><h3 id="format_version" style="font-size: null; text-align: left">format_version</h3></div>
-            <div class="object_description">
-                <p></p><p>Version of the JSON schema used by this file</p>
-<p></p>
-            </div>
-        </div>
-        </div>
-
-<div class="container" id="node_head_1_3">
-        <div class="object_name">
-<div class="object_inline_name"><h3 id="minecraft:biome" style="font-size: null; text-align: left">minecraft:biome</h3></div>
-            <div class="object_description">
-                <p></p><p>A single biome definition</p>
-<p></p>
-            </div>
-        </div>
-        </div>
-
-<div class="container" id="node_head_4_2">
-        <div class="object_name">
-<div class="object_inline_name"><h2 id="BlockSpecifier" style="font-size: null; text-align: left">Block Specifier</h2></div>
-            <div class="object_description">
-                <p></p><p>Specifies a particular block. Can be a string block name or a JSON object</p>
-<p></p>
-            </div>
-        </div>
-        </div>
-
-<div class="container" id="node_head_0_3">
-        <div class="object_name">
-<div class="object_inline_name"><h3 id="name" style="font-size: null; text-align: left">name</h3></div>
-            <div class="object_description">
-                <p></p><p>Name of the block</p>
-<p></p>
-            </div>
-        </div>
-        </div>
-
-<div class="container" id="node_head_1_3">
-        <div class="object_name">
-<div class="object_inline_name"><h3 id="states" style="font-size: null; text-align: left">states</h3></div>
-            <div class="object_description">
-                <p></p><p>Contains members named after each state, with boolean, integer, or string values.</p>
-<p></p>
-            </div>
-        </div>
-        </div>
-
+</div>
+    
 <div class="container" id="node_head_5_2">
         <div class="object_name">
 <div class="object_inline_name"><h2 id="MolangExpression" style="font-size: null; text-align: left">Molang Expression</h2></div>
@@ -426,327 +153,409 @@
         </div>
         </div>
 
-<div class="container" id="node_head_6_2">
+<div class="container" id="node_table_6_2">
+  <script src="/assets/libraries/gridjs.umd.js"></script>
+  <h2 id="minecraft:capped_surface" style="padding: 10px">minecraft:capped_surface</h2>
+  <p style="margin-left: 1vw">Generates surface on blocks with non-solid blocks above or below.</p>
+  <div id="wrapper" style="overflow-x: scroll; scrollbar-width: none;"></div>
+<script>
+  new gridjs.Grid({
+    data: [["beach_material","Object of type Block Specifier","Optional","Material used to decorate surface near sea level."],["ceiling_materials","Array of Object of type Block Specifier","Required","Materials used for the surface ceiling."],["floor_materials","Array of Object of type Block Specifier","Required","Materials used for the surface floor."],["foundation_material","Object of type Block Specifier","Required","Material used to replace solid blocks that are not surface blocks."],["sea_material","Object of type Block Specifier","Required","Material used to replace air blocks below sea level."]],
+    columns: ["Name","Required?","Type","Description"],
+    search: true,
+    height:'100%',
+    width:'100%',
+    style: {
+      table: {
+        width: '30vw',
+      },
+    }
+  }).render(document.getElementById("wrapper"));
+</script>
+
+</div>
+    
+<div class="container" id="node_table_7_2">
+  <script src="/assets/libraries/gridjs.umd.js"></script>
+  <h2 id="minecraft:climate" style="padding: 10px">minecraft:climate</h2>
+  <p style="margin-left: 1vw">Describes temperature, humidity, precipitation, and similar. Biomes without this component will have default values.</p>
+  <div id="wrapper" style="overflow-x: scroll; scrollbar-width: none;"></div>
+<script>
+  new gridjs.Grid({
+    data: [["ash","Float","Optional","Density of ash precipitation visuals"],["blue_spores","Float","Optional","Density of blue spore precipitation visuals"],["downfall","Float","Optional","Amount that precipitation affects colors and block changes"],["red_spores","Float","Optional","Density of blue spore precipitation visuals"],["snow_accumulation","Array of 2 Floats","Optional","Minimum and maximum snow level, each multiple of 0.125 is another snow layer"],["temperature","Float","Optional","Temperature affects a variety of visual and behavioral things, including snow and ice placement, sponge drying, and sky color"],["white_ash","Float","Optional","Density of white ash precipitation visuals"]],
+    columns: ["Name","Required?","Type","Description"],
+    search: true,
+    height:'100%',
+    width:'100%',
+    style: {
+      table: {
+        width: '30vw',
+      },
+    }
+  }).render(document.getElementById("wrapper"));
+</script>
+
+</div>
+    
+<div class="container" id="node_table_8_2">
+  <script src="/assets/libraries/gridjs.umd.js"></script>
+  <h2 id="minecraft:creature_spawn_probability" style="padding: 10px">minecraft:creature_spawn_probability</h2>
+  <p style="margin-left: 1vw">Probability that creatures will spawn within the biome when a chunk is generated.</p>
+  <div id="wrapper" style="overflow-x: scroll; scrollbar-width: none;"></div>
+<script>
+  new gridjs.Grid({
+    data: [["probability","Float","Optional","Probabiltity between [0.0, 0.75] of creatures spawning within the biome on chunk generation."]],
+    columns: ["Name","Required?","Type","Description"],
+    search: true,
+    height:'100%',
+    width:'100%',
+    style: {
+      table: {
+        width: '30vw',
+      },
+    }
+  }).render(document.getElementById("wrapper"));
+</script>
+
+</div>
+    
+<div class="container" id="node_table_9_2">
+  <script src="/assets/libraries/gridjs.umd.js"></script>
+  <h2 id="minecraft:frozen_ocean_surface" style="padding: 10px">minecraft:frozen_ocean_surface</h2>
+  <p style="margin-left: 1vw">Similar to overworld_surface. Adds icebergs.</p>
+  <div id="wrapper" style="overflow-x: scroll; scrollbar-width: none;"></div>
+<script>
+  new gridjs.Grid({
+    data: [["foundation_material","Object of type Block Specifier","Required","Controls the block type used deep underground in this biome"],["mid_material","Object of type Block Specifier","Required","Controls the block type used in a layer below the surface of this biome"],["sea_floor_depth","Integer","Required","Controls how deep below the world water level the floor should occur"],["sea_floor_material","Object of type Block Specifier","Required","Controls the block type used as a floor for bodies of water in this biome"],["sea_material","Object of type Block Specifier","Required","Controls the block type used for the bodies of water in this biome"],["top_material","Object of type Block Specifier","Required","Controls the block type used for the surface of this biome"]],
+    columns: ["Name","Required?","Type","Description"],
+    search: true,
+    height:'100%',
+    width:'100%',
+    style: {
+      table: {
+        width: '30vw',
+      },
+    }
+  }).render(document.getElementById("wrapper"));
+</script>
+
+</div>
+    
+<div class="container" id="node_table_10_2">
+  <script src="/assets/libraries/gridjs.umd.js"></script>
+  <h2 id="minecraft:mesa_surface" style="padding: 10px">minecraft:mesa_surface</h2>
+  <p style="margin-left: 1vw">Similar to overworld_surface. Adds colored strata and optional pillars.</p>
+  <div id="wrapper" style="overflow-x: scroll; scrollbar-width: none;"></div>
+<script>
+  new gridjs.Grid({
+    data: [["bryce_pillars","Boolean","Required","Whether the mesa generates with pillars"],["clay_material","Object of type Block Specifier","Required","Base clay block to use"],["foundation_material","Object of type Block Specifier","Required","Controls the block type used deep underground in this biome"],["hard_clay_material","Object of type Block Specifier","Required","Hardened clay block to use"],["has_forest","Boolean","Required","Places coarse dirt and grass at high altitudes"],["mid_material","Object of type Block Specifier","Required","Controls the block type used in a layer below the surface of this biome"],["sea_floor_depth","Integer","Required","Controls how deep below the world water level the floor should occur"],["sea_floor_material","Object of type Block Specifier","Required","Controls the block type used as a floor for bodies of water in this biome"],["sea_material","Object of type Block Specifier","Required","Controls the block type used for the bodies of water in this biome"],["top_material","Object of type Block Specifier","Required","Controls the block type used for the surface of this biome"]],
+    columns: ["Name","Required?","Type","Description"],
+    search: true,
+    height:'100%',
+    width:'100%',
+    style: {
+      table: {
+        width: '30vw',
+      },
+    }
+  }).render(document.getElementById("wrapper"));
+</script>
+
+</div>
+    
+<div class="container" id="node_table_11_2">
+  <script src="/assets/libraries/gridjs.umd.js"></script>
+  <h2 id="minecraft:mountain_parameters" style="padding: 10px">minecraft:mountain_parameters</h2>
+  <p style="margin-left: 1vw">Noise parameters used to drive mountain terrain generation in Overworld.</p>
+  <div id="wrapper" style="overflow-x: scroll; scrollbar-width: none;"></div>
+<script>
+  new gridjs.Grid({
+    data: [["peaks_factor","Float","Optional","Does nothing"],["steep_material_adjustment","Object of type minecraft:mountain_parameters - steep_material_adjustment settings","Optional","Defines surface material for steep slopes"],["top_slide","Object of type minecraft:mountain_parameters - top_slide settings","Optional","Controls the density tapering that happens at the top of the world to prevent terrain from reaching too high"]],
+    columns: ["Name","Required?","Type","Description"],
+    search: true,
+    height:'100%',
+    width:'100%',
+    style: {
+      table: {
+        width: '30vw',
+      },
+    }
+  }).render(document.getElementById("wrapper"));
+</script>
+
+</div>
+    
+<div class="container" id="node_table_12_2">
+  <script src="/assets/libraries/gridjs.umd.js"></script>
+  <h2 id="minecraft:mountain_parameters-steep_material_adjustmentsettings" style="padding: 10px">minecraft:mountain_parameters - steep_material_adjustment settings</h2>
+  <p style="margin-left: 1vw">Defines surface material for steep slopes</p>
+  <div id="wrapper" style="overflow-x: scroll; scrollbar-width: none;"></div>
+<script>
+  new gridjs.Grid({
+    data: [["east_slopes","Boolean","Optional","Enable for east-facing slopes"],["material","Object of type Block Specifier","Optional","Block type use as steep material"],["north_slopes","Boolean","Optional","Enable for north-facing slopes"],["south_slopes","Boolean","Optional","Enable for south-facing slopes"],["west_slopes","Boolean","Optional","Enable for west-facing slopes"]],
+    columns: ["Name","Required?","Type","Description"],
+    search: true,
+    height:'100%',
+    width:'100%',
+    style: {
+      table: {
+        width: '30vw',
+      },
+    }
+  }).render(document.getElementById("wrapper"));
+</script>
+
+</div>
+    
+<div class="container" id="node_table_13_2">
+  <script src="/assets/libraries/gridjs.umd.js"></script>
+  <h2 id="minecraft:mountain_parameters-top_slidesettings" style="padding: 10px">minecraft:mountain_parameters - top_slide settings</h2>
+  <p style="margin-left: 1vw">Controls the density tapering that happens at the top of the world to prevent terrain from reaching too high.</p>
+  <div id="wrapper" style="overflow-x: scroll; scrollbar-width: none;"></div>
+<script>
+  new gridjs.Grid({
+    data: [["enabled","Boolean","Required","If false, top slide will be disabled. If true, other parameters will be taken into account."]],
+    columns: ["Name","Required?","Type","Description"],
+    search: true,
+    height:'100%',
+    width:'100%',
+    style: {
+      table: {
+        width: '30vw',
+      },
+    }
+  }).render(document.getElementById("wrapper"));
+</script>
+
+</div>
+    
+<div class="container" id="node_table_14_2">
+  <script src="/assets/libraries/gridjs.umd.js"></script>
+  <h2 id="minecraft:multinoise_generation_rules" style="padding: 10px">minecraft:multinoise_generation_rules</h2>
+  <p style="margin-left: 1vw">Controls how this biome is instantiated (and then potentially modified) during world generation of the nether.</p>
+  <div id="wrapper" style="overflow-x: scroll; scrollbar-width: none;"></div>
+<script>
+  new gridjs.Grid({
+    data: [["target_altitude","Float","Optional","Altitude with which this biome should be generated, relative to other biomes."],["target_humidity","Float","Optional","Humidity with which this biome should be generated, relative to other biomes."],["target_temperature","Float","Optional","Temperature with which this biome should be generated, relative to other biomes."],["target_weirdness","Float","Optional","Weirdness with which this biome should be generated, relative to other biomes."],["weight","Float","Optional","Weight with which this biome should be generated, relative to other biomes."]],
+    columns: ["Name","Required?","Type","Description"],
+    search: true,
+    height:'100%',
+    width:'100%',
+    style: {
+      table: {
+        width: '30vw',
+      },
+    }
+  }).render(document.getElementById("wrapper"));
+</script>
+
+</div>
+    
+<div class="container" id="node_table_15_2">
+  <script src="/assets/libraries/gridjs.umd.js"></script>
+  <h2 id="minecraft:overworld_generation_rules" style="padding: 10px">minecraft:overworld_generation_rules</h2>
+  <p style="margin-left: 1vw">Controls how this biome is instantiated (and then potentially modified) during world generation of the overworld.</p>
+  <div id="wrapper" style="overflow-x: scroll; scrollbar-width: none;"></div>
+<script>
+  new gridjs.Grid({
+    data: [["generate_for_climates","Array of Object of type minecraft:overworld_generation_rules - Weighted climate categories settings","Optional","Controls the world generation climate categories that this biome can spawn for. A single biome can be associated with multiple categories with different weightings."],["hills_transformation","Object of type minecraft:overworld_generation_rules - Weighted biome names settings","Optional","What biome to switch to when converting to a hilly biome"],["mutate_transformation","Object of type minecraft:overworld_generation_rules - Weighted biome names settings","Optional","What biome to switch to when converting to a mutated biome"],["river_transformation","Object of type minecraft:overworld_generation_rules - Weighted biome names settings","Optional","What biome to switch to when converting to a river biome (if not the Vanilla 'river' biome)"],["shore_transformation","Object of type minecraft:overworld_generation_rules - Weighted biome names settings","Optional","What biome to switch to when adjacent to an ocean biome"]],
+    columns: ["Name","Required?","Type","Description"],
+    search: true,
+    height:'100%',
+    width:'100%',
+    style: {
+      table: {
+        width: '30vw',
+      },
+    }
+  }).render(document.getElementById("wrapper"));
+</script>
+
+</div>
+    
+<div class="container" id="node_head_16_2">
         <div class="object_name">
-<div class="object_inline_name"><h2 id="minecraft:capped_surface" style="font-size: null; text-align: left">minecraft:capped_surface</h2></div>
+<div class="object_inline_name"><h2 id="minecraft:overworld_generation_rules-Weightedbiomenamessettings" style="font-size: null; text-align: left">minecraft:overworld_generation_rules - Weighted biome names settings</h2></div>
             <div class="object_description">
-                <p></p><p>Generates surface on blocks with non-solid blocks above or below.</p>
+                <p></p><p>Can be just the string name of a Biome, or an array of any size. If an array, each entry can be a Biome name string, or an array of size 2, where the first entry is a Biome name and the second entry is a positive integer representing how that Biome is weighted against other entries. If no weight is provided, a weight of 1 is used.</p>
 <p></p>
             </div>
         </div>
         </div>
 
-<div class="container" id="node_head_0_3">
+<div class="container" id="node_head_17_2">
         <div class="object_name">
-<div class="object_inline_name"><h3 id="beach_material" style="font-size: null; text-align: left">beach_material</h3></div>
+<div class="object_inline_name"><h2 id="minecraft:overworld_generation_rules-Weightedclimatecategoriessettings" style="font-size: null; text-align: left">minecraft:overworld_generation_rules - Weighted climate categories settings</h2></div>
             <div class="object_description">
-                <p></p><p>Material used to decorate surface near sea level.</p>
+                <p></p><p>An array of any size containing arrays of exactly two elements. For each contained array, the first element is a climate category string (‘medium’, ‘warm’, ‘lukewarm’, ‘cold’, or ‘frozen’). The second element is a positive integer for how much that entry is weighted relative to other entries.</p>
 <p></p>
             </div>
         </div>
         </div>
 
-<div class="container" id="node_head_1_3">
+<div class="container" id="node_table_18_2">
+  <script src="/assets/libraries/gridjs.umd.js"></script>
+  <h2 id="minecraft:overworld_height" style="padding: 10px">minecraft:overworld_height</h2>
+  <p style="margin-left: 1vw">Noise parameters used to drive terrain height in the Overworld.</p>
+  <div id="wrapper" style="overflow-x: scroll; scrollbar-width: none;"></div>
+<script>
+  new gridjs.Grid({
+    data: [["noise_params","Array of 2 Floats","Optional","First value is depth - more negative means deeper underwater, while more positive means higher. Second value is scale, which affects how much noise changes as it moves from the surface."],["noise_type","\"default\", \"default_mutated\", \"river\", \"ocean\", \"deep_ocean\", \"lowlands\", \"taiga\", \"mountains\", \"highlands\", \"extreme\", \"less_extreme\", \"beach\", \"stone_beach\", \"mushroom\", \"swamp\"","Optional","Specifies a preset based on a built-in setting rather than manually using noise_params"]],
+    columns: ["Name","Required?","Type","Description"],
+    search: true,
+    height:'100%',
+    width:'100%',
+    style: {
+      table: {
+        width: '30vw',
+      },
+    }
+  }).render(document.getElementById("wrapper"));
+</script>
+
+</div>
+    
+<div class="container" id="node_table_19_2">
+  <script src="/assets/libraries/gridjs.umd.js"></script>
+  <h2 id="minecraft:surface_material_adjustments" style="padding: 10px">minecraft:surface_material_adjustments</h2>
+  <p style="margin-left: 1vw">Specify fine-detail changes to blocks used in terrain generation (based on a noise function).</p>
+  <div id="wrapper" style="overflow-x: scroll; scrollbar-width: none;"></div>
+<script>
+  new gridjs.Grid({
+    data: [["adjustments","Array of Object of type minecraft:surface_material_adjustments - surface adjustment settings","Optional","All adjustments that match the column's noise values will be applied in the order listed."]],
+    columns: ["Name","Required?","Type","Description"],
+    search: true,
+    height:'100%',
+    width:'100%',
+    style: {
+      table: {
+        width: '30vw',
+      },
+    }
+  }).render(document.getElementById("wrapper"));
+</script>
+
+</div>
+    
+<div class="container" id="node_table_20_2">
+  <script src="/assets/libraries/gridjs.umd.js"></script>
+  <h2 id="minecraft:surface_material_adjustments-surfaceadjustmentmaterialssettings" style="padding: 10px">minecraft:surface_material_adjustments - surface adjustment materials settings</h2>
+  <p style="margin-left: 1vw">The specific blocks used for this surface adjustment</p>
+  <div id="wrapper" style="overflow-x: scroll; scrollbar-width: none;"></div>
+<script>
+  new gridjs.Grid({
+    data: [["foundation_material","Object of type Block Specifier","Optional","Controls the block type used deep underground in this biome when this adjustment is active."],["mid_material","Object of type Block Specifier","Optional","Controls the block type used in a layer below the surface of this biome when this adjustment is active."],["sea_floor_material","Object of type Block Specifier","Optional","Controls the block type used as a floor for bodies of water in this biome when this adjustment is active."],["sea_material","Object of type Block Specifier","Optional","Controls the block type used in the bodies of water in this biome when this adjustment is active."],["top_material","Object of type Block Specifier","Optional","Controls the block type used for the surface of this biome when this adjustment is active."]],
+    columns: ["Name","Required?","Type","Description"],
+    search: true,
+    height:'100%',
+    width:'100%',
+    style: {
+      table: {
+        width: '30vw',
+      },
+    }
+  }).render(document.getElementById("wrapper"));
+</script>
+
+</div>
+    
+<div class="container" id="node_table_21_2">
+  <script src="/assets/libraries/gridjs.umd.js"></script>
+  <h2 id="minecraft:surface_material_adjustments-surfaceadjustmentsettings" style="padding: 10px">minecraft:surface_material_adjustments - surface adjustment settings</h2>
+  <p style="margin-left: 1vw">An adjustment to generated terrain, replacing blocks based on the specified settings.</p>
+  <div id="wrapper" style="overflow-x: scroll; scrollbar-width: none;"></div>
+<script>
+  new gridjs.Grid({
+    data: [["height_range","Array of 2 Molang expressions","Optional","Defines a range of noise values [min, max] for which this adjustment should be applied."],["materials","Object of type minecraft:surface_material_adjustments - surface adjustment materials settings","Required",""],["noise_frequency_scale","Float","Optional","The scale to multiply by the position when accessing the noise value for the material adjustments."],["noise_range","Array of 2 Floats","Optional","Defines a range of noise values [min, max] for which this adjustment should be applied."]],
+    columns: ["Name","Required?","Type","Description"],
+    search: true,
+    height:'100%',
+    width:'100%',
+    style: {
+      table: {
+        width: '30vw',
+      },
+    }
+  }).render(document.getElementById("wrapper"));
+</script>
+
+</div>
+    
+<div class="container" id="node_table_22_2">
+  <script src="/assets/libraries/gridjs.umd.js"></script>
+  <h2 id="minecraft:surface_parameters" style="padding: 10px">minecraft:surface_parameters</h2>
+  <p style="margin-left: 1vw">Controls the blocks used for the default Minecraft Overworld terrain generation.</p>
+  <div id="wrapper" style="overflow-x: scroll; scrollbar-width: none;"></div>
+<script>
+  new gridjs.Grid({
+    data: [["foundation_material","Object of type Block Specifier","Required","Controls the block type used deep underground in this biome."],["mid_material","Object of type Block Specifier","Required","Controls the block type used in a layer below the surface of this biome."],["sea_floor_depth","Integer","Required","Controls how deep below the world water level the floor should occur."],["sea_floor_material","Object of type Block Specifier","Required","Controls the block type used as a floor for bodies of water in this biome."],["sea_material","Object of type Block Specifier","Required","Controls the block type used for the bodies of water in this biome."],["top_material","Object of type Block Specifier","Required","Controls the block type used for the surface of this biome."]],
+    columns: ["Name","Required?","Type","Description"],
+    search: true,
+    height:'100%',
+    width:'100%',
+    style: {
+      table: {
+        width: '30vw',
+      },
+    }
+  }).render(document.getElementById("wrapper"));
+</script>
+
+</div>
+    
+<div class="container" id="node_table_23_2">
+  <script src="/assets/libraries/gridjs.umd.js"></script>
+  <h2 id="minecraft:swamp_surface" style="padding: 10px">minecraft:swamp_surface</h2>
+  <p style="margin-left: 1vw">Similar to overworld_surface. Adds swamp surface details.</p>
+  <div id="wrapper" style="overflow-x: scroll; scrollbar-width: none;"></div>
+<script>
+  new gridjs.Grid({
+    data: [["foundation_material","Object of type Block Specifier","Required","Controls the block type used deep underground in this biome."],["mid_material","Object of type Block Specifier","Required","Controls the block type used in a layer below the surface of this biome."],["sea_floor_depth","Integer","Required","Controls how deep below the world water level the floor should occur."],["sea_floor_material","Object of type Block Specifier","Required","Controls the block type used as a floor for bodies of water in this biome."],["sea_material","Object of type Block Specifier","Required","Controls the block type used for the bodies of water in this biome."],["top_material","Object of type Block Specifier","Required","Controls the block type used for the surface of this biome."]],
+    columns: ["Name","Required?","Type","Description"],
+    search: true,
+    height:'100%',
+    width:'100%',
+    style: {
+      table: {
+        width: '30vw',
+      },
+    }
+  }).render(document.getElementById("wrapper"));
+</script>
+
+</div>
+    
+<div class="container" id="node_table_24_2">
+  <script src="/assets/libraries/gridjs.umd.js"></script>
+  <h2 id="minecraft:tags" style="padding: 10px">minecraft:tags</h2>
+  <p style="margin-left: 1vw">Attach arbitrary string tags to this biome.</p>
+  <div id="wrapper" style="overflow-x: scroll; scrollbar-width: none;"></div>
+<script>
+  new gridjs.Grid({
+    data: [["tags","Array of String","Required","Array of string tags used by other systems such as entity spawning"]],
+    columns: ["Name","Required?","Type","Description"],
+    search: true,
+    height:'100%',
+    width:'100%',
+    style: {
+      table: {
+        width: '30vw',
+      },
+    }
+  }).render(document.getElementById("wrapper"));
+</script>
+
+</div>
+    
+<div class="container" id="node_head_25_2">
         <div class="object_name">
-<div class="object_inline_name"><h3 id="ceiling_materials" style="font-size: null; text-align: left">ceiling_materials</h3></div>
+<div class="object_inline_name"><h2 id="minecraft:the_end_surface" style="font-size: null; text-align: left">minecraft:the_end_surface</h2></div>
             <div class="object_description">
-                <p></p><p>Materials used for the surface ceiling.</p>
+                <p></p><p>Use default Minecraft End terrain generation.</p>
 <p></p>
             </div>
         </div>
         </div>
-
-<div class="container" id="node_head_2_3">
-        <div class="object_name">
-<div class="object_inline_name"><h3 id="floor_materials" style="font-size: null; text-align: left">floor_materials</h3></div>
-            <div class="object_description">
-                <p></p><p>Materials used for the surface floor.</p>
-<p></p>
-            </div>
-        </div>
-        </div>
-
-<div class="container" id="node_head_3_3">
-        <div class="object_name">
-<div class="object_inline_name"><h3 id="foundation_material" style="font-size: null; text-align: left">foundation_material</h3></div>
-            <div class="object_description">
-                <p></p><p>Material used to replace solid blocks that are not surface blocks.</p>
-<p></p>
-            </div>
-        </div>
-        </div>
-
-<div class="container" id="node_head_4_3">
-        <div class="object_name">
-<div class="object_inline_name"><h3 id="sea_material" style="font-size: null; text-align: left">sea_material</h3></div>
-            <div class="object_description">
-                <p></p><p>Material used to replace air blocks below sea level.</p>
-<p></p>
-            </div>
-        </div>
-        </div>
-
-<div class="container" id="node_head_7_2">
-        <div class="object_name">
-<div class="object_inline_name"><h2 id="minecraft:climate" style="font-size: null; text-align: left">minecraft:climate</h2></div>
-            <div class="object_description">
-                <p></p><p>Describes temperature, humidity, precipitation, and similar. Biomes without this component will have default values.</p>
-<p></p>
-            </div>
-        </div>
-        </div>
-
-<div class="container" id="node_head_0_3">
-        <div class="object_name">
-<div class="object_inline_name"><h3 id="ash" style="font-size: null; text-align: left">ash</h3></div>
-            <div class="object_description">
-                <p></p><p>Density of ash precipitation visuals</p>
-<p></p>
-            </div>
-        </div>
-        </div>
-
-<div class="container" id="node_head_1_3">
-        <div class="object_name">
-<div class="object_inline_name"><h3 id="blue_spores" style="font-size: null; text-align: left">blue_spores</h3></div>
-            <div class="object_description">
-                <p></p><p>Density of blue spore precipitation visuals</p>
-<p></p>
-            </div>
-        </div>
-        </div>
-
-<div class="container" id="node_head_2_3">
-        <div class="object_name">
-<div class="object_inline_name"><h3 id="downfall" style="font-size: null; text-align: left">downfall</h3></div>
-            <div class="object_description">
-                <p></p><p>Amount that precipitation affects colors and block changes</p>
-<p></p>
-            </div>
-        </div>
-        </div>
-
-<div class="container" id="node_head_3_3">
-        <div class="object_name">
-<div class="object_inline_name"><h3 id="red_spores" style="font-size: null; text-align: left">red_spores</h3></div>
-            <div class="object_description">
-                <p></p><p>Density of blue spore precipitation visuals</p>
-<p></p>
-            </div>
-        </div>
-        </div>
-
-<div class="container" id="node_head_4_3">
-        <div class="object_name">
-<div class="object_inline_name"><h3 id="snow_accumulation" style="font-size: null; text-align: left">snow_accumulation</h3></div>
-            <div class="object_description">
-                <p></p><p>Minimum and maximum snow level, each multiple of 0.125 is another snow layer</p>
-<p></p>
-            </div>
-        </div>
-        </div>
-
-<div class="container" id="node_head_5_3">
-        <div class="object_name">
-<div class="object_inline_name"><h3 id="temperature" style="font-size: null; text-align: left">temperature</h3></div>
-            <div class="object_description">
-                <p></p><p>Temperature affects a variety of visual and behavioral things, including snow and ice placement, sponge drying, and sky color</p>
-<p></p>
-            </div>
-        </div>
-        </div>
-
-<div class="container" id="node_head_6_3">
-        <div class="object_name">
-<div class="object_inline_name"><h3 id="white_ash" style="font-size: null; text-align: left">white_ash</h3></div>
-            <div class="object_description">
-                <p></p><p>Density of white ash precipitation visuals</p>
-<p></p>
-            </div>
-        </div>
-        </div>
-
-<div class="container" id="node_head_8_2">
-        <div class="object_name">
-<div class="object_inline_name"><h2 id="minecraft:creature_spawn_probability" style="font-size: null; text-align: left">minecraft:creature_spawn_probability</h2></div>
-            <div class="object_description">
-                <p></p><p>Probability that creatures will spawn within the biome when a chunk is generated.</p>
-<p></p>
-            </div>
-        </div>
-        </div>
-
-<div class="container" id="node_head_0_3">
-        <div class="object_name">
-<div class="object_inline_name"><h3 id="probability" style="font-size: null; text-align: left">probability</h3></div>
-            <div class="object_description">
-                <p></p><p>Probabiltity between [0.0, 0.75] of creatures spawning within the biome on chunk generation.</p>
-<p></p>
-            </div>
-        </div>
-        </div>
-
-<div class="container" id="node_head_9_2">
-        <div class="object_name">
-<div class="object_inline_name"><h2 id="minecraft:frozen_ocean_surface" style="font-size: null; text-align: left">minecraft:frozen_ocean_surface</h2></div>
-            <div class="object_description">
-                <p></p><p>Similar to overworld_surface. Adds icebergs.</p>
-<p></p>
-            </div>
-        </div>
-        </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
     <script src="/assets/js/LanguageHandler.js"></script>
         <script src="/assets/js/occlusionPilot.js"></script>
@@ -805,4 +614,46 @@
                 };
                 </script>
                 </div>
+                <div class="loading_thingy_container" style="
+      position: sticky;
+      left: 50%;
+      bottom: 50%;
+      display: flex;
+      justify-content: center;
+      opacity: 0;
+    "><div class="loading_thingy"></div></div>
+        <style>
+        .loading_thingy {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      position: relative;
+      animation: rotate 1s linear infinite
+    }
+    .loading_thingy::before,
+    .loading_thingy::after {
+      content: "";
+      box-sizing: border-box;
+      position: absolute;
+      inset: 0px;
+      border-radius: 50%;
+      border: 5px solid rgba(207,207,207,0.53);
+      animation: prixClipFix 2s linear infinite ;
+    }
+    .loading_thingy::after {
+      inset: 8px;
+      transform: rotate3d(90, 90, 0, 180deg );
+      border-color: rgba(255,140,140,0.56);
+    }
+
+    @keyframes rotate {
+      0%   {transform: rotate(0deg)}
+      100%   {transform: rotate(360deg)}
+    }
+    @keyframes prixClipFix {
+      0%   {clip-path:polygon(50% 50%,0 0,0 0,0 0,0 0,0 0)}
+      50%  {clip-path:polygon(50% 50%,0 0,100% 0,100% 0,100% 0,100% 0)}
+      75%, 100%  {clip-path:polygon(50% 50%,0 0,100% 0,100% 100%,100% 100%,100% 100%)}
+    }
+</style>
         </body></html>

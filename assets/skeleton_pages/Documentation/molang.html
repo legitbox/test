@@ -33,28 +33,6 @@
         </div>
         </div>
 
-<div class="container" id="node_head_0_1">
-        <div class="object_name">
-<div class="object_inline_name"><h1 id="WhyDoesMolangExist?" style="font-size: null; text-align: left">Why Does Molang Exist?</h1></div>
-            <div class="object_description">
-                <p></p><p>Molang is a simple expression-based language designed for fast, data-driven calculation of values at run-time, and with a direct connection to in-game values and systems.  Its focus is to enable low-level systems like animation to support flexible data-driven behavior for both internal and external creators, while staying highly performant.</p>
-<p></p>
-            </div>
-        </div>
-        </div>
-
-<div class="container" id="node_head_1_1">
-        <div class="object_name">
-<div class="object_inline_name"><h1 id="LexicalStructure" style="font-size: null; text-align: left">Lexical Structure</h1></div>
-            <div class="object_description">
-                <p></p><p>The language structure is largely based on simple ‘C’ language family style syntax.  An expression can be made of either one simple value or math calculation, or can be made of several sub-expressions where more complicated code is required.</p>
-<p>In simple cases, the terminating <code>;</code> is omitted and the expression result is returned.</p>
-<p>In complex cases, multiple sub-expressions are each terminated with a semicolon <code>;</code>.  Complex expressions evaluate to <code>0.0</code> unless there is a <code>return</code> statement, in which case the evaluated value of the <code>return</code>’s sub-expression will be returned out of the current scope.</p>
-<p></p>
-            </div>
-        </div>
-        </div>
-
 <div class="container" id="node_head_0_2">
         <div class="object_name">
 <div class="object_inline_name"><h2 id="CaseSensitivity" style="font-size: null; text-align: left">Case Sensitivity</h2></div>
@@ -65,376 +43,50 @@
         </div>
         </div>
 
-<div class="container" id="node_head_1_2">
-        <div class="object_name">
-<div class="object_inline_name"><h2 id="Keywords" style="font-size: null; text-align: left">Keywords</h2></div>
-            <div class="object_description">
-                <p></p><p>All identifiers not in a scope listed below are reserved for future use</p>
-<p></p>
-            </div>
-        </div>
-        </div>
+<div class="container" id="node_table_1_2">
+  <script src="/assets/libraries/gridjs.umd.js"></script>
+  <h2 id="Keywords" style="padding: 10px">Keywords</h2>
+  <p style="margin-left: 1vw">All identifiers not in a scope listed below are reserved for future use</p>
+  <div id="wrapper" style="overflow-x: scroll; scrollbar-width: none;"></div>
+<script>
+  new gridjs.Grid({
+    data: [["`1.23`","Numerical constant value"],["`! && || < <= >= > == !=`","Logical operators"],["`* / + -`","Basic math operators"],["`(` `)`","Parentheses for expression term evaluation control"],["`{` `}`","Braces for execution scope"],["`??`","Null coalescing operator, for handling missing variables or stale actor references"],["`geometry.texture_name`","A reference to a geometry named in the entity definition"],["`material.texture_name`","A reference to a material named in the entity definition"],["`texture.texture_name`","A reference to a texture named in the entity definition"],["`math.function_name`","Various math functions"],["`query.function_name`","Access to an entity's properties"],["`variable.variable_name`","Read/write storage on an actor"],["`temp.variable_name`","Read/write temporary storage"],["`context.variable_name`","Read-only storage provided by the game in certain scenarios"],["`<test> ? <if true>`","Binary conditional operator"],["`<test> ? <if true> : <if false>`","Ternary conditional operator - NOTE: Nested ternary expressions without parentheses were incorrectly parsed before a Versioned Change was made to fix it (see 'Versioned Changes' below)"],["`this`","The current value that this expression will ultimately write to (context specific)"],["`return`","For complex expressions, this evaluates the following statement and stops execution of the expression, returns the value computed"],["`->`","Arrow operator, for accessing data from a different entity"],["`loop`","For repeating one or more commands 'n' times"],["`for_each`","For iterating over an array of entities"],["`break`","For early exiting a loop/for_each scope"],["`continue`","For skipping the rest of the set of statements of a loop/for_each iteration and moving to the next iteration"],["`[` `]`","Brackets for array access"]],
+    columns: ["Keyword","Description"],
+    search: true,
+    height:'100%',
+    width:'100%',
+    style: {
+      table: {
+        width: '30vw',
+      },
+    }
+  }).render(document.getElementById("wrapper"));
+</script>
 
-<div class="container" id="node_head_0_3">
-        <div class="object_name">
-<div class="object_inline_name"><h3 id="`1.23`" style="font-size: null; text-align: left">`1.23`</h3></div>
-            <div class="object_description">
-                <p></p><p>Numerical constant value</p>
-<p></p>
-            </div>
-        </div>
-        </div>
+</div>
+    
+<div class="container" id="node_table_2_2">
+  <script src="/assets/libraries/gridjs.umd.js"></script>
+  <h2 id="OperatorPrecedence" style="padding: 10px">Operator Precedence</h2>
+  <p style="margin-left: 1vw">Molang Operators follow this order to determine which thing is evaluated first when no parentheses are used. This should match the behavior of C or C++. Operators that are higher in this table are evaluated first, while operators on the same row are evaluated with the same priority. When operators have the same priority, they are evaluated left-to-right, except for the Ternary conditional operator, which is evaluated right-to-left. Using parentheses will allow direct control of order of evaluation, and is recommended for more complex expressions. </p>
+  <div id="wrapper" style="overflow-x: scroll; scrollbar-width: none;"></div>
+<script>
+  new gridjs.Grid({
+    data: [["(Highest Precedence)","Higher precedence operators are evaluated first when no parentheses are used to control evaluation order"],["Logical Not","The Logical Not '!' operator"],["Multiplication and Division","Multiplication '*' and Division '/'"],["Addition and Subtraction","Addition '+' and Subtraction '-'"],["Comparisons","Comparison operators '<' '<=' '>' '>=' (See 'Versioned Changes' below)"],["Equality checks","Equality checking operators '==' '!=' (See 'Versioned Changes' below)"],["Logical AND","The Logical AND '&&' operator (See 'Versioned Changes' below)"],["Logical OR","The Logical OR '||' operator (See 'Versioned Changes' below)"],["Ternary Conditional","Ternary conditional operators using '? :'. Evaluated right-to-left when there are multiple ternary operators. (See 'Versioned Changes' below)"],["Null Coalescing","Null coalescing operator '??'"],["(Lowest Precedence)","Lower precedence operators are evaluated last when no parentheses are used to control evaluation order"]],
+    columns: ["Operator Precedence Groups","Description"],
+    search: true,
+    height:'100%',
+    width:'100%',
+    style: {
+      table: {
+        width: '30vw',
+      },
+    }
+  }).render(document.getElementById("wrapper"));
+</script>
 
-<div class="container" id="node_head_1_3">
-        <div class="object_name">
-<div class="object_inline_name"><h3 id="`!&amp;&amp;||<<=>=>==!=`" style="font-size: null; text-align: left">`! &amp;&amp; || &lt; &lt;= &gt;= &gt; == !=`</h3></div>
-            <div class="object_description">
-                <p></p><p>Logical operators</p>
-<p></p>
-            </div>
-        </div>
-        </div>
-
-<div class="container" id="node_head_2_3">
-        <div class="object_name">
-<div class="object_inline_name"><h3 id="`*/+-`" style="font-size: null; text-align: left">`* / + -`</h3></div>
-            <div class="object_description">
-                <p></p><p>Basic math operators</p>
-<p></p>
-            </div>
-        </div>
-        </div>
-
-<div class="container" id="node_head_3_3">
-        <div class="object_name">
-<div class="object_inline_name"><h3 id="`(``)`" style="font-size: null; text-align: left">`(` `)`</h3></div>
-            <div class="object_description">
-                <p></p><p>Parentheses for expression term evaluation control</p>
-<p></p>
-            </div>
-        </div>
-        </div>
-
-<div class="container" id="node_head_4_3">
-        <div class="object_name">
-<div class="object_inline_name"><h3 id="`{``}`" style="font-size: null; text-align: left">`{` `}`</h3></div>
-            <div class="object_description">
-                <p></p><p>Braces for execution scope</p>
-<p></p>
-            </div>
-        </div>
-        </div>
-
-<div class="container" id="node_head_5_3">
-        <div class="object_name">
-<div class="object_inline_name"><h3 id="`??`" style="font-size: null; text-align: left">`??`</h3></div>
-            <div class="object_description">
-                <p></p><p>Null coalescing operator, for handling missing variables or stale actor references</p>
-<p></p>
-            </div>
-        </div>
-        </div>
-
-<div class="container" id="node_head_6_3">
-        <div class="object_name">
-<div class="object_inline_name"><h3 id="`geometry.texture_name`" style="font-size: null; text-align: left">`geometry.texture_name`</h3></div>
-            <div class="object_description">
-                <p></p><p>A reference to a geometry named in the entity definition</p>
-<p></p>
-            </div>
-        </div>
-        </div>
-
-<div class="container" id="node_head_7_3">
-        <div class="object_name">
-<div class="object_inline_name"><h3 id="`material.texture_name`" style="font-size: null; text-align: left">`material.texture_name`</h3></div>
-            <div class="object_description">
-                <p></p><p>A reference to a material named in the entity definition</p>
-<p></p>
-            </div>
-        </div>
-        </div>
-
-<div class="container" id="node_head_8_3">
-        <div class="object_name">
-<div class="object_inline_name"><h3 id="`texture.texture_name`" style="font-size: null; text-align: left">`texture.texture_name`</h3></div>
-            <div class="object_description">
-                <p></p><p>A reference to a texture named in the entity definition</p>
-<p></p>
-            </div>
-        </div>
-        </div>
-
-<div class="container" id="node_head_9_3">
-        <div class="object_name">
-<div class="object_inline_name"><h3 id="`math.function_name`" style="font-size: null; text-align: left">`math.function_name`</h3></div>
-            <div class="object_description">
-                <p></p><p>Various math functions</p>
-<p></p>
-            </div>
-        </div>
-        </div>
-
-<div class="container" id="node_head_10_3">
-        <div class="object_name">
-<div class="object_inline_name"><h3 id="`query.function_name`" style="font-size: null; text-align: left">`query.function_name`</h3></div>
-            <div class="object_description">
-                <p></p><p>Access to an entity’s properties</p>
-<p></p>
-            </div>
-        </div>
-        </div>
-
-<div class="container" id="node_head_11_3">
-        <div class="object_name">
-<div class="object_inline_name"><h3 id="`variable.variable_name`" style="font-size: null; text-align: left">`variable.variable_name`</h3></div>
-            <div class="object_description">
-                <p></p><p>Read/write storage on an actor</p>
-<p></p>
-            </div>
-        </div>
-        </div>
-
-<div class="container" id="node_head_12_3">
-        <div class="object_name">
-<div class="object_inline_name"><h3 id="`temp.variable_name`" style="font-size: null; text-align: left">`temp.variable_name`</h3></div>
-            <div class="object_description">
-                <p></p><p>Read/write temporary storage</p>
-<p></p>
-            </div>
-        </div>
-        </div>
-
-<div class="container" id="node_head_13_3">
-        <div class="object_name">
-<div class="object_inline_name"><h3 id="`context.variable_name`" style="font-size: null; text-align: left">`context.variable_name`</h3></div>
-            <div class="object_description">
-                <p></p><p>Read-only storage provided by the game in certain scenarios</p>
-<p></p>
-            </div>
-        </div>
-        </div>
-
-<div class="container" id="node_head_14_3">
-        <div class="object_name">
-<div class="object_inline_name"><h3 id="`<test>?<iftrue>`" style="font-size: null; text-align: left">`<test> ? <if true="">`</if></test></h3></div>
-            <div class="object_description">
-                <p></p><p>Binary conditional operator</p>
-<p></p>
-            </div>
-        </div>
-        </div>
-
-<div class="container" id="node_head_15_3">
-        <div class="object_name">
-<div class="object_inline_name"><h3 id="`<test>?<iftrue>:<iffalse>`" style="font-size: null; text-align: left">`<test> ? <if true=""> : <if false="">`</if></if></test></h3></div>
-            <div class="object_description">
-                <p></p><p>Ternary conditional operator - NOTE: Nested ternary expressions without parentheses were incorrectly parsed before a Versioned Change was made to fix it (see ‘Versioned Changes’ below)</p>
-<p></p>
-            </div>
-        </div>
-        </div>
-
-<div class="container" id="node_head_16_3">
-        <div class="object_name">
-<div class="object_inline_name"><h3 id="`this`" style="font-size: null; text-align: left">`this`</h3></div>
-            <div class="object_description">
-                <p></p><p>The current value that this expression will ultimately write to (context specific)</p>
-<p></p>
-            </div>
-        </div>
-        </div>
-
-<div class="container" id="node_head_17_3">
-        <div class="object_name">
-<div class="object_inline_name"><h3 id="`return`" style="font-size: null; text-align: left">`return`</h3></div>
-            <div class="object_description">
-                <p></p><p>For complex expressions, this evaluates the following statement and stops execution of the expression, returns the value computed</p>
-<p></p>
-            </div>
-        </div>
-        </div>
-
-<div class="container" id="node_head_18_3">
-        <div class="object_name">
-<div class="object_inline_name"><h3 id="`->`" style="font-size: null; text-align: left">`-&gt;`</h3></div>
-            <div class="object_description">
-                <p></p><p>Arrow operator, for accessing data from a different entity</p>
-<p></p>
-            </div>
-        </div>
-        </div>
-
-<div class="container" id="node_head_19_3">
-        <div class="object_name">
-<div class="object_inline_name"><h3 id="`loop`" style="font-size: null; text-align: left">`loop`</h3></div>
-            <div class="object_description">
-                <p></p><p>For repeating one or more commands ‘n’ times</p>
-<p></p>
-            </div>
-        </div>
-        </div>
-
-<div class="container" id="node_head_20_3">
-        <div class="object_name">
-<div class="object_inline_name"><h3 id="`for_each`" style="font-size: null; text-align: left">`for_each`</h3></div>
-            <div class="object_description">
-                <p></p><p>For iterating over an array of entities</p>
-<p></p>
-            </div>
-        </div>
-        </div>
-
-<div class="container" id="node_head_21_3">
-        <div class="object_name">
-<div class="object_inline_name"><h3 id="`break`" style="font-size: null; text-align: left">`break`</h3></div>
-            <div class="object_description">
-                <p></p><p>For early exiting a loop/for_each scope</p>
-<p></p>
-            </div>
-        </div>
-        </div>
-
-<div class="container" id="node_head_22_3">
-        <div class="object_name">
-<div class="object_inline_name"><h3 id="`continue`" style="font-size: null; text-align: left">`continue`</h3></div>
-            <div class="object_description">
-                <p></p><p>For skipping the rest of the set of statements of a loop/for_each iteration and moving to the next iteration</p>
-<p></p>
-            </div>
-        </div>
-        </div>
-
-<div class="container" id="node_head_23_3">
-        <div class="object_name">
-<div class="object_inline_name"><h3 id="`[``]`" style="font-size: null; text-align: left">`[` `]`</h3></div>
-            <div class="object_description">
-                <p></p><p>Brackets for array access</p>
-<p></p>
-            </div>
-        </div>
-        </div>
-
-<div class="container" id="node_head_2_2">
-        <div class="object_name">
-<div class="object_inline_name"><h2 id="OperatorPrecedence" style="font-size: null; text-align: left">Operator Precedence</h2></div>
-            <div class="object_description">
-                <p></p><p>Molang Operators follow this order to determine which thing is evaluated first when no parentheses are used. This should match the behavior of C or C++. Operators that are higher in this table are evaluated first, while operators on the same row are evaluated with the same priority. When operators have the same priority, they are evaluated left-to-right, except for the Ternary conditional operator, which is evaluated right-to-left. Using parentheses will allow direct control of order of evaluation, and is recommended for more complex expressions.</p>
-<p></p>
-            </div>
-        </div>
-        </div>
-
-<div class="container" id="node_head_0_3">
-        <div class="object_name">
-<div class="object_inline_name"><h3 id="(HighestPrecedence)" style="font-size: null; text-align: left">(Highest Precedence)</h3></div>
-            <div class="object_description">
-                <p></p><p>Higher precedence operators are evaluated first when no parentheses are used to control evaluation order</p>
-<p></p>
-            </div>
-        </div>
-        </div>
-
-<div class="container" id="node_head_1_3">
-        <div class="object_name">
-<div class="object_inline_name"><h3 id="LogicalNot" style="font-size: null; text-align: left">Logical Not</h3></div>
-            <div class="object_description">
-                <p></p><p>The Logical Not ‘!’ operator</p>
-<p></p>
-            </div>
-        </div>
-        </div>
-
-<div class="container" id="node_head_2_3">
-        <div class="object_name">
-<div class="object_inline_name"><h3 id="MultiplicationandDivision" style="font-size: null; text-align: left">Multiplication and Division</h3></div>
-            <div class="object_description">
-                <p></p><p>Multiplication ‘*’ and Division ‘/’</p>
-<p></p>
-            </div>
-        </div>
-        </div>
-
-<div class="container" id="node_head_3_3">
-        <div class="object_name">
-<div class="object_inline_name"><h3 id="AdditionandSubtraction" style="font-size: null; text-align: left">Addition and Subtraction</h3></div>
-            <div class="object_description">
-                <p></p><p>Addition ‘+’ and Subtraction ‘-’</p>
-<p></p>
-            </div>
-        </div>
-        </div>
-
-<div class="container" id="node_head_4_3">
-        <div class="object_name">
-<div class="object_inline_name"><h3 id="Comparisons" style="font-size: null; text-align: left">Comparisons</h3></div>
-            <div class="object_description">
-                <p></p><p>Comparison operators ‘&lt;’ ‘&lt;=’ ‘&gt;’ ‘&gt;=’ (See ‘Versioned Changes’ below)</p>
-<p></p>
-            </div>
-        </div>
-        </div>
-
-<div class="container" id="node_head_5_3">
-        <div class="object_name">
-<div class="object_inline_name"><h3 id="Equalitychecks" style="font-size: null; text-align: left">Equality checks</h3></div>
-            <div class="object_description">
-                <p></p><p>Equality checking operators ‘==’ ‘!=’ (See ‘Versioned Changes’ below)</p>
-<p></p>
-            </div>
-        </div>
-        </div>
-
-<div class="container" id="node_head_6_3">
-        <div class="object_name">
-<div class="object_inline_name"><h3 id="LogicalAND" style="font-size: null; text-align: left">Logical AND</h3></div>
-            <div class="object_description">
-                <p></p><p>The Logical AND ‘&amp;&amp;’ operator (See ‘Versioned Changes’ below)</p>
-<p></p>
-            </div>
-        </div>
-        </div>
-
-<div class="container" id="node_head_7_3">
-        <div class="object_name">
-<div class="object_inline_name"><h3 id="LogicalOR" style="font-size: null; text-align: left">Logical OR</h3></div>
-            <div class="object_description">
-                <p></p><p>The Logical OR ‘||’ operator (See ‘Versioned Changes’ below)</p>
-<p></p>
-            </div>
-        </div>
-        </div>
-
-<div class="container" id="node_head_8_3">
-        <div class="object_name">
-<div class="object_inline_name"><h3 id="TernaryConditional" style="font-size: null; text-align: left">Ternary Conditional</h3></div>
-            <div class="object_description">
-                <p></p><p>Ternary conditional operators using ‘? :’. Evaluated right-to-left when there are multiple ternary operators. (See ‘Versioned Changes’ below)</p>
-<p></p>
-            </div>
-        </div>
-        </div>
-
-<div class="container" id="node_head_9_3">
-        <div class="object_name">
-<div class="object_inline_name"><h3 id="NullCoalescing" style="font-size: null; text-align: left">Null Coalescing</h3></div>
-            <div class="object_description">
-                <p></p><p>Null coalescing operator ‘??’</p>
-<p></p>
-            </div>
-        </div>
-        </div>
-
-<div class="container" id="node_head_10_3">
-        <div class="object_name">
-<div class="object_inline_name"><h3 id="(LowestPrecedence)" style="font-size: null; text-align: left">(Lowest Precedence)</h3></div>
-            <div class="object_description">
-                <p></p><p>Lower precedence operators are evaluated last when no parentheses are used to control evaluation order</p>
-<p></p>
-            </div>
-        </div>
-        </div>
-
+</div>
+    
 <div class="container" id="node_head_3_2">
         <div class="object_name">
 <div class="object_inline_name"><h2 id="Variables" style="font-size: null; text-align: left">Variables</h2></div>
@@ -539,9 +191,250 @@ Struct (see 'structs' section below)</code></pre>
         </div>
         </div>
 
+<div class="container" id="node_table_0_3">
+  <script src="/assets/libraries/gridjs.umd.js"></script>
+  <h3 id="AliasMapping" style="padding: 10px">Alias Mapping</h3>
+  <p style="margin-left: 1vw"></p>
+  <div id="wrapper" style="overflow-x: scroll; scrollbar-width: none;"></div>
+<script>
+  new gridjs.Grid({
+    data: [["`context.moo`","`c.moo`"],["`query.moo`","`q.moo`"],["`temp.moo`","`t.moo`"],["`variable.moo`","`v.moo`"]],
+    columns: ["Full Name","Aliased Name"],
+    search: true,
+    height:'100%',
+    width:'100%',
+    style: {
+      table: {
+        width: '30vw',
+      },
+    }
+  }).render(document.getElementById("wrapper"));
+</script>
+
+</div>
+    
+<div class="container" id="node_head_1_3">
+        <div class="object_name">
+
+            <div class="object_description">
+                <p></p><p>As an example…</p>
+<p></p>
+            </div>
+        </div>
+        </div>
+
+<div class="container" id="node_example_2_0_3">
+  <h2 class="object_name" id="Example">{ Example }</h2>
+  <div style="margin-left: 1.5vw">
+    <link rel="stylesheet" href="/assets/styles/github-dark.css">
+    <script src="/assets/libraries/highlight.min.js"></script>
+    <script defer="">hljs.highlightAll();</script>
+    <pre><code>math.cos(query.anim_time * 38) * variable.rotation_scale + variable.x * variable.x * query.life_time;</code></pre>
+  </div>
+</div>
+
+<div class="container" id="node_head_3_3">
+        <div class="object_name">
+
+            <div class="object_description">
+                <p></p><p>…can also be written as:</p>
+<p></p>
+            </div>
+        </div>
+        </div>
+
+<div class="container" id="node_example_4_0_3">
+  <h2 class="object_name" id="Example">{ Example }</h2>
+  <div style="margin-left: 1.5vw">
+    <link rel="stylesheet" href="/assets/styles/github-dark.css">
+    <script src="/assets/libraries/highlight.min.js"></script>
+    <script defer="">hljs.highlightAll();</script>
+    <pre><code>math.cos(q.anim_time * 38) * v.rotation_scale + v.x * v.x * q.life_time</code></pre>
+  </div>
+</div>
+
+<div class="container" id="node_head_5_3">
+        <div class="object_name">
+
+            <div class="object_description">
+                <p></p><p>Either syntax will work, and can be intermixed as desired. eg:</p>
+<p></p>
+            </div>
+        </div>
+        </div>
+
+<div class="container" id="node_example_6_0_3">
+  <h2 class="object_name" id="Example">{ Example }</h2>
+  <div style="margin-left: 1.5vw">
+    <link rel="stylesheet" href="/assets/styles/github-dark.css">
+    <script src="/assets/libraries/highlight.min.js"></script>
+    <script defer="">hljs.highlightAll();</script>
+    <pre><code>math.cos(q.anim_time * 38) * variable.rotation_scale + v.x * variable.x * query.life_time</code></pre>
+  </div>
+</div>
+
+<div class="container" id="node_head_7_2">
+        <div class="object_name">
+<div class="object_inline_name"><h2 id="Structs" style="font-size: null; text-align: left">Structs</h2></div>
+            <div class="object_description">
+                <p></p><p>Structures of data, unlike C, are implicitly defined by usage.  Their purpose is to more efficiently pass data around, such as passing <code>v.location</code> rather than <code>v.x</code>, <code>v.y</code>, and <code>v.z</code>.  eg:</p>
+<p></p>
+            </div>
+        </div>
+        </div>
+
+<div class="container" id="node_example_0_0_3">
+  <h2 class="object_name" id="Example">{ Example }</h2>
+  <div style="margin-left: 1.5vw">
+    <link rel="stylesheet" href="/assets/styles/github-dark.css">
+    <script src="/assets/libraries/highlight.min.js"></script>
+    <script defer="">hljs.highlightAll();</script>
+    <pre><code>v.location.x = 1;
+v.location.y = 2;
+v.location.z = 3;
+v.another_mobs_location = v.another_mob_set_elsewhere-&gt;v.location;</code></pre>
+  </div>
+</div>
+
+<div class="container" id="node_head_1_3">
+        <div class="object_name">
+
+            <div class="object_description">
+                <p></p><p>For some more usage examples, each of the following expressions return 1.23</p>
+<p></p>
+            </div>
+        </div>
+        </div>
+
+<div class="container" id="node_example_2_0_3">
+  <h2 class="object_name" id="Example">{ Example }</h2>
+  <div style="margin-left: 1.5vw">
+    <link rel="stylesheet" href="/assets/styles/github-dark.css">
+    <script src="/assets/libraries/highlight.min.js"></script>
+    <script defer="">hljs.highlightAll();</script>
+    <pre><code>v.cowcow.friend = v.pigpig; v.pigpig-&gt;v.test.a.b.c = 1.23; return v.cowcow.friend-&gt;v.test.a.b.c;</code></pre>
+  </div>
+</div>
+
+<div class="container" id="node_example_3_0_3">
+  <h2 class="object_name" id="Example">{ Example }</h2>
+  <div style="margin-left: 1.5vw">
+    <link rel="stylesheet" href="/assets/styles/github-dark.css">
+    <script src="/assets/libraries/highlight.min.js"></script>
+    <script defer="">hljs.highlightAll();</script>
+    <pre><code>v.cowcow.friend = v.pigpig; v.pigpig-&gt;v.test.a.b.c = 1.23; v.moo = v.cowcow.friend-&gt;v.test; return v.moo.a.b.c;</code></pre>
+  </div>
+</div>
+
+<div class="container" id="node_example_4_0_3">
+  <h2 class="object_name" id="Example">{ Example }</h2>
+  <div style="margin-left: 1.5vw">
+    <link rel="stylesheet" href="/assets/styles/github-dark.css">
+    <script src="/assets/libraries/highlight.min.js"></script>
+    <script defer="">hljs.highlightAll();</script>
+    <pre><code>v.cowcow.friend = v.pigpig; v.pigpig-&gt;v.test.a.b.c = 1.23; v.moo = v.cowcow.friend-&gt;v.test.a; return v.moo.b.c;</code></pre>
+  </div>
+</div>
+
+<div class="container" id="node_example_5_0_3">
+  <h2 class="object_name" id="Example">{ Example }</h2>
+  <div style="margin-left: 1.5vw">
+    <link rel="stylesheet" href="/assets/styles/github-dark.css">
+    <script src="/assets/libraries/highlight.min.js"></script>
+    <script defer="">hljs.highlightAll();</script>
+    <pre><code>v.cowcow.friend = v.pigpig; v.pigpig-&gt;v.test.a.b.c = 1.23; v.moo = v.cowcow.friend-&gt;v.test.a.b; return v.moo.c;</code></pre>
+  </div>
+</div>
+
+<div class="container" id="node_example_6_0_3">
+  <h2 class="object_name" id="Example">{ Example }</h2>
+  <div style="margin-left: 1.5vw">
+    <link rel="stylesheet" href="/assets/styles/github-dark.css">
+    <script src="/assets/libraries/highlight.min.js"></script>
+    <script defer="">hljs.highlightAll();</script>
+    <pre><code>v.cowcow.friend = v.pigpig; v.pigpig-&gt;v.test.a.b.c = 1.23; v.moo = v.cowcow.friend-&gt;v.test.a.b.c; return v.moo;</code></pre>
+  </div>
+</div>
+
+<div class="container" id="node_head_7_3">
+        <div class="object_name">
+
+            <div class="object_description">
+                <p></p><p>Note that structures can be arbitrarily deep in their nesting/recursiveness.  That said, it is recommended that you don’t copy full structures inside other structures to avoid exploding memory, and not making structures too deep as there is a slight performance cost for each layer.</p>
+<p></p>
+            </div>
+        </div>
+        </div>
+
+<div class="container" id="node_head_8_2">
+        <div class="object_name">
+<div class="object_inline_name"><h2 id="Strings" style="font-size: null; text-align: left">Strings</h2></div>
+            <div class="object_description">
+                <p></p><p>Strings in Molang are surrounded by single quotes, eg: <code>'minecraft:pig'</code> or <code>'hello world!'</code>. An empty string is defined as two consecutive single quotes.  String operations only support <code>==</code> and <code>!=</code> at this time.</p>
+<p>Note: strings don’t support the ’ character as there is no support for escape characters at this time.</p>
+<p></p>
+            </div>
+        </div>
+        </div>
+
+<div class="container" id="node_table_9_2">
+  <script src="/assets/libraries/gridjs.umd.js"></script>
+  <h2 id="MathFunctions" style="padding: 10px">Math Functions</h2>
+  <p style="margin-left: 1vw"></p>
+  <div id="wrapper" style="overflow-x: scroll; scrollbar-width: none;"></div>
+<script>
+  new gridjs.Grid({
+    data: [["`math.abs(value)`","Absolute value of value"],["`math.acos(value)`","arccos of value"],["`math.asin(value)`","arcsin of value"],["`math.atan(value)`","arctan of value"],["`math.atan2(y, x)`","arctan of y/x.  NOTE: the order of arguments!"],["`math.ceil(value)`","Round value up to nearest integral number"],["`math.clamp(value, min, max)`","Clamp value to between min and max inclusive"],["`math.cos(value)`","Cosine (in degrees) of value"],["`math.die_roll(num, low, high)`","returns the sum of 'num' random numbers, each with a value from low to high`.  Note: the generated random numbers are not integers like normal dice.  For that, use `math.die_roll_integer`."],["`math.die_roll_integer(num, low, high)`","returns the sum of 'num' random integer numbers, each with a value from low to high`.  Note: the generated random numbers are integers like normal dice."],["`math.exp(value)`","Calculates e to the value'th power"],["`math.floor(value)`","Round value down to nearest integral number"],["`math.hermite_blend(value)`","Useful for simple smooth curve interpolation using one of the Hermite Basis functions: `3t^2 - 2t^3`.  Note that while any valid float is a valid input, this function works best in the range [0,1]."],["`math.lerp(start, end, 0_to_1)`","Lerp from start to end via 0_to_1"],["`math.lerprotate(start, end, 0_to_1)`","Lerp the shortest direction around a circle from start degrees to end degrees via 0_to_1"],["`math.ln(value)`","Natural logarithm of value"],["`math.max(A, B)`","Return highest value of A or B"],["`math.min(A, B)`","Return lowest value of A or B"],["`math.min_angle(value)`","Minimize angle magnitude (in degrees) into the range [-180, 180)"],["`math.mod(value, denominator)`","Return the remainder of value / denominator"],["`math.pi`","Returns the float representation of the constant pi."],["`math.pow(base, exponent)`","Elevates `base` to the `exponent`'th power"],["`math.random(low, high)`","Random value between low and high inclusive"],["`math.random_integer(low, high)`","Random integer value between low and high inclusive"],["`math.round(value)`","Round value to nearest integral number"],["`math.sin(value)`","Sine (in degrees) of value"],["`math.sqrt(value)`","Square root of value"],["`math.trunc(value)`","Round value towards zero"]],
+    columns: ["Function","Description"],
+    search: true,
+    height:'100%',
+    width:'100%',
+    style: {
+      table: {
+        width: '30vw',
+      },
+    }
+  }).render(document.getElementById("wrapper"));
+</script>
+
+</div>
+    
+<div class="container" id="node_head_10_2">
+        <div class="object_name">
+<div class="object_inline_name"><h2 id="->ArrowOperator" style="font-size: null; text-align: left">-&gt;  Arrow Operator</h2></div>
+            <div class="object_description">
+                <p></p>
+            </div>
+        </div>
+        </div>
+
 <div class="container" id="node_head_0_3">
         <div class="object_name">
-<div class="object_inline_name"><h3 id="AliasMapping" style="font-size: null; text-align: left">Alias Mapping</h3></div>
+
+            <div class="object_description">
+                <p></p><p>Some return values of query function, or values stored in temp/entity/context variables can be a reference to another entity.  The <code>-&gt;</code> operator allows an expression to access variables or run queries on that entity.  For example, the example below will find all pigs within four meters of the current entity (including itself if it’s a pig), and increment a variable <code>v.x</code> on itself if the block immediately above each pig is flammable (such as an oak button) :</p>
+<p>Note that in the case where the left-hand side of the <code>-&gt;</code> operator has an error (value is null, the entity was killed previously, or some other issue), the expression will not evaluate the right-hand side and will return 0. This implementation style was a choice between performance and not requiring content creators to overly worry about checking for potentially bad values everywhere.</p>
+<p></p>
+            </div>
+        </div>
+        </div>
+
+<div class="container" id="node_example_0_0_3">
+  <h2 class="object_name" id="Example">{ Example }</h2>
+  <div style="margin-left: 1.5vw">
+    <link rel="stylesheet" href="/assets/styles/github-dark.css">
+    <script src="/assets/libraries/highlight.min.js"></script>
+    <script defer="">hljs.highlightAll();</script>
+    <pre><code>"v.x = 0;
+for_each(v.pig, query.get_nearby_entities(4, 'minecraft:pig'), {
+    v.x = v.x + v.pig-&gt;query.get_relative_block_state(0, 1, 0, 'flammable');
+});"</code></pre>
+  </div>
+</div>
+
+<div class="container" id="node_head_1_3">
+        <div class="object_name">
+<div class="object_inline_name"><h3 id="PublicVariables" style="font-size: null; text-align: left">Public Variables</h3></div>
             <div class="object_description">
                 <p></p>
             </div>
@@ -550,9 +443,208 @@ Struct (see 'structs' section below)</code></pre>
 
 <div class="container" id="node_head_0_4">
         <div class="object_name">
-<div class="object_inline_name"><h4 id="`context.moo`" style="font-size: null; text-align: left">`context.moo`</h4></div>
+
             <div class="object_description">
-                <p></p><p><code>c.moo</code></p>
+                <p></p><p>In general, variables of a mob are considered private to that mob and cannot be accessed by another.  To expose read-only access of a variable to other mobs, you need to set the ‘public’ setting on that variable in the owning entity’s resource definition.  It is also recommended to default-initialize the variable.</p>
+<p></p>
+            </div>
+        </div>
+        </div>
+
+<div class="container" id="node_example_0_0_4">
+  <h2 class="object_name" id="Example">{ Example }</h2>
+  <div style="margin-left: 1.5vw">
+    <link rel="stylesheet" href="/assets/styles/github-dark.css">
+    <script src="/assets/libraries/highlight.min.js"></script>
+    <script defer="">hljs.highlightAll();</script>
+    <pre><code>{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      ...
+      "scripts": {
+        "variables": {
+          "variable.oink": "public"
+        },
+        "initialize": [
+          "variable.oink = 0;"
+        ],
+        ...
+      },
+      ...
+    }
+  }
+}</code></pre>
+  </div>
+</div>
+
+<div class="container" id="node_head_11_2">
+        <div class="object_name">
+<div class="object_inline_name"><h2 id="{}BraceScopeDelimiters" style="font-size: null; text-align: left">{ } Brace Scope Delimiters</h2></div>
+            <div class="object_description">
+                <p></p><p>One can group a series of statements into a single group by wrapping them in <code>{</code> and <code>}</code> symbols.  This is used primarily in loops and conditional statements:</p>
+<p></p>
+            </div>
+        </div>
+        </div>
+
+<div class="container" id="node_example_11_0_2">
+  <h2 class="object_name" id="Example">{ Example }</h2>
+  <div style="margin-left: 1.5vw">
+    <link rel="stylesheet" href="/assets/styles/github-dark.css">
+    <script src="/assets/libraries/highlight.min.js"></script>
+    <script defer="">hljs.highlightAll();</script>
+    <pre><code>(v.moo &gt; 0) ? {
+	v.x = math.sin(q.life_time * 45);
+	v.x = v.x * v.x + 17.3;
+	t.sin_x = math.sin(v.x);
+	v.x = t.sin_x * t.sin_x + v.x * v.x;
+	v.x = math.sqrt(v.x) * v.x * math.pi;
+}</code></pre>
+  </div>
+</div>
+
+<div class="container" id="node_head_12_2">
+        <div class="object_name">
+<div class="object_inline_name"><h2 id="Conditionals" style="font-size: null; text-align: left">Conditionals</h2></div>
+            <div class="object_description">
+                <p></p><p>The conditional ‘?’ operator allows for two convenient ways to implement simple branching logic.</p>
+<p>The first way is to use ‘?’ by itself to conditionally execute part of an expression, for example <code>A ? B</code>. The part after the ‘?’ is only run if the part before it evaluates to a true boolean.</p>
+<p>The second way is to use ‘?’ with a ‘:’ as a ‘conditional ternary’, for example <code>A ? B : C</code>. If the part before the ‘?’ is evaluated as true, the part before the ‘:’ is returned. Otherwise the part after is returned.</p>
+<p>NOTE: Nested ternary expressions without parentheses were incorrectly parsed before a Versioned Change was made to fix it (see ‘Versioned Changes’ below).</p>
+<p></p>
+            </div>
+        </div>
+        </div>
+
+<div class="container" id="node_example_12_0_2">
+  <h2 class="object_name" id="ConditionalExamples">{ Conditional Examples }</h2>
+  <div style="margin-left: 1.5vw">
+    <link rel="stylesheet" href="/assets/styles/github-dark.css">
+    <script src="/assets/libraries/highlight.min.js"></script>
+    <script defer="">hljs.highlightAll();</script>
+    <pre><code>v.should_reset_a ? { v.a = 0; }
+
+v.larger_value = (v.a &gt; v.b) ? v.a : v.b;</code></pre>
+  </div>
+</div>
+
+<div class="container" id="node_head_13_2">
+        <div class="object_name">
+<div class="object_inline_name"><h2 id="loop" style="font-size: null; text-align: left">loop</h2></div>
+            <div class="object_description">
+                <p></p><p>Sometimes you want to execute an expression multiple times.  Rather than copy-pasting it a bunch, you can use <code>loop(&lt;count&gt;, &lt;expression&gt;);</code>.  We have placed some arbitrary restrictions on these for safety for now. The maximum loop counter is (as of this document being written) 1024.  Also, note that while you can nest loops inside loops pretty much as deep as you want, be careful you don’t make a loop so long it will hang your game.</p>
+<p></p>
+            </div>
+        </div>
+        </div>
+
+<div class="container" id="node_example_13_0_2">
+  <h2 class="object_name" id="AFibonacciCalculator">{ A Fibonacci Calculator }</h2>
+  <div style="margin-left: 1.5vw">
+    <link rel="stylesheet" href="/assets/styles/github-dark.css">
+    <script src="/assets/libraries/highlight.min.js"></script>
+    <script defer="">hljs.highlightAll();</script>
+    <pre><code>v.x = 1;
+v.y = 1;
+loop(10, {
+	t.x = v.x + v.y;
+	v.x = v.y;
+	v.y = t.x;
+});</code></pre>
+  </div>
+</div>
+
+<div class="container" id="node_head_14_2">
+        <div class="object_name">
+<div class="object_inline_name"><h2 id="for_each" style="font-size: null; text-align: left">for_each</h2></div>
+            <div class="object_description">
+                <p></p><p><code>query.get_nearby_entities</code> (see below) returns an array of entities.  In order to iterate through them, you can use the following new built-in function <code>for_each</code>.  It takes three parameters: <code>for_each(&lt;variable&gt;, &lt;array&gt;, &lt;expression&gt;);</code>  The variable can be any variable, either a <code>temp.</code> or <code>variable.</code>, although I’d recommend using <code>temp.</code> to not pollute the entity’s variable space.  The expression is any Molang expression you want to execute for each entry in the array)</p>
+<p></p>
+            </div>
+        </div>
+        </div>
+
+<div class="container" id="node_example_14_0_2">
+  <h2 class="object_name" id="Example">{ Example }</h2>
+  <div style="margin-left: 1.5vw">
+    <link rel="stylesheet" href="/assets/styles/github-dark.css">
+    <script src="/assets/libraries/highlight.min.js"></script>
+    <script defer="">hljs.highlightAll();</script>
+    <pre><code>"v.x = 0;
+for_each(t.pig, query.get_nearby_entities(4, 'minecraft:pig'), {
+    v.x = v.x + 1;
+});"</code></pre>
+  </div>
+</div>
+
+<div class="container" id="node_head_15_2">
+        <div class="object_name">
+<div class="object_inline_name"><h2 id="break" style="font-size: null; text-align: left">break</h2></div>
+            <div class="object_description">
+                <p></p>
+            </div>
+        </div>
+        </div>
+
+<div class="container" id="node_head_0_3">
+        <div class="object_name">
+
+            <div class="object_description">
+                <p></p><p>This will exit out of a <code>loop</code> or <code>for_each</code> early.  Eg:</p>
+<p></p>
+            </div>
+        </div>
+        </div>
+
+<div class="container" id="node_example_1_0_3">
+  <h2 class="object_name" id="Example">{ Example }</h2>
+  <div style="margin-left: 1.5vw">
+    <link rel="stylesheet" href="/assets/styles/github-dark.css">
+    <script src="/assets/libraries/highlight.min.js"></script>
+    <script defer="">hljs.highlightAll();</script>
+    <pre><code>v.x = 1;
+v.y = 1;
+loop(10, {t.x = v.x + v.y; v.x = v.y; v.y = t.x; (v.y &gt; 20) ? break;});</code></pre>
+  </div>
+</div>
+
+<div class="container" id="node_head_2_3">
+        <div class="object_name">
+
+            <div class="object_description">
+                <p></p><p>This will immediately exit the inner-most active loop, as per C-style language rules.  If you have:</p>
+<p></p>
+            </div>
+        </div>
+        </div>
+
+<div class="container" id="node_example_3_0_3">
+  <h2 class="object_name" id="Example">{ Example }</h2>
+  <div style="margin-left: 1.5vw">
+    <link rel="stylesheet" href="/assets/styles/github-dark.css">
+    <script src="/assets/libraries/highlight.min.js"></script>
+    <script defer="">hljs.highlightAll();</script>
+    <pre><code>v.x = 0;
+loop(10, {loop(10, {v.x = v.x + 1; (v.x &gt; 5) ? break;});});</code></pre>
+  </div>
+</div>
+
+<div class="container" id="node_head_4_3">
+        <div class="object_name">
+
+            <div class="object_description">
+                <p></p><p>The <code>break</code> statement will terminate the inner loop when <code>v.x &gt; 5</code>, and continue processing the outer loop’s expression.  Note that as v.x is not reset between the outer loops, the second time into the inner loop this will add one more to <code>v.x</code> and then exit the inner loop again, resulting in a final value of <code>v.x</code> of <code>6 + 1 + 1 + 1 + ... + 1</code> = <code>15</code>.)</p>
+<p></p>
+            </div>
+        </div>
+        </div>
+
+<div class="container" id="node_head_16_2">
+        <div class="object_name">
+<div class="object_inline_name"><h2 id="continue" style="font-size: null; text-align: left">continue</h2></div>
+            <div class="object_description">
+                <p></p><p><code>continue</code> functions as per C-style language rules.  Currently only supported in <code>loop</code> and <code>for_each</code>, this will skip to the next iteration of the current loop.  See <code>break</code> above for more details on inner/outer loops.  The following example will result in v.x becoming 6.0, as the increment will be skipped once it reaches that value.  Note that it is better to break out of the loop in this contrived example, as it would be more performant than continuing to perform all 10 iterations.</p>
 <p></p>
             </div>
         </div>
@@ -617,775 +709,11 @@ Struct (see 'structs' section below)</code></pre>
 
 
 
+    
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    
     <script src="/assets/js/LanguageHandler.js"></script>
         <script src="/assets/js/occlusionPilot.js"></script>
         <script src="/assets/js/preloadPilot.js"></script>
@@ -1443,4 +771,46 @@ Struct (see 'structs' section below)</code></pre>
                 };
                 </script>
                 </div>
+                <div class="loading_thingy_container" style="
+      position: sticky;
+      left: 50%;
+      bottom: 50%;
+      display: flex;
+      justify-content: center;
+      opacity: 0;
+    "><div class="loading_thingy"></div></div>
+        <style>
+        .loading_thingy {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      position: relative;
+      animation: rotate 1s linear infinite
+    }
+    .loading_thingy::before,
+    .loading_thingy::after {
+      content: "";
+      box-sizing: border-box;
+      position: absolute;
+      inset: 0px;
+      border-radius: 50%;
+      border: 5px solid rgba(207,207,207,0.53);
+      animation: prixClipFix 2s linear infinite ;
+    }
+    .loading_thingy::after {
+      inset: 8px;
+      transform: rotate3d(90, 90, 0, 180deg );
+      border-color: rgba(255,140,140,0.56);
+    }
+
+    @keyframes rotate {
+      0%   {transform: rotate(0deg)}
+      100%   {transform: rotate(360deg)}
+    }
+    @keyframes prixClipFix {
+      0%   {clip-path:polygon(50% 50%,0 0,0 0,0 0,0 0,0 0)}
+      50%  {clip-path:polygon(50% 50%,0 0,100% 0,100% 0,100% 0,100% 0)}
+      75%, 100%  {clip-path:polygon(50% 50%,0 0,100% 0,100% 100%,100% 100%,100% 100%)}
+    }
+</style>
         </body></html>

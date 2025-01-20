@@ -36,15 +36,6 @@
         </div>
         </div>
 
-<div class="container" id="node_head_0_1">
-        <div class="object_name">
-<div class="object_inline_name"><h1 id="AnimationControllers" style="font-size: null; text-align: left">Animation Controllers</h1></div>
-            <div class="object_description">
-                <p></p>
-            </div>
-        </div>
-        </div>
-
 <div class="container" id="node_head_0_2">
         <div class="object_name">
 
@@ -325,95 +316,6 @@
   </div>
 </div>
 
-<div class="container" id="node_head_1_1">
-        <div class="object_name">
-<div class="object_inline_name"><h1 id="Channels(Rotation,Position,Scale)" style="font-size: null; text-align: left">Channels (Rotation, Position, Scale)</h1></div>
-            <div class="object_description">
-                <p><p>The engine tracks the animation of rotation, position, and scale separately.  Within a channel, one or more key frames are specified at arbitrary times, in seconds, from the start of the animation.  If no key frames are specified, a single key frame is created at t=0.0 and all channel data is stored within that key frame.</p>
-</p>
-            </div>
-        </div>
-        </div>
-
-<div class="container" id="node_head_2_1">
-        <div class="object_name">
-<div class="object_inline_name"><h1 id="EntityAnimationFormatExamples" style="font-size: null; text-align: left">Entity Animation Format Examples</h1></div>
-            <div class="object_description">
-                <p><p>The json format for an animation is as follows.  Note Matching the geometry format, units are in 1/16ths of meters.</p>
-</p>
-            </div>
-        </div>
-        </div>
-
-<div class="container" id="node_example_2_0_1">
-  <h2 class="object_name" id="Example">{ Example }</h2>
-  <div style="margin-left: 1.5vw">
-    <link rel="stylesheet" href="/assets/styles/github-dark.css">
-    <script src="/assets/libraries/highlight.min.js"></script>
-    <script defer>hljs.highlightAll();</script>
-    <pre><code>```
-<animation_name>": {
-  // optional
-  "loop": <bool>                                       // default = false.  Should the animation loop back to t=0.0 when it finishes?
-  "blend_weight": <expression>                         // default = "1.0".  How much this animation is blended with the others.  0.0 = off.  1.0 = fully apply all transforms.  Can be an expression - see the Animation Controller section below
-  "animation_length": <float>                          // default = time of last key frame.  At what time does the system consider this animation finished?
-  "override_previous_animation": <bool>                // default = false.  Should the animation pose of the bone be set to the bind pose before applying this animation, thereby overriding any previous animations to this point?
-
-  // required
-  "bones": [
-    {
-    "<bone_name>": {                                   // must match the name of the bone specified in the geometry skeleton
-      // various flavours of setting data
-      // omitting a channel skips that channel for this animation of this bone
-      // any number of floats below can be replaced by a string expression as described above; you don't have to replace all the floats on a line with expressions, only the ones you want to be expression-based
-      "position": 1.0,                                 // set x, y, and z to 1
-      "position": [1.0],                               // set x, y, and z to 1
-      "position": [1.0, 2.0, 3.0],                     // set x=1 , y=2 , and z=3
-      "rotation": 45.0,                                // set x, y, and z to 45 degrees
-      "rotation": [45.0],                              // set x, y, and z to 45 degrees
-      "rotation": [30.0, 0.0, 45.0],                   // set x, y, and z to the respective values (in degrees)
-      // note: only uniform scaling is supported at this time
-      "scale": 2.0,                                    // scales the bone by 2.0
-      "scale": [2.0],                                  // scales the bone by 2.0
-      // Key frame data is described below
-      // Note that any of the above styles of values will work for "pre" and "post", and "pre" does not have to have the same format as "post"
-      "rotation": {
-        "0.0": [80.0, 0.0, 0.0],
-        "0.1667": [-80.0, 0.0, 0.0],
-        "0.333": [80.0, 0.0, 0.0]
-      }
-      // For discontinuous channel curve, you can specify a different value when interpolating to/from this key frame
-      "rotation": {
-        "0.3": {                                       // the key field is the time stamp for this key frame: the value can be any of the above examples
-        "pre": [30.0, 0.0, 45.0],                      // when interpolating towards this key frame from the previous, use this value
-        "post": "180.0 * Math.Sin(global.key_frame_lerp_time)"  // when at interpolating away from this key frame to the next, use this value
-        }
-      }
-      // another example
-      "rotation": {
-        "0.0": [80.0, 0.0, 0.0],                       // start at an x rotation of 80 degrees
-        "0.4": {
-        "pre": [80.0, 0.0, 0.0],                       // stay at 80 until 0.4 seconds have elapsed
-        "post": [0.0, 0.0, 0.0],                       // discontinuously pop the x rotation to 0.0 degrees
-        },
-        "0.8": [-80.0, 0.0, 0.0]                       // using the previous frame's lerp mode, lerp to a x rotation of -80 degrees by 0.8 seconds
-      }
-    }
-  ]
-}
-```</code></pre>
-  </div>
-</div>
-
-<div class="container" id="node_head_3_1">
-        <div class="object_name">
-<div class="object_inline_name"><h1 id="GettingStarted" style="font-size: null; text-align: left">Getting Started</h1></div>
-            <div class="object_description">
-                <p></p>
-            </div>
-        </div>
-        </div>
-
 <div class="container" id="node_head_0_2">
         <div class="object_name">
 <div class="object_inline_name"><h2 id="AddingAnimations" style="font-size: null; text-align: left">Adding Animations</h2></div>
@@ -478,30 +380,6 @@
         </div>
         </div>
 
-<div class="container" id="node_example_1_0_3">
-  <h2 class="object_name" id="Hereisanexamplefromquadruped.animation.jsoninthevanillaresourcepack'sanimationfolder">{ Here is an example from quadruped.animation.json in the vanilla resource pack's animation folder }</h2>
-  <div style="margin-left: 1.5vw">
-    <link rel="stylesheet" href="/assets/styles/github-dark.css">
-    <script src="/assets/libraries/highlight.min.js"></script>
-    <script defer>hljs.highlightAll();</script>
-    <pre><code>{
-  "format_version": "1.8.0",
-  "animations": {
-    "animation.quadruped.walk": {
-      "anim_time_update": "query.modified_distance_moved",
-      "loop": true,
-      "bones": {
-        "leg0": { "rotation": [ "Math.cos(query.anim_time * 38.17) *  80.0", 0.0, 0.0 ] },
-        "leg1": { "rotation": [ "Math.cos(query.anim_time * 38.17) * -80.0", 0.0, 0.0 ] },
-        "leg2": { "rotation": [ "Math.cos(query.anim_time * 38.17) * -80.0", 0.0, 0.0 ] },
-        "leg3": { "rotation": [ "Math.cos(query.anim_time * 38.17) *  80.0", 0.0, 0.0 ] }
-      }
-    }
-  }
-}</code></pre>
-  </div>
-</div>
-
 <div class="container" id="node_head_0_4">
         <div class="object_name">
 <div class="object_inline_name"><h4 id="Animationdatacanbeeitherrawdata:" style="font-size: null; text-align: left">Animation data can be either raw data:</h4></div>
@@ -537,6 +415,30 @@
     <script src="/assets/libraries/highlight.min.js"></script>
     <script defer>hljs.highlightAll();</script>
     <pre><code>"rotation": ["cos(query.anim_pos * 38.17) * 80.0 * query.anim_speed", 0.0, 0.0]</code></pre>
+  </div>
+</div>
+
+<div class="container" id="node_example_1_0_3">
+  <h2 class="object_name" id="Hereisanexamplefromquadruped.animation.jsoninthevanillaresourcepack'sanimationfolder">{ Here is an example from quadruped.animation.json in the vanilla resource pack's animation folder }</h2>
+  <div style="margin-left: 1.5vw">
+    <link rel="stylesheet" href="/assets/styles/github-dark.css">
+    <script src="/assets/libraries/highlight.min.js"></script>
+    <script defer>hljs.highlightAll();</script>
+    <pre><code>{
+  "format_version": "1.8.0",
+  "animations": {
+    "animation.quadruped.walk": {
+      "anim_time_update": "query.modified_distance_moved",
+      "loop": true,
+      "bones": {
+        "leg0": { "rotation": [ "Math.cos(query.anim_time * 38.17) *  80.0", 0.0, 0.0 ] },
+        "leg1": { "rotation": [ "Math.cos(query.anim_time * 38.17) * -80.0", 0.0, 0.0 ] },
+        "leg2": { "rotation": [ "Math.cos(query.anim_time * 38.17) * -80.0", 0.0, 0.0 ] },
+        "leg3": { "rotation": [ "Math.cos(query.anim_time * 38.17) *  80.0", 0.0, 0.0 ] }
+      }
+    }
+  }
+}</code></pre>
   </div>
 </div>
 
@@ -726,17 +628,6 @@
         </div>
         </div>
 
-<div class="container" id="node_head_4_1">
-        <div class="object_name">
-<div class="object_inline_name"><h1 id="KeyFrames" style="font-size: null; text-align: left">Key Frames</h1></div>
-            <div class="object_description">
-                <p><p>A key frame defines two values for a channel-specific transform to a specific bone at a specified time, one as time approaches the key frame time, and the second from that key frame time onwards.</p>
-<p>As such, when interpolating between two key frames, one can define the slope of the animation curve in either a continuous or discontinuous manner.</p>
-</p>
-            </div>
-        </div>
-        </div>
-
 <div class="container" id="node_head_0_2">
         <div class="object_name">
 <div class="object_inline_name"><h2 id="Interpolation" style="font-size: null; text-align: left">Interpolation</h2></div>
@@ -814,45 +705,6 @@
 }</code></pre>
   </div>
 </div>
-
-<div class="container" id="node_head_5_1">
-        <div class="object_name">
-<div class="object_inline_name"><h1 id="Names" style="font-size: null; text-align: left">Names</h1></div>
-            <div class="object_description">
-                <p><p>All names: animations, bones, states, etc, must all start with a letter and contain only alphanumerics, underscore, or period.  It is recommended to use names in all lower-case</p>
-</p>
-            </div>
-        </div>
-        </div>
-
-<div class="container" id="node_head_6_1">
-        <div class="object_name">
-<div class="object_inline_name"><h1 id="Overview" style="font-size: null; text-align: left">Overview</h1></div>
-            <div class="object_description">
-                <p><p>The follows the current Minecraft JSON paradigms:</p>
-<ul>
-<li>
-<p>Fields should be lower-case and use underscores (no spaces)</p>
-</li>
-<li>
-<p>All JSON files in the definitions directory and subtree will be read into and interpreted by the animation system</p>
-</li>
-</ul>
-</p>
-            </div>
-        </div>
-        </div>
-
-<div class="container" id="node_head_7_1">
-        <div class="object_name">
-<div class="object_inline_name"><h1 id="RenderControllers" style="font-size: null; text-align: left">Render Controllers</h1></div>
-            <div class="object_description">
-                <p><p>The Render Controller needs an identifier and needs to follow the format of “controller.render.<name>”.  This name needs to match the name set in the Client Entity Definitions JSON.</p>
-<p>Render Controllers are a way for the player to determine what renders on the entity.  Players can set the geometry, materials, textures, and part visibility of the entity.  In addition to setting the keys directly, players can use arrays to have the entity choose between different options.</p>
-</p>
-            </div>
-        </div>
-        </div>
 
 <div class="container" id="node_head_0_2">
         <div class="object_name">
@@ -1119,44 +971,6 @@
   </div>
 </div>
 
-<div class="container" id="node_head_8_1">
-        <div class="object_name">
-<div class="object_inline_name"><h1 id="Transforms" style="font-size: null; text-align: left">Transforms</h1></div>
-            <div class="object_description">
-                <p><ul>
-<li>
-<p>Order of operations: vertices are translated, rotated, then scaled.</p>
-</li>
-<li>
-<p>Animation data is assumed to be hierarchical, and is applied to a bone by name matching the bone name in the animation data to the targeted geometry’s skeleton.</p>
-</li>
-<li>
-<p>Not every bone needs to be animated</p>
-</li>
-<li>
-<p>You can animate bones that don’t exist in the targeted geometry (missing bones are ignored).</p>
-</li>
-<li>
-<p>For each of scale, rotation, position, one can set the fields individually or uniformly with a single value.  For example, these are equivalent.</p>
-</li>
-</ul>
-</p>
-            </div>
-        </div>
-        </div>
-
-<div class="container" id="node_example_8_0_1">
-  <h2 class="object_name" id="Example">{ Example }</h2>
-  <div style="margin-left: 1.5vw">
-    <link rel="stylesheet" href="/assets/styles/github-dark.css">
-    <script src="/assets/libraries/highlight.min.js"></script>
-    <script defer>hljs.highlightAll();</script>
-    <pre><code>"scale": [2.0, 2.0, 2.0]
-"scale": 2.0
-"scale": [2.0]</code></pre>
-  </div>
-</div>
-
     <script src="/assets/js/LanguageHandler.js"></script>
         <script src="/assets/js/occlusionPilot.js"></script>
         <script src="/assets/js/preloadPilot.js"></script>
@@ -1214,4 +1028,47 @@
                 };
                 </script>
                 </div>
+                <div class="loading_thingy_container"
+    style="
+      position: sticky;
+      left: 50%;
+      bottom: 50%;
+      display: flex;
+      justify-content: center;
+      opacity: 0;
+    "><div class="loading_thingy"></div></div>
+        <style>
+        .loading_thingy {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      position: relative;
+      animation: rotate 1s linear infinite
+    }
+    .loading_thingy::before,
+    .loading_thingy::after {
+      content: "";
+      box-sizing: border-box;
+      position: absolute;
+      inset: 0px;
+      border-radius: 50%;
+      border: 5px solid rgba(207,207,207,0.53);
+      animation: prixClipFix 2s linear infinite ;
+    }
+    .loading_thingy::after {
+      inset: 8px;
+      transform: rotate3d(90, 90, 0, 180deg );
+      border-color: rgba(255,140,140,0.56);
+    }
+
+    @keyframes rotate {
+      0%   {transform: rotate(0deg)}
+      100%   {transform: rotate(360deg)}
+    }
+    @keyframes prixClipFix {
+      0%   {clip-path:polygon(50% 50%,0 0,0 0,0 0,0 0,0 0)}
+      50%  {clip-path:polygon(50% 50%,0 0,100% 0,100% 0,100% 0,100% 0)}
+      75%, 100%  {clip-path:polygon(50% 50%,0 0,100% 0,100% 100%,100% 100%,100% 100%)}
+    }
+</style>
         </body>

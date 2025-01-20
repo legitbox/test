@@ -33,784 +33,173 @@
         </div>
         </div>
 
-<div class="container" id="node_head_0_1">
-        <div class="object_name">
-<div class="object_inline_name"><h1 id="Blocks" style="font-size: null; text-align: left">Blocks</h1></div>
-            <div class="object_description">
-                <p></p>
-            </div>
-        </div>
-        </div>
+<div class="container" id="node_table_0_2">
+  <script src="/assets/libraries/gridjs.umd.js"></script>
+  <h2 id="BlockComponents" style="padding: 10px">Block Components</h2>
+  <p style="margin-left: 1vw"></p>
+  <div id="wrapper" style="overflow-x: scroll; scrollbar-width: none;"></div>
+<script>
+  new gridjs.Grid({
+    data: [["bone_visibility","JSON Object","","A JSON object that contains a list of key/value pairs that map from bone name in the specified geometry file (key) to a boolean that tells whether the bone should be visible or not (value)."],["minecraft:breathability","String","","Determines whether the block is breathable by defining if the block is treated as a `solid` or as `air`. The default is `solid` if this component is omitted."],["minecraft:collision_box","Boolean / JSON Object","true","Defines the area of the block that collides with entities. If set to true, default values are used. If set to false, the block's collision with entities is disabled. If this component is omitted, default values are used."],["minecraft:crafting_table","JSON Object","","Makes your block into a custom crafting table which enables the crafting table UI and the ability to craft recipes. This component supports only \"recipe_shaped\" and \"recipe_shapeless\" typed recipes and not others like \"recipe_furnace\" or \"recipe_brewing_mix\". If there are two recipes for one item, the recipe book will pick the first that was parsed. If two input recipes are the same, crafting may assert and the resulting item may vary."],["minecraft:custom_components","Array","","Sets an ordered list of custom component names which are bound in script to be executed upon a block event."],["minecraft:destructible_by_explosion","Boolean / JSON Object","true","Describes the destructible by explosion properties for this block. If set to true, the block will have the default explosion resistance. If set to false, this block is indestructible by explosion. If the component is omitted, the block will have the default explosion resistance."],["minecraft:destructible_by_mining","Boolean / JSON Object","true","Describes the destructible by mining properties for this block. If set to true, the block will take the default number of seconds to destroy. If set to false, this block is indestructible by mining. If the component is omitted, the block will take the default number of seconds to destroy."],["minecraft:display_name","Localization String","","Specifies the language file key that maps to what text will be displayed when you hover over the block in your inventory and hotbar. If the string given can not be resolved as a loc string, the raw string given will be displayed. If this component is omitted, the name of the block will be used as the display name."],["minecraft:flammable","Boolean / JSON Object","","Describes the flammable properties for this block. If set to true, default values are used. If set to false, or if this component is omitted, the block will not be able to catch on fire naturally from neighbors, but it can still be directly ignited."],["minecraft:friction","Decimal","0.4","Describes the friction for this block in a range of (0.0-0.9). Friction affects an entity's movement speed when it travels on the block. Greater value results in more friction."],["minecraft:geometry","Identifier String","","The description identifier of the geometry to use to render this block. This identifier must either match an existing geometry identifier in any of the loaded resource packs or be one of the currently supported Vanilla identifiers: \"minecraft:geometry.full_block\" or \"minecraft:geometry.cross\"."],["minecraft:item_visual","Identifier String","","The description identifier of the geometry and material used to render the item of this block.\n\nExperimental toggles required: Upcoming Creator Features (in format versions before 1.21.50)"],["minecraft:light_dampening","Integer","15","The amount that light will be dampened when it passes through the block, in a range (0-15). Higher value means the light will be dampened more."],["minecraft:light_emission","Integer","0","The amount of light this block will emit in a range (0-15). Higher value means more light will be emitted."],["minecraft:liquid_detection","Identifier String","","The definitions for how a block behaves when detecting liquid. Only one rule definition is allowed per liquid type - if multiple are specified, the first will be used and the rest will be ignored.\n\nExperimental toggles required: Upcoming Creator Features (in format versions before 1.21.60)"],["minecraft:loot","Path String","","The path to the loot table, relative to the behavior pack. Path string is limited to 256 characters."],["minecraft:map_color","String","","Sets the color of the block when rendered to a map. The color is represented as a hex value in the format \"#RRGGBB\". May also be expressed as an array of [R, G, B] from 0 to 255. If this component is omitted, the block will not show up on the map."],["minecraft:material_instances","JSON Object","","The material instances for a block. Maps face or material_instance names in a geometry file to an actual material instance. You can assign a material instance object to any of these faces: \"up\", \"down\", \"north\", \"south\", \"east\", \"west\", or \"*\". You can also give an instance the name of your choosing such as \"my_instance\", and then assign it to a face by doing \"north\":\"my_instance\"."],["minecraft:placement_filter","JSON Object","","Sets rules for under what conditions the block can be placed/survive"],["minecraft:queued_ticking","JSON Object","","Triggers the specified event, either once, or at a regular interval equal to a number of ticks randomly chosen from the interval_range provided."],["minecraft:random_ticking","JSON Object","","Triggers the specified event randomly based on the random tick speed gamerule. The random tick speed determines how often blocks are updated. Some other examples of game mechanics that use random ticking are crop growth and fire spreading."],["minecraft:redstone_conductivity","Identifier String","","The basic redstone properties of a block; if the component is not provided the default values are used. Requires 1.21.30 format version and above.\n\nExperimental toggles required: Upcoming Creator Features (in format versions before 1.21.30)"],["minecraft:selection_box","Boolean / JSON Object","","Defines the area of the block that is selected by the player's cursor. If set to true, default values are used. If set to false, this block is not selectable by the player's cursor. If this component is omitted, default values are used."],["minecraft:transformation","JSON Object","","The block's translation, rotation and scale with respect to the center of its world position"],["minecraft:unit_cube","JSON Object","","Specifies that a unit cube is to be used with tessellation."]],
+    columns: ["Name","Default Value","Type","Description"],
+    search: true,
+    height:'100%',
+    width:'100%',
+    style: {
+      table: {
+        width: '30vw',
+      },
+    }
+  }).render(document.getElementById("wrapper"));
+</script>
 
-<div class="container" id="node_head_0_2">
-        <div class="object_name">
-<div class="object_inline_name"><h2 id="BlockComponents" style="font-size: null; text-align: left">Block Components</h2></div>
-            <div class="object_description">
-                <p></p>
-            </div>
-        </div>
-        </div>
+</div>
+    
+<div class="container" id="node_table_1_2">
+  <script src="/assets/libraries/gridjs.umd.js"></script>
+  <h2 id="BlockDefinitionProperties" style="padding: 10px">Block Definition Properties</h2>
+  <p style="margin-left: 1vw">These properties are part of the Block Definition. This helps the system determine how to parse and initialize this block.</p>
+  <div id="wrapper" style="overflow-x: scroll; scrollbar-width: none;"></div>
+<script>
+  new gridjs.Grid({
+    data: [["format_version","String","","Specifies the version of the game this entity was made in. If the version is lower than the current version, any changes made to the entity in the vanilla version will be applied to it."]],
+    columns: ["Name","Default Value","Type","Description"],
+    search: true,
+    height:'100%',
+    width:'100%',
+    style: {
+      table: {
+        width: '30vw',
+      },
+    }
+  }).render(document.getElementById("wrapper"));
+</script>
 
-<div class="container" id="node_head_0_3">
-        <div class="object_name">
-<div class="object_inline_name"><h3 id="bone_visibility" style="font-size: null; text-align: left">bone_visibility</h3></div>
-            <div class="object_description">
-                <p></p><p>A JSON object that contains a list of key/value pairs that map from bone name in the specified geometry file (key) to a boolean that tells whether the bone should be visible or not (value).</p>
-<p></p>
-            </div>
-        </div>
-        </div>
-
-<div class="container" id="node_head_1_3">
-        <div class="object_name">
-<div class="object_inline_name"><h3 id="minecraft:breathability" style="font-size: null; text-align: left">minecraft:breathability</h3></div>
-            <div class="object_description">
-                <p></p><p>Determines whether the block is breathable by defining if the block is treated as a <code>solid</code> or as <code>air</code>. The default is <code>solid</code> if this component is omitted.</p>
-<p></p>
-            </div>
-        </div>
-        </div>
-
-<div class="container" id="node_head_2_3">
-        <div class="object_name">
-<div class="object_inline_name"><h3 id="minecraft:collision_box" style="font-size: null; text-align: left">minecraft:collision_box</h3></div>
-            <div class="object_description">
-                <p></p><p>Defines the area of the block that collides with entities. If set to true, default values are used. If set to false, the block’s collision with entities is disabled. If this component is omitted, default values are used.</p>
-<p></p>
-            </div>
-        </div>
-        </div>
-
-<div class="container" id="node_head_0_4">
-        <div class="object_name">
-<div class="object_inline_name"><h4 id="origin" style="font-size: null; text-align: left">origin</h4></div>
-            <div class="object_description">
-                <p></p><p>Minimal position of the bounds of the collision box. “origin” is specified as [x, y, z] and must be in the range (-8, 0, -8) to (8, 16, 8), inclusive.</p>
-<p></p>
-            </div>
-        </div>
-        </div>
-
-<div class="container" id="node_head_1_4">
-        <div class="object_name">
-<div class="object_inline_name"><h4 id="size" style="font-size: null; text-align: left">size</h4></div>
-            <div class="object_description">
-                <p></p><p>Size of each side of the collision box. Size is specified as [x, y, z]. “origin” + “size” must be in the range (-8, 0, -8) to (8, 16, 8), inclusive.</p>
-<p></p>
-            </div>
-        </div>
-        </div>
-
-<div class="container" id="node_head_3_3">
-        <div class="object_name">
-<div class="object_inline_name"><h3 id="minecraft:crafting_table" style="font-size: null; text-align: left">minecraft:crafting_table</h3></div>
-            <div class="object_description">
-                <p></p><p>Makes your block into a custom crafting table which enables the crafting table UI and the ability to craft recipes. This component supports only “recipe_shaped” and “recipe_shapeless” typed recipes and not others like “recipe_furnace” or “recipe_brewing_mix”. If there are two recipes for one item, the recipe book will pick the first that was parsed. If two input recipes are the same, crafting may assert and the resulting item may vary.</p>
-<p></p>
-            </div>
-        </div>
-        </div>
-
-<div class="container" id="node_head_0_4">
-        <div class="object_name">
-<div class="object_inline_name"><h4 id="crafting_tags" style="font-size: null; text-align: left">crafting_tags</h4></div>
-            <div class="object_description">
-                <p></p><p>Defines the tags recipes should define to be crafted on this table. Limited to 64 tags. Each tag is limited to 64 characters.</p>
-<p></p>
-            </div>
-        </div>
-        </div>
-
-<div class="container" id="node_head_1_4">
-        <div class="object_name">
-<div class="object_inline_name"><h4 id="table_name" style="font-size: null; text-align: left">table_name</h4></div>
-            <div class="object_description">
-                <p></p><p>Specifies the language file key that maps to what text will be displayed in the UI of this table. If the string given can not be resolved as a loc string, the raw string given will be displayed. If this field is omitted, the name displayed will default to the name specified in the “display_name” component. If this block has no “display_name” component, the name displayed will default to the name of the block.</p>
-<p></p>
-            </div>
-        </div>
-        </div>
-
-<div class="container" id="node_head_4_3">
-        <div class="object_name">
-<div class="object_inline_name"><h3 id="minecraft:custom_components" style="font-size: null; text-align: left">minecraft:custom_components</h3></div>
-            <div class="object_description">
-                <p></p><p>Sets an ordered list of custom component names which are bound in script to be executed upon a block event.</p>
-<p></p>
-            </div>
-        </div>
-        </div>
-
-<div class="container" id="node_head_5_3">
-        <div class="object_name">
-<div class="object_inline_name"><h3 id="minecraft:destructible_by_explosion" style="font-size: null; text-align: left">minecraft:destructible_by_explosion</h3></div>
-            <div class="object_description">
-                <p></p><p>Describes the destructible by explosion properties for this block. If set to true, the block will have the default explosion resistance. If set to false, this block is indestructible by explosion. If the component is omitted, the block will have the default explosion resistance.</p>
-<p></p>
-            </div>
-        </div>
-        </div>
-
-<div class="container" id="node_head_0_4">
-        <div class="object_name">
-<div class="object_inline_name"><h4 id="explosion_resistance" style="font-size: null; text-align: left">explosion_resistance</h4></div>
-            <div class="object_description">
-                <p></p><p>Sets the explosion resistance for the block. Greater values result in greater resistance to explosions. The scale will be different for different explosion power levels. A negative value or 0 means it will easily explode; larger numbers increase level of resistance.</p>
-<p></p>
-            </div>
-        </div>
-        </div>
-
-<div class="container" id="node_head_6_3">
-        <div class="object_name">
-<div class="object_inline_name"><h3 id="minecraft:destructible_by_mining" style="font-size: null; text-align: left">minecraft:destructible_by_mining</h3></div>
-            <div class="object_description">
-                <p></p><p>Describes the destructible by mining properties for this block. If set to true, the block will take the default number of seconds to destroy. If set to false, this block is indestructible by mining. If the component is omitted, the block will take the default number of seconds to destroy.</p>
-<p></p>
-            </div>
-        </div>
-        </div>
-
-<div class="container" id="node_head_0_4">
-        <div class="object_name">
-<div class="object_inline_name"><h4 id="item_specific_speeds" style="font-size: null; text-align: left">item_specific_speeds</h4></div>
-            <div class="object_description">
-                <p></p><p>Optional array of objects to describe item specific block destroy speeds, each object contains an ‘item’ ItemDescriptor and a ‘destroy_speed’ float. This array currently requires UpcomingFeatures experiment to be enabled.</p>
-<p></p>
-            </div>
-        </div>
-        </div>
-
-<div class="container" id="node_example_0_0_4">
-  <h2 class="object_name" id="Example1">{ Example1 }</h2>
+</div>
+    
+<div class="container" id="node_example_1_0_2">
+  <h2 class="object_name" id="Example">{ Example }</h2>
   <div style="margin-left: 1.5vw">
     <link rel="stylesheet" href="/assets/styles/github-dark.css">
     <script src="/assets/libraries/highlight.min.js"></script>
     <script defer="">hljs.highlightAll();</script>
     <pre><code>{
-	"minecraft:destructible_by_mining": {
-		"seconds_to_destroy": 10,
-		"item_specific_speeds": [
-			{
-				"item": { "tags": "q.any_tag('minecraft:is_pickaxe', 'minecraft:is_tool') " },
-				"destroy_speed": 5.0
-			}
-		]
-	}
+  "format_version": "1.21.60",
+  "minecraft:block": {
+    "description": {
+      "identifier": "design:lavenderstone"
+    },
+    "components": {
+      "minecraft:loot": "loot_tables/chests/simple_dungeon.json",
+      "minecraft:destroy_time": 4.0,
+      "minecraft:friction": 0.6,
+      "minecraft:map_color": "#00ff00",
+      "minecraft:flammable": {
+        "flame_odds": 50,
+        "burn_odds": 0
+	  },
+      "minecraft:light_emission": 1
+    }
+  }
 }</code></pre>
   </div>
 </div>
 
-<div class="container" id="node_example_0_1_4">
-  <h2 class="object_name" id="Example2">{ Example2 }</h2>
+<div class="container" id="node_table_2_2">
+  <script src="/assets/libraries/gridjs.umd.js"></script>
+  <h2 id="BlockDescriptionProperties" style="padding: 10px">Block Description Properties</h2>
+  <p style="margin-left: 1vw"></p>
+  <div id="wrapper" style="overflow-x: scroll; scrollbar-width: none;"></div>
+<script>
+  new gridjs.Grid({
+    data: [["identifier","String","","The identifier for this block. The name must include a namespace and must not use the Minecraft namespace unless overriding a Vanilla block."]],
+    columns: ["Name","Default Value","Type","Description"],
+    search: true,
+    height:'100%',
+    width:'100%',
+    style: {
+      table: {
+        width: '30vw',
+      },
+    }
+  }).render(document.getElementById("wrapper"));
+</script>
+
+</div>
+    
+<div class="container" id="node_table_3_2">
+  <script src="/assets/libraries/gridjs.umd.js"></script>
+  <h2 id="BlockEventResponses" style="padding: 10px">Block Event Responses</h2>
+  <p style="margin-left: 1vw">Event responses for block trigger components.</p>
+  <div id="wrapper" style="overflow-x: scroll; scrollbar-width: none;"></div>
+<script>
+  new gridjs.Grid({
+    data: [["add_mob_effect","JSON Object","","Apply mob effect to target."],["damage","JSON Object","","Deals damage to the target."],["decrement_stack","JSON Object","","Decrement item stack."],["die","JSON Object","","Kill target. If target is self and this is run from a block then destroy the block."],["play_effect","JSON Object","","Spawns a particle effect relative to target position."],["play_sound","JSON Object","","Play a sound relative to target position."],["remove_mob_effect","JSON Object","","Removes mob effect from target."],["run_command","JSON Object","","Triggers a slash command or a list of slash commands."],["set_block","JSON Object","","Sets this block to another block type."],["set_block_at_pos","JSON Object","","Sets a block relative to this block to another block type."],["set_block_state","JSON Object","","Sets a block state on this block."],["spawn_loot","JSON Object","","Spawn loot from block."],["swing","JSON Object","","Event causes the actor to swing."],["teleport","JSON Object","","Teleport target randomly around destination point."],["transform_item","JSON Object","","Transforms item into another item."]],
+    columns: ["Name","Default Value","Type","Description"],
+    search: true,
+    height:'100%',
+    width:'100%',
+    style: {
+      table: {
+        width: '30vw',
+      },
+    }
+  }).render(document.getElementById("wrapper"));
+</script>
+
+</div>
+    
+<div class="container" id="node_example_3_0_2">
+  <h2 class="object_name" id="EventResponseExample">{ Event Response Example }</h2>
   <div style="margin-left: 1.5vw">
     <link rel="stylesheet" href="/assets/styles/github-dark.css">
     <script src="/assets/libraries/highlight.min.js"></script>
     <script defer="">hljs.highlightAll();</script>
-    <pre><code>{
-	"minecraft:destructible_by_mining": {
-		"seconds_to_destroy": 10,
-		"item_specific_speeds": [
-			{
-				"item": "minecraft:iron_pickaxe",
-				"destroy_speed": 5.0
+    <pre><code>		"minecraft:block": {
+			"description": {
+				"identifier": "test:on_interact_change_state_block",
+				"properties": {
+					"custom:direction": [0, 1, 2, 3]
+				}
 			},
-			{
-				"item": "minecraft:diamond_pickaxe",
-				"destroy_speed": 2.0
+			"components": {
+				"minecraft:on_interact": {
+					"event": "test_event"
+				}
+			},
+			"events": {
+				"test_event": {
+					"set_block_state": {
+						"custom:direction": "1"
+					}
+				}
 			}
-		]
-	}
-}</code></pre>
+		}</code></pre>
   </div>
 </div>
 
-<div class="container" id="node_head_0_5">
-        <div class="object_name">
-<div class="object_inline_name"><h5 id="destroy_speed" style="font-size: null; text-align: left">destroy_speed</h5></div>
-            <div class="object_description">
-                <p></p><p>Required.</p>
-<p>A destroy speed applied while using the defined ‘item’.</p>
-<p></p>
-            </div>
-        </div>
-        </div>
+<div class="container" id="node_table_4_2">
+  <script src="/assets/libraries/gridjs.umd.js"></script>
+  <h2 id="BlockTriggerComponents" style="padding: 10px">Block Trigger Components</h2>
+  <p style="margin-left: 1vw"></p>
+  <div id="wrapper" style="overflow-x: scroll; scrollbar-width: none;"></div>
+<script>
+  new gridjs.Grid({
+    data: [["minecraft:on_fall_on","JSON Object","","Describes event for this block."],["minecraft:on_interact","JSON Object","","Describes event for this block."],["minecraft:on_placed","JSON Object","","Describes event for this block."],["minecraft:on_player_destroyed","JSON Object","","Describes event for this block."],["minecraft:on_player_placing","JSON Object","","Describes event for this block."],["minecraft:on_step_off","JSON Object","","Describes event for this block."],["minecraft:on_step_on","JSON Object","","Describes event for this block."]],
+    columns: ["Name","Default Value","Type","Description"],
+    search: true,
+    height:'100%',
+    width:'100%',
+    style: {
+      table: {
+        width: '30vw',
+      },
+    }
+  }).render(document.getElementById("wrapper"));
+</script>
 
-<div class="container" id="node_head_1_5">
-        <div class="object_name">
-<div class="object_inline_name"><h5 id="item" style="font-size: null; text-align: left">item</h5></div>
-            <div class="object_description">
-                <p></p><p>Required.</p>
-<p>An ItemDescriptor filtering for the item used while mining.</p>
-<p></p>
-            </div>
-        </div>
-        </div>
-
-<div class="container" id="node_head_1_4">
-        <div class="object_name">
-<div class="object_inline_name"><h4 id="seconds_to_destroy" style="font-size: null; text-align: left">seconds_to_destroy</h4></div>
-            <div class="object_description">
-                <p></p><p>Sets the number of seconds it takes to destroy the block with base equipment. Greater numbers result in greater mining times.</p>
-<p></p>
-            </div>
-        </div>
-        </div>
-
-<div class="container" id="node_head_7_3">
-        <div class="object_name">
-<div class="object_inline_name"><h3 id="minecraft:display_name" style="font-size: null; text-align: left">minecraft:display_name</h3></div>
-            <div class="object_description">
-                <p></p><p>Specifies the language file key that maps to what text will be displayed when you hover over the block in your inventory and hotbar. If the string given can not be resolved as a loc string, the raw string given will be displayed. If this component is omitted, the name of the block will be used as the display name.</p>
-<p></p>
-            </div>
-        </div>
-        </div>
-
-<div class="container" id="node_head_8_3">
-        <div class="object_name">
-<div class="object_inline_name"><h3 id="minecraft:flammable" style="font-size: null; text-align: left">minecraft:flammable</h3></div>
-            <div class="object_description">
-                <p></p><p>Describes the flammable properties for this block. If set to true, default values are used. If set to false, or if this component is omitted, the block will not be able to catch on fire naturally from neighbors, but it can still be directly ignited.</p>
-<p></p>
-            </div>
-        </div>
-        </div>
-
-<div class="container" id="node_head_0_4">
-        <div class="object_name">
-<div class="object_inline_name"><h4 id="catch_chance_modifier" style="font-size: null; text-align: left">catch_chance_modifier</h4></div>
-            <div class="object_description">
-                <p></p><p>A modifier affecting the chance that this block will catch flame when next to a fire. Values are greater than or equal to 0, with a higher number meaning more likely to catch on fire. For a “catch_chance_modifier” greater than 0, the fire will continue to burn until the block is destroyed (or it will burn forever if the “destroy_chance_modifier” is 0). If the “catch_chance_modifier” is 0, and the block is directly ignited, the fire will eventually burn out without destroying the block (or it will have a chance to be destroyed if “destroy_chance_modifier” is greater than 0). The default value of 5 is the same as that of Planks.</p>
-<p></p>
-            </div>
-        </div>
-        </div>
-
-<div class="container" id="node_head_1_4">
-        <div class="object_name">
-<div class="object_inline_name"><h4 id="destroy_chance_modifier" style="font-size: null; text-align: left">destroy_chance_modifier</h4></div>
-            <div class="object_description">
-                <p></p><p>A modifier affecting the chance that this block will be destroyed by flames when on fire. Values are greater than or equal to 0, with a higher number meaning more likely to be destroyed by fire. For a “destroy_chance_modifier” of 0, the block will never be destroyed by fire, and the fire will burn forever if the “catch_chance_modifier” is greater than 0. The default value of 20 is the same as that of Planks.</p>
-<p></p>
-            </div>
-        </div>
-        </div>
-
-<div class="container" id="node_head_9_3">
-        <div class="object_name">
-<div class="object_inline_name"><h3 id="minecraft:friction" style="font-size: null; text-align: left">minecraft:friction</h3></div>
-            <div class="object_description">
-                <p></p><p>Describes the friction for this block in a range of (0.0-0.9). Friction affects an entity’s movement speed when it travels on the block. Greater value results in more friction.</p>
-<p></p>
-            </div>
-        </div>
-        </div>
-
-<div class="container" id="node_head_10_3">
-        <div class="object_name">
-<div class="object_inline_name"><h3 id="minecraft:geometry" style="font-size: null; text-align: left">minecraft:geometry</h3></div>
-            <div class="object_description">
-                <p></p><p>The description identifier of the geometry to use to render this block. This identifier must either match an existing geometry identifier in any of the loaded resource packs or be one of the currently supported Vanilla identifiers: “minecraft:geometry.full_block” or “minecraft:geometry.cross”.</p>
-<p></p>
-            </div>
-        </div>
-        </div>
-
-<div class="container" id="node_head_11_3">
-        <div class="object_name">
-<div class="object_inline_name"><h3 id="minecraft:item_visual" style="font-size: null; text-align: left">minecraft:item_visual</h3></div>
-            <div class="object_description">
-                <p></p><p>The description identifier of the geometry and material used to render the item of this block.</p>
-<p>Experimental toggles required: Upcoming Creator Features (in format versions before 1.21.50)</p>
-<p></p>
-            </div>
-        </div>
-        </div>
-
-<div class="container" id="node_example_11_0_3">
-  <h2 class="object_name" id="Example">{ Example }</h2>
-  <div style="margin-left: 1.5vw">
-    <link rel="stylesheet" href="/assets/styles/github-dark.css">
-    <script src="/assets/libraries/highlight.min.js"></script>
-    <script defer="">hljs.highlightAll();</script>
-    <pre><code>"minecraft:item_visual": {
-		"geometry": {
-			"identifier": "minecraft:geometry.full_block"
-        },
-        "material_instances": {
-			"*": {
-				"texture": "dirt",
-                "render_method": "opaque"
-			}
-		}
-	}</code></pre>
-  </div>
 </div>
-
-<div class="container" id="node_head_0_4">
-        <div class="object_name">
-<div class="object_inline_name"><h4 id="geometry" style="font-size: null; text-align: left">geometry</h4></div>
-            <div class="object_description">
-                <p></p><p>[Required] The “minecraft:geometry” component that will be used for the item.</p>
-<p></p>
-            </div>
-        </div>
-        </div>
-
-<div class="container" id="node_head_1_4">
-        <div class="object_name">
-<div class="object_inline_name"><h4 id="material_instances" style="font-size: null; text-align: left">material_instances</h4></div>
-            <div class="object_description">
-                <p></p><p>[Required] The “minecraft:material_instances” component that will be used for the item.</p>
-<p></p>
-            </div>
-        </div>
-        </div>
-
-<div class="container" id="node_head_12_3">
-        <div class="object_name">
-<div class="object_inline_name"><h3 id="minecraft:light_dampening" style="font-size: null; text-align: left">minecraft:light_dampening</h3></div>
-            <div class="object_description">
-                <p></p><p>The amount that light will be dampened when it passes through the block, in a range (0-15). Higher value means the light will be dampened more.</p>
-<p></p>
-            </div>
-        </div>
-        </div>
-
-<div class="container" id="node_head_13_3">
-        <div class="object_name">
-<div class="object_inline_name"><h3 id="minecraft:light_emission" style="font-size: null; text-align: left">minecraft:light_emission</h3></div>
-            <div class="object_description">
-                <p></p><p>The amount of light this block will emit in a range (0-15). Higher value means more light will be emitted.</p>
-<p></p>
-            </div>
-        </div>
-        </div>
-
-<div class="container" id="node_head_14_3">
-        <div class="object_name">
-<div class="object_inline_name"><h3 id="minecraft:liquid_detection" style="font-size: null; text-align: left">minecraft:liquid_detection</h3></div>
-            <div class="object_description">
-                <p></p><p>The definitions for how a block behaves when detecting liquid. Only one rule definition is allowed per liquid type - if multiple are specified, the first will be used and the rest will be ignored.</p>
-<p>Experimental toggles required: Upcoming Creator Features (in format versions before 1.21.60)</p>
-<p></p>
-            </div>
-        </div>
-        </div>
-
-<div class="container" id="node_example_14_0_3">
-  <h2 class="object_name" id="Example">{ Example }</h2>
-  <div style="margin-left: 1.5vw">
-    <link rel="stylesheet" href="/assets/styles/github-dark.css">
-    <script src="/assets/libraries/highlight.min.js"></script>
-    <script defer="">hljs.highlightAll();</script>
-    <pre><code>"minecraft:liquid_detection": {
-		"detection_rules": [
-			{
-				"liquid_type": "water",
-				"can_contain_liquid": true,
-				"on_liquid_touches": "no_reaction",
-				"stops_liquid_flowing_from_direction": ["west", "east"]
-			}
-		]
-	}</code></pre>
-  </div>
-</div>
-
-<div class="container" id="node_head_0_4">
-        <div class="object_name">
-<div class="object_inline_name"><h4 id="can_contain_liquid" style="font-size: null; text-align: left">can_contain_liquid</h4></div>
-            <div class="object_description">
-                <p></p><p>Whether this block can contain the liquid. For example, if the liquid type is <code>water</code>, this means the block can be waterlogged.</p>
-<p></p>
-            </div>
-        </div>
-        </div>
-
-<div class="container" id="node_head_1_4">
-        <div class="object_name">
-<div class="object_inline_name"><h4 id="liquid_type" style="font-size: null; text-align: left">liquid_type</h4></div>
-            <div class="object_description">
-                <p></p><p>The type of liquid this detection rule is for. Currently, <code>water</code> is the only supported liquid type. If this field is omitted, <code>water</code> will be the liquid type by default.</p>
-<p></p>
-            </div>
-        </div>
-        </div>
-
-<div class="container" id="node_head_2_4">
-        <div class="object_name">
-<div class="object_inline_name"><h4 id="on_liquid_touches" style="font-size: null; text-align: left">on_liquid_touches</h4></div>
-            <div class="object_description">
-                <p></p><p>How the block reacts to flowing water. Must be one of the following options:</p>
-<p>“blocking” - The default value for this field. The block stops the liquid from flowing.</p>
-<p>“broken” - The block is destroyed completely.</p>
-<p>“popped” - The block is destroyed and its item is spawned.</p>
-<p>“no_reaction” - The block is unaffected; visually, the liquid will flow through the block.</p>
-<p></p>
-            </div>
-        </div>
-        </div>
-
-<div class="container" id="node_head_3_4">
-        <div class="object_name">
-<div class="object_inline_name"><h4 id="stops_liquid_flowing_from_direction" style="font-size: null; text-align: left">stops_liquid_flowing_from_direction</h4></div>
-            <div class="object_description">
-                <p></p><p>When a block contains a liquid, controls the directions in which the liquid can’t flow out from the block. Also controls the directions in which a block can stop liquid flowing into it if <code>no_reaction</code> is set for the <code>on_liquid_touches</code> field. Can be a list of the following directions: “up”, “down”, “north”, “south”, “east”, “west”. The default is an empty list; this means that liquid can flow out of all directions by default.</p>
-<p></p>
-            </div>
-        </div>
-        </div>
-
-<div class="container" id="node_head_15_3">
-        <div class="object_name">
-<div class="object_inline_name"><h3 id="minecraft:loot" style="font-size: null; text-align: left">minecraft:loot</h3></div>
-            <div class="object_description">
-                <p></p><p>The path to the loot table, relative to the behavior pack. Path string is limited to 256 characters.</p>
-<p></p>
-            </div>
-        </div>
-        </div>
-
-<div class="container" id="node_head_16_3">
-        <div class="object_name">
-<div class="object_inline_name"><h3 id="minecraft:map_color" style="font-size: null; text-align: left">minecraft:map_color</h3></div>
-            <div class="object_description">
-                <p></p><p>Sets the color of the block when rendered to a map. The color is represented as a hex value in the format “#RRGGBB”. May also be expressed as an array of [R, G, B] from 0 to 255. If this component is omitted, the block will not show up on the map.</p>
-<p></p>
-            </div>
-        </div>
-        </div>
-
-<div class="container" id="node_head_17_3">
-        <div class="object_name">
-<div class="object_inline_name"><h3 id="minecraft:material_instances" style="font-size: null; text-align: left">minecraft:material_instances</h3></div>
-            <div class="object_description">
-                <p></p><p>The material instances for a block. Maps face or material_instance names in a geometry file to an actual material instance. You can assign a material instance object to any of these faces: “up”, “down”, “north”, “south”, “east”, “west”, or “*”. You can also give an instance the name of your choosing such as “my_instance”, and then assign it to a face by doing “north”:“my_instance”.</p>
-<p></p>
-            </div>
-        </div>
-        </div>
-
-<div class="container" id="node_example_17_0_3">
-  <h2 class="object_name" id="Example">{ Example }</h2>
-  <div style="margin-left: 1.5vw">
-    <link rel="stylesheet" href="/assets/styles/github-dark.css">
-    <script src="/assets/libraries/highlight.min.js"></script>
-    <script defer="">hljs.highlightAll();</script>
-    <pre><code>"minecraft:material_instances" : {
-		"*": {
-			"texture": "log",
-			"render_method" : "opaque"
-		},
-		"ends" : {
-			"texture": "log_top",
-			"render_method" : "opaque"
-		},
-		"up" : "ends",
-		"some_face_material_name" : "ends"
-	}</code></pre>
-  </div>
-</div>
-
-<div class="container" id="node_head_0_4">
-        <div class="object_name">
-<div class="object_inline_name"><h4 id="MaterialInstance" style="font-size: null; text-align: left">Material Instance</h4></div>
-            <div class="object_description">
-                <p></p><p>A material instance definition to map to a material instance in a geometry file. The material instance “*” will be used for any materials that don’t have a match.</p>
-<p></p>
-            </div>
-        </div>
-        </div>
-
-<div class="container" id="node_head_0_5">
-        <div class="object_name">
-<div class="object_inline_name"><h5 id="ambient_occlusion" style="font-size: null; text-align: left">ambient_occlusion</h5></div>
-            <div class="object_description">
-                <p></p><p>Should this material have ambient occlusion applied when lighting? If true, shadows will be created around and underneath the block. Optionally can be constructed with float to control exponent applied to ao value after lighting.</p>
-<p></p>
-            </div>
-        </div>
-        </div>
-
-<div class="container" id="node_head_1_5">
-        <div class="object_name">
-<div class="object_inline_name"><h5 id="face_dimming" style="font-size: null; text-align: left">face_dimming</h5></div>
-            <div class="object_description">
-                <p></p><p>Should this material be dimmed by the direction it’s facing?</p>
-<p></p>
-            </div>
-        </div>
-        </div>
-
-<div class="container" id="node_head_2_5">
-        <div class="object_name">
-<div class="object_inline_name"><h5 id="render_method" style="font-size: null; text-align: left">render_method</h5></div>
-            <div class="object_description">
-                <p></p><p>The render method to use. Must be one of these options:</p>
-<p>“opaque” - Used for a regular block texture without an alpha layer. Does not allow for transparency or translucency.</p>
-<p>“double_sided” - Used for completely disabling backface culling.</p>
-<p>“blend” - Used for a block like stained glass. Allows for transparency and translucency (slightly transparent textures).</p>
-<p>“alpha_test” - Used for a block like the vanilla (unstained) glass. Does not allow for translucency, only fully opaque or fully transparent textures. Also disables backface culling.</p>
-<p></p>
-            </div>
-        </div>
-        </div>
-
-<div class="container" id="node_head_3_5">
-        <div class="object_name">
-<div class="object_inline_name"><h5 id="texture" style="font-size: null; text-align: left">texture</h5></div>
-            <div class="object_description">
-                <p></p><p>Texture name for the material.</p>
-<p></p>
-            </div>
-        </div>
-        </div>
-
-<div class="container" id="node_head_18_3">
-        <div class="object_name">
-<div class="object_inline_name"><h3 id="minecraft:placement_filter" style="font-size: null; text-align: left">minecraft:placement_filter</h3></div>
-            <div class="object_description">
-                <p></p><p>Sets rules for under what conditions the block can be placed/survive</p>
-<p></p>
-            </div>
-        </div>
-        </div>
-
-<div class="container" id="node_head_0_4">
-        <div class="object_name">
-<div class="object_inline_name"><h4 id="conditions" style="font-size: null; text-align: left">conditions</h4></div>
-            <div class="object_description">
-                <p></p><p>List of conditions where the block can be placed/survive. Limited to 64 conditions.</p>
-<p></p>
-            </div>
-        </div>
-        </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    
     <script src="/assets/js/LanguageHandler.js"></script>
         <script src="/assets/js/occlusionPilot.js"></script>
         <script src="/assets/js/preloadPilot.js"></script>
@@ -868,4 +257,46 @@
                 };
                 </script>
                 </div>
+                <div class="loading_thingy_container" style="
+      position: sticky;
+      left: 50%;
+      bottom: 50%;
+      display: flex;
+      justify-content: center;
+      opacity: 0;
+    "><div class="loading_thingy"></div></div>
+        <style>
+        .loading_thingy {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      position: relative;
+      animation: rotate 1s linear infinite
+    }
+    .loading_thingy::before,
+    .loading_thingy::after {
+      content: "";
+      box-sizing: border-box;
+      position: absolute;
+      inset: 0px;
+      border-radius: 50%;
+      border: 5px solid rgba(207,207,207,0.53);
+      animation: prixClipFix 2s linear infinite ;
+    }
+    .loading_thingy::after {
+      inset: 8px;
+      transform: rotate3d(90, 90, 0, 180deg );
+      border-color: rgba(255,140,140,0.56);
+    }
+
+    @keyframes rotate {
+      0%   {transform: rotate(0deg)}
+      100%   {transform: rotate(360deg)}
+    }
+    @keyframes prixClipFix {
+      0%   {clip-path:polygon(50% 50%,0 0,0 0,0 0,0 0,0 0)}
+      50%  {clip-path:polygon(50% 50%,0 0,100% 0,100% 0,100% 0,100% 0)}
+      75%, 100%  {clip-path:polygon(50% 50%,0 0,100% 0,100% 100%,100% 100%,100% 100%)}
+    }
+</style>
         </body></html>
