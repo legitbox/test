@@ -3,16 +3,16 @@
         <html lang="en">
         <head>
           <meta charset="UTF-8">
-          <title>Item</title>
+          <title>Introduction</title>
           <link rel="preload" href="/assets/images/background_dark_factory.webp" as="image">
           <link rel="prefetch" href="/index.html">
           <link rel="prefetch" href="/settings.html">
           <link rel="stylesheet" href="/assets/styles/wiki_styles.css">
-          <link rel="icon" href="/assets/images/melon.png" type="image/png">
-          <meta name="description" content="Item">
+          <link rel="icon" href="/assets/images/shrimple_wiki_icon.png" type="image/png">
+          <meta name="description" content="Introduction">
           <meta name="viewport" content="width=device-width, initial-scale=1" />
-          <meta property="og:title" content="Item" />
-          <meta property="og:image" content="/assets/images/melon.png"/>
+          <meta property="og:title" content="Introduction" />
+          <meta property="og:image" content="/assets/images/shrimple_wiki_icon.png"/>
         </head>
         
         <body>
@@ -27,24 +27,95 @@
           </nav>
         </div>
         
-<div class="container" id="title">
+<div class="container" id="introduction">
         <div class="object_name">
-<div class="object_inline_name"><h1 id="Item" style="font-size: null; text-align: center">Item</h1></div>
+<div class="object_inline_name"><h1 id="Notsomuchofanintroduction" style="font-size: undefined; text-align: undefined">Not so much of an introduction</h1></div>
             <div class="object_description">
-                <p></p>
+                <p><p>Shrimple wiki is a simple tool designed to create static pages using static HTML/CSS generation using JSON.</p>
+<p>The entire structure is based on a container system. For example, this description box you are reading right now is a “description” container defined inside the page structure JSON file.</p>
+</p>
             </div>
         </div>
         </div>
 
-<div class="container" id="node_table_0_2">
+<div class="container" id="possibilities">
+        <div class="object_name">
+
+            <div class="object_description">
+                <p><p>Since the design is modular and uses JSON for its structure generation, this allows us to create lots of custom components for easy use inside Spadix projects, as well as in custom websites that can have wikis for other Minecraft mods (like Java) or even other games.</p>
+<p>Time for some features:</p>
+<p><em>Markdown support</em></p>
+<table>
+<thead>
+<tr>
+<th>sandwiches</th>
+<th>toasters</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>just enough</td>
+<td>too many!</td>
+</tr>
+</tbody>
+</table>
+</p>
+            </div>
+        </div>
+        </div>
+
+<div class="container" id="coding">
+  <h2 class="object_name" id="funkyscript">{ funky script }</h2>
+  <div style="margin-left: 1.5vw">
+    <link rel="stylesheet" href="/assets/styles/github-dark.css">
+    <script defer src="/assets/libraries/highlight.min.js"></script>
+    <script defer>hljs.highlightAll();</script>
+    <pre><code>defmodule SimpleCalculator do
+  def start do
+    IO.puts("Welcome to the Elixir Calculator!")
+    IO.puts("Choose an operation:")
+    IO.puts("1) Addition (+)")
+    IO.puts("2) Subtraction (-)")
+    IO.puts("3) Multiplication (*)")
+    IO.puts("4) Division (/)")
+    
+    operation = IO.gets("Enter the number of the operation: ") |> String.trim() |> String.to_integer()
+
+    num1 = IO.gets("Enter the first number: ") |> String.trim() |> String.to_float()
+    num2 = IO.gets("Enter the second number: ") |> String.trim() |> String.to_float()
+
+    result =
+      case operation do
+        1 -> num1 + num2
+        2 -> num1 - num2
+        3 -> num1 * num2
+        4 -> 
+          if num2 == 0 do
+            "Error: Division by zero is not allowed."
+          else
+            num1 / num2
+          end
+        _ -> "Invalid operation selected."
+      end
+
+    IO.puts("Result: #{result}")
+  end
+end
+
+SimpleCalculator.start()
+</code></pre>
+  </div>
+</div>
+
+<div class="container" id="data_table_thingamabob">
   <script defer src="/assets/libraries/gridjs.umd.js"></script>
-  <h2 id="ItemDefinitionProperties" style="padding: 10px">Item Definition Properties</h2>
-  <p style="margin-left: 1vw">Properties are part of the Item Definition. They help the system determine how to parse and initialize the item.</p>
+  <h2 id="minecraft:density_limit" style="padding: 10px">minecraft:density_limit</h2>
+  <p style="margin-left: 1vw">This component allows players to determine the density cap limits for the specified mob type.</p>
   <div id="wrapper" style="overflow-x: scroll; scrollbar-width: none;"></div>
 <script defer>
   new gridjs.Grid({
-    data: [["format_version","","","Specifies the version of the game this entity was made in. If the version is lower than the current version, any changes made to the entity in the vanilla version will be applied to it."],["minecraft:item","","","Item definition includes the \"description\" and \"components\" sections."]],
-    columns: ["Name","Default Value","Type","Description"],
+    data: [["surface","Integer","","This is the maximum number of mobs of this type spawnable on the surface"],["underground","Integer","","This is the maximum number of mobs of this type spawnable underground"]],
+    columns: ["Name","Type","Default Value","Description"],
     search: true,
     height:'100%',
     width:'100%',
@@ -58,36 +129,6 @@
 
 </div>
     
-<div class="container" id="node_example_0_0_2">
-  <h2 class="object_name" id="Example">{ Example }</h2>
-  <div style="margin-left: 1.5vw">
-    <link rel="stylesheet" href="/assets/styles/github-dark.css">
-    <script defer src="/assets/libraries/highlight.min.js"></script>
-    <script defer>hljs.highlightAll();</script>
-    <pre><code>{
-  "format_version": "1.20.20",
-  "minecraft:item": {
-    "description": {
-      "identifier": "minecraft:blaze_rod"
-    },
-    "components": {
-      "minecraft:fuel": {
-        "duration": 120.0
-      },
-      "minecraft:max_stack_size": 64,
-      "minecraft:icon": {
-        "texture": "blaze_rod"
-      },
-      "minecraft:hand_equipped": true,
-      "minecraft:display_name": {
-        "value": "Blaze Rod"
-      }
-    }
-  }
-}</code></pre>
-  </div>
-</div>
-
     <script src="/assets/js/LanguageHandler.js"></script>
         <script src="/assets/js/occlusionPilot.js"></script>
         <script src="/assets/js/preloadPilot.js"></script>

@@ -34,11 +34,11 @@
         </div>
 
 <div class="container" id="node_table_0_2">
-  <script src="/assets/libraries/gridjs.umd.js"></script>
+  <script defer="" src="/assets/libraries/gridjs.umd.js"></script>
   <h2 id="ItemDefinitionProperties" style="padding: 10px">Item Definition Properties</h2>
   <p style="margin-left: 1vw">Properties are part of the Item Definition. They help the system determine how to parse and initialize the item.</p>
   <div id="wrapper" style="overflow-x: scroll; scrollbar-width: none;"></div>
-<script>
+<script defer="">
   new gridjs.Grid({
     data: [["format_version","","","Specifies the version of the game this entity was made in. If the version is lower than the current version, any changes made to the entity in the vanilla version will be applied to it."],["minecraft:item","","","Item definition includes the \"description\" and \"components\" sections."]],
     columns: ["Name","Default Value","Type","Description"],
@@ -59,7 +59,7 @@
   <h2 class="object_name" id="Example">{ Example }</h2>
   <div style="margin-left: 1.5vw">
     <link rel="stylesheet" href="/assets/styles/github-dark.css">
-    <script src="/assets/libraries/highlight.min.js"></script>
+    <script defer="" src="/assets/libraries/highlight.min.js"></script>
     <script defer="">hljs.highlightAll();</script>
     <pre><code>{
   "format_version": "1.20.20",

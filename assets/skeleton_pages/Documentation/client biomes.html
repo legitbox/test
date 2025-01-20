@@ -34,11 +34,11 @@
         </div>
 
 <div class="container" id="node_table_0_2">
-  <script src="/assets/libraries/gridjs.umd.js"></script>
+  <script defer="" src="/assets/libraries/gridjs.umd.js"></script>
   <h2 id="ClientBiomeComponents" style="padding: 10px">Client Biome Components</h2>
   <p style="margin-left: 1vw">Any components that this Client Biome uses</p>
   <div id="wrapper" style="overflow-x: scroll; scrollbar-width: none;"></div>
-<script>
+<script defer="">
   new gridjs.Grid({
     data: [["minecraft:ambient_sounds","Object","Optional","Set the ambient sounds for the biome. These sounds must be in the 'individual_named_sounds' in a 'sounds.json' file."],["minecraft:biome_music","Object","Optional","Affect how music plays within the biome"],["minecraft:fog_appearance","Object","Optional","Set the fog settings used during rendering. Biomes without this component will have default fog settings."],["minecraft:foliage_appearance","Object","Optional","Set the foliage color or color map used during rendering. Biomes without this component will have default foliage appearance."],["minecraft:grass_appearance","Object","Optional","Set the grass color or color map used during rendering. Biomes without this component will have default grass appearance."],["minecraft:sky_color","Object","Optional","Set the sky color used during rendering. Biomes without this component will have default sky color behavior."],["minecraft:water_appearance","Object","Optional","Set the water surface color used during rendering. Biomes without this component will have default water surface color behavior."]],
     columns: ["Name","Required?","Type","Description"],
@@ -56,11 +56,11 @@
 </div>
     
 <div class="container" id="node_table_1_2">
-  <script src="/assets/libraries/gridjs.umd.js"></script>
+  <script defer="" src="/assets/libraries/gridjs.umd.js"></script>
   <h2 id="ClientBiomeDefinition" style="padding: 10px">Client Biome Definition</h2>
   <p style="margin-left: 1vw">Contains a description and components to define a Client Biome.</p>
   <div id="wrapper" style="overflow-x: scroll; scrollbar-width: none;"></div>
-<script>
+<script defer="">
   new gridjs.Grid({
     data: [["components","Object of type Client Biome Components","Required","Components for this Client Biome."],["description","Object of type Client Biome Description","Required","Non-component settings, including the Client Biome name."]],
     columns: ["Name","Required?","Type","Description"],
@@ -78,11 +78,11 @@
 </div>
     
 <div class="container" id="node_table_2_2">
-  <script src="/assets/libraries/gridjs.umd.js"></script>
+  <script defer="" src="/assets/libraries/gridjs.umd.js"></script>
   <h2 id="ClientBiomeDescription" style="padding: 10px">Client Biome Description</h2>
   <p style="margin-left: 1vw">Contains non-component settings for a Client Biome.</p>
   <div id="wrapper" style="overflow-x: scroll; scrollbar-width: none;"></div>
-<script>
+<script defer="">
   new gridjs.Grid({
     data: [["identifier","String","Required","The name of the Client Biome, used by other features like the '/locate biome' command. Must match the name of a Biome defined by the game or a behavior pack."]],
     columns: ["Name","Required?","Type","Description"],
@@ -100,11 +100,11 @@
 </div>
     
 <div class="container" id="node_table_3_2">
-  <script src="/assets/libraries/gridjs.umd.js"></script>
+  <script defer="" src="/assets/libraries/gridjs.umd.js"></script>
   <h2 id="ClientBiomeJSONFile" style="padding: 10px">Client Biome JSON File</h2>
   <p style="margin-left: 1vw">Contains a format version and a Client Biome definition</p>
   <div id="wrapper" style="overflow-x: scroll; scrollbar-width: none;"></div>
-<script>
+<script defer="">
   new gridjs.Grid({
     data: [["format_version","String","Required","Version of the JSON schema used by this file"],["minecraft:client_biome","Object of type Client Biome Definition","Required","A single Client Biome definition, containing rendering or sound settings related to a Biome defined by the game or a behavior pack"]],
     columns: ["Name","Required?","Type","Description"],
@@ -122,11 +122,11 @@
 </div>
     
 <div class="container" id="node_table_4_2">
-  <script src="/assets/libraries/gridjs.umd.js"></script>
+  <script defer="" src="/assets/libraries/gridjs.umd.js"></script>
   <h2 id="FoliageColorMap" style="padding: 10px">Foliage Color Map</h2>
   <p style="margin-left: 1vw">Object specifying a color map for foliage instead of a specific color.</p>
   <div id="wrapper" style="overflow-x: scroll; scrollbar-width: none;"></div>
-<script>
+<script defer="">
   new gridjs.Grid({
     data: [["color_map","\"foliage\", \"birch\", \"evergreen\", \"mangrove_swamp_foliage\", \"swamp_foliage\"","Required","Color map from textures/colormap to determine color of foliage."]],
     columns: ["Name","Required?","Type","Description"],
@@ -144,11 +144,11 @@
 </div>
     
 <div class="container" id="node_table_5_2">
-  <script src="/assets/libraries/gridjs.umd.js"></script>
+  <script defer="" src="/assets/libraries/gridjs.umd.js"></script>
   <h2 id="GrassColorMap" style="padding: 10px">Grass Color Map</h2>
   <p style="margin-left: 1vw">Object specifying a color map for grass instead of a specific color.</p>
   <div id="wrapper" style="overflow-x: scroll; scrollbar-width: none;"></div>
-<script>
+<script defer="">
   new gridjs.Grid({
     data: [["color_map","\"grass\", \"swamp_grass\"","Required","Color map from textures/colormap to determine color of grass."]],
     columns: ["Name","Required?","Type","Description"],
@@ -166,11 +166,11 @@
 </div>
     
 <div class="container" id="node_table_6_2">
-  <script src="/assets/libraries/gridjs.umd.js"></script>
+  <script defer="" src="/assets/libraries/gridjs.umd.js"></script>
   <h2 id="minecraft:ambient_sounds" style="padding: 10px">minecraft:ambient_sounds</h2>
   <p style="margin-left: 1vw">Set the ambient sounds for the biome. These sounds must be in the 'individual_named_sounds' in a 'sounds.json' file.</p>
   <div id="wrapper" style="overflow-x: scroll; scrollbar-width: none;"></div>
-<script>
+<script defer="">
   new gridjs.Grid({
     data: [["addition","String","Optional","Named sound that occasionally plays at the listener position"],["loop","String","Optional","Named sound that loops while the listener position is inside the biome"],["mood","String","Optional","Named sound that rarely plays at a nearby air block position when the light level is low. Biomes without an ambient mood sound will use the 'ambient.cave' sound."]],
     columns: ["Name","Required?","Type","Description"],
@@ -188,11 +188,11 @@
 </div>
     
 <div class="container" id="node_table_7_2">
-  <script src="/assets/libraries/gridjs.umd.js"></script>
+  <script defer="" src="/assets/libraries/gridjs.umd.js"></script>
   <h2 id="minecraft:biome_music" style="padding: 10px">minecraft:biome_music</h2>
   <p style="margin-left: 1vw">Affect how music plays within the biome</p>
   <div id="wrapper" style="overflow-x: scroll; scrollbar-width: none;"></div>
-<script>
+<script defer="">
   new gridjs.Grid({
     data: [["volume_multiplier","Float","Optional","Multiplier temporarily and gradually applied to music volume when within this biome. Must be a value between 0 and 1, inclusive."]],
     columns: ["Name","Required?","Type","Description"],
@@ -210,11 +210,11 @@
 </div>
     
 <div class="container" id="node_table_8_2">
-  <script src="/assets/libraries/gridjs.umd.js"></script>
+  <script defer="" src="/assets/libraries/gridjs.umd.js"></script>
   <h2 id="minecraft:fog_appearance" style="padding: 10px">minecraft:fog_appearance</h2>
   <p style="margin-left: 1vw">Set the fog settings used during rendering. Biomes without this component will have default fog settings.</p>
   <div id="wrapper" style="overflow-x: scroll; scrollbar-width: none;"></div>
-<script>
+<script defer="">
   new gridjs.Grid({
     data: [["fog_identifier","String","Required","Identifier of fog definition to use"]],
     columns: ["Name","Required?","Type","Description"],
@@ -232,11 +232,11 @@
 </div>
     
 <div class="container" id="node_table_9_2">
-  <script src="/assets/libraries/gridjs.umd.js"></script>
+  <script defer="" src="/assets/libraries/gridjs.umd.js"></script>
   <h2 id="minecraft:foliage_appearance" style="padding: 10px">minecraft:foliage_appearance</h2>
   <p style="margin-left: 1vw">Set the foliage color or color map used during rendering. Biomes without this component will have default foliage appearance.</p>
   <div id="wrapper" style="overflow-x: scroll; scrollbar-width: none;"></div>
-<script>
+<script defer="">
   new gridjs.Grid({
     data: [["color","Object of type Color255RGB or Object of type Foliage Color Map","Optional","RGB color of foliage, or a Foliage Color Map object."]],
     columns: ["Name","Required?","Type","Description"],
@@ -254,11 +254,11 @@
 </div>
     
 <div class="container" id="node_table_10_2">
-  <script src="/assets/libraries/gridjs.umd.js"></script>
+  <script defer="" src="/assets/libraries/gridjs.umd.js"></script>
   <h2 id="minecraft:grass_appearance" style="padding: 10px">minecraft:grass_appearance</h2>
   <p style="margin-left: 1vw">Set the grass color or color map used during rendering. Biomes without this component will have default grass appearance.</p>
   <div id="wrapper" style="overflow-x: scroll; scrollbar-width: none;"></div>
-<script>
+<script defer="">
   new gridjs.Grid({
     data: [["color","Object of type Color255RGB or Object of type Grass Color Map","Optional","RGB color of grass."]],
     columns: ["Name","Required?","Type","Description"],
@@ -276,11 +276,11 @@
 </div>
     
 <div class="container" id="node_table_11_2">
-  <script src="/assets/libraries/gridjs.umd.js"></script>
+  <script defer="" src="/assets/libraries/gridjs.umd.js"></script>
   <h2 id="minecraft:sky_color" style="padding: 10px">minecraft:sky_color</h2>
   <p style="margin-left: 1vw">Set the sky color used during rendering. Biomes without this component will have default sky color behavior.</p>
   <div id="wrapper" style="overflow-x: scroll; scrollbar-width: none;"></div>
-<script>
+<script defer="">
   new gridjs.Grid({
     data: [["sky_color","Object of type Color255RGB","Required","RGB color of the sky"]],
     columns: ["Name","Required?","Type","Description"],
@@ -298,11 +298,11 @@
 </div>
     
 <div class="container" id="node_table_12_2">
-  <script src="/assets/libraries/gridjs.umd.js"></script>
+  <script defer="" src="/assets/libraries/gridjs.umd.js"></script>
   <h2 id="minecraft:water_appearance" style="padding: 10px">minecraft:water_appearance</h2>
   <p style="margin-left: 1vw">Set the water surface color used during rendering. Biomes without this component will have default water surface color behavior.</p>
   <div id="wrapper" style="overflow-x: scroll; scrollbar-width: none;"></div>
-<script>
+<script defer="">
   new gridjs.Grid({
     data: [["surface_color","Object of type Color255RGB","Required","RGB color of the water surface"],["surface_opacity","Float","Optional","Opacity of the water surface (must be between 0 for invisible and 1 for opaque, inclusive)"]],
     columns: ["Name","Required?","Type","Description"],
