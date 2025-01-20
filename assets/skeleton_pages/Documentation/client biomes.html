@@ -1,0 +1,523 @@
+<!DOCTYPE html><html lang="en"><head>
+          <meta charset="UTF-8">
+          <title>Client Biomes</title>
+          <link rel="preload" href="/assets/images/background_dark_factory.webp" as="image">
+          <link rel="prefetch" href="/index.html">
+          <link rel="prefetch" href="/settings.html">
+          <link rel="stylesheet" href="/assets/styles/wiki_styles.css">
+          <link rel="icon" href="/assets/images/melon.png" type="image/png">
+          <meta name="description" content="Client Biomes">
+          <meta name="viewport" content="width=device-width, initial-scale=1">
+          <meta property="og:title" content="Client Biomes">
+          <meta property="og:image" content="/assets/images/melon.png">
+        </head>
+        
+        <body>
+        <div class="scroll">
+        <div class="navbar">
+          <nav>
+            <ul>
+              <li><a href="/index.html" id="home_button">home</a></li>
+              <li><a href="/settings.html" id="settings_title">settings</a></li>
+              <li><input id="search" placeholder="search..." class="search"></li>
+                <li><a id="searchbar_result" href="" style="display: none"></a></li>
+            </ul>
+          </nav>
+        </div>
+        
+<div class="container" id="title">
+        <div class="object_name">
+<div class="object_inline_name"><h1 style="font-size: null; text-align: center">Client Biomes</h1></div>
+            <div class="object_description">
+                <p></p>
+            </div>
+        </div>
+        </div>
+
+<div class="container" id="node_head_0_1">
+        <div class="object_name">
+<div class="object_inline_name"><h1 style="font-size: null; text-align: left">Overview</h1></div>
+            <div class="object_description">
+                <p></p><p>Minecraft client_biome files define client-side settings for biomes in resource packs.</p>
+<p>This is the new preferred location for per-biome settings that used to be in biomes_client.json.</p>
+<p>(As of base game version 1.21.40, biomes_client.json is no longer loaded from built-in Vanilla resource packs. That file will still be loaded for other content regardless of version, and worlds using older base game versions will also still use it.)</p>
+<p>These files are not part of the ‘Custom Biomes’ experiment and do not cause biome definitions to exist on their own, but they can be used to customize client-side settings of custom biomes.</p>
+<p></p>
+            </div>
+        </div>
+        </div>
+
+<div class="container" id="node_head_1_1">
+        <div class="object_name">
+<div class="object_inline_name"><h1 style="font-size: null; text-align: left">JSON Format</h1></div>
+            <div class="object_description">
+                <p></p>
+            </div>
+        </div>
+        </div>
+
+<div class="container" id="node_example_1_0_1">
+  <h2 class="object_name">{ Here is a sample client_biome file. }</h2>
+  <div style="margin-left: 1.5vw">
+    <link rel="stylesheet" href="/assets/styles/github-dark.css">
+    <script src="/assets/libraries/highlight.min.js"></script>
+    <script defer="">hljs.highlightAll();</script>
+    <pre><code>{
+  "format_version": "1.21.40",
+  "minecraft:client_biome": {
+    "description": {
+      "identifier": "the_end"
+    },
+    "components": {
+      "minecraft:sky_color": {
+        "sky_color": "#000000"
+      },
+      "minecraft:fog_appearance": {
+        "fog_identifier": "minecraft:fog_the_end"
+      },
+      "minecraft:water_appearance": {
+        "surface_color": "#62529e"
+      }
+    }
+  }
+}</code></pre>
+  </div>
+</div>
+
+<div class="container" id="node_head_2_1">
+        <div class="object_name">
+<div class="object_inline_name"><h1 style="font-size: null; text-align: left">Schema</h1></div>
+            <div class="object_description">
+                <p></p>
+            </div>
+        </div>
+        </div>
+
+<div class="container" id="node_head_0_2">
+        <div class="object_name">
+<div class="object_inline_name"><h2 style="font-size: null; text-align: left">Client Biome Components</h2></div>
+            <div class="object_description">
+                <p></p><p>Any components that this Client Biome uses</p>
+<p></p>
+            </div>
+        </div>
+        </div>
+
+<div class="container" id="node_head_0_3">
+        <div class="object_name">
+<div class="object_inline_name"><h3 style="font-size: null; text-align: left">minecraft:ambient_sounds</h3></div>
+            <div class="object_description">
+                <p></p><p>Set the ambient sounds for the biome. These sounds must be in the ‘individual_named_sounds’ in a ‘sounds.json’ file.</p>
+<p></p>
+            </div>
+        </div>
+        </div>
+
+<div class="container" id="node_head_1_3">
+        <div class="object_name">
+<div class="object_inline_name"><h3 style="font-size: null; text-align: left">minecraft:biome_music</h3></div>
+            <div class="object_description">
+                <p></p><p>Affect how music plays within the biome</p>
+<p></p>
+            </div>
+        </div>
+        </div>
+
+<div class="container" id="node_head_2_3">
+        <div class="object_name">
+<div class="object_inline_name"><h3 style="font-size: null; text-align: left">minecraft:fog_appearance</h3></div>
+            <div class="object_description">
+                <p></p><p>Set the fog settings used during rendering. Biomes without this component will have default fog settings.</p>
+<p></p>
+            </div>
+        </div>
+        </div>
+
+<div class="container" id="node_head_3_3">
+        <div class="object_name">
+<div class="object_inline_name"><h3 style="font-size: null; text-align: left">minecraft:foliage_appearance</h3></div>
+            <div class="object_description">
+                <p></p><p>Set the foliage color or color map used during rendering. Biomes without this component will have default foliage appearance.</p>
+<p></p>
+            </div>
+        </div>
+        </div>
+
+<div class="container" id="node_head_4_3">
+        <div class="object_name">
+<div class="object_inline_name"><h3 style="font-size: null; text-align: left">minecraft:grass_appearance</h3></div>
+            <div class="object_description">
+                <p></p><p>Set the grass color or color map used during rendering. Biomes without this component will have default grass appearance.</p>
+<p></p>
+            </div>
+        </div>
+        </div>
+
+<div class="container" id="node_head_5_3">
+        <div class="object_name">
+<div class="object_inline_name"><h3 style="font-size: null; text-align: left">minecraft:sky_color</h3></div>
+            <div class="object_description">
+                <p></p><p>Set the sky color used during rendering. Biomes without this component will have default sky color behavior.</p>
+<p></p>
+            </div>
+        </div>
+        </div>
+
+<div class="container" id="node_head_6_3">
+        <div class="object_name">
+<div class="object_inline_name"><h3 style="font-size: null; text-align: left">minecraft:water_appearance</h3></div>
+            <div class="object_description">
+                <p></p><p>Set the water surface color used during rendering. Biomes without this component will have default water surface color behavior.</p>
+<p></p>
+            </div>
+        </div>
+        </div>
+
+<div class="container" id="node_head_1_2">
+        <div class="object_name">
+<div class="object_inline_name"><h2 style="font-size: null; text-align: left">Client Biome Definition</h2></div>
+            <div class="object_description">
+                <p></p><p>Contains a description and components to define a Client Biome.</p>
+<p></p>
+            </div>
+        </div>
+        </div>
+
+<div class="container" id="node_head_0_3">
+        <div class="object_name">
+<div class="object_inline_name"><h3 style="font-size: null; text-align: left">components</h3></div>
+            <div class="object_description">
+                <p></p><p>Components for this Client Biome.</p>
+<p></p>
+            </div>
+        </div>
+        </div>
+
+<div class="container" id="node_head_1_3">
+        <div class="object_name">
+<div class="object_inline_name"><h3 style="font-size: null; text-align: left">description</h3></div>
+            <div class="object_description">
+                <p></p><p>Non-component settings, including the Client Biome name.</p>
+<p></p>
+            </div>
+        </div>
+        </div>
+
+<div class="container" id="node_head_2_2">
+        <div class="object_name">
+<div class="object_inline_name"><h2 style="font-size: null; text-align: left">Client Biome Description</h2></div>
+            <div class="object_description">
+                <p></p><p>Contains non-component settings for a Client Biome.</p>
+<p></p>
+            </div>
+        </div>
+        </div>
+
+<div class="container" id="node_head_0_3">
+        <div class="object_name">
+<div class="object_inline_name"><h3 style="font-size: null; text-align: left">identifier</h3></div>
+            <div class="object_description">
+                <p></p><p>The name of the Client Biome, used by other features like the ‘/locate biome’ command. Must match the name of a Biome defined by the game or a behavior pack.</p>
+<p></p>
+            </div>
+        </div>
+        </div>
+
+<div class="container" id="node_head_3_2">
+        <div class="object_name">
+<div class="object_inline_name"><h2 style="font-size: null; text-align: left">Client Biome JSON File</h2></div>
+            <div class="object_description">
+                <p></p><p>Contains a format version and a Client Biome definition</p>
+<p></p>
+            </div>
+        </div>
+        </div>
+
+<div class="container" id="node_head_0_3">
+        <div class="object_name">
+<div class="object_inline_name"><h3 style="font-size: null; text-align: left">format_version</h3></div>
+            <div class="object_description">
+                <p></p><p>Version of the JSON schema used by this file</p>
+<p></p>
+            </div>
+        </div>
+        </div>
+
+<div class="container" id="node_head_1_3">
+        <div class="object_name">
+<div class="object_inline_name"><h3 style="font-size: null; text-align: left">minecraft:client_biome</h3></div>
+            <div class="object_description">
+                <p></p><p>A single Client Biome definition, containing rendering or sound settings related to a Biome defined by the game or a behavior pack</p>
+<p></p>
+            </div>
+        </div>
+        </div>
+
+<div class="container" id="node_head_4_2">
+        <div class="object_name">
+<div class="object_inline_name"><h2 style="font-size: null; text-align: left">Foliage Color Map</h2></div>
+            <div class="object_description">
+                <p></p><p>Object specifying a color map for foliage instead of a specific color.</p>
+<p></p>
+            </div>
+        </div>
+        </div>
+
+<div class="container" id="node_head_0_3">
+        <div class="object_name">
+<div class="object_inline_name"><h3 style="font-size: null; text-align: left">color_map</h3></div>
+            <div class="object_description">
+                <p></p><p>Color map from textures/colormap to determine color of foliage.</p>
+<p></p>
+            </div>
+        </div>
+        </div>
+
+<div class="container" id="node_head_5_2">
+        <div class="object_name">
+<div class="object_inline_name"><h2 style="font-size: null; text-align: left">Grass Color Map</h2></div>
+            <div class="object_description">
+                <p></p><p>Object specifying a color map for grass instead of a specific color.</p>
+<p></p>
+            </div>
+        </div>
+        </div>
+
+<div class="container" id="node_head_0_3">
+        <div class="object_name">
+<div class="object_inline_name"><h3 style="font-size: null; text-align: left">color_map</h3></div>
+            <div class="object_description">
+                <p></p><p>Color map from textures/colormap to determine color of grass.</p>
+<p></p>
+            </div>
+        </div>
+        </div>
+
+<div class="container" id="node_head_6_2">
+        <div class="object_name">
+<div class="object_inline_name"><h2 style="font-size: null; text-align: left">minecraft:ambient_sounds</h2></div>
+            <div class="object_description">
+                <p></p><p>Set the ambient sounds for the biome. These sounds must be in the ‘individual_named_sounds’ in a ‘sounds.json’ file.</p>
+<p></p>
+            </div>
+        </div>
+        </div>
+
+<div class="container" id="node_head_0_3">
+        <div class="object_name">
+<div class="object_inline_name"><h3 style="font-size: null; text-align: left">addition</h3></div>
+            <div class="object_description">
+                <p></p><p>Named sound that occasionally plays at the listener position</p>
+<p></p>
+            </div>
+        </div>
+        </div>
+
+<div class="container" id="node_head_1_3">
+        <div class="object_name">
+<div class="object_inline_name"><h3 style="font-size: null; text-align: left">loop</h3></div>
+            <div class="object_description">
+                <p></p><p>Named sound that loops while the listener position is inside the biome</p>
+<p></p>
+            </div>
+        </div>
+        </div>
+
+<div class="container" id="node_head_2_3">
+        <div class="object_name">
+<div class="object_inline_name"><h3 style="font-size: null; text-align: left">mood</h3></div>
+            <div class="object_description">
+                <p></p><p>Named sound that rarely plays at a nearby air block position when the light level is low. Biomes without an ambient mood sound will use the ‘ambient.cave’ sound.</p>
+<p></p>
+            </div>
+        </div>
+        </div>
+
+<div class="container" id="node_head_7_2">
+        <div class="object_name">
+<div class="object_inline_name"><h2 style="font-size: null; text-align: left">minecraft:biome_music</h2></div>
+            <div class="object_description">
+                <p></p><p>Affect how music plays within the biome</p>
+<p></p>
+            </div>
+        </div>
+        </div>
+
+<div class="container" id="node_head_0_3">
+        <div class="object_name">
+<div class="object_inline_name"><h3 style="font-size: null; text-align: left">volume_multiplier</h3></div>
+            <div class="object_description">
+                <p></p><p>Multiplier temporarily and gradually applied to music volume when within this biome. Must be a value between 0 and 1, inclusive.</p>
+<p></p>
+            </div>
+        </div>
+        </div>
+
+<div class="container" id="node_head_8_2">
+        <div class="object_name">
+<div class="object_inline_name"><h2 style="font-size: null; text-align: left">minecraft:fog_appearance</h2></div>
+            <div class="object_description">
+                <p></p><p>Set the fog settings used during rendering. Biomes without this component will have default fog settings.</p>
+<p></p>
+            </div>
+        </div>
+        </div>
+
+<div class="container" id="node_head_0_3">
+        <div class="object_name">
+<div class="object_inline_name"><h3 style="font-size: null; text-align: left">fog_identifier</h3></div>
+            <div class="object_description">
+                <p></p><p>Identifier of fog definition to use</p>
+<p></p>
+            </div>
+        </div>
+        </div>
+
+<div class="container" id="node_head_9_2">
+        <div class="object_name">
+<div class="object_inline_name"><h2 style="font-size: null; text-align: left">minecraft:foliage_appearance</h2></div>
+            <div class="object_description">
+                <p></p><p>Set the foliage color or color map used during rendering. Biomes without this component will have default foliage appearance.</p>
+<p></p>
+            </div>
+        </div>
+        </div>
+
+<div class="container" id="node_head_0_3">
+        <div class="object_name">
+<div class="object_inline_name"><h3 style="font-size: null; text-align: left">color</h3></div>
+            <div class="object_description">
+                <p></p><p>RGB color of foliage, or a Foliage Color Map object.</p>
+<p></p>
+            </div>
+        </div>
+        </div>
+
+<div class="container" id="node_head_10_2">
+        <div class="object_name">
+<div class="object_inline_name"><h2 style="font-size: null; text-align: left">minecraft:grass_appearance</h2></div>
+            <div class="object_description">
+                <p></p><p>Set the grass color or color map used during rendering. Biomes without this component will have default grass appearance.</p>
+<p></p>
+            </div>
+        </div>
+        </div>
+
+<div class="container" id="node_head_0_3">
+        <div class="object_name">
+<div class="object_inline_name"><h3 style="font-size: null; text-align: left">color</h3></div>
+            <div class="object_description">
+                <p></p><p>RGB color of grass.</p>
+<p></p>
+            </div>
+        </div>
+        </div>
+
+<div class="container" id="node_head_11_2">
+        <div class="object_name">
+<div class="object_inline_name"><h2 style="font-size: null; text-align: left">minecraft:sky_color</h2></div>
+            <div class="object_description">
+                <p></p><p>Set the sky color used during rendering. Biomes without this component will have default sky color behavior.</p>
+<p></p>
+            </div>
+        </div>
+        </div>
+
+<div class="container" id="node_head_0_3">
+        <div class="object_name">
+<div class="object_inline_name"><h3 style="font-size: null; text-align: left">sky_color</h3></div>
+            <div class="object_description">
+                <p></p><p>RGB color of the sky</p>
+<p></p>
+            </div>
+        </div>
+        </div>
+
+<div class="container" id="node_head_12_2">
+        <div class="object_name">
+<div class="object_inline_name"><h2 style="font-size: null; text-align: left">minecraft:water_appearance</h2></div>
+            <div class="object_description">
+                <p></p><p>Set the water surface color used during rendering. Biomes without this component will have default water surface color behavior.</p>
+<p></p>
+            </div>
+        </div>
+        </div>
+
+<div class="container" id="node_head_0_3">
+        <div class="object_name">
+<div class="object_inline_name"><h3 style="font-size: null; text-align: left">surface_color</h3></div>
+            <div class="object_description">
+                <p></p><p>RGB color of the water surface</p>
+<p></p>
+            </div>
+        </div>
+        </div>
+
+<div class="container" id="node_head_1_3">
+        <div class="object_name">
+<div class="object_inline_name"><h3 style="font-size: null; text-align: left">surface_opacity</h3></div>
+            <div class="object_description">
+                <p></p><p>Opacity of the water surface (must be between 0 for invisible and 1 for opaque, inclusive)</p>
+<p></p>
+            </div>
+        </div>
+        </div>
+
+    <script src="/assets/js/LanguageHandler.js"></script>
+        <script src="/assets/js/occlusionPilot.js"></script>
+        <script src="/assets/js/preloadPilot.js"></script>
+        <script src="/assets/js/chunkPilot.js"></script>
+                        <script src="/assets/libraries/index.min.js" defer=""></script>
+                <script>
+                window.onload = function () {
+                    let searchData = null;
+                    async function LoadData() {
+                        if (searchData !== null) {
+                            return searchData;
+                        }
+                        const res = await fetch('/assets/index_list.json');
+                        searchData = await res.json();
+                        return searchData;
+                    }
+                    
+                    
+                    let miniSearch = new MiniSearch({
+                      fields: ['id'],
+                      storeFields: ['id', 'href'],
+                      searchOptions: {
+                          prefix: true
+                      }
+                    })
+                    let dataLoaded = false;
+                    const searchbar = document.getElementById("search");
+                    searchbar.addEventListener("input", async function() {
+                        searchData = await LoadData();
+                        
+                        if (!dataLoaded) {
+                            for (const key in searchData){
+                                for (const subkey in searchData[key]){
+                                    miniSearch.add({
+                                        "id": subkey,
+                                        "href": searchData[key][subkey],
+                                    });
+                                }
+                            }
+                            dataLoaded = true;
+                        }
+                        
+                        
+                        
+                        const searchResults = miniSearch.search(searchbar.value, { fuzzy: 0.2 });
+                        if (searchResults.length > 0) {
+                            document.getElementById("searchbar_result").innerHTML = searchResults[0].id;
+                            document.getElementById("searchbar_result").style.display = "block";
+                            document.getElementById("searchbar_result").setAttribute("href", searchResults[0].href);
+                        }
+                        else {
+                            document.getElementById("searchbar_result").innerHTML = "";
+                        }
+                    })
+                };
+                </script>
+                </div>
+        </body></html>

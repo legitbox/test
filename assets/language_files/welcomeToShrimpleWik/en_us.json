@@ -1,0 +1,28 @@
+{
+  "introduction": {
+    "object_name": "Not so much of an introduction",
+    "object_image_path": "/assets/images/shrimple_wiki_icon.png",
+    "object_description": "Shrimple wiki is a simple tool designed to create static pages using static HTML/CSS generation using JSON.\n\nThe entire structure is based on a container system. For example, this description box you are reading right now is a \"description\" container defined inside the page structure JSON file.\n"
+  },
+  "possibilities": {
+    "object_name": null,
+    "object_image_path": null,
+    "object_description": "Since the design is modular and uses JSON for its structure generation, this allows us to create lots of custom components for easy use inside Spadix projects, as well as in custom websites that can have wikis for other Minecraft mods (like Java) or even other games.\n\nTime for some features:\n\n*Markdown support*\n\n| sandwiches  \t| toasters  \t|\n|-------------\t|-----------\t|\n| just enough \t| too many! \t|"
+  },
+  "images": {
+    "image_paths": ["/assets/images/tech.png", "/assets/images/uber.png"],
+    "image_descriptions": ["lmao", "even more lmao"],
+    "image_sizes": [20, 20]
+  },
+  "coding": {
+    "code_snippet_name": "funky script",
+    "code_string": "defmodule SimpleCalculator do\n  def start do\n    IO.puts(\"Welcome to the Elixir Calculator!\")\n    IO.puts(\"Choose an operation:\")\n    IO.puts(\"1) Addition (+)\")\n    IO.puts(\"2) Subtraction (-)\")\n    IO.puts(\"3) Multiplication (*)\")\n    IO.puts(\"4) Division (/)\")\n    \n    operation = IO.gets(\"Enter the number of the operation: \") |> String.trim() |> String.to_integer()\n\n    num1 = IO.gets(\"Enter the first number: \") |> String.trim() |> String.to_float()\n    num2 = IO.gets(\"Enter the second number: \") |> String.trim() |> String.to_float()\n\n    result =\n      case operation do\n        1 -> num1 + num2\n        2 -> num1 - num2\n        3 -> num1 * num2\n        4 -> \n          if num2 == 0 do\n            \"Error: Division by zero is not allowed.\"\n          else\n            num1 / num2\n          end\n        _ -> \"Invalid operation selected.\"\n      end\n\n    IO.puts(\"Result: #{result}\")\n  end\nend\n\nSimpleCalculator.start()\n"
+  },
+  "mermaid_test": {
+    "mermaid_script_string": "flowchart TD\n    A[Christmas] -->|Get money| B(Go shopping)\n    B --> C{Let me think}\n    C -->|One| D[Laptop]\n    C -->|Two| E[iPhone]\n    C -->|Three| F[fa:fa-car Car]\n    D -->|Bazinga| G[extra bazinga]"
+  },
+  "funky table": {
+    "table_object_headers": ["yes", "yes, but more"],
+    "table_object_data": ["so true", "bestie"]
+  }
+}

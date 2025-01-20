@@ -1,0 +1,27 @@
+{
+  "Info": {
+    "Timeline": "/assets/skeleton_pages/Info/timeline.html",
+    "Introduction": "/assets/skeleton_pages/Info/introduction.html"
+  },
+  "Documentation": {
+    "Addons": "/assets/skeleton_pages/Documentation/addons.html",
+    "Biomes": "/assets/skeleton_pages/Documentation/biomes.html",
+    "Blocks": "/assets/skeleton_pages/Documentation/blocks.html",
+    "Client Biomes": "/assets/skeleton_pages/Documentation/client biomes.html",
+    "Entities": "/assets/skeleton_pages/Documentation/entities.html",
+    "Entity Events": "/assets/skeleton_pages/Documentation/entity events.html",
+    "Entity Timeline Events": "/assets/skeleton_pages/Documentation/entity timeline events.html",
+    "Features": "/assets/skeleton_pages/Documentation/features.html",
+    "Fogs": "/assets/skeleton_pages/Documentation/fogs.html",
+    "Molang": "/assets/skeleton_pages/Documentation/molang.html",
+    "Particles": "/assets/skeleton_pages/Documentation/particles.html",
+    "Recipes": "/assets/skeleton_pages/Documentation/recipes.html",
+    "Schemas": "/assets/skeleton_pages/Documentation/schemas.html",
+    "Texture Sets": "/assets/skeleton_pages/Documentation/texture sets.html",
+    "Animations": "/assets/skeleton_pages/Documentation/animations.html",
+    "Item": "/assets/skeleton_pages/Documentation/item.html"
+  },
+  "Items": {
+    "Stick": "/assets/skeleton_pages/Items/stick.html"
+  }
+}

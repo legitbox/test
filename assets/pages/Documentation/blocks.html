@@ -1,0 +1,1807 @@
+
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+          <meta charset="UTF-8">
+          <title>Blocks</title>
+          <link rel="preload" href="/assets/images/background_dark_factory.webp" as="image">
+          <link rel="prefetch" href="/index.html">
+          <link rel="prefetch" href="/settings.html">
+          <link rel="stylesheet" href="/assets/styles/wiki_styles.css">
+          <link rel="icon" href="/assets/images/melon.png" type="image/png">
+          <meta name="description" content="Blocks">
+          <meta name="viewport" content="width=device-width, initial-scale=1" />
+          <meta property="og:title" content="Blocks" />
+          <meta property="og:image" content="/assets/images/melon.png"/>
+        </head>
+        
+        <body>
+        <div class="scroll">
+        <div class="navbar">
+          <nav>
+            <ul>
+              <li><a href="/index.html" id="home_button">home</a></li>
+              <li><a href="/settings.html" id="settings_title">settings</a></li>
+              <li><input id="search" placeholder="search..." class="search"></li>
+                <li><a id="searchbar_result" href="" style="display: none"></a></li>
+            </ul>
+          </nav>
+        </div>
+        
+<div class="container" id="title">
+        <div class="object_name">
+<div class="object_inline_name"><h1 style="font-size: null; text-align: center">Blocks</h1></div>
+            <div class="object_description">
+                <p></p>
+            </div>
+        </div>
+        </div>
+
+<div class="container" id="node_head_0_1">
+        <div class="object_name">
+<div class="object_inline_name"><h1 style="font-size: null; text-align: left">Blocks</h1></div>
+            <div class="object_description">
+                <p></p>
+            </div>
+        </div>
+        </div>
+
+<div class="container" id="node_head_0_2">
+        <div class="object_name">
+<div class="object_inline_name"><h2 style="font-size: null; text-align: left">Block Components</h2></div>
+            <div class="object_description">
+                <p></p>
+            </div>
+        </div>
+        </div>
+
+<div class="container" id="node_head_0_3">
+        <div class="object_name">
+<div class="object_inline_name"><h3 style="font-size: null; text-align: left">bone_visibility</h3></div>
+            <div class="object_description">
+                <p><p>A JSON object that contains a list of key/value pairs that map from bone name in the specified geometry file (key) to a boolean that tells whether the bone should be visible or not (value).</p>
+</p>
+            </div>
+        </div>
+        </div>
+
+<div class="container" id="node_head_1_3">
+        <div class="object_name">
+<div class="object_inline_name"><h3 style="font-size: null; text-align: left">minecraft:breathability</h3></div>
+            <div class="object_description">
+                <p><p>Determines whether the block is breathable by defining if the block is treated as a <code>solid</code> or as <code>air</code>. The default is <code>solid</code> if this component is omitted.</p>
+</p>
+            </div>
+        </div>
+        </div>
+
+<div class="container" id="node_head_2_3">
+        <div class="object_name">
+<div class="object_inline_name"><h3 style="font-size: null; text-align: left">minecraft:collision_box</h3></div>
+            <div class="object_description">
+                <p><p>Defines the area of the block that collides with entities. If set to true, default values are used. If set to false, the block’s collision with entities is disabled. If this component is omitted, default values are used.</p>
+</p>
+            </div>
+        </div>
+        </div>
+
+<div class="container" id="node_head_0_4">
+        <div class="object_name">
+<div class="object_inline_name"><h4 style="font-size: null; text-align: left">origin</h4></div>
+            <div class="object_description">
+                <p><p>Minimal position of the bounds of the collision box. “origin” is specified as [x, y, z] and must be in the range (-8, 0, -8) to (8, 16, 8), inclusive.</p>
+</p>
+            </div>
+        </div>
+        </div>
+
+<div class="container" id="node_head_1_4">
+        <div class="object_name">
+<div class="object_inline_name"><h4 style="font-size: null; text-align: left">size</h4></div>
+            <div class="object_description">
+                <p><p>Size of each side of the collision box. Size is specified as [x, y, z]. “origin” + “size” must be in the range (-8, 0, -8) to (8, 16, 8), inclusive.</p>
+</p>
+            </div>
+        </div>
+        </div>
+
+<div class="container" id="node_head_3_3">
+        <div class="object_name">
+<div class="object_inline_name"><h3 style="font-size: null; text-align: left">minecraft:crafting_table</h3></div>
+            <div class="object_description">
+                <p><p>Makes your block into a custom crafting table which enables the crafting table UI and the ability to craft recipes. This component supports only “recipe_shaped” and “recipe_shapeless” typed recipes and not others like “recipe_furnace” or “recipe_brewing_mix”. If there are two recipes for one item, the recipe book will pick the first that was parsed. If two input recipes are the same, crafting may assert and the resulting item may vary.</p>
+</p>
+            </div>
+        </div>
+        </div>
+
+<div class="container" id="node_head_0_4">
+        <div class="object_name">
+<div class="object_inline_name"><h4 style="font-size: null; text-align: left">crafting_tags</h4></div>
+            <div class="object_description">
+                <p><p>Defines the tags recipes should define to be crafted on this table. Limited to 64 tags. Each tag is limited to 64 characters.</p>
+</p>
+            </div>
+        </div>
+        </div>
+
+<div class="container" id="node_head_1_4">
+        <div class="object_name">
+<div class="object_inline_name"><h4 style="font-size: null; text-align: left">table_name</h4></div>
+            <div class="object_description">
+                <p><p>Specifies the language file key that maps to what text will be displayed in the UI of this table. If the string given can not be resolved as a loc string, the raw string given will be displayed. If this field is omitted, the name displayed will default to the name specified in the “display_name” component. If this block has no “display_name” component, the name displayed will default to the name of the block.</p>
+</p>
+            </div>
+        </div>
+        </div>
+
+<div class="container" id="node_head_4_3">
+        <div class="object_name">
+<div class="object_inline_name"><h3 style="font-size: null; text-align: left">minecraft:custom_components</h3></div>
+            <div class="object_description">
+                <p><p>Sets an ordered list of custom component names which are bound in script to be executed upon a block event.</p>
+</p>
+            </div>
+        </div>
+        </div>
+
+<div class="container" id="node_head_5_3">
+        <div class="object_name">
+<div class="object_inline_name"><h3 style="font-size: null; text-align: left">minecraft:destructible_by_explosion</h3></div>
+            <div class="object_description">
+                <p><p>Describes the destructible by explosion properties for this block. If set to true, the block will have the default explosion resistance. If set to false, this block is indestructible by explosion. If the component is omitted, the block will have the default explosion resistance.</p>
+</p>
+            </div>
+        </div>
+        </div>
+
+<div class="container" id="node_head_0_4">
+        <div class="object_name">
+<div class="object_inline_name"><h4 style="font-size: null; text-align: left">explosion_resistance</h4></div>
+            <div class="object_description">
+                <p><p>Sets the explosion resistance for the block. Greater values result in greater resistance to explosions. The scale will be different for different explosion power levels. A negative value or 0 means it will easily explode; larger numbers increase level of resistance.</p>
+</p>
+            </div>
+        </div>
+        </div>
+
+<div class="container" id="node_head_6_3">
+        <div class="object_name">
+<div class="object_inline_name"><h3 style="font-size: null; text-align: left">minecraft:destructible_by_mining</h3></div>
+            <div class="object_description">
+                <p><p>Describes the destructible by mining properties for this block. If set to true, the block will take the default number of seconds to destroy. If set to false, this block is indestructible by mining. If the component is omitted, the block will take the default number of seconds to destroy.</p>
+</p>
+            </div>
+        </div>
+        </div>
+
+<div class="container" id="node_head_0_4">
+        <div class="object_name">
+<div class="object_inline_name"><h4 style="font-size: null; text-align: left">item_specific_speeds</h4></div>
+            <div class="object_description">
+                <p><p>Optional array of objects to describe item specific block destroy speeds, each object contains an ‘item’ ItemDescriptor and a ‘destroy_speed’ float. This array currently requires UpcomingFeatures experiment to be enabled.</p>
+</p>
+            </div>
+        </div>
+        </div>
+
+<div class="container" id="node_example_0_0_4">
+  <h2 class="object_name">{ Example1 }</h2>
+  <div style="margin-left: 1.5vw">
+    <link rel="stylesheet" href="/assets/styles/github-dark.css">
+    <script src="/assets/libraries/highlight.min.js"></script>
+    <script defer>hljs.highlightAll();</script>
+    <pre><code>{
+	"minecraft:destructible_by_mining": {
+		"seconds_to_destroy": 10,
+		"item_specific_speeds": [
+			{
+				"item": { "tags": "q.any_tag('minecraft:is_pickaxe', 'minecraft:is_tool') " },
+				"destroy_speed": 5.0
+			}
+		]
+	}
+}</code></pre>
+  </div>
+</div>
+
+<div class="container" id="node_example_0_1_4">
+  <h2 class="object_name">{ Example2 }</h2>
+  <div style="margin-left: 1.5vw">
+    <link rel="stylesheet" href="/assets/styles/github-dark.css">
+    <script src="/assets/libraries/highlight.min.js"></script>
+    <script defer>hljs.highlightAll();</script>
+    <pre><code>{
+	"minecraft:destructible_by_mining": {
+		"seconds_to_destroy": 10,
+		"item_specific_speeds": [
+			{
+				"item": "minecraft:iron_pickaxe",
+				"destroy_speed": 5.0
+			},
+			{
+				"item": "minecraft:diamond_pickaxe",
+				"destroy_speed": 2.0
+			}
+		]
+	}
+}</code></pre>
+  </div>
+</div>
+
+<div class="container" id="node_head_0_5">
+        <div class="object_name">
+<div class="object_inline_name"><h5 style="font-size: null; text-align: left">destroy_speed</h5></div>
+            <div class="object_description">
+                <p><p>Required.</p>
+<p>A destroy speed applied while using the defined ‘item’.</p>
+</p>
+            </div>
+        </div>
+        </div>
+
+<div class="container" id="node_head_1_5">
+        <div class="object_name">
+<div class="object_inline_name"><h5 style="font-size: null; text-align: left">item</h5></div>
+            <div class="object_description">
+                <p><p>Required.</p>
+<p>An ItemDescriptor filtering for the item used while mining.</p>
+</p>
+            </div>
+        </div>
+        </div>
+
+<div class="container" id="node_head_1_4">
+        <div class="object_name">
+<div class="object_inline_name"><h4 style="font-size: null; text-align: left">seconds_to_destroy</h4></div>
+            <div class="object_description">
+                <p><p>Sets the number of seconds it takes to destroy the block with base equipment. Greater numbers result in greater mining times.</p>
+</p>
+            </div>
+        </div>
+        </div>
+
+<div class="container" id="node_head_7_3">
+        <div class="object_name">
+<div class="object_inline_name"><h3 style="font-size: null; text-align: left">minecraft:display_name</h3></div>
+            <div class="object_description">
+                <p><p>Specifies the language file key that maps to what text will be displayed when you hover over the block in your inventory and hotbar. If the string given can not be resolved as a loc string, the raw string given will be displayed. If this component is omitted, the name of the block will be used as the display name.</p>
+</p>
+            </div>
+        </div>
+        </div>
+
+<div class="container" id="node_head_8_3">
+        <div class="object_name">
+<div class="object_inline_name"><h3 style="font-size: null; text-align: left">minecraft:flammable</h3></div>
+            <div class="object_description">
+                <p><p>Describes the flammable properties for this block. If set to true, default values are used. If set to false, or if this component is omitted, the block will not be able to catch on fire naturally from neighbors, but it can still be directly ignited.</p>
+</p>
+            </div>
+        </div>
+        </div>
+
+<div class="container" id="node_head_0_4">
+        <div class="object_name">
+<div class="object_inline_name"><h4 style="font-size: null; text-align: left">catch_chance_modifier</h4></div>
+            <div class="object_description">
+                <p><p>A modifier affecting the chance that this block will catch flame when next to a fire. Values are greater than or equal to 0, with a higher number meaning more likely to catch on fire. For a “catch_chance_modifier” greater than 0, the fire will continue to burn until the block is destroyed (or it will burn forever if the “destroy_chance_modifier” is 0). If the “catch_chance_modifier” is 0, and the block is directly ignited, the fire will eventually burn out without destroying the block (or it will have a chance to be destroyed if “destroy_chance_modifier” is greater than 0). The default value of 5 is the same as that of Planks.</p>
+</p>
+            </div>
+        </div>
+        </div>
+
+<div class="container" id="node_head_1_4">
+        <div class="object_name">
+<div class="object_inline_name"><h4 style="font-size: null; text-align: left">destroy_chance_modifier</h4></div>
+            <div class="object_description">
+                <p><p>A modifier affecting the chance that this block will be destroyed by flames when on fire. Values are greater than or equal to 0, with a higher number meaning more likely to be destroyed by fire. For a “destroy_chance_modifier” of 0, the block will never be destroyed by fire, and the fire will burn forever if the “catch_chance_modifier” is greater than 0. The default value of 20 is the same as that of Planks.</p>
+</p>
+            </div>
+        </div>
+        </div>
+
+<div class="container" id="node_head_9_3">
+        <div class="object_name">
+<div class="object_inline_name"><h3 style="font-size: null; text-align: left">minecraft:friction</h3></div>
+            <div class="object_description">
+                <p><p>Describes the friction for this block in a range of (0.0-0.9). Friction affects an entity’s movement speed when it travels on the block. Greater value results in more friction.</p>
+</p>
+            </div>
+        </div>
+        </div>
+
+<div class="container" id="node_head_10_3">
+        <div class="object_name">
+<div class="object_inline_name"><h3 style="font-size: null; text-align: left">minecraft:geometry</h3></div>
+            <div class="object_description">
+                <p><p>The description identifier of the geometry to use to render this block. This identifier must either match an existing geometry identifier in any of the loaded resource packs or be one of the currently supported Vanilla identifiers: “minecraft:geometry.full_block” or “minecraft:geometry.cross”.</p>
+</p>
+            </div>
+        </div>
+        </div>
+
+<div class="container" id="node_head_11_3">
+        <div class="object_name">
+<div class="object_inline_name"><h3 style="font-size: null; text-align: left">minecraft:item_visual</h3></div>
+            <div class="object_description">
+                <p><p>The description identifier of the geometry and material used to render the item of this block.</p>
+<p>Experimental toggles required: Upcoming Creator Features (in format versions before 1.21.50)</p>
+</p>
+            </div>
+        </div>
+        </div>
+
+<div class="container" id="node_example_11_0_3">
+  <h2 class="object_name">{ Example }</h2>
+  <div style="margin-left: 1.5vw">
+    <link rel="stylesheet" href="/assets/styles/github-dark.css">
+    <script src="/assets/libraries/highlight.min.js"></script>
+    <script defer>hljs.highlightAll();</script>
+    <pre><code>"minecraft:item_visual": {
+		"geometry": {
+			"identifier": "minecraft:geometry.full_block"
+        },
+        "material_instances": {
+			"*": {
+				"texture": "dirt",
+                "render_method": "opaque"
+			}
+		}
+	}</code></pre>
+  </div>
+</div>
+
+<div class="container" id="node_head_0_4">
+        <div class="object_name">
+<div class="object_inline_name"><h4 style="font-size: null; text-align: left">geometry</h4></div>
+            <div class="object_description">
+                <p><p>[Required] The “minecraft:geometry” component that will be used for the item.</p>
+</p>
+            </div>
+        </div>
+        </div>
+
+<div class="container" id="node_head_1_4">
+        <div class="object_name">
+<div class="object_inline_name"><h4 style="font-size: null; text-align: left">material_instances</h4></div>
+            <div class="object_description">
+                <p><p>[Required] The “minecraft:material_instances” component that will be used for the item.</p>
+</p>
+            </div>
+        </div>
+        </div>
+
+<div class="container" id="node_head_12_3">
+        <div class="object_name">
+<div class="object_inline_name"><h3 style="font-size: null; text-align: left">minecraft:light_dampening</h3></div>
+            <div class="object_description">
+                <p><p>The amount that light will be dampened when it passes through the block, in a range (0-15). Higher value means the light will be dampened more.</p>
+</p>
+            </div>
+        </div>
+        </div>
+
+<div class="container" id="node_head_13_3">
+        <div class="object_name">
+<div class="object_inline_name"><h3 style="font-size: null; text-align: left">minecraft:light_emission</h3></div>
+            <div class="object_description">
+                <p><p>The amount of light this block will emit in a range (0-15). Higher value means more light will be emitted.</p>
+</p>
+            </div>
+        </div>
+        </div>
+
+<div class="container" id="node_head_14_3">
+        <div class="object_name">
+<div class="object_inline_name"><h3 style="font-size: null; text-align: left">minecraft:liquid_detection</h3></div>
+            <div class="object_description">
+                <p><p>The definitions for how a block behaves when detecting liquid. Only one rule definition is allowed per liquid type - if multiple are specified, the first will be used and the rest will be ignored.</p>
+<p>Experimental toggles required: Upcoming Creator Features (in format versions before 1.21.60)</p>
+</p>
+            </div>
+        </div>
+        </div>
+
+<div class="container" id="node_example_14_0_3">
+  <h2 class="object_name">{ Example }</h2>
+  <div style="margin-left: 1.5vw">
+    <link rel="stylesheet" href="/assets/styles/github-dark.css">
+    <script src="/assets/libraries/highlight.min.js"></script>
+    <script defer>hljs.highlightAll();</script>
+    <pre><code>"minecraft:liquid_detection": {
+		"detection_rules": [
+			{
+				"liquid_type": "water",
+				"can_contain_liquid": true,
+				"on_liquid_touches": "no_reaction",
+				"stops_liquid_flowing_from_direction": ["west", "east"]
+			}
+		]
+	}</code></pre>
+  </div>
+</div>
+
+<div class="container" id="node_head_0_4">
+        <div class="object_name">
+<div class="object_inline_name"><h4 style="font-size: null; text-align: left">can_contain_liquid</h4></div>
+            <div class="object_description">
+                <p><p>Whether this block can contain the liquid. For example, if the liquid type is <code>water</code>, this means the block can be waterlogged.</p>
+</p>
+            </div>
+        </div>
+        </div>
+
+<div class="container" id="node_head_1_4">
+        <div class="object_name">
+<div class="object_inline_name"><h4 style="font-size: null; text-align: left">liquid_type</h4></div>
+            <div class="object_description">
+                <p><p>The type of liquid this detection rule is for. Currently, <code>water</code> is the only supported liquid type. If this field is omitted, <code>water</code> will be the liquid type by default.</p>
+</p>
+            </div>
+        </div>
+        </div>
+
+<div class="container" id="node_head_2_4">
+        <div class="object_name">
+<div class="object_inline_name"><h4 style="font-size: null; text-align: left">on_liquid_touches</h4></div>
+            <div class="object_description">
+                <p><p>How the block reacts to flowing water. Must be one of the following options:</p>
+<p>“blocking” - The default value for this field. The block stops the liquid from flowing.</p>
+<p>“broken” - The block is destroyed completely.</p>
+<p>“popped” - The block is destroyed and its item is spawned.</p>
+<p>“no_reaction” - The block is unaffected; visually, the liquid will flow through the block.</p>
+</p>
+            </div>
+        </div>
+        </div>
+
+<div class="container" id="node_head_3_4">
+        <div class="object_name">
+<div class="object_inline_name"><h4 style="font-size: null; text-align: left">stops_liquid_flowing_from_direction</h4></div>
+            <div class="object_description">
+                <p><p>When a block contains a liquid, controls the directions in which the liquid can’t flow out from the block. Also controls the directions in which a block can stop liquid flowing into it if <code>no_reaction</code> is set for the <code>on_liquid_touches</code> field. Can be a list of the following directions: “up”, “down”, “north”, “south”, “east”, “west”. The default is an empty list; this means that liquid can flow out of all directions by default.</p>
+</p>
+            </div>
+        </div>
+        </div>
+
+<div class="container" id="node_head_15_3">
+        <div class="object_name">
+<div class="object_inline_name"><h3 style="font-size: null; text-align: left">minecraft:loot</h3></div>
+            <div class="object_description">
+                <p><p>The path to the loot table, relative to the behavior pack. Path string is limited to 256 characters.</p>
+</p>
+            </div>
+        </div>
+        </div>
+
+<div class="container" id="node_head_16_3">
+        <div class="object_name">
+<div class="object_inline_name"><h3 style="font-size: null; text-align: left">minecraft:map_color</h3></div>
+            <div class="object_description">
+                <p><p>Sets the color of the block when rendered to a map. The color is represented as a hex value in the format “#RRGGBB”. May also be expressed as an array of [R, G, B] from 0 to 255. If this component is omitted, the block will not show up on the map.</p>
+</p>
+            </div>
+        </div>
+        </div>
+
+<div class="container" id="node_head_17_3">
+        <div class="object_name">
+<div class="object_inline_name"><h3 style="font-size: null; text-align: left">minecraft:material_instances</h3></div>
+            <div class="object_description">
+                <p><p>The material instances for a block. Maps face or material_instance names in a geometry file to an actual material instance. You can assign a material instance object to any of these faces: “up”, “down”, “north”, “south”, “east”, “west”, or “*”. You can also give an instance the name of your choosing such as “my_instance”, and then assign it to a face by doing “north”:“my_instance”.</p>
+</p>
+            </div>
+        </div>
+        </div>
+
+<div class="container" id="node_example_17_0_3">
+  <h2 class="object_name">{ Example }</h2>
+  <div style="margin-left: 1.5vw">
+    <link rel="stylesheet" href="/assets/styles/github-dark.css">
+    <script src="/assets/libraries/highlight.min.js"></script>
+    <script defer>hljs.highlightAll();</script>
+    <pre><code>"minecraft:material_instances" : {
+		"*": {
+			"texture": "log",
+			"render_method" : "opaque"
+		},
+		"ends" : {
+			"texture": "log_top",
+			"render_method" : "opaque"
+		},
+		"up" : "ends",
+		"some_face_material_name" : "ends"
+	}</code></pre>
+  </div>
+</div>
+
+<div class="container" id="node_head_0_4">
+        <div class="object_name">
+<div class="object_inline_name"><h4 style="font-size: null; text-align: left">Material Instance</h4></div>
+            <div class="object_description">
+                <p><p>A material instance definition to map to a material instance in a geometry file. The material instance “*” will be used for any materials that don’t have a match.</p>
+</p>
+            </div>
+        </div>
+        </div>
+
+<div class="container" id="node_head_0_5">
+        <div class="object_name">
+<div class="object_inline_name"><h5 style="font-size: null; text-align: left">ambient_occlusion</h5></div>
+            <div class="object_description">
+                <p><p>Should this material have ambient occlusion applied when lighting? If true, shadows will be created around and underneath the block. Optionally can be constructed with float to control exponent applied to ao value after lighting.</p>
+</p>
+            </div>
+        </div>
+        </div>
+
+<div class="container" id="node_head_1_5">
+        <div class="object_name">
+<div class="object_inline_name"><h5 style="font-size: null; text-align: left">face_dimming</h5></div>
+            <div class="object_description">
+                <p><p>Should this material be dimmed by the direction it’s facing?</p>
+</p>
+            </div>
+        </div>
+        </div>
+
+<div class="container" id="node_head_2_5">
+        <div class="object_name">
+<div class="object_inline_name"><h5 style="font-size: null; text-align: left">render_method</h5></div>
+            <div class="object_description">
+                <p><p>The render method to use. Must be one of these options:</p>
+<p>“opaque” - Used for a regular block texture without an alpha layer. Does not allow for transparency or translucency.</p>
+<p>“double_sided” - Used for completely disabling backface culling.</p>
+<p>“blend” - Used for a block like stained glass. Allows for transparency and translucency (slightly transparent textures).</p>
+<p>“alpha_test” - Used for a block like the vanilla (unstained) glass. Does not allow for translucency, only fully opaque or fully transparent textures. Also disables backface culling.</p>
+</p>
+            </div>
+        </div>
+        </div>
+
+<div class="container" id="node_head_3_5">
+        <div class="object_name">
+<div class="object_inline_name"><h5 style="font-size: null; text-align: left">texture</h5></div>
+            <div class="object_description">
+                <p><p>Texture name for the material.</p>
+</p>
+            </div>
+        </div>
+        </div>
+
+<div class="container" id="node_head_18_3">
+        <div class="object_name">
+<div class="object_inline_name"><h3 style="font-size: null; text-align: left">minecraft:placement_filter</h3></div>
+            <div class="object_description">
+                <p><p>Sets rules for under what conditions the block can be placed/survive</p>
+</p>
+            </div>
+        </div>
+        </div>
+
+<div class="container" id="node_head_0_4">
+        <div class="object_name">
+<div class="object_inline_name"><h4 style="font-size: null; text-align: left">conditions</h4></div>
+            <div class="object_description">
+                <p><p>List of conditions where the block can be placed/survive. Limited to 64 conditions.</p>
+</p>
+            </div>
+        </div>
+        </div>
+
+<div class="container" id="node_head_0_5">
+        <div class="object_name">
+<div class="object_inline_name"><h5 style="font-size: null; text-align: left">allowed_faces</h5></div>
+            <div class="object_description">
+                <p><p>List of any of the following strings describing which face(s) this block can be placed on: “up”, “down”, “north”, “south”, “east”, “west”, “side”, “all”. Limited to 6 faces.</p>
+</p>
+            </div>
+        </div>
+        </div>
+
+<div class="container" id="node_head_1_5">
+        <div class="object_name">
+<div class="object_inline_name"><h5 style="font-size: null; text-align: left">block_filter</h5></div>
+            <div class="object_description">
+                <p><p>List of blocks that this block can be placed against in the “allowed_faces” direction. Limited to 64 blocks. Each block in this list can either be specified as a String (block name) or as a BlockDescriptor. A BlockDescriptor is an object that allows you to reference a block (or multiple blocks) based on its tags, or based on its name and states. The fields of a BlockDescriptor are described below.</p>
+</p>
+            </div>
+        </div>
+        </div>
+
+<div class="container" id="node_head_0_6">
+        <div class="object_name">
+<div class="object_inline_name"><h6 style="font-size: null; text-align: left">name</h6></div>
+            <div class="object_description">
+                <p><p>The name of a block.</p>
+</p>
+            </div>
+        </div>
+        </div>
+
+<div class="container" id="node_head_1_6">
+        <div class="object_name">
+<div class="object_inline_name"><h6 style="font-size: null; text-align: left">states</h6></div>
+            <div class="object_description">
+                <p><p>The list of Vanilla block states and their values that the block can have, expressed in key/value pairs.</p>
+</p>
+            </div>
+        </div>
+        </div>
+
+<div class="container" id="node_head_2_6">
+        <div class="object_name">
+<div class="object_inline_name"><h6 style="font-size: null; text-align: left">tags</h6></div>
+            <div class="object_description">
+                <p><p>A condition using Molang queries that results to true/false that can be used to query for blocks with certain tags.</p>
+</p>
+            </div>
+        </div>
+        </div>
+
+<div class="container" id="node_head_19_3">
+        <div class="object_name">
+<div class="object_inline_name"><h3 style="font-size: null; text-align: left">minecraft:queued_ticking</h3></div>
+            <div class="object_description">
+                <p><p>Triggers the specified event, either once, or at a regular interval equal to a number of ticks randomly chosen from the interval_range provided.</p>
+</p>
+            </div>
+        </div>
+        </div>
+
+<div class="container" id="node_head_0_4">
+        <div class="object_name">
+<div class="object_inline_name"><h4 style="font-size: null; text-align: left">interval_range</h4></div>
+            <div class="object_description">
+                <p><p>A range of values, specified in ticks, that will be used to decide the interval between times this event triggers. Each interval will be chosen randomly from the range, so the times between this event triggering will differ given an interval_range of two different values. If the values in the interval_range are the same, the event will always be triggered after that number of ticks.</p>
+</p>
+            </div>
+        </div>
+        </div>
+
+<div class="container" id="node_head_1_4">
+        <div class="object_name">
+<div class="object_inline_name"><h4 style="font-size: null; text-align: left">looping</h4></div>
+            <div class="object_description">
+                <p><p>Does the event loop? If false, the event will only be triggered once, after a delay equal to a number of ticks randomly chosen from the interval_range. If true, the event will loop, and each interval between events will be equal to a number of ticks randomly chosen from the interval_range.</p>
+</p>
+            </div>
+        </div>
+        </div>
+
+<div class="container" id="node_head_2_4">
+        <div class="object_name">
+<div class="object_inline_name"><h4 style="font-size: null; text-align: left">on_tick</h4></div>
+            <div class="object_description">
+                <p><p>The event that will be triggered once or on an interval.</p>
+</p>
+            </div>
+        </div>
+        </div>
+
+<div class="container" id="node_head_0_5">
+        <div class="object_name">
+<div class="object_inline_name"><h5 style="font-size: null; text-align: left">condition</h5></div>
+            <div class="object_description">
+                <p><p>A condition using Molang queries that results to true/false. If true on the scheduled tick, the event will be triggered. If false on the scheduled tick, the event will not be triggered.</p>
+</p>
+            </div>
+        </div>
+        </div>
+
+<div class="container" id="node_head_1_5">
+        <div class="object_name">
+<div class="object_inline_name"><h5 style="font-size: null; text-align: left">event</h5></div>
+            <div class="object_description">
+                <p><p>The event that will be triggered.</p>
+</p>
+            </div>
+        </div>
+        </div>
+
+<div class="container" id="node_head_2_5">
+        <div class="object_name">
+<div class="object_inline_name"><h5 style="font-size: null; text-align: left">target</h5></div>
+            <div class="object_description">
+                <p><p>The target of the event executed by the block.</p>
+</p>
+            </div>
+        </div>
+        </div>
+
+<div class="container" id="node_head_20_3">
+        <div class="object_name">
+<div class="object_inline_name"><h3 style="font-size: null; text-align: left">minecraft:random_ticking</h3></div>
+            <div class="object_description">
+                <p><p>Triggers the specified event randomly based on the random tick speed gamerule. The random tick speed determines how often blocks are updated. Some other examples of game mechanics that use random ticking are crop growth and fire spreading.</p>
+</p>
+            </div>
+        </div>
+        </div>
+
+<div class="container" id="node_head_0_4">
+        <div class="object_name">
+<div class="object_inline_name"><h4 style="font-size: null; text-align: left">on_tick</h4></div>
+            <div class="object_description">
+                <p><p>The event that will be triggered on random ticks.</p>
+</p>
+            </div>
+        </div>
+        </div>
+
+<div class="container" id="node_head_0_5">
+        <div class="object_name">
+<div class="object_inline_name"><h5 style="font-size: null; text-align: left">condition</h5></div>
+            <div class="object_description">
+                <p><p>A condition using Molang queries that results to true/false. If true on the random tick, the event will be triggered. If false on the random tick, the event will not be triggered.</p>
+</p>
+            </div>
+        </div>
+        </div>
+
+<div class="container" id="node_head_1_5">
+        <div class="object_name">
+<div class="object_inline_name"><h5 style="font-size: null; text-align: left">event</h5></div>
+            <div class="object_description">
+                <p><p>The event that will be triggered.</p>
+</p>
+            </div>
+        </div>
+        </div>
+
+<div class="container" id="node_head_2_5">
+        <div class="object_name">
+<div class="object_inline_name"><h5 style="font-size: null; text-align: left">target</h5></div>
+            <div class="object_description">
+                <p><p>The target of the event executed by the block.</p>
+</p>
+            </div>
+        </div>
+        </div>
+
+<div class="container" id="node_head_21_3">
+        <div class="object_name">
+<div class="object_inline_name"><h3 style="font-size: null; text-align: left">minecraft:redstone_conductivity</h3></div>
+            <div class="object_description">
+                <p><p>The basic redstone properties of a block; if the component is not provided the default values are used. Requires 1.21.30 format version and above.</p>
+<p>Experimental toggles required: Upcoming Creator Features (in format versions before 1.21.30)</p>
+</p>
+            </div>
+        </div>
+        </div>
+
+<div class="container" id="node_head_0_4">
+        <div class="object_name">
+<div class="object_inline_name"><h4 style="font-size: null; text-align: left">allows_wire_to_step_down</h4></div>
+            <div class="object_description">
+                <p><p>Specifies if redstone wire can stair-step downward on the block.</p>
+</p>
+            </div>
+        </div>
+        </div>
+
+<div class="container" id="node_head_1_4">
+        <div class="object_name">
+<div class="object_inline_name"><h4 style="font-size: null; text-align: left">redstone_conductor</h4></div>
+            <div class="object_description">
+                <p><p>Specifies if the block can be powered by redstone.</p>
+</p>
+            </div>
+        </div>
+        </div>
+
+<div class="container" id="node_head_22_3">
+        <div class="object_name">
+<div class="object_inline_name"><h3 style="font-size: null; text-align: left">minecraft:selection_box</h3></div>
+            <div class="object_description">
+                <p><p>Defines the area of the block that is selected by the player’s cursor. If set to true, default values are used. If set to false, this block is not selectable by the player’s cursor. If this component is omitted, default values are used.</p>
+</p>
+            </div>
+        </div>
+        </div>
+
+<div class="container" id="node_head_0_4">
+        <div class="object_name">
+<div class="object_inline_name"><h4 style="font-size: null; text-align: left">origin</h4></div>
+            <div class="object_description">
+                <p><p>Minimal position of the bounds of the selection box. “origin” is specified as [x, y, z] and must be in the range (-8, 0, -8) to (8, 16, 8), inclusive.</p>
+</p>
+            </div>
+        </div>
+        </div>
+
+<div class="container" id="node_head_1_4">
+        <div class="object_name">
+<div class="object_inline_name"><h4 style="font-size: null; text-align: left">size</h4></div>
+            <div class="object_description">
+                <p><p>Size of each side of the selection box. Size is specified as [x, y, z]. “origin” + “size” must be in the range (-8, 0, -8) to (8, 16, 8), inclusive.</p>
+</p>
+            </div>
+        </div>
+        </div>
+
+<div class="container" id="node_head_23_3">
+        <div class="object_name">
+<div class="object_inline_name"><h3 style="font-size: null; text-align: left">minecraft:transformation</h3></div>
+            <div class="object_description">
+                <p><p>The block’s translation, rotation and scale with respect to the center of its world position</p>
+</p>
+            </div>
+        </div>
+        </div>
+
+<div class="container" id="node_head_0_4">
+        <div class="object_name">
+<div class="object_inline_name"><h4 style="font-size: null; text-align: left">rotation</h4></div>
+            <div class="object_description">
+                <p><p>The block’s rotation in increments of 90 degrees</p>
+</p>
+            </div>
+        </div>
+        </div>
+
+<div class="container" id="node_head_1_4">
+        <div class="object_name">
+<div class="object_inline_name"><h4 style="font-size: null; text-align: left">rotation_pivot</h4></div>
+            <div class="object_description">
+                <p><p>The point to apply rotation around</p>
+</p>
+            </div>
+        </div>
+        </div>
+
+<div class="container" id="node_head_2_4">
+        <div class="object_name">
+<div class="object_inline_name"><h4 style="font-size: null; text-align: left">scale</h4></div>
+            <div class="object_description">
+                <p><p>The block’s scale</p>
+</p>
+            </div>
+        </div>
+        </div>
+
+<div class="container" id="node_head_3_4">
+        <div class="object_name">
+<div class="object_inline_name"><h4 style="font-size: null; text-align: left">scale_pivot</h4></div>
+            <div class="object_description">
+                <p><p>The point to apply scale around</p>
+</p>
+            </div>
+        </div>
+        </div>
+
+<div class="container" id="node_head_4_4">
+        <div class="object_name">
+<div class="object_inline_name"><h4 style="font-size: null; text-align: left">translation</h4></div>
+            <div class="object_description">
+                <p><p>The block’s translation</p>
+</p>
+            </div>
+        </div>
+        </div>
+
+<div class="container" id="node_head_24_3">
+        <div class="object_name">
+<div class="object_inline_name"><h3 style="font-size: null; text-align: left">minecraft:unit_cube</h3></div>
+            <div class="object_description">
+                <p><p>Specifies that a unit cube is to be used with tessellation.</p>
+</p>
+            </div>
+        </div>
+        </div>
+
+<div class="container" id="node_head_1_2">
+        <div class="object_name">
+<div class="object_inline_name"><h2 style="font-size: null; text-align: left">Block Definition Properties</h2></div>
+            <div class="object_description">
+                <p><p>These properties are part of the Block Definition. This helps the system determine how to parse and initialize this block.</p>
+</p>
+            </div>
+        </div>
+        </div>
+
+<div class="container" id="node_example_1_0_2">
+  <h2 class="object_name">{ Example }</h2>
+  <div style="margin-left: 1.5vw">
+    <link rel="stylesheet" href="/assets/styles/github-dark.css">
+    <script src="/assets/libraries/highlight.min.js"></script>
+    <script defer>hljs.highlightAll();</script>
+    <pre><code>{
+  "format_version": "1.21.60",
+  "minecraft:block": {
+    "description": {
+      "identifier": "design:lavenderstone"
+    },
+    "components": {
+      "minecraft:loot": "loot_tables/chests/simple_dungeon.json",
+      "minecraft:destroy_time": 4.0,
+      "minecraft:friction": 0.6,
+      "minecraft:map_color": "#00ff00",
+      "minecraft:flammable": {
+        "flame_odds": 50,
+        "burn_odds": 0
+	  },
+      "minecraft:light_emission": 1
+    }
+  }
+}</code></pre>
+  </div>
+</div>
+
+<div class="container" id="node_head_0_3">
+        <div class="object_name">
+<div class="object_inline_name"><h3 style="font-size: null; text-align: left">format_version</h3></div>
+            <div class="object_description">
+                <p><p>Specifies the version of the game this entity was made in. If the version is lower than the current version, any changes made to the entity in the vanilla version will be applied to it.</p>
+</p>
+            </div>
+        </div>
+        </div>
+
+<div class="container" id="node_head_2_2">
+        <div class="object_name">
+<div class="object_inline_name"><h2 style="font-size: null; text-align: left">Block Description Properties</h2></div>
+            <div class="object_description">
+                <p></p>
+            </div>
+        </div>
+        </div>
+
+<div class="container" id="node_head_0_3">
+        <div class="object_name">
+<div class="object_inline_name"><h3 style="font-size: null; text-align: left">identifier</h3></div>
+            <div class="object_description">
+                <p><p>The identifier for this block. The name must include a namespace and must not use the Minecraft namespace unless overriding a Vanilla block.</p>
+</p>
+            </div>
+        </div>
+        </div>
+
+<div class="container" id="node_head_3_2">
+        <div class="object_name">
+<div class="object_inline_name"><h2 style="font-size: null; text-align: left">Block Event Responses</h2></div>
+            <div class="object_description">
+                <p><p>Event responses for block trigger components.</p>
+</p>
+            </div>
+        </div>
+        </div>
+
+<div class="container" id="node_example_3_0_2">
+  <h2 class="object_name">{ Event Response Example }</h2>
+  <div style="margin-left: 1.5vw">
+    <link rel="stylesheet" href="/assets/styles/github-dark.css">
+    <script src="/assets/libraries/highlight.min.js"></script>
+    <script defer>hljs.highlightAll();</script>
+    <pre><code>		"minecraft:block": {
+			"description": {
+				"identifier": "test:on_interact_change_state_block",
+				"properties": {
+					"custom:direction": [0, 1, 2, 3]
+				}
+			},
+			"components": {
+				"minecraft:on_interact": {
+					"event": "test_event"
+				}
+			},
+			"events": {
+				"test_event": {
+					"set_block_state": {
+						"custom:direction": "1"
+					}
+				}
+			}
+		}</code></pre>
+  </div>
+</div>
+
+<div class="container" id="node_head_0_3">
+        <div class="object_name">
+<div class="object_inline_name"><h3 style="font-size: null; text-align: left">add_mob_effect</h3></div>
+            <div class="object_description">
+                <p><p>Apply mob effect to target.</p>
+</p>
+            </div>
+        </div>
+        </div>
+
+<div class="container" id="node_head_0_4">
+        <div class="object_name">
+<div class="object_inline_name"><h4 style="font-size: null; text-align: left">amplifier</h4></div>
+            <div class="object_description">
+                <p><p>The amplifier for the mob effect.</p>
+</p>
+            </div>
+        </div>
+        </div>
+
+<div class="container" id="node_head_1_4">
+        <div class="object_name">
+<div class="object_inline_name"><h4 style="font-size: null; text-align: left">duration</h4></div>
+            <div class="object_description">
+                <p><p>The duration of the mob effect.</p>
+</p>
+            </div>
+        </div>
+        </div>
+
+<div class="container" id="node_head_2_4">
+        <div class="object_name">
+<div class="object_inline_name"><h4 style="font-size: null; text-align: left">effect</h4></div>
+            <div class="object_description">
+                <p><p>The mob effect to apply.</p>
+</p>
+            </div>
+        </div>
+        </div>
+
+<div class="container" id="node_head_3_4">
+        <div class="object_name">
+<div class="object_inline_name"><h4 style="font-size: null; text-align: left">target</h4></div>
+            <div class="object_description">
+                <p><p>The target context to execute against.</p>
+</p>
+            </div>
+        </div>
+        </div>
+
+<div class="container" id="node_head_1_3">
+        <div class="object_name">
+<div class="object_inline_name"><h3 style="font-size: null; text-align: left">damage</h3></div>
+            <div class="object_description">
+                <p><p>Deals damage to the target.</p>
+</p>
+            </div>
+        </div>
+        </div>
+
+<div class="container" id="node_head_0_4">
+        <div class="object_name">
+<div class="object_inline_name"><h4 style="font-size: null; text-align: left">amount</h4></div>
+            <div class="object_description">
+                <p><p>The amount of damage to deal.</p>
+</p>
+            </div>
+        </div>
+        </div>
+
+<div class="container" id="node_head_1_4">
+        <div class="object_name">
+<div class="object_inline_name"><h4 style="font-size: null; text-align: left">mob_amount</h4></div>
+            <div class="object_description">
+                <p><p>The amount of damage to deal if held by a mob.</p>
+</p>
+            </div>
+        </div>
+        </div>
+
+<div class="container" id="node_head_2_4">
+        <div class="object_name">
+<div class="object_inline_name"><h4 style="font-size: null; text-align: left">target</h4></div>
+            <div class="object_description">
+                <p><p>The target context to execute against.</p>
+</p>
+            </div>
+        </div>
+        </div>
+
+<div class="container" id="node_head_3_4">
+        <div class="object_name">
+<div class="object_inline_name"><h4 style="font-size: null; text-align: left">type</h4></div>
+            <div class="object_description">
+                <p><p>The type of damage to deal.</p>
+</p>
+            </div>
+        </div>
+        </div>
+
+<div class="container" id="node_head_2_3">
+        <div class="object_name">
+<div class="object_inline_name"><h3 style="font-size: null; text-align: left">decrement_stack</h3></div>
+            <div class="object_description">
+                <p><p>Decrement item stack.</p>
+</p>
+            </div>
+        </div>
+        </div>
+
+<div class="container" id="node_head_3_3">
+        <div class="object_name">
+<div class="object_inline_name"><h3 style="font-size: null; text-align: left">die</h3></div>
+            <div class="object_description">
+                <p><p>Kill target. If target is self and this is run from a block then destroy the block.</p>
+</p>
+            </div>
+        </div>
+        </div>
+
+<div class="container" id="node_head_0_4">
+        <div class="object_name">
+<div class="object_inline_name"><h4 style="font-size: null; text-align: left">target</h4></div>
+            <div class="object_description">
+                <p><p>The target context to execute against.</p>
+</p>
+            </div>
+        </div>
+        </div>
+
+<div class="container" id="node_head_4_3">
+        <div class="object_name">
+<div class="object_inline_name"><h3 style="font-size: null; text-align: left">play_effect</h3></div>
+            <div class="object_description">
+                <p><p>Spawns a particle effect relative to target position.</p>
+</p>
+            </div>
+        </div>
+        </div>
+
+<div class="container" id="node_head_0_4">
+        <div class="object_name">
+<div class="object_inline_name"><h4 style="font-size: null; text-align: left">data</h4></div>
+            <div class="object_description">
+                <p><p>Particle data value.</p>
+</p>
+            </div>
+        </div>
+        </div>
+
+<div class="container" id="node_head_1_4">
+        <div class="object_name">
+<div class="object_inline_name"><h4 style="font-size: null; text-align: left">effect</h4></div>
+            <div class="object_description">
+                <p><p>The name of the particle effect to create.</p>
+</p>
+            </div>
+        </div>
+        </div>
+
+<div class="container" id="node_head_2_4">
+        <div class="object_name">
+<div class="object_inline_name"><h4 style="font-size: null; text-align: left">target</h4></div>
+            <div class="object_description">
+                <p><p>The target context to execute against.</p>
+</p>
+            </div>
+        </div>
+        </div>
+
+<div class="container" id="node_head_5_3">
+        <div class="object_name">
+<div class="object_inline_name"><h3 style="font-size: null; text-align: left">play_sound</h3></div>
+            <div class="object_description">
+                <p><p>Play a sound relative to target position.</p>
+</p>
+            </div>
+        </div>
+        </div>
+
+<div class="container" id="node_head_0_4">
+        <div class="object_name">
+<div class="object_inline_name"><h4 style="font-size: null; text-align: left">sound</h4></div>
+            <div class="object_description">
+                <p><p>The name of the sound to play.</p>
+</p>
+            </div>
+        </div>
+        </div>
+
+<div class="container" id="node_head_1_4">
+        <div class="object_name">
+<div class="object_inline_name"><h4 style="font-size: null; text-align: left">target</h4></div>
+            <div class="object_description">
+                <p><p>The target context to execute against.</p>
+</p>
+            </div>
+        </div>
+        </div>
+
+<div class="container" id="node_head_6_3">
+        <div class="object_name">
+<div class="object_inline_name"><h3 style="font-size: null; text-align: left">remove_mob_effect</h3></div>
+            <div class="object_description">
+                <p><p>Removes mob effect from target.</p>
+</p>
+            </div>
+        </div>
+        </div>
+
+<div class="container" id="node_head_0_4">
+        <div class="object_name">
+<div class="object_inline_name"><h4 style="font-size: null; text-align: left">effect</h4></div>
+            <div class="object_description">
+                <p><p>The mob effect to remove. Use ‘all’ to remove all mob effects from target.</p>
+</p>
+            </div>
+        </div>
+        </div>
+
+<div class="container" id="node_head_1_4">
+        <div class="object_name">
+<div class="object_inline_name"><h4 style="font-size: null; text-align: left">target</h4></div>
+            <div class="object_description">
+                <p><p>The target context to execute against.</p>
+</p>
+            </div>
+        </div>
+        </div>
+
+<div class="container" id="node_head_7_3">
+        <div class="object_name">
+<div class="object_inline_name"><h3 style="font-size: null; text-align: left">run_command</h3></div>
+            <div class="object_description">
+                <p><p>Triggers a slash command or a list of slash commands.</p>
+</p>
+            </div>
+        </div>
+        </div>
+
+<div class="container" id="node_head_0_4">
+        <div class="object_name">
+<div class="object_inline_name"><h4 style="font-size: null; text-align: left">command</h4></div>
+            <div class="object_description">
+                <p><p>Slash command to run.</p>
+</p>
+            </div>
+        </div>
+        </div>
+
+<div class="container" id="node_head_1_4">
+        <div class="object_name">
+<div class="object_inline_name"><h4 style="font-size: null; text-align: left">command array</h4></div>
+            <div class="object_description">
+                <p><p>List of slash commands to run.</p>
+</p>
+            </div>
+        </div>
+        </div>
+
+<div class="container" id="node_head_2_4">
+        <div class="object_name">
+<div class="object_inline_name"><h4 style="font-size: null; text-align: left">target</h4></div>
+            <div class="object_description">
+                <p><p>The target context to execute against.</p>
+</p>
+            </div>
+        </div>
+        </div>
+
+<div class="container" id="node_head_8_3">
+        <div class="object_name">
+<div class="object_inline_name"><h3 style="font-size: null; text-align: left">set_block</h3></div>
+            <div class="object_description">
+                <p><p>Sets this block to another block type.</p>
+</p>
+            </div>
+        </div>
+        </div>
+
+<div class="container" id="node_head_0_4">
+        <div class="object_name">
+<div class="object_inline_name"><h4 style="font-size: null; text-align: left">block_type</h4></div>
+            <div class="object_description">
+                <p><p>The type of block to set.</p>
+</p>
+            </div>
+        </div>
+        </div>
+
+<div class="container" id="node_head_9_3">
+        <div class="object_name">
+<div class="object_inline_name"><h3 style="font-size: null; text-align: left">set_block_at_pos</h3></div>
+            <div class="object_description">
+                <p><p>Sets a block relative to this block to another block type.</p>
+</p>
+            </div>
+        </div>
+        </div>
+
+<div class="container" id="node_head_0_4">
+        <div class="object_name">
+<div class="object_inline_name"><h4 style="font-size: null; text-align: left">block_offset</h4></div>
+            <div class="object_description">
+                <p><p>The offset from the block’s center.</p>
+</p>
+            </div>
+        </div>
+        </div>
+
+<div class="container" id="node_head_1_4">
+        <div class="object_name">
+<div class="object_inline_name"><h4 style="font-size: null; text-align: left">block_type</h4></div>
+            <div class="object_description">
+                <p><p>The type of block to set.</p>
+</p>
+            </div>
+        </div>
+        </div>
+
+<div class="container" id="node_head_10_3">
+        <div class="object_name">
+<div class="object_inline_name"><h3 style="font-size: null; text-align: left">set_block_state</h3></div>
+            <div class="object_description">
+                <p><p>Sets a block state on this block.</p>
+</p>
+            </div>
+        </div>
+        </div>
+
+<div class="container" id="node_head_0_4">
+        <div class="object_name">
+<div class="object_inline_name"><h4 style="font-size: null; text-align: left">state</h4></div>
+            <div class="object_description">
+                <p><p>Block state to set on the block.</p>
+</p>
+            </div>
+        </div>
+        </div>
+
+<div class="container" id="node_head_11_3">
+        <div class="object_name">
+<div class="object_inline_name"><h3 style="font-size: null; text-align: left">spawn_loot</h3></div>
+            <div class="object_description">
+                <p><p>Spawn loot from block.</p>
+</p>
+            </div>
+        </div>
+        </div>
+
+<div class="container" id="node_head_0_4">
+        <div class="object_name">
+<div class="object_inline_name"><h4 style="font-size: null; text-align: left">table</h4></div>
+            <div class="object_description">
+                <p><p>File path, relative to the Behavior Pack’s path, to the loot table file.</p>
+</p>
+            </div>
+        </div>
+        </div>
+
+<div class="container" id="node_head_12_3">
+        <div class="object_name">
+<div class="object_inline_name"><h3 style="font-size: null; text-align: left">swing</h3></div>
+            <div class="object_description">
+                <p><p>Event causes the actor to swing.</p>
+</p>
+            </div>
+        </div>
+        </div>
+
+<div class="container" id="node_head_13_3">
+        <div class="object_name">
+<div class="object_inline_name"><h3 style="font-size: null; text-align: left">teleport</h3></div>
+            <div class="object_description">
+                <p><p>Teleport target randomly around destination point.</p>
+</p>
+            </div>
+        </div>
+        </div>
+
+<div class="container" id="node_head_0_4">
+        <div class="object_name">
+<div class="object_inline_name"><h4 style="font-size: null; text-align: left">avoid_water</h4></div>
+            <div class="object_description">
+                <p><p>Determines if the teleport avoids putting the target in water.</p>
+</p>
+            </div>
+        </div>
+        </div>
+
+<div class="container" id="node_head_1_4">
+        <div class="object_name">
+<div class="object_inline_name"><h4 style="font-size: null; text-align: left">destination</h4></div>
+            <div class="object_description">
+                <p><p>Origin destination of the teleport.</p>
+</p>
+            </div>
+        </div>
+        </div>
+
+<div class="container" id="node_head_2_4">
+        <div class="object_name">
+<div class="object_inline_name"><h4 style="font-size: null; text-align: left">land_on_block</h4></div>
+            <div class="object_description">
+                <p><p>Determines if the teleport places the target on a block.</p>
+</p>
+            </div>
+        </div>
+        </div>
+
+<div class="container" id="node_head_3_4">
+        <div class="object_name">
+<div class="object_inline_name"><h4 style="font-size: null; text-align: left">max_range</h4></div>
+            <div class="object_description">
+                <p><p>Max range the target can teleport relative to the origin destination.</p>
+</p>
+            </div>
+        </div>
+        </div>
+
+<div class="container" id="node_head_4_4">
+        <div class="object_name">
+<div class="object_inline_name"><h4 style="font-size: null; text-align: left">target</h4></div>
+            <div class="object_description">
+                <p><p>The target context to execute against.</p>
+</p>
+            </div>
+        </div>
+        </div>
+
+<div class="container" id="node_head_14_3">
+        <div class="object_name">
+<div class="object_inline_name"><h3 style="font-size: null; text-align: left">transform_item</h3></div>
+            <div class="object_description">
+                <p><p>Transforms item into another item.</p>
+</p>
+            </div>
+        </div>
+        </div>
+
+<div class="container" id="node_head_0_4">
+        <div class="object_name">
+<div class="object_inline_name"><h4 style="font-size: null; text-align: left">transform</h4></div>
+            <div class="object_description">
+                <p><p>Name of the item it should transform into</p>
+</p>
+            </div>
+        </div>
+        </div>
+
+<div class="container" id="node_head_4_2">
+        <div class="object_name">
+<div class="object_inline_name"><h2 style="font-size: null; text-align: left">Block Trigger Components</h2></div>
+            <div class="object_description">
+                <p></p>
+            </div>
+        </div>
+        </div>
+
+<div class="container" id="node_head_0_3">
+        <div class="object_name">
+<div class="object_inline_name"><h3 style="font-size: null; text-align: left">minecraft:on_fall_on</h3></div>
+            <div class="object_description">
+                <p><p>Describes event for this block.</p>
+</p>
+            </div>
+        </div>
+        </div>
+
+<div class="container" id="node_head_0_4">
+        <div class="object_name">
+<div class="object_inline_name"><h4 style="font-size: null; text-align: left">condition</h4></div>
+            <div class="object_description">
+                <p><p>The condition of event to be executed on the block.</p>
+</p>
+            </div>
+        </div>
+        </div>
+
+<div class="container" id="node_head_1_4">
+        <div class="object_name">
+<div class="object_inline_name"><h4 style="font-size: null; text-align: left">event</h4></div>
+            <div class="object_description">
+                <p><p>The event executed on the block.</p>
+</p>
+            </div>
+        </div>
+        </div>
+
+<div class="container" id="node_head_2_4">
+        <div class="object_name">
+<div class="object_inline_name"><h4 style="font-size: null; text-align: left">min_fall_distance</h4></div>
+            <div class="object_description">
+                <p><p>The minimum distance in blocks that an actor needs to fall to trigger this event.</p>
+</p>
+            </div>
+        </div>
+        </div>
+
+<div class="container" id="node_head_3_4">
+        <div class="object_name">
+<div class="object_inline_name"><h4 style="font-size: null; text-align: left">target</h4></div>
+            <div class="object_description">
+                <p><p>The target of event executed on the block.</p>
+</p>
+            </div>
+        </div>
+        </div>
+
+<div class="container" id="node_head_1_3">
+        <div class="object_name">
+<div class="object_inline_name"><h3 style="font-size: null; text-align: left">minecraft:on_interact</h3></div>
+            <div class="object_description">
+                <p><p>Describes event for this block.</p>
+</p>
+            </div>
+        </div>
+        </div>
+
+<div class="container" id="node_head_0_4">
+        <div class="object_name">
+<div class="object_inline_name"><h4 style="font-size: null; text-align: left">condition</h4></div>
+            <div class="object_description">
+                <p><p>The condition of event to be executed on the block.</p>
+</p>
+            </div>
+        </div>
+        </div>
+
+<div class="container" id="node_head_1_4">
+        <div class="object_name">
+<div class="object_inline_name"><h4 style="font-size: null; text-align: left">event</h4></div>
+            <div class="object_description">
+                <p><p>The event executed on the block.</p>
+</p>
+            </div>
+        </div>
+        </div>
+
+<div class="container" id="node_head_2_4">
+        <div class="object_name">
+<div class="object_inline_name"><h4 style="font-size: null; text-align: left">target</h4></div>
+            <div class="object_description">
+                <p><p>The target of event executed on the block.</p>
+</p>
+            </div>
+        </div>
+        </div>
+
+<div class="container" id="node_head_2_3">
+        <div class="object_name">
+<div class="object_inline_name"><h3 style="font-size: null; text-align: left">minecraft:on_placed</h3></div>
+            <div class="object_description">
+                <p><p>Describes event for this block.</p>
+</p>
+            </div>
+        </div>
+        </div>
+
+<div class="container" id="node_head_0_4">
+        <div class="object_name">
+<div class="object_inline_name"><h4 style="font-size: null; text-align: left">condition</h4></div>
+            <div class="object_description">
+                <p><p>The condition of event to be executed on the block.</p>
+</p>
+            </div>
+        </div>
+        </div>
+
+<div class="container" id="node_head_1_4">
+        <div class="object_name">
+<div class="object_inline_name"><h4 style="font-size: null; text-align: left">event</h4></div>
+            <div class="object_description">
+                <p><p>The event executed on the block.</p>
+</p>
+            </div>
+        </div>
+        </div>
+
+<div class="container" id="node_head_2_4">
+        <div class="object_name">
+<div class="object_inline_name"><h4 style="font-size: null; text-align: left">target</h4></div>
+            <div class="object_description">
+                <p><p>The target of event executed on the block.</p>
+</p>
+            </div>
+        </div>
+        </div>
+
+<div class="container" id="node_head_3_3">
+        <div class="object_name">
+<div class="object_inline_name"><h3 style="font-size: null; text-align: left">minecraft:on_player_destroyed</h3></div>
+            <div class="object_description">
+                <p><p>Describes event for this block.</p>
+</p>
+            </div>
+        </div>
+        </div>
+
+<div class="container" id="node_head_0_4">
+        <div class="object_name">
+<div class="object_inline_name"><h4 style="font-size: null; text-align: left">condition</h4></div>
+            <div class="object_description">
+                <p><p>The condition of event to be executed on the block.</p>
+</p>
+            </div>
+        </div>
+        </div>
+
+<div class="container" id="node_head_1_4">
+        <div class="object_name">
+<div class="object_inline_name"><h4 style="font-size: null; text-align: left">event</h4></div>
+            <div class="object_description">
+                <p><p>The event executed on the block.</p>
+</p>
+            </div>
+        </div>
+        </div>
+
+<div class="container" id="node_head_2_4">
+        <div class="object_name">
+<div class="object_inline_name"><h4 style="font-size: null; text-align: left">target</h4></div>
+            <div class="object_description">
+                <p><p>The target of event executed on the block.</p>
+</p>
+            </div>
+        </div>
+        </div>
+
+<div class="container" id="node_head_4_3">
+        <div class="object_name">
+<div class="object_inline_name"><h3 style="font-size: null; text-align: left">minecraft:on_player_placing</h3></div>
+            <div class="object_description">
+                <p><p>Describes event for this block.</p>
+</p>
+            </div>
+        </div>
+        </div>
+
+<div class="container" id="node_head_0_4">
+        <div class="object_name">
+<div class="object_inline_name"><h4 style="font-size: null; text-align: left">condition</h4></div>
+            <div class="object_description">
+                <p><p>The condition of event to be executed on the block.</p>
+</p>
+            </div>
+        </div>
+        </div>
+
+<div class="container" id="node_head_1_4">
+        <div class="object_name">
+<div class="object_inline_name"><h4 style="font-size: null; text-align: left">event</h4></div>
+            <div class="object_description">
+                <p><p>The event executed on the block.</p>
+</p>
+            </div>
+        </div>
+        </div>
+
+<div class="container" id="node_head_2_4">
+        <div class="object_name">
+<div class="object_inline_name"><h4 style="font-size: null; text-align: left">target</h4></div>
+            <div class="object_description">
+                <p><p>The target of event executed on the block.</p>
+</p>
+            </div>
+        </div>
+        </div>
+
+<div class="container" id="node_head_5_3">
+        <div class="object_name">
+<div class="object_inline_name"><h3 style="font-size: null; text-align: left">minecraft:on_step_off</h3></div>
+            <div class="object_description">
+                <p><p>Describes event for this block.</p>
+</p>
+            </div>
+        </div>
+        </div>
+
+<div class="container" id="node_head_0_4">
+        <div class="object_name">
+<div class="object_inline_name"><h4 style="font-size: null; text-align: left">condition</h4></div>
+            <div class="object_description">
+                <p><p>The condition of event to be executed on the block.</p>
+</p>
+            </div>
+        </div>
+        </div>
+
+<div class="container" id="node_head_1_4">
+        <div class="object_name">
+<div class="object_inline_name"><h4 style="font-size: null; text-align: left">event</h4></div>
+            <div class="object_description">
+                <p><p>The event executed on the block.</p>
+</p>
+            </div>
+        </div>
+        </div>
+
+<div class="container" id="node_head_2_4">
+        <div class="object_name">
+<div class="object_inline_name"><h4 style="font-size: null; text-align: left">target</h4></div>
+            <div class="object_description">
+                <p><p>The target of event executed on the block.</p>
+</p>
+            </div>
+        </div>
+        </div>
+
+<div class="container" id="node_head_6_3">
+        <div class="object_name">
+<div class="object_inline_name"><h3 style="font-size: null; text-align: left">minecraft:on_step_on</h3></div>
+            <div class="object_description">
+                <p><p>Describes event for this block.</p>
+</p>
+            </div>
+        </div>
+        </div>
+
+<div class="container" id="node_head_0_4">
+        <div class="object_name">
+<div class="object_inline_name"><h4 style="font-size: null; text-align: left">condition</h4></div>
+            <div class="object_description">
+                <p><p>The condition of event to be executed on the block.</p>
+</p>
+            </div>
+        </div>
+        </div>
+
+<div class="container" id="node_head_1_4">
+        <div class="object_name">
+<div class="object_inline_name"><h4 style="font-size: null; text-align: left">event</h4></div>
+            <div class="object_description">
+                <p><p>The event executed on the block.</p>
+</p>
+            </div>
+        </div>
+        </div>
+
+<div class="container" id="node_head_2_4">
+        <div class="object_name">
+<div class="object_inline_name"><h4 style="font-size: null; text-align: left">target</h4></div>
+            <div class="object_description">
+                <p><p>The target of event executed on the block.</p>
+</p>
+            </div>
+        </div>
+        </div>
+
+    <script src="/assets/js/LanguageHandler.js"></script>
+        <script src="/assets/js/occlusionPilot.js"></script>
+        <script src="/assets/js/preloadPilot.js"></script>
+        <script src="/assets/js/chunkPilot.js"></script>
+                        <script src="/assets/libraries/index.min.js" defer></script>
+                <script>
+                window.onload = function () {
+                    let searchData = null;
+                    async function LoadData() {
+                        if (searchData !== null) {
+                            return searchData;
+                        }
+                        const res = await fetch('/assets/index_list.json');
+                        searchData = await res.json();
+                        return searchData;
+                    }
+                    
+                    
+                    let miniSearch = new MiniSearch({
+                      fields: ['id'],
+                      storeFields: ['id', 'href'],
+                      searchOptions: {
+                          prefix: true
+                      }
+                    })
+                    let dataLoaded = false;
+                    const searchbar = document.getElementById("search");
+                    searchbar.addEventListener("input", async function() {
+                        searchData = await LoadData();
+                        
+                        if (!dataLoaded) {
+                            for (const key in searchData){
+                                for (const subkey in searchData[key]){
+                                    miniSearch.add({
+                                        "id": subkey,
+                                        "href": searchData[key][subkey],
+                                    });
+                                }
+                            }
+                            dataLoaded = true;
+                        }
+                        
+                        
+                        
+                        const searchResults = miniSearch.search(searchbar.value, { fuzzy: 0.2 });
+                        if (searchResults.length > 0) {
+                            document.getElementById("searchbar_result").innerHTML = searchResults[0].id;
+                            document.getElementById("searchbar_result").style.display = "block";
+                            document.getElementById("searchbar_result").setAttribute("href", searchResults[0].href);
+                        }
+                        else {
+                            document.getElementById("searchbar_result").innerHTML = "";
+                        }
+                    })
+                };
+                </script>
+                </div>
+        </body>

@@ -1,0 +1,285 @@
+<!DOCTYPE html><html lang="en"><head>
+          <meta charset="UTF-8">
+          <title>Entity Timeline Events</title>
+          <link rel="preload" href="/assets/images/background_dark_factory.webp" as="image">
+          <link rel="prefetch" href="/index.html">
+          <link rel="prefetch" href="/settings.html">
+          <link rel="stylesheet" href="/assets/styles/wiki_styles.css">
+          <link rel="icon" href="/assets/images/melon.png" type="image/png">
+          <meta name="description" content="Entity Timeline Events">
+          <meta name="viewport" content="width=device-width, initial-scale=1">
+          <meta property="og:title" content="Entity Timeline Events">
+          <meta property="og:image" content="/assets/images/melon.png">
+        </head>
+        
+        <body>
+        <div class="scroll">
+        <div class="navbar">
+          <nav>
+            <ul>
+              <li><a href="/index.html" id="home_button">home</a></li>
+              <li><a href="/settings.html" id="settings_title">settings</a></li>
+              <li><input id="search" placeholder="search..." class="search"></li>
+                <li><a id="searchbar_result" href="" style="display: none"></a></li>
+            </ul>
+          </nav>
+        </div>
+        
+<div class="container" id="title">
+        <div class="object_name">
+<div class="object_inline_name"><h1 style="font-size: null; text-align: center">Entity Timeline Events</h1></div>
+            <div class="object_description">
+                <p></p>
+            </div>
+        </div>
+        </div>
+
+<div class="container" id="node_head_0_1">
+        <div class="object_name">
+<div class="object_inline_name"><h1 style="font-size: null; text-align: left">Animation Controller Events</h1></div>
+            <div class="object_description">
+                <p></p><p>Animation controllers can trigger events on entry or exit of a state.  Events to trigger on state entry go in the “on_entry” section, those on exit go in the “on_exit” section.</p>
+<p></p>
+            </div>
+        </div>
+        </div>
+
+<div class="container" id="node_example_0_0_1">
+  <h2 class="object_name">{ Example }</h2>
+  <div style="margin-left: 1.5vw">
+    <link rel="stylesheet" href="/assets/styles/github-dark.css">
+    <script src="/assets/libraries/highlight.min.js"></script>
+    <script defer="">hljs.highlightAll();</script>
+    <pre><code>{
+  "format_version": "1.8.0",
+  "animation_controllers": {
+    "controller.animation.test": {
+      "states": {
+        "default": {
+          "on_entry": [
+            "event1", // note that these events can be any event, slash command, Molang, or entity event
+            "event2",
+            "event3"
+          ],
+          "on_exit": [
+            "event1",
+            "event2"
+          ]
+        },
+      }
+    }
+  }
+}</code></pre>
+  </div>
+</div>
+
+<div class="container" id="node_head_1_1">
+        <div class="object_name">
+<div class="object_inline_name"><h1 style="font-size: null; text-align: left">Animation Events</h1></div>
+            <div class="object_description">
+                <p></p><p>Animations can have a timeline dedicated to events. The “timeline” section contains the event timeline list.  Below there are various examples where particular times can trigger a single event, or an array of events:</p>
+<p></p>
+            </div>
+        </div>
+        </div>
+
+<div class="container" id="node_example_1_0_1">
+  <h2 class="object_name">{ Example }</h2>
+  <div style="margin-left: 1.5vw">
+    <link rel="stylesheet" href="/assets/styles/github-dark.css">
+    <script src="/assets/libraries/highlight.min.js"></script>
+    <script defer="">hljs.highlightAll();</script>
+    <pre><code>{
+  "format_version": "1.8.0",
+  "animations": {
+    "animation.test_events": {
+      "timeline": {
+        "2.0": "@s minecraft:entity_born",
+        "4.0": [ "@s minecraft:ageable_grow_up" ]
+      },
+      "animation_length": 5.0
+    },
+    "animation.test_molang": {
+      "timeline": {
+        "0.0": "variable.pop_smoke = 1; variable.pop_bubbles = 0;",
+        "3.0": [
+          "variable.pop_smoke = 0;",
+          "variable.pop_bubbles = 1;"
+        ]
+      }
+    },
+    "animation.test_commands": {
+      "timeline": {
+        "1.0": "/tell @a timeline command1",
+        "2.0": [
+          "/tell @a timeline command 2.1",
+          "/tell @a timeline command 2.2"
+        ],
+        "3.0": [ "/tell @a command 3" ]
+      }
+    }
+  }
+}</code></pre>
+  </div>
+</div>
+
+<div class="container" id="node_head_2_1">
+        <div class="object_name">
+<div class="object_inline_name"><h1 style="font-size: null; text-align: left">Animation Notes</h1></div>
+            <div class="object_description">
+                <p></p><p>Entity events occur in animations, which normally occur on the client (via resource packs), but can also occur on the server (via behavior packs). As the server side of the game has no visual aspects to it, obviously no bone-based animations can occur.  However, a traditional animation is basically a timeline of events, with the events being bone positions for an animated visual rig that moves the entity’s visual shape around.  The mechanisms for the Bedrock animation system are state machines (Animation Controllers), and timelines (Animations).  These concepts apply directly to the triggering of events, thus the animation system can execute on the server (minus the visual aspects), with the intent of driving entity events.</p>
+<p>To use entity events on the server (in a behavior pack), add animation controllers and animations to a behavior pack just as you would to a resource pack.  Add animation and animation controllers to an “animations” section in the description field of an entity.  These animations and animation controllers will run on the server just as if they were on the client in a resource pack.  Add the “scripts” section with an “animate” subsection to specify which animations/animation-controllers to have run.</p>
+<p>Client side (resource pack) events do not require special setup as the client side entities usually already have animations and animation controllers in place.  Just add your events where you need them in animations or animation controllers.</p>
+<p></p>
+            </div>
+        </div>
+        </div>
+
+<div class="container" id="node_example_2_0_1">
+  <h2 class="object_name">{ Example }</h2>
+  <div style="margin-left: 1.5vw">
+    <link rel="stylesheet" href="/assets/styles/github-dark.css">
+    <script src="/assets/libraries/highlight.min.js"></script>
+    <script defer="">hljs.highlightAll();</script>
+    <pre><code>{
+  // Example of the schema for a server-side entity, modified to run animations and animation controllers
+  "format_version": "1.8.0",
+  "minecraft:entity": {
+    "description": {
+      "identifier": "minecraft:cat",
+      ...
+      "animations": {
+        "anim1": "animation.anim1",
+        "anim2": "animation.anim2",
+        "anim_controller1": "controller.animation.test1",
+        "anim_controller2": "controller.animation.test2"
+      },
+      "scripts": {
+        // note that only these animations and animation controllers will automatically run:
+        "animate": [
+          "anim1",
+          "anim_controller1",
+          ...
+         ]
+      }
+      ...
+    },
+    ...
+  },
+  ...
+}</code></pre>
+  </div>
+</div>
+
+<div class="container" id="node_head_3_1">
+        <div class="object_name">
+<div class="object_inline_name"><h1 style="font-size: null; text-align: left">Events</h1></div>
+            <div class="object_description">
+                <p></p><p>Events consist of three categories, all represented by a string:</p>
+<ul>
+<li>
+<p>Entity events</p>
+</li>
+<li>
+<p>Slash Commands</p>
+</li>
+<li>
+<p>Molang Expressions</p>
+</li>
+</ul>
+<p>In detail:</p>
+<p>Entity Events: Server side (behavior packs) only.  Currently, we only support entity events to self, and these take the form “@s event”.  These are events declared in the events section of the entity definition file.  For example, in the cat.json, “minecraft:ageable_grow_up” event causes the kitten to grow up.  This would take the form of “@s minecraft:ageable_grow_up”</p>
+<p>Slash commands: Server side (behavior packs) only.  Any slash command can be invoked, such as “/particle minecraft:example_smoke_puff ~ ~ ~”.  The assumed entity for the slash command is the invoking entity, so this particular slash command will spawn a smoke puff effect at the entity’s location.</p>
+<p>Molang Expressions: This executes a Molang expression.  The primary usage is to set Molang variables that can be used later.  For example, a state transition might be looking at a particluar Molang variable, and this expression could change that variable.  A particle effect on the entity might change color due to Molang variables that the effect uses for color tints.  An animation to move an arm might use a Molang variable that was set by an animation event.</p>
+<p></p>
+            </div>
+        </div>
+        </div>
+
+<div class="container" id="node_example_3_0_1">
+  <h2 class="object_name">{ Example }</h2>
+  <div style="margin-left: 1.5vw">
+    <link rel="stylesheet" href="/assets/styles/github-dark.css">
+    <script src="/assets/libraries/highlight.min.js"></script>
+    <script defer="">hljs.highlightAll();</script>
+    <pre><code>// entity event (behavior packs only), put the particular event name after the @s
+"@s minecraft:entity_event"
+
+// slash command (behavior packs only), can be any server-side slash command
+// is invoked from the entity, so a teleport, for example, will teleport the entity by default
+"/tell @a this is a message"
+
+// Molang Expressions, executes a Molang expression on the entity
+"variable.something_to_set = 3;"</code></pre>
+  </div>
+</div>
+
+<div class="container" id="node_head_4_1">
+        <div class="object_name">
+<div class="object_inline_name"><h1 style="font-size: null; text-align: left">General Notes</h1></div>
+            <div class="object_description">
+                <p></p><p>This document contains details for driving various events via entity .json data.  Entity events can go in both behavior and resource packs.  Behavior packs use the same animations and animation controllers setup that are used in resource packs, albeit with a different method in the entity .json itself to activate the animations.</p>
+<p>Entity events are a way to drive gameplay and entity state changes in the Bedrock engine.  These events can typically include slash commands (behavior packs only), entity events (e.g. become an adult), and Molang expressions (e.g. set the Molang variable “variable.foo” to 3 on a particular entity).  Animations and Animation controllers provide a method for driving state machines and timelines for an entity.  For example, a particular animation controller could be in a particular state, and running a particular animation, and we want events triggered when entering/exiting that state.  Alternately, an “animation” could be running, and we wish to fire off events during that animation.  The entity event timeline mechanic makes this possible.</p>
+<p></p>
+            </div>
+        </div>
+        </div>
+
+    <script src="/assets/js/LanguageHandler.js"></script>
+        <script src="/assets/js/occlusionPilot.js"></script>
+        <script src="/assets/js/preloadPilot.js"></script>
+        <script src="/assets/js/chunkPilot.js"></script>
+                        <script src="/assets/libraries/index.min.js" defer=""></script>
+                <script>
+                window.onload = function () {
+                    let searchData = null;
+                    async function LoadData() {
+                        if (searchData !== null) {
+                            return searchData;
+                        }
+                        const res = await fetch('/assets/index_list.json');
+                        searchData = await res.json();
+                        return searchData;
+                    }
+                    
+                    
+                    let miniSearch = new MiniSearch({
+                      fields: ['id'],
+                      storeFields: ['id', 'href'],
+                      searchOptions: {
+                          prefix: true
+                      }
+                    })
+                    let dataLoaded = false;
+                    const searchbar = document.getElementById("search");
+                    searchbar.addEventListener("input", async function() {
+                        searchData = await LoadData();
+                        
+                        if (!dataLoaded) {
+                            for (const key in searchData){
+                                for (const subkey in searchData[key]){
+                                    miniSearch.add({
+                                        "id": subkey,
+                                        "href": searchData[key][subkey],
+                                    });
+                                }
+                            }
+                            dataLoaded = true;
+                        }
+                        
+                        
+                        
+                        const searchResults = miniSearch.search(searchbar.value, { fuzzy: 0.2 });
+                        if (searchResults.length > 0) {
+                            document.getElementById("searchbar_result").innerHTML = searchResults[0].id;
+                            document.getElementById("searchbar_result").style.display = "block";
+                            document.getElementById("searchbar_result").setAttribute("href", searchResults[0].href);
+                        }
+                        else {
+                            document.getElementById("searchbar_result").innerHTML = "";
+                        }
+                    })
+                };
+                </script>
+                </div>
+        </body></html>

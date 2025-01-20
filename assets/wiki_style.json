@@ -1,0 +1,16 @@
+{
+  "object_image_rendering_mode": "pixelated",
+  "object_image_size": 64,
+  "container_blur_amount": 10,
+  "default_font_family": "",
+  "default_font_path": "/assets/fonts/SpaceGrotesk-VariableFont_wght.woff2",
+  "default_font_type": "woff2",
+  "default_text_color": "rgb(255, 255, 255)",
+  "default_header_color": "#ceb6ff",
+  "use_background_image": true,
+  "default_website_background_color": "rgb(0,0,0)",
+  "default_container_background_color": "rgba(126, 126, 126, 0.3)",
+  "default_background_image_path": "/assets/images/background_dark_factory.webp",
+  "default_border_color": "rgba(182, 255, 157, 0.6)",
+  "default_border_fill_color": "rgba(153, 213, 117, 0.3)"
+}
