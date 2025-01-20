@@ -1,4 +1,4 @@
-function loadHTMLData() {
+/*function loadHTMLData() {
     return fetch(window.location.pathname.replace("skeleton_pages", "pages"))
         .then(response => response.text())
         .then(data => {
@@ -92,3 +92,4 @@ async function main() {
     });
 }
 main();
+*/

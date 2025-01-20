@@ -1,15 +1,18 @@
-<!DOCTYPE html><html lang="en"><head>
+
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
           <meta charset="UTF-8">
-          <title>Timeline</title>
+          <title>Item</title>
           <link rel="preload" href="/assets/images/background_dark_factory.webp" as="image">
           <link rel="prefetch" href="/index.html">
           <link rel="prefetch" href="/settings.html">
           <link rel="stylesheet" href="/assets/styles/wiki_styles.css">
-          <link rel="icon" href="" type="image/png">
-          <meta name="description" content="Timeline">
-          <meta name="viewport" content="width=device-width, initial-scale=1">
-          <meta property="og:title" content="Timeline">
-          <meta property="og:image" content="">
+          <link rel="icon" href="/assets/images/melon.png" type="image/png">
+          <meta name="description" content="Item">
+          <meta name="viewport" content="width=device-width, initial-scale=1" />
+          <meta property="og:title" content="Item" />
+          <meta property="og:image" content="/assets/images/melon.png"/>
         </head>
         
         <body>
@@ -24,75 +27,76 @@
           </nav>
         </div>
         
-<div class="container" id="timeline_intro">
+<div class="container" id="title">
         <div class="object_name">
-<div class="object_inline_name"><h1 id="TheTimeline" style="font-size: undefined; text-align: undefined">The Timeline</h1></div>
+<div class="object_inline_name"><h1 id="Item" style="font-size: null; text-align: center">Item</h1></div>
             <div class="object_description">
                 <p></p>
             </div>
         </div>
         </div>
 
-        <div class="container" id="timeline_mermaid" style="text-align: center">
-        
-            <script type="module" defer="">
-                import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
-                mermaid.initialize({ 
-  startOnLoad: true,
-  themeVariables: {
-    primaryTextColor: "#ffffff",
-    lineColor: "#ffffff"
-  }
+    <div class="container" id="node_table_0_2_item_definition_properties">
+  <script defer src="/assets/libraries/gridjs.umd.js"></script>
+  <h2 id="ItemDefinitionProperties" style="padding: 10px">Item Definition Properties</h2>
+  <p style="margin-left: 1vw">Properties are part of the Item Definition. They help the system determine how to parse and initialize the item.</p>
+  <div id="wrappernode_table_0_2_item_definition_properties" style="overflow-x: scroll; scrollbar-width: none;"></div>
+<script defer>
+  document.addEventListener("DOMContentLoaded", function() {
+        new gridjs.Grid({
+    data: [["format_version","","","Specifies the version of the game this entity was made in. If the version is lower than the current version, any changes made to the entity in the vanilla version will be applied to it."],["minecraft:item","","","Item definition includes the \"description\" and \"components\" sections."]],
+    columns: ["Name","Default Value","Type","Description"],
+    search: true,
+    height:'100%',
+    width:'100%',
+    style: {
+      table: {
+        width: '30vw',
+      },
+    }
+  }).render(document.getElementById("wrappernode_table_0_2_item_definition_properties"));
 });
+</script>
 
-            </script>
-            
-            <div class="mermaid" style="padding: 5vh">
-            flowchart TD
+</div>
+<div class="container" id="node_example_0_0_2">
+  <h2 class="object_name" id="Example">{ Example }</h2>
+  <div style="margin-left: 1.5vw">
+    <link rel="stylesheet" href="/assets/styles/github-dark.css">
+    <script defer src="/assets/libraries/highlight.min.js"></script>
+    <script defer>
+    document.addEventListener("DOMContentLoaded", function() {
+    hljs.highlightAll();
+});</script>
+    <pre><code>{
+  "format_version": "1.20.20",
+  "minecraft:item": {
+    "description": {
+      "identifier": "minecraft:blaze_rod"
+    },
+    "components": {
+      "minecraft:fuel": {
+        "duration": 120.0
+      },
+      "minecraft:max_stack_size": 64,
+      "minecraft:icon": {
+        "texture": "blaze_rod"
+      },
+      "minecraft:hand_equipped": true,
+      "minecraft:display_name": {
+        "value": "Blaze Rod"
+      }
+    }
+  }
+}</code></pre>
+  </div>
+</div>
 
-
-    finish_alpha_build[Create a refactored alpha build of Spadix-TS]
-    --&gt;
-    make_docs_for_alpha[Make documentation for the codebase and tutorials for how to use Spadix]
-    --&gt;
-    talk_to_studios[Talk with studios: Show off the alpha build, and give them the build to test out]
-    --&gt;
-    refactor[Refactor Spadix-TS]--&gt;
-    
-    finish_next_build[Finish the next build of Spadix-TS]     
-    --&gt;
-    talk_to_studios_again[Give the studios the next preview build]
-    
-    talk_to_studios_again --&gt;get_opinions_and_repeat
-    get_opinions_and_repeat[Keep in touch with the studios as they use Spadix]
-   
-    get_opinions_and_repeat --&gt;refactor
- 
-    proper_ts_integration_with_rs[Work on integrating Spadix-TS into Spadix-RS]
-
-    finish_ir[Finish the Phyllon-IR]
-    --&gt;
-    switch_to_ir[Switch to using the IR in spadix_macros]
-    --&gt;
-    generate_from_phyllon
-
-    refactor_minecraft[Continue to refactor the Minecraft crate and remove any sharp edges]
-    
-    refactor_minecraft --&gt; generate_from_phyllon
-
-    generate_from_phyllon[Generate RS and TS code from the Minecraft crate using the Phyllon-IR]
-
-    generate_from_phyllon --&gt;
-    spadix_backend[Work on the Spadix-RS backend]
-    spadix_backend --&gt; proper_ts_integration_with_rs
-            </div>
-        </div>
-        
     <script src="/assets/js/LanguageHandler.js"></script>
         <script src="/assets/js/occlusionPilot.js"></script>
         <script src="/assets/js/preloadPilot.js"></script>
         <script src="/assets/js/chunkPilot.js"></script>
-                        <script src="/assets/libraries/index.min.js" defer=""></script>
+                        <script src="/assets/libraries/index.min.js" defer></script>
                 <script>
                 window.onload = function () {
                     let searchData = null;
@@ -145,7 +149,8 @@
                 };
                 </script>
                 </div>
-                <div class="loading_thingy_container" style="
+                <div class="loading_thingy_container"
+    style="
       position: sticky;
       left: 50%;
       bottom: 50%;
@@ -187,4 +192,4 @@
       75%, 100%  {clip-path:polygon(50% 50%,0 0,100% 0,100% 100%,100% 100%,100% 100%)}
     }
 </style>
-        </body></html>
+        </body>

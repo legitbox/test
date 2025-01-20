@@ -404,6 +404,33 @@
         </div>
         </div>
 
+<div class="container" id="node_example_1_0_3">
+  <h2 class="object_name" id="Hereisanexamplefromquadruped.animation.jsoninthevanillaresourcepack'sanimationfolder">{ Here is an example from quadruped.animation.json in the vanilla resource pack's animation folder }</h2>
+  <div style="margin-left: 1.5vw">
+    <link rel="stylesheet" href="/assets/styles/github-dark.css">
+    <script defer src="/assets/libraries/highlight.min.js"></script>
+    <script defer>
+    document.addEventListener("DOMContentLoaded", function() {
+    hljs.highlightAll();
+});</script>
+    <pre><code>{
+  "format_version": "1.8.0",
+  "animations": {
+    "animation.quadruped.walk": {
+      "anim_time_update": "query.modified_distance_moved",
+      "loop": true,
+      "bones": {
+        "leg0": { "rotation": [ "Math.cos(query.anim_time * 38.17) *  80.0", 0.0, 0.0 ] },
+        "leg1": { "rotation": [ "Math.cos(query.anim_time * 38.17) * -80.0", 0.0, 0.0 ] },
+        "leg2": { "rotation": [ "Math.cos(query.anim_time * 38.17) * -80.0", 0.0, 0.0 ] },
+        "leg3": { "rotation": [ "Math.cos(query.anim_time * 38.17) *  80.0", 0.0, 0.0 ] }
+      }
+    }
+  }
+}</code></pre>
+  </div>
+</div>
+
 <div class="container" id="node_head_0_4">
         <div class="object_name">
 <div class="object_inline_name"><h4 id="Animationdatacanbeeitherrawdata:" style="font-size: null; text-align: left">Animation data can be either raw data:</h4></div>
@@ -445,33 +472,6 @@
     hljs.highlightAll();
 });</script>
     <pre><code>"rotation": ["cos(query.anim_pos * 38.17) * 80.0 * query.anim_speed", 0.0, 0.0]</code></pre>
-  </div>
-</div>
-
-<div class="container" id="node_example_1_0_3">
-  <h2 class="object_name" id="Hereisanexamplefromquadruped.animation.jsoninthevanillaresourcepack'sanimationfolder">{ Here is an example from quadruped.animation.json in the vanilla resource pack's animation folder }</h2>
-  <div style="margin-left: 1.5vw">
-    <link rel="stylesheet" href="/assets/styles/github-dark.css">
-    <script defer src="/assets/libraries/highlight.min.js"></script>
-    <script defer>
-    document.addEventListener("DOMContentLoaded", function() {
-    hljs.highlightAll();
-});</script>
-    <pre><code>{
-  "format_version": "1.8.0",
-  "animations": {
-    "animation.quadruped.walk": {
-      "anim_time_update": "query.modified_distance_moved",
-      "loop": true,
-      "bones": {
-        "leg0": { "rotation": [ "Math.cos(query.anim_time * 38.17) *  80.0", 0.0, 0.0 ] },
-        "leg1": { "rotation": [ "Math.cos(query.anim_time * 38.17) * -80.0", 0.0, 0.0 ] },
-        "leg2": { "rotation": [ "Math.cos(query.anim_time * 38.17) * -80.0", 0.0, 0.0 ] },
-        "leg3": { "rotation": [ "Math.cos(query.anim_time * 38.17) *  80.0", 0.0, 0.0 ] }
-      }
-    }
-  }
-}</code></pre>
   </div>
 </div>
 

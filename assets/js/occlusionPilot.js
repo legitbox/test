@@ -13,3 +13,24 @@ const observer = new IntersectionObserver(
     { root: null, rootMargin: "500px", threshold: 0 }
 );
 
+const pageData = document.getElementsByClassName("scroll");
+let blurTimeout;
+let el = pageData[0].querySelectorAll(
+
+    ".container, .navbar, .index_container, .inline_container",
+);
+for (const item of el){
+    item.style.backdropFilter = "blur(2px)";
+}
+
+pageData[0].addEventListener("scroll", function () {
+    for (const item of el) {
+        item.style.backdropFilter = "blur(0px)";
+        clearTimeout(blurTimeout);
+    }
+    blurTimeout = setTimeout(() => {
+        for (const item of el) {
+            item.style.backdropFilter = "blur(2px)";
+        }
+    }, 100);
+});
