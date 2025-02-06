@@ -213,19 +213,26 @@ th, td{
     will-change: backdrop-filter;
     border: 3px solid rgba(255, 255, 255, 0.05);
     content-visibility: auto;
-    
-    &::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: url('data:image/svg+xml,<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"><filter id="n"><feTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="3"/></filter><rect width="100%" height="100%" filter="url(%23n)"/></svg>');
-        opacity: 0.08;
-        pointer-events: none; /* Allows clicks through */
-        z-index: -1; /* Places texture behind content */
-    }
+}
+
+.container::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 30%; /* Adjust this value to control grain area height */
+    background: 
+        linear-gradient(
+            to top,
+            rgba(0, 0, 0, 0.8) 0%,
+            transparent 100%
+        ),
+        url('data:image/svg+xml,<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"><filter id="n"><feTurbulence type="fractalNoise" baseFrequency="1.5" numOctaves="3"/></filter><rect width="100%" height="100%" filter="url(%23n)"/></svg>');
+    opacity: 0.8;
+    pointer-events: none;
+    z-index: 0;
+    mix-blend-mode: overlay; /* Creates natural integration with background */
 }
 
 .index_container {
