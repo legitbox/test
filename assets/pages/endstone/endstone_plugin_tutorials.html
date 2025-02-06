@@ -3,16 +3,16 @@
         <html lang="en">
         <head>
           <meta charset="UTF-8">
-          <title>Timeline</title>
+          <title>endstone_plugin_tutorials</title>
           <link rel="preload" href="/assets/images/end.jpg" as="image">
           <link rel="prefetch" href="/index.html">
           <link rel="prefetch" href="/settings.html">
           <link rel="stylesheet" href="/assets/styles/wiki_styles.css">
-          <link rel="icon" href="" type="image/png">
-          <meta name="description" content="Timeline">
+          <link rel="icon" href="/assets/images/shrimple_wiki_icon.png" type="image/png">
+          <meta name="description" content="endstone_plugin_tutorials">
           <meta name="viewport" content="width=device-width, initial-scale=1" />
-          <meta property="og:title" content="Timeline" />
-          <meta property="og:image" content=""/>
+          <meta property="og:title" content="endstone_plugin_tutorials" />
+          <meta property="og:image" content="/assets/images/shrimple_wiki_icon.png"/>
         </head>
         
         <body>
@@ -27,7 +27,7 @@
           </nav>
         </div>
         
-<div class="container" id="timeline_intro">
+<div class="container" id="introduction">
 <div class="description" style="all: revert;">
 <link rel="stylesheet" href="/assets/styles/github-dark.css">
 <script defer src="/assets/libraries/highlight.min.js"></script>
@@ -36,69 +36,59 @@
     hljs.highlightAll();
 });</script>
         <div class="object_name">
-<div class="object_inline_name"><h1 id="TheTimeline" style="font-size: undefined; text-align: undefined">The Timeline</h1></div>
+<div class="object_inline_name"><h1 id="Endstoneplugindevelopmentintroduction" style="font-size: undefined; text-align: undefined">Endstone plugin development introduction</h1></div>
             <div class="object_description">
-                <p></p>
+                <p><p>the following tutorials will show examples of how to make endstone server software plugins in python.</p>
+<p>Most tutorials will be made using <strong>LazyVim</strong> in Fedora linux, but the same features or support can be achieved using <strong>Pycharm</strong> or <strong>Visual Studio Code</strong> using <strong>Windows</strong> or any <strong>Linux</strong> distro.<br></p>
+<h3>requirements before we start:</h3>
+<blockquote>
+<p>Windows 10 or any modern Linux distro<br></p>
+</blockquote>
+<blockquote>
+<p><code>python</code>, version 3.11 or above</p>
+</blockquote>
+</p>
             </div>
         </div>
         </div>
         </div>
 
-        <div class="container" id="timeline_mermaid" style="text-align: center">
-        
-            <script type="module" defer>
-                import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
-                mermaid.initialize({ 
-  startOnLoad: true,
-  themeVariables: {
-    primaryTextColor: "#ffffff",
-    lineColor: "#ffffff"
-  }
-});
-
-            </script>
-            
-            <div class="mermaid" style="padding: 5vh">
-            flowchart TD
-
-
-    finish_alpha_build[Create a refactored alpha build of Spadix-TS]
-    -->
-    make_docs_for_alpha[Make documentation for the codebase and tutorials for how to use Spadix]
-    -->
-    talk_to_studios[Talk with studios: Show off the alpha build, and give them the build to test out]
-    -->
-    refactor[Refactor Spadix-TS]-->
-    
-    finish_next_build[Finish the next build of Spadix-TS]     
-    -->
-    talk_to_studios_again[Give the studios the next preview build]
-    
-    talk_to_studios_again -->get_opinions_and_repeat
-    get_opinions_and_repeat[Keep in touch with the studios as they use Spadix]
-   
-    get_opinions_and_repeat -->refactor
- 
-    proper_ts_integration_with_rs[Work on integrating Spadix-TS into Spadix-RS]
-
-    finish_ir[Finish the Phyllon-IR]
-    -->
-    switch_to_ir[Switch to using the IR in spadix_macros]
-    -->
-    generate_from_phyllon
-
-    refactor_minecraft[Continue to refactor the Minecraft crate and remove any sharp edges]
-    
-    refactor_minecraft --> generate_from_phyllon
-
-    generate_from_phyllon[Generate RS and TS code from the Minecraft crate using the Phyllon-IR]
-
-    generate_from_phyllon -->
-    spadix_backend[Work on the Spadix-RS backend]
-    spadix_backend --> proper_ts_integration_with_rs
+<div class="container" id="project_structure">
+<div class="description" style="all: revert;">
+<link rel="stylesheet" href="/assets/styles/github-dark.css">
+<script defer src="/assets/libraries/highlight.min.js"></script>
+    <script defer>
+    document.addEventListener("DOMContentLoaded", function() {
+    hljs.highlightAll();
+});</script>
+        <div class="object_name">
+<div class="object_inline_name"><h1 id="Pluginprojectstructure" style="font-size: undefined; text-align: undefined">Plugin project structure</h1></div>
+            <div class="object_description">
+                <p><p>to create your first project in endstone, you need to understand how the project structure works.</p>
+<pre><code class="hljs language-python">print(&quot;hello&quot;)
+</code></pre>
+<p>Here is the basic layout of an endstone project</p>
+<pre><code class="hljs">/endstone-example-plugin
+├─ /.venv
+├─ /dist
+├─ /src
+	├─ __init__.py
+	├─ main.py
+├─ pyproject.toml
+</code></pre>
+<h3>explanation</h3>
+<p>`.venv` - this is a directory where your python virtual enviroment is stored. it is required to ensure system file safety when installing python libraries and running endstone</p>
+<p>`dist` - this is a directory where your plugin files will be dropped at after compilation</p>
+<p>`src` - this is a directory where all the main plugin files are stored in</p>
+<p>`__init__.py` - the initiation file which tells the plugin loader which python script and which Class has to be targetted to start the plugin</p>
+<p>`main.py` - an example python script file that has all the required code to run the plugin</p>
+<p>`pyproject.toml` - this file defines how the project itself is structured, what are it’s dependancies and more. It is basically a file that describes how the project itself is structured</p>
+</p>
             </div>
         </div>
-        
+        </div>
+        </div>
+
     <script src="/assets/js/LanguageHandler.js"></script>
         <script src="/assets/js/occlusionPilot.js"></script>
         <script src="/assets/js/preloadPilot.js"></script>

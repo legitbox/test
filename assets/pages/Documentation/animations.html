@@ -4,7 +4,7 @@
         <head>
           <meta charset="UTF-8">
           <title>Animations</title>
-          <link rel="preload" href="/assets/images/background_dark_factory.webp" as="image">
+          <link rel="preload" href="/assets/images/end.jpg" as="image">
           <link rel="prefetch" href="/index.html">
           <link rel="prefetch" href="/settings.html">
           <link rel="stylesheet" href="/assets/styles/wiki_styles.css">
@@ -28,6 +28,13 @@
         </div>
         
 <div class="container" id="title">
+<div class="description" style="all: revert;">
+<link rel="stylesheet" href="/assets/styles/github-dark.css">
+<script defer src="/assets/libraries/highlight.min.js"></script>
+    <script defer>
+    document.addEventListener("DOMContentLoaded", function() {
+    hljs.highlightAll();
+});</script>
         <div class="object_name">
 <div class="object_inline_name"><h1 id="Animations" style="font-size: null; text-align: center">Animations</h1></div>
             <div class="object_description">
@@ -35,14 +42,23 @@
             </div>
         </div>
         </div>
+        </div>
 
 <div class="container" id="node_head_0_2">
+<div class="description" style="all: revert;">
+<link rel="stylesheet" href="/assets/styles/github-dark.css">
+<script defer src="/assets/libraries/highlight.min.js"></script>
+    <script defer>
+    document.addEventListener("DOMContentLoaded", function() {
+    hljs.highlightAll();
+});</script>
         <div class="object_name">
 
             <div class="object_description">
                 <p><p>Animation controllers decide which animations to play when.  Each controller contains a list of states that play one or more animations, each of which can be blended by a Molang expression if so desired.  Controller files are stored as JSON in the animation_controllers folder</p>
 </p>
             </div>
+        </div>
         </div>
         </div>
 
@@ -82,12 +98,20 @@
 </div>
 
 <div class="container" id="node_head_1_2">
+<div class="description" style="all: revert;">
+<link rel="stylesheet" href="/assets/styles/github-dark.css">
+<script defer src="/assets/libraries/highlight.min.js"></script>
+    <script defer>
+    document.addEventListener("DOMContentLoaded", function() {
+    hljs.highlightAll();
+});</script>
         <div class="object_name">
 <div class="object_inline_name"><h2 id="StateBlending" style="font-size: null; text-align: left">State Blending</h2></div>
             <div class="object_description">
                 <p><p>If you would like there to be a cross-fade between states when transitioning, simply set “blend_transition” to the time you would like the system to take in blending between the two states.  This is done as a simple lerp between the two states over the time specified.</p>
 </p>
             </div>
+        </div>
         </div>
         </div>
 
@@ -121,12 +145,20 @@
 </div>
 
 <div class="container" id="node_head_2_2">
+<div class="description" style="all: revert;">
+<link rel="stylesheet" href="/assets/styles/github-dark.css">
+<script defer src="/assets/libraries/highlight.min.js"></script>
+    <script defer>
+    document.addEventListener("DOMContentLoaded", function() {
+    hljs.highlightAll();
+});</script>
         <div class="object_name">
 <div class="object_inline_name"><h2 id="StateTransitions" style="font-size: null; text-align: left">State Transitions</h2></div>
             <div class="object_description">
                 <p><p>A state can specify any number of transition scripts, listed in order.  Each transition has a target state to switch to, and a script for whether it should switch or not.  For each transition in order, evaluate the script, and if it returns non-zero, switch to the specified state immediately.  NOTE: Only one transition will be processed per frame.</p>
 </p>
             </div>
+        </div>
         </div>
         </div>
 
@@ -194,6 +226,13 @@
 </div>
 
 <div class="container" id="node_head_3_2">
+<div class="description" style="all: revert;">
+<link rel="stylesheet" href="/assets/styles/github-dark.css">
+<script defer src="/assets/libraries/highlight.min.js"></script>
+    <script defer>
+    document.addEventListener("DOMContentLoaded", function() {
+    hljs.highlightAll();
+});</script>
         <div class="object_name">
 <div class="object_inline_name"><h2 id="States" style="font-size: null; text-align: left">States</h2></div>
             <div class="object_description">
@@ -202,8 +241,16 @@
             </div>
         </div>
         </div>
+        </div>
 
 <div class="container" id="node_head_0_3">
+<div class="description" style="all: revert;">
+<link rel="stylesheet" href="/assets/styles/github-dark.css">
+<script defer src="/assets/libraries/highlight.min.js"></script>
+    <script defer>
+    document.addEventListener("DOMContentLoaded", function() {
+    hljs.highlightAll();
+});</script>
         <div class="object_name">
 <div class="object_inline_name"><h3 id="StateVariables" style="font-size: null; text-align: left">State Variables</h3></div>
             <div class="object_description">
@@ -212,14 +259,23 @@
             </div>
         </div>
         </div>
+        </div>
 
 <div class="container" id="node_head_0_4">
+<div class="description" style="all: revert;">
+<link rel="stylesheet" href="/assets/styles/github-dark.css">
+<script defer src="/assets/libraries/highlight.min.js"></script>
+    <script defer>
+    document.addEventListener("DOMContentLoaded", function() {
+    hljs.highlightAll();
+});</script>
         <div class="object_name">
 <div class="object_inline_name"><h4 id="ForExample:" style="font-size: null; text-align: left">For Example:</h4></div>
             <div class="object_description">
                 <p><p>This defines a controller with a single state.  It will create a variable <code>variable.ground_speed_curve</code> that lives on the entity only while processing the animation controller for that frame.  It will take the value of <code>query.ground_speed</code>, then remap it to between 0.2 and 0.7 based on the value of <code>query.ground_speed</code> going from 0.0 to 1.0It will play one animation walk that will blend from 0.0 to 1.0 as the ground speed increases from stopped to 2.3 m/s.  The remap curve can have any number of entries.  The animation controller will then play the entity-referenced <code>wiggle_nose</code> animations, followed by the <code>walk</code> animation, scaling the latter by the value of <code>variable.ground_speed_curve</code></p>
 </p>
             </div>
+        </div>
         </div>
         </div>
 
@@ -262,6 +318,13 @@
 </div>
 
 <div class="container" id="node_head_1_3">
+<div class="description" style="all: revert;">
+<link rel="stylesheet" href="/assets/styles/github-dark.css">
+<script defer src="/assets/libraries/highlight.min.js"></script>
+    <script defer>
+    document.addEventListener("DOMContentLoaded", function() {
+    hljs.highlightAll();
+});</script>
         <div class="object_name">
 <div class="object_inline_name"><h3 id="User-DefinedScriptExample" style="font-size: null; text-align: left">User-Defined Script Example</h3></div>
             <div class="object_description">
@@ -271,14 +334,23 @@
             </div>
         </div>
         </div>
+        </div>
 
 <div class="container" id="node_head_0_4">
+<div class="description" style="all: revert;">
+<link rel="stylesheet" href="/assets/styles/github-dark.css">
+<script defer src="/assets/libraries/highlight.min.js"></script>
+    <script defer>
+    document.addEventListener("DOMContentLoaded", function() {
+    hljs.highlightAll();
+});</script>
         <div class="object_name">
 
             <div class="object_description">
                 <p><p>Note in this example that because foo is equal to a sin wave, that its values will range from -1 to 1.  This means that you will have a period from 0 to -1 to 0 where only “base_pose” will play and then an equal amount of time where Walk will play on top of base_pose as foo goes from 0 to 1 back to 0.  Base_pose will have a blend value of 1.0.</p>
 </p>
             </div>
+        </div>
         </div>
         </div>
 
@@ -308,11 +380,19 @@
 </div>
 
 <div class="container" id="node_head_1_4">
+<div class="description" style="all: revert;">
+<link rel="stylesheet" href="/assets/styles/github-dark.css">
+<script defer src="/assets/libraries/highlight.min.js"></script>
+    <script defer>
+    document.addEventListener("DOMContentLoaded", function() {
+    hljs.highlightAll();
+});</script>
         <div class="object_name">
 <div class="object_inline_name"><h4 id="Indefinitions\entity\tiger.json:" style="font-size: null; text-align: left">In definitions\entity\tiger.json:</h4></div>
             <div class="object_description">
                 <p></p>
             </div>
+        </div>
         </div>
         </div>
 
@@ -338,6 +418,13 @@
 </div>
 
 <div class="container" id="node_head_0_2">
+<div class="description" style="all: revert;">
+<link rel="stylesheet" href="/assets/styles/github-dark.css">
+<script defer src="/assets/libraries/highlight.min.js"></script>
+    <script defer>
+    document.addEventListener("DOMContentLoaded", function() {
+    hljs.highlightAll();
+});</script>
         <div class="object_name">
 <div class="object_inline_name"><h2 id="AddingAnimations" style="font-size: null; text-align: left">Adding Animations</h2></div>
             <div class="object_description">
@@ -345,14 +432,23 @@
             </div>
         </div>
         </div>
+        </div>
 
 <div class="container" id="node_head_0_3">
+<div class="description" style="all: revert;">
+<link rel="stylesheet" href="/assets/styles/github-dark.css">
+<script defer src="/assets/libraries/highlight.min.js"></script>
+    <script defer>
+    document.addEventListener("DOMContentLoaded", function() {
+    hljs.highlightAll();
+});</script>
         <div class="object_name">
 <div class="object_inline_name"><h3 id="AnimationController" style="font-size: null; text-align: left">Animation Controller</h3></div>
             <div class="object_description">
                 <p><p>One needs to be able to control how animations are played, when, and how they interact with other animations.  to group animations While a lot of this can be managed in the entity definition <code>scripts/animate</code> section, animation controllers give you the functionality of a state machine into states and control them as a block.  Animations in an animation controller state can be animation controllers themselves, allowing for arbitrarily complex animation hierarchies.</p>
 </p>
             </div>
+        </div>
         </div>
         </div>
 
@@ -395,12 +491,20 @@
 </div>
 
 <div class="container" id="node_head_1_3">
+<div class="description" style="all: revert;">
+<link rel="stylesheet" href="/assets/styles/github-dark.css">
+<script defer src="/assets/libraries/highlight.min.js"></script>
+    <script defer>
+    document.addEventListener("DOMContentLoaded", function() {
+    hljs.highlightAll();
+});</script>
         <div class="object_name">
 <div class="object_inline_name"><h3 id="Animations" style="font-size: null; text-align: left">Animations</h3></div>
             <div class="object_description">
                 <p><p>At the beginning of each frame, the skeleton is reset to its default pose from its geometry definition and then animations are applied per-channel-additively in order.  Note that the channels (x, y, and z) are added separately across animations first, then converted to a transform once all animations have been cumulatively applied.</p>
 </p>
             </div>
+        </div>
         </div>
         </div>
 
@@ -432,11 +536,19 @@
 </div>
 
 <div class="container" id="node_head_0_4">
+<div class="description" style="all: revert;">
+<link rel="stylesheet" href="/assets/styles/github-dark.css">
+<script defer src="/assets/libraries/highlight.min.js"></script>
+    <script defer>
+    document.addEventListener("DOMContentLoaded", function() {
+    hljs.highlightAll();
+});</script>
         <div class="object_name">
 <div class="object_inline_name"><h4 id="Animationdatacanbeeitherrawdata:" style="font-size: null; text-align: left">Animation data can be either raw data:</h4></div>
             <div class="object_description">
                 <p></p>
             </div>
+        </div>
         </div>
         </div>
 
@@ -454,11 +566,19 @@
 </div>
 
 <div class="container" id="node_head_1_4">
+<div class="description" style="all: revert;">
+<link rel="stylesheet" href="/assets/styles/github-dark.css">
+<script defer src="/assets/libraries/highlight.min.js"></script>
+    <script defer>
+    document.addEventListener("DOMContentLoaded", function() {
+    hljs.highlightAll();
+});</script>
         <div class="object_name">
 <div class="object_inline_name"><h4 id="orarun-timeinterpretedscript:" style="font-size: null; text-align: left">or a run-time interpreted script:</h4></div>
             <div class="object_description">
                 <p></p>
             </div>
+        </div>
         </div>
         </div>
 
@@ -476,6 +596,13 @@
 </div>
 
 <div class="container" id="node_head_2_3">
+<div class="description" style="all: revert;">
+<link rel="stylesheet" href="/assets/styles/github-dark.css">
+<script defer src="/assets/libraries/highlight.min.js"></script>
+    <script defer>
+    document.addEventListener("DOMContentLoaded", function() {
+    hljs.highlightAll();
+});</script>
         <div class="object_name">
 <div class="object_inline_name"><h3 id="EntityDefinition" style="font-size: null; text-align: left">Entity Definition</h3></div>
             <div class="object_description">
@@ -484,14 +611,23 @@
             </div>
         </div>
         </div>
+        </div>
 
 <div class="container" id="node_head_0_4">
+<div class="description" style="all: revert;">
+<link rel="stylesheet" href="/assets/styles/github-dark.css">
+<script defer src="/assets/libraries/highlight.min.js"></script>
+    <script defer>
+    document.addEventListener("DOMContentLoaded", function() {
+    hljs.highlightAll();
+});</script>
         <div class="object_name">
 
             <div class="object_description">
                 <p><p>Here you can see the entity definition for pig.json:</p>
 </p>
             </div>
+        </div>
         </div>
         </div>
 
@@ -544,6 +680,13 @@
 </div>
 
 <div class="container" id="node_head_1_4">
+<div class="description" style="all: revert;">
+<link rel="stylesheet" href="/assets/styles/github-dark.css">
+<script defer src="/assets/libraries/highlight.min.js"></script>
+    <script defer>
+    document.addEventListener("DOMContentLoaded", function() {
+    hljs.highlightAll();
+});</script>
         <div class="object_name">
 <div class="object_inline_name"><h4 id="Note" style="font-size: null; text-align: left">Note</h4></div>
             <div class="object_description">
@@ -554,8 +697,16 @@
             </div>
         </div>
         </div>
+        </div>
 
 <div class="container" id="node_head_1_2">
+<div class="description" style="all: revert;">
+<link rel="stylesheet" href="/assets/styles/github-dark.css">
+<script defer src="/assets/libraries/highlight.min.js"></script>
+    <script defer>
+    document.addEventListener("DOMContentLoaded", function() {
+    hljs.highlightAll();
+});</script>
         <div class="object_name">
 <div class="object_inline_name"><h2 id="AnimationHierarchy" style="font-size: null; text-align: left">Animation Hierarchy</h2></div>
             <div class="object_description">
@@ -569,8 +720,16 @@
             </div>
         </div>
         </div>
+        </div>
 
 <div class="container" id="node_head_2_2">
+<div class="description" style="all: revert;">
+<link rel="stylesheet" href="/assets/styles/github-dark.css">
+<script defer src="/assets/libraries/highlight.min.js"></script>
+    <script defer>
+    document.addEventListener("DOMContentLoaded", function() {
+    hljs.highlightAll();
+});</script>
         <div class="object_name">
 <div class="object_inline_name"><h2 id="Upgradefromv1.10tov1.17.30" style="font-size: null; text-align: left">Upgrade from v1.10 to v1.17.30</h2></div>
             <div class="object_description">
@@ -582,8 +741,16 @@
             </div>
         </div>
         </div>
+        </div>
 
 <div class="container" id="node_head_3_2">
+<div class="description" style="all: revert;">
+<link rel="stylesheet" href="/assets/styles/github-dark.css">
+<script defer src="/assets/libraries/highlight.min.js"></script>
+    <script defer>
+    document.addEventListener("DOMContentLoaded", function() {
+    hljs.highlightAll();
+});</script>
         <div class="object_name">
 <div class="object_inline_name"><h2 id="Upgradefromv1.17.30tov1.18.10" style="font-size: null; text-align: left">Upgrade from v1.17.30 to v1.18.10</h2></div>
             <div class="object_description">
@@ -595,8 +762,16 @@
             </div>
         </div>
         </div>
+        </div>
 
 <div class="container" id="node_head_4_2">
+<div class="description" style="all: revert;">
+<link rel="stylesheet" href="/assets/styles/github-dark.css">
+<script defer src="/assets/libraries/highlight.min.js"></script>
+    <script defer>
+    document.addEventListener("DOMContentLoaded", function() {
+    hljs.highlightAll();
+});</script>
         <div class="object_name">
 <div class="object_inline_name"><h2 id="Upgradefromv1.18.10tov1.18.20" style="font-size: null; text-align: left">Upgrade from v1.18.10 to v1.18.20</h2></div>
             <div class="object_description">
@@ -608,8 +783,16 @@
             </div>
         </div>
         </div>
+        </div>
 
 <div class="container" id="node_head_5_2">
+<div class="description" style="all: revert;">
+<link rel="stylesheet" href="/assets/styles/github-dark.css">
+<script defer src="/assets/libraries/highlight.min.js"></script>
+    <script defer>
+    document.addEventListener("DOMContentLoaded", function() {
+    hljs.highlightAll();
+});</script>
         <div class="object_name">
 <div class="object_inline_name"><h2 id="Upgradefromv1.7Betatov1.8" style="font-size: null; text-align: left">Upgrade from v1.7 Beta to v1.8</h2></div>
             <div class="object_description">
@@ -641,8 +824,16 @@
             </div>
         </div>
         </div>
+        </div>
 
 <div class="container" id="node_head_6_2">
+<div class="description" style="all: revert;">
+<link rel="stylesheet" href="/assets/styles/github-dark.css">
+<script defer src="/assets/libraries/highlight.min.js"></script>
+    <script defer>
+    document.addEventListener("DOMContentLoaded", function() {
+    hljs.highlightAll();
+});</script>
         <div class="object_name">
 <div class="object_inline_name"><h2 id="Upgradefromv1.8Betatov1.10" style="font-size: null; text-align: left">Upgrade from v1.8 Beta to v1.10</h2></div>
             <div class="object_description">
@@ -663,8 +854,16 @@
             </div>
         </div>
         </div>
+        </div>
 
 <div class="container" id="node_head_0_2">
+<div class="description" style="all: revert;">
+<link rel="stylesheet" href="/assets/styles/github-dark.css">
+<script defer src="/assets/libraries/highlight.min.js"></script>
+    <script defer>
+    document.addEventListener("DOMContentLoaded", function() {
+    hljs.highlightAll();
+});</script>
         <div class="object_name">
 <div class="object_inline_name"><h2 id="Interpolation" style="font-size: null; text-align: left">Interpolation</h2></div>
             <div class="object_description">
@@ -673,8 +872,16 @@
             </div>
         </div>
         </div>
+        </div>
 
 <div class="container" id="node_head_0_3">
+<div class="description" style="all: revert;">
+<link rel="stylesheet" href="/assets/styles/github-dark.css">
+<script defer src="/assets/libraries/highlight.min.js"></script>
+    <script defer>
+    document.addEventListener("DOMContentLoaded", function() {
+    hljs.highlightAll();
+});</script>
         <div class="object_name">
 <div class="object_inline_name"><h3 id="ContinuousExample" style="font-size: null; text-align: left">Continuous Example</h3></div>
             <div class="object_description">
@@ -682,6 +889,7 @@
 <p>Note that because interpolation is linear, at .25 seconds the head will be rotated to 90 degrees.</p>
 </p>
             </div>
+        </div>
         </div>
         </div>
 
@@ -705,6 +913,13 @@
 </div>
 
 <div class="container" id="node_head_1_3">
+<div class="description" style="all: revert;">
+<link rel="stylesheet" href="/assets/styles/github-dark.css">
+<script defer src="/assets/libraries/highlight.min.js"></script>
+    <script defer>
+    document.addEventListener("DOMContentLoaded", function() {
+    hljs.highlightAll();
+});</script>
         <div class="object_name">
 <div class="object_inline_name"><h3 id="DiscontinuousExample" style="font-size: null; text-align: left">Discontinuous Example</h3></div>
             <div class="object_description">
@@ -724,6 +939,7 @@
 <p>Note In the larger example above of the file format, “pre” and “post” can also be defined by a Molang expression that calculates that value at runtime, allowing you to have a mathematically defined curve instead of being purely linear.</p>
 </p>
             </div>
+        </div>
         </div>
         </div>
 
@@ -749,11 +965,19 @@
 </div>
 
 <div class="container" id="node_head_0_2">
+<div class="description" style="all: revert;">
+<link rel="stylesheet" href="/assets/styles/github-dark.css">
+<script defer src="/assets/libraries/highlight.min.js"></script>
+    <script defer>
+    document.addEventListener("DOMContentLoaded", function() {
+    hljs.highlightAll();
+});</script>
         <div class="object_name">
 <div class="object_inline_name"><h2 id="Examples" style="font-size: null; text-align: left">Examples</h2></div>
             <div class="object_description">
                 <p></p>
             </div>
+        </div>
         </div>
         </div>
 
@@ -981,12 +1205,20 @@
 </div>
 
 <div class="container" id="node_head_1_3">
+<div class="description" style="all: revert;">
+<link rel="stylesheet" href="/assets/styles/github-dark.css">
+<script defer src="/assets/libraries/highlight.min.js"></script>
+    <script defer>
+    document.addEventListener("DOMContentLoaded", function() {
+    hljs.highlightAll();
+});</script>
         <div class="object_name">
 <div class="object_inline_name"><h3 id="Note" style="font-size: null; text-align: left">Note</h3></div>
             <div class="object_description">
                 <p><p>NOTE: The arrays for Materials and Part visibility are applied in the order specified.  Materials and Part visibility specified later in the file will override previous materials or parts.</p>
 </p>
             </div>
+        </div>
         </div>
         </div>
 
@@ -1009,12 +1241,20 @@
 </div>
 
 <div class="container" id="node_head_1_2">
+<div class="description" style="all: revert;">
+<link rel="stylesheet" href="/assets/styles/github-dark.css">
+<script defer src="/assets/libraries/highlight.min.js"></script>
+    <script defer>
+    document.addEventListener("DOMContentLoaded", function() {
+    hljs.highlightAll();
+});</script>
         <div class="object_name">
 <div class="object_inline_name"><h2 id="GettingStarted" style="font-size: null; text-align: left">Getting Started</h2></div>
             <div class="object_description">
                 <p><p>To begin create a new folder named “render_controllers” in the root of the Resource Pack you want to add the new Render Controller JSON inside.</p>
 </p>
             </div>
+        </div>
         </div>
         </div>
 
@@ -1050,6 +1290,12 @@
                         <script src="/assets/libraries/index.min.js" defer></script>
                 <script>
                 window.onload = function () {
+                    const searchResultsDiv = document.createElement("div");
+                    searchResultsDiv.classList.add("search_container");
+                    const targetDiv = document.querySelector(".scroll");
+
+                    let searchResultsDivMade = false
+
                     let searchData = null;
                     async function LoadData() {
                         if (searchData !== null) {
@@ -1071,6 +1317,16 @@
                     let dataLoaded = false;
                     const searchbar = document.getElementById("search");
                     searchbar.addEventListener("input", async function() {
+                        try {
+                            let oldULS = document.querySelectorAll(".search_ul");
+                            for (let i = 0; i < oldULS.length; i++) {
+                                oldULS[i].remove();
+                            }
+                        } catch (error) {
+                            console.warn("the search container is still empty :3");
+                        }
+                        
+                        
                         searchData = await LoadData();
                         
                         if (!dataLoaded) {
@@ -1084,18 +1340,34 @@
                             }
                             dataLoaded = true;
                         }
-                        
-                        
-                        
+
+                        let searchBarContainer = document.querySelector(".search_container");
+                        let ul = document.createElement("ul");
+                        ul.classList.add("search_ul");
                         const searchResults = miniSearch.search(searchbar.value, { fuzzy: 0.2 });
                         if (searchResults.length > 0) {
-                            document.getElementById("searchbar_result").innerHTML = searchResults[0].id;
-                            document.getElementById("searchbar_result").style.display = "block";
-                            document.getElementById("searchbar_result").setAttribute("href", searchResults[0].href);
+                            if (!searchResultsDivMade){
+                                targetDiv.insertBefore(searchResultsDiv, targetDiv.children[1]);
+                                searchResultsDivMade = true;
+                            }
+                           
+                            ul.style.listStyle = "none";
+                            searchBarContainer.style.opacity = "1";
+                            for (let i = 0; i < searchResults.length && i <= 3; i++){
+                                let li = document.createElement("li");
+                                let p = document.createElement("a");
+                                p.classList.add("list_link");
+                                p.style.color = "beige";
+                                p.innerHTML = searchResults[i].id;
+                                p.setAttribute("href", searchResults[i].href);
+                                li.appendChild(p);
+                                ul.appendChild(li);
+                            }
                         }
                         else {
-                            document.getElementById("searchbar_result").innerHTML = "";
+                            searchResultsDivMade = false;
                         }
+                        searchBarContainer.appendChild(ul);
                     })
                 };
                 </script>

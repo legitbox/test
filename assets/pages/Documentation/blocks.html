@@ -4,7 +4,7 @@
         <head>
           <meta charset="UTF-8">
           <title>Blocks</title>
-          <link rel="preload" href="/assets/images/background_dark_factory.webp" as="image">
+          <link rel="preload" href="/assets/images/end.jpg" as="image">
           <link rel="prefetch" href="/index.html">
           <link rel="prefetch" href="/settings.html">
           <link rel="stylesheet" href="/assets/styles/wiki_styles.css">
@@ -28,6 +28,13 @@
         </div>
         
 <div class="container" id="title">
+<div class="description" style="all: revert;">
+<link rel="stylesheet" href="/assets/styles/github-dark.css">
+<script defer src="/assets/libraries/highlight.min.js"></script>
+    <script defer>
+    document.addEventListener("DOMContentLoaded", function() {
+    hljs.highlightAll();
+});</script>
         <div class="object_name">
 <div class="object_inline_name"><h1 id="Blocks" style="font-size: null; text-align: center">Blocks</h1></div>
             <div class="object_description">
@@ -35,12 +42,13 @@
             </div>
         </div>
         </div>
+        </div>
 
     <div class="container" id="node_table_0_2_block_components">
   <script defer src="/assets/libraries/gridjs.umd.js"></script>
   <h2 id="BlockComponents" style="padding: 10px">Block Components</h2>
   <p style="margin-left: 1vw"></p>
-  <div id="wrappernode_table_0_2_block_components" style="overflow-x: scroll; scrollbar-width: none;"></div>
+  <div id="wrappernode_table_0_2_block_components" style="overflow: scroll; scrollbar-width: none;"></div>
 <script defer>
   document.addEventListener("DOMContentLoaded", function() {
         new gridjs.Grid({
@@ -49,11 +57,6 @@
     search: true,
     height:'100%',
     width:'100%',
-    style: {
-      table: {
-        width: '30vw',
-      },
-    }
   }).render(document.getElementById("wrappernode_table_0_2_block_components"));
 });
 </script>
@@ -63,7 +66,7 @@
   <script defer src="/assets/libraries/gridjs.umd.js"></script>
   <h2 id="BlockDefinitionProperties" style="padding: 10px">Block Definition Properties</h2>
   <p style="margin-left: 1vw">These properties are part of the Block Definition. This helps the system determine how to parse and initialize this block.</p>
-  <div id="wrappernode_table_1_2_block_definition_properties" style="overflow-x: scroll; scrollbar-width: none;"></div>
+  <div id="wrappernode_table_1_2_block_definition_properties" style="overflow: scroll; scrollbar-width: none;"></div>
 <script defer>
   document.addEventListener("DOMContentLoaded", function() {
         new gridjs.Grid({
@@ -72,11 +75,6 @@
     search: true,
     height:'100%',
     width:'100%',
-    style: {
-      table: {
-        width: '30vw',
-      },
-    }
   }).render(document.getElementById("wrappernode_table_1_2_block_definition_properties"));
 });
 </script>
@@ -117,7 +115,7 @@
   <script defer src="/assets/libraries/gridjs.umd.js"></script>
   <h2 id="BlockDescriptionProperties" style="padding: 10px">Block Description Properties</h2>
   <p style="margin-left: 1vw"></p>
-  <div id="wrappernode_table_2_2_block_description_properties" style="overflow-x: scroll; scrollbar-width: none;"></div>
+  <div id="wrappernode_table_2_2_block_description_properties" style="overflow: scroll; scrollbar-width: none;"></div>
 <script defer>
   document.addEventListener("DOMContentLoaded", function() {
         new gridjs.Grid({
@@ -126,11 +124,6 @@
     search: true,
     height:'100%',
     width:'100%',
-    style: {
-      table: {
-        width: '30vw',
-      },
-    }
   }).render(document.getElementById("wrappernode_table_2_2_block_description_properties"));
 });
 </script>
@@ -140,7 +133,7 @@
   <script defer src="/assets/libraries/gridjs.umd.js"></script>
   <h2 id="BlockEventResponses" style="padding: 10px">Block Event Responses</h2>
   <p style="margin-left: 1vw">Event responses for block trigger components.</p>
-  <div id="wrappernode_table_3_2_block_event_responses" style="overflow-x: scroll; scrollbar-width: none;"></div>
+  <div id="wrappernode_table_3_2_block_event_responses" style="overflow: scroll; scrollbar-width: none;"></div>
 <script defer>
   document.addEventListener("DOMContentLoaded", function() {
         new gridjs.Grid({
@@ -149,11 +142,6 @@
     search: true,
     height:'100%',
     width:'100%',
-    style: {
-      table: {
-        width: '30vw',
-      },
-    }
   }).render(document.getElementById("wrappernode_table_3_2_block_event_responses"));
 });
 </script>
@@ -195,7 +183,7 @@
   <script defer src="/assets/libraries/gridjs.umd.js"></script>
   <h2 id="BlockTriggerComponents" style="padding: 10px">Block Trigger Components</h2>
   <p style="margin-left: 1vw"></p>
-  <div id="wrappernode_table_4_2_block_trigger_components" style="overflow-x: scroll; scrollbar-width: none;"></div>
+  <div id="wrappernode_table_4_2_block_trigger_components" style="overflow: scroll; scrollbar-width: none;"></div>
 <script defer>
   document.addEventListener("DOMContentLoaded", function() {
         new gridjs.Grid({
@@ -204,11 +192,6 @@
     search: true,
     height:'100%',
     width:'100%',
-    style: {
-      table: {
-        width: '30vw',
-      },
-    }
   }).render(document.getElementById("wrappernode_table_4_2_block_trigger_components"));
 });
 </script>
@@ -221,6 +204,12 @@
                         <script src="/assets/libraries/index.min.js" defer></script>
                 <script>
                 window.onload = function () {
+                    const searchResultsDiv = document.createElement("div");
+                    searchResultsDiv.classList.add("search_container");
+                    const targetDiv = document.querySelector(".scroll");
+
+                    let searchResultsDivMade = false
+
                     let searchData = null;
                     async function LoadData() {
                         if (searchData !== null) {
@@ -242,6 +231,16 @@
                     let dataLoaded = false;
                     const searchbar = document.getElementById("search");
                     searchbar.addEventListener("input", async function() {
+                        try {
+                            let oldULS = document.querySelectorAll(".search_ul");
+                            for (let i = 0; i < oldULS.length; i++) {
+                                oldULS[i].remove();
+                            }
+                        } catch (error) {
+                            console.warn("the search container is still empty :3");
+                        }
+                        
+                        
                         searchData = await LoadData();
                         
                         if (!dataLoaded) {
@@ -255,18 +254,34 @@
                             }
                             dataLoaded = true;
                         }
-                        
-                        
-                        
+
+                        let searchBarContainer = document.querySelector(".search_container");
+                        let ul = document.createElement("ul");
+                        ul.classList.add("search_ul");
                         const searchResults = miniSearch.search(searchbar.value, { fuzzy: 0.2 });
                         if (searchResults.length > 0) {
-                            document.getElementById("searchbar_result").innerHTML = searchResults[0].id;
-                            document.getElementById("searchbar_result").style.display = "block";
-                            document.getElementById("searchbar_result").setAttribute("href", searchResults[0].href);
+                            if (!searchResultsDivMade){
+                                targetDiv.insertBefore(searchResultsDiv, targetDiv.children[1]);
+                                searchResultsDivMade = true;
+                            }
+                           
+                            ul.style.listStyle = "none";
+                            searchBarContainer.style.opacity = "1";
+                            for (let i = 0; i < searchResults.length && i <= 3; i++){
+                                let li = document.createElement("li");
+                                let p = document.createElement("a");
+                                p.classList.add("list_link");
+                                p.style.color = "beige";
+                                p.innerHTML = searchResults[i].id;
+                                p.setAttribute("href", searchResults[i].href);
+                                li.appendChild(p);
+                                ul.appendChild(li);
+                            }
                         }
                         else {
-                            document.getElementById("searchbar_result").innerHTML = "";
+                            searchResultsDivMade = false;
                         }
+                        searchBarContainer.appendChild(ul);
                     })
                 };
                 </script>

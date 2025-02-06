@@ -4,7 +4,7 @@
         <head>
           <meta charset="UTF-8">
           <title>Fogs</title>
-          <link rel="preload" href="/assets/images/background_dark_factory.webp" as="image">
+          <link rel="preload" href="/assets/images/end.jpg" as="image">
           <link rel="prefetch" href="/index.html">
           <link rel="prefetch" href="/settings.html">
           <link rel="stylesheet" href="/assets/styles/wiki_styles.css">
@@ -28,6 +28,13 @@
         </div>
         
 <div class="container" id="title">
+<div class="description" style="all: revert;">
+<link rel="stylesheet" href="/assets/styles/github-dark.css">
+<script defer src="/assets/libraries/highlight.min.js"></script>
+    <script defer>
+    document.addEventListener("DOMContentLoaded", function() {
+    hljs.highlightAll();
+});</script>
         <div class="object_name">
 <div class="object_inline_name"><h1 id="Fogs" style="font-size: null; text-align: center">Fogs</h1></div>
             <div class="object_description">
@@ -35,12 +42,20 @@
             </div>
         </div>
         </div>
+        </div>
 
 <div class="container" id="node_head_0_2">
+<div class="description" style="all: revert;">
+<link rel="stylesheet" href="/assets/styles/github-dark.css">
+<script defer src="/assets/libraries/highlight.min.js"></script>
+    <script defer>
+    document.addEventListener("DOMContentLoaded", function() {
+    hljs.highlightAll();
+});</script>
         <div class="object_name">
 <div class="object_inline_name"><h2 id="FogSchema" style="font-size: null; text-align: left">Fog Schema</h2></div>
             <div class="object_description">
-                <p><pre><code>
+                <p><pre><code class="hljs">
 --------
 
 {
@@ -69,9 +84,9 @@
 
                 color &quot;fog_color&quot; // The color that the fog will take on.
 
-                float &quot;fog_start&quot; // The distance from the player that the fog will begin to appear. 'fog_start' must be less than or equal to 'fog_end'.
+                float &quot;fog_start&quot; // The distance from the player that the fog will begin to appear. &#x27;fog_start&#x27; must be less than or equal to &#x27;fog_end&#x27;.
 
-                float &quot;fog_end&quot;&lt;0.000000-*&gt; // The distance from the player that the fog will become fully opaque. 'fog_end' must be greater than or equal to 'fog_start'.
+                float &quot;fog_end&quot;&lt;0.000000-*&gt; // The distance from the player that the fog will become fully opaque. &#x27;fog_end&#x27; must be greater than or equal to &#x27;fog_start&#x27;.
 
                 string &quot;render_distance_type&quot;&lt;&quot;fixed&quot;, &quot;render&quot;&gt; // Determines how distance value is used. Fixed distance is measured in blocks. Dynamic distance is multiplied by the current render distance.
 
@@ -85,9 +100,9 @@
 
                         color &quot;fog_color&quot; // The color that the fog will take on.
 
-                        float &quot;fog_start&quot; // The distance from the player that the fog will begin to appear. 'fog_start' must be less than or equal to 'fog_end'.
+                        float &quot;fog_start&quot; // The distance from the player that the fog will begin to appear. &#x27;fog_start&#x27; must be less than or equal to &#x27;fog_end&#x27;.
 
-                        float &quot;fog_end&quot;&lt;0.000000-*&gt; // The distance from the player that the fog will become fully opaque. 'fog_end' must be greater than or equal to 'fog_start'.
+                        float &quot;fog_end&quot;&lt;0.000000-*&gt; // The distance from the player that the fog will become fully opaque. &#x27;fog_end&#x27; must be greater than or equal to &#x27;fog_start&#x27;.
 
                         string &quot;render_distance_type&quot;&lt;&quot;fixed&quot;, &quot;render&quot;&gt; // Determines how distance value is used. Fixed distance is measured in blocks. Dynamic distance is multiplied by the current render distance.
 
@@ -95,9 +110,9 @@
 
                     float &quot;min_percent&quot;&lt;0.000000-1.000000&gt; // The minimum progress of fog transition.
 
-                    float &quot;mid_seconds&quot;&lt;0.000000-*&gt; // The time takes to reach certain progress('mid_percent') of fog transition.
+                    float &quot;mid_seconds&quot;&lt;0.000000-*&gt; // The time takes to reach certain progress(&#x27;mid_percent&#x27;) of fog transition.
 
-                    float &quot;mid_percent&quot;&lt;0.000000-1.000000&gt; // The progress of fog transition after 'mid_seconds' seconds.
+                    float &quot;mid_percent&quot;&lt;0.000000-1.000000&gt; // The progress of fog transition after &#x27;mid_seconds&#x27; seconds.
 
                     float &quot;max_seconds&quot;&lt;0.000000-*&gt; // Total amount of time takes to complete fog transition.
 
@@ -111,9 +126,9 @@
 
                 color &quot;fog_color&quot; // The color that the fog will take on.
 
-                float &quot;fog_start&quot; // The distance from the player that the fog will begin to appear. 'fog_start' must be less than or equal to 'fog_end'.
+                float &quot;fog_start&quot; // The distance from the player that the fog will begin to appear. &#x27;fog_start&#x27; must be less than or equal to &#x27;fog_end&#x27;.
 
-                float &quot;fog_end&quot;&lt;0.000000-*&gt; // The distance from the player that the fog will become fully opaque. 'fog_end' must be greater than or equal to 'fog_start'.
+                float &quot;fog_end&quot;&lt;0.000000-*&gt; // The distance from the player that the fog will become fully opaque. &#x27;fog_end&#x27; must be greater than or equal to &#x27;fog_start&#x27;.
 
                 string &quot;render_distance_type&quot;&lt;&quot;fixed&quot;, &quot;render&quot;&gt; // Determines how distance value is used. Fixed distance is measured in blocks. Dynamic distance is multiplied by the current render distance.
 
@@ -127,9 +142,9 @@
 
                         color &quot;fog_color&quot; // The color that the fog will take on.
 
-                        float &quot;fog_start&quot; // The distance from the player that the fog will begin to appear. 'fog_start' must be less than or equal to 'fog_end'.
+                        float &quot;fog_start&quot; // The distance from the player that the fog will begin to appear. &#x27;fog_start&#x27; must be less than or equal to &#x27;fog_end&#x27;.
 
-                        float &quot;fog_end&quot;&lt;0.000000-*&gt; // The distance from the player that the fog will become fully opaque. 'fog_end' must be greater than or equal to 'fog_start'.
+                        float &quot;fog_end&quot;&lt;0.000000-*&gt; // The distance from the player that the fog will become fully opaque. &#x27;fog_end&#x27; must be greater than or equal to &#x27;fog_start&#x27;.
 
                         string &quot;render_distance_type&quot;&lt;&quot;fixed&quot;, &quot;render&quot;&gt; // Determines how distance value is used. Fixed distance is measured in blocks. Dynamic distance is multiplied by the current render distance.
 
@@ -137,9 +152,9 @@
 
                     float &quot;min_percent&quot;&lt;0.000000-1.000000&gt; // The minimum progress of fog transition.
 
-                    float &quot;mid_seconds&quot;&lt;0.000000-*&gt; // The time takes to reach certain progress('mid_percent') of fog transition.
+                    float &quot;mid_seconds&quot;&lt;0.000000-*&gt; // The time takes to reach certain progress(&#x27;mid_percent&#x27;) of fog transition.
 
-                    float &quot;mid_percent&quot;&lt;0.000000-1.000000&gt; // The progress of fog transition after 'mid_seconds' seconds.
+                    float &quot;mid_percent&quot;&lt;0.000000-1.000000&gt; // The progress of fog transition after &#x27;mid_seconds&#x27; seconds.
 
                     float &quot;max_seconds&quot;&lt;0.000000-*&gt; // Total amount of time takes to complete fog transition.
 
@@ -153,9 +168,9 @@
 
                 color &quot;fog_color&quot; // The color that the fog will take on.
 
-                float &quot;fog_start&quot; // The distance from the player that the fog will begin to appear. 'fog_start' must be less than or equal to 'fog_end'.
+                float &quot;fog_start&quot; // The distance from the player that the fog will begin to appear. &#x27;fog_start&#x27; must be less than or equal to &#x27;fog_end&#x27;.
 
-                float &quot;fog_end&quot;&lt;0.000000-*&gt; // The distance from the player that the fog will become fully opaque. 'fog_end' must be greater than or equal to 'fog_start'.
+                float &quot;fog_end&quot;&lt;0.000000-*&gt; // The distance from the player that the fog will become fully opaque. &#x27;fog_end&#x27; must be greater than or equal to &#x27;fog_start&#x27;.
 
                 string &quot;render_distance_type&quot;&lt;&quot;fixed&quot;, &quot;render&quot;&gt; // Determines how distance value is used. Fixed distance is measured in blocks. Dynamic distance is multiplied by the current render distance.
 
@@ -169,9 +184,9 @@
 
                         color &quot;fog_color&quot; // The color that the fog will take on.
 
-                        float &quot;fog_start&quot; // The distance from the player that the fog will begin to appear. 'fog_start' must be less than or equal to 'fog_end'.
+                        float &quot;fog_start&quot; // The distance from the player that the fog will begin to appear. &#x27;fog_start&#x27; must be less than or equal to &#x27;fog_end&#x27;.
 
-                        float &quot;fog_end&quot;&lt;0.000000-*&gt; // The distance from the player that the fog will become fully opaque. 'fog_end' must be greater than or equal to 'fog_start'.
+                        float &quot;fog_end&quot;&lt;0.000000-*&gt; // The distance from the player that the fog will become fully opaque. &#x27;fog_end&#x27; must be greater than or equal to &#x27;fog_start&#x27;.
 
                         string &quot;render_distance_type&quot;&lt;&quot;fixed&quot;, &quot;render&quot;&gt; // Determines how distance value is used. Fixed distance is measured in blocks. Dynamic distance is multiplied by the current render distance.
 
@@ -179,9 +194,9 @@
 
                     float &quot;min_percent&quot;&lt;0.000000-1.000000&gt; // The minimum progress of fog transition.
 
-                    float &quot;mid_seconds&quot;&lt;0.000000-*&gt; // The time takes to reach certain progress('mid_percent') of fog transition.
+                    float &quot;mid_seconds&quot;&lt;0.000000-*&gt; // The time takes to reach certain progress(&#x27;mid_percent&#x27;) of fog transition.
 
-                    float &quot;mid_percent&quot;&lt;0.000000-1.000000&gt; // The progress of fog transition after 'mid_seconds' seconds.
+                    float &quot;mid_percent&quot;&lt;0.000000-1.000000&gt; // The progress of fog transition after &#x27;mid_seconds&#x27; seconds.
 
                     float &quot;max_seconds&quot;&lt;0.000000-*&gt; // Total amount of time takes to complete fog transition.
 
@@ -195,9 +210,9 @@
 
                 color &quot;fog_color&quot; // The color that the fog will take on.
 
-                float &quot;fog_start&quot; // The distance from the player that the fog will begin to appear. 'fog_start' must be less than or equal to 'fog_end'.
+                float &quot;fog_start&quot; // The distance from the player that the fog will begin to appear. &#x27;fog_start&#x27; must be less than or equal to &#x27;fog_end&#x27;.
 
-                float &quot;fog_end&quot;&lt;0.000000-*&gt; // The distance from the player that the fog will become fully opaque. 'fog_end' must be greater than or equal to 'fog_start'.
+                float &quot;fog_end&quot;&lt;0.000000-*&gt; // The distance from the player that the fog will become fully opaque. &#x27;fog_end&#x27; must be greater than or equal to &#x27;fog_start&#x27;.
 
                 string &quot;render_distance_type&quot;&lt;&quot;fixed&quot;, &quot;render&quot;&gt; // Determines how distance value is used. Fixed distance is measured in blocks. Dynamic distance is multiplied by the current render distance.
 
@@ -211,9 +226,9 @@
 
                         color &quot;fog_color&quot; // The color that the fog will take on.
 
-                        float &quot;fog_start&quot; // The distance from the player that the fog will begin to appear. 'fog_start' must be less than or equal to 'fog_end'.
+                        float &quot;fog_start&quot; // The distance from the player that the fog will begin to appear. &#x27;fog_start&#x27; must be less than or equal to &#x27;fog_end&#x27;.
 
-                        float &quot;fog_end&quot;&lt;0.000000-*&gt; // The distance from the player that the fog will become fully opaque. 'fog_end' must be greater than or equal to 'fog_start'.
+                        float &quot;fog_end&quot;&lt;0.000000-*&gt; // The distance from the player that the fog will become fully opaque. &#x27;fog_end&#x27; must be greater than or equal to &#x27;fog_start&#x27;.
 
                         string &quot;render_distance_type&quot;&lt;&quot;fixed&quot;, &quot;render&quot;&gt; // Determines how distance value is used. Fixed distance is measured in blocks. Dynamic distance is multiplied by the current render distance.
 
@@ -221,9 +236,9 @@
 
                     float &quot;min_percent&quot;&lt;0.000000-1.000000&gt; // The minimum progress of fog transition.
 
-                    float &quot;mid_seconds&quot;&lt;0.000000-*&gt; // The time takes to reach certain progress('mid_percent') of fog transition.
+                    float &quot;mid_seconds&quot;&lt;0.000000-*&gt; // The time takes to reach certain progress(&#x27;mid_percent&#x27;) of fog transition.
 
-                    float &quot;mid_percent&quot;&lt;0.000000-1.000000&gt; // The progress of fog transition after 'mid_seconds' seconds.
+                    float &quot;mid_percent&quot;&lt;0.000000-1.000000&gt; // The progress of fog transition after &#x27;mid_seconds&#x27; seconds.
 
                     float &quot;max_seconds&quot;&lt;0.000000-*&gt; // Total amount of time takes to complete fog transition.
 
@@ -237,9 +252,9 @@
 
                 color &quot;fog_color&quot; // The color that the fog will take on.
 
-                float &quot;fog_start&quot; // The distance from the player that the fog will begin to appear. 'fog_start' must be less than or equal to 'fog_end'.
+                float &quot;fog_start&quot; // The distance from the player that the fog will begin to appear. &#x27;fog_start&#x27; must be less than or equal to &#x27;fog_end&#x27;.
 
-                float &quot;fog_end&quot;&lt;0.000000-*&gt; // The distance from the player that the fog will become fully opaque. 'fog_end' must be greater than or equal to 'fog_start'.
+                float &quot;fog_end&quot;&lt;0.000000-*&gt; // The distance from the player that the fog will become fully opaque. &#x27;fog_end&#x27; must be greater than or equal to &#x27;fog_start&#x27;.
 
                 string &quot;render_distance_type&quot;&lt;&quot;fixed&quot;, &quot;render&quot;&gt; // Determines how distance value is used. Fixed distance is measured in blocks. Dynamic distance is multiplied by the current render distance.
 
@@ -253,9 +268,9 @@
 
                         color &quot;fog_color&quot; // The color that the fog will take on.
 
-                        float &quot;fog_start&quot; // The distance from the player that the fog will begin to appear. 'fog_start' must be less than or equal to 'fog_end'.
+                        float &quot;fog_start&quot; // The distance from the player that the fog will begin to appear. &#x27;fog_start&#x27; must be less than or equal to &#x27;fog_end&#x27;.
 
-                        float &quot;fog_end&quot;&lt;0.000000-*&gt; // The distance from the player that the fog will become fully opaque. 'fog_end' must be greater than or equal to 'fog_start'.
+                        float &quot;fog_end&quot;&lt;0.000000-*&gt; // The distance from the player that the fog will become fully opaque. &#x27;fog_end&#x27; must be greater than or equal to &#x27;fog_start&#x27;.
 
                         string &quot;render_distance_type&quot;&lt;&quot;fixed&quot;, &quot;render&quot;&gt; // Determines how distance value is used. Fixed distance is measured in blocks. Dynamic distance is multiplied by the current render distance.
 
@@ -263,9 +278,9 @@
 
                     float &quot;min_percent&quot;&lt;0.000000-1.000000&gt; // The minimum progress of fog transition.
 
-                    float &quot;mid_seconds&quot;&lt;0.000000-*&gt; // The time takes to reach certain progress('mid_percent') of fog transition.
+                    float &quot;mid_seconds&quot;&lt;0.000000-*&gt; // The time takes to reach certain progress(&#x27;mid_percent&#x27;) of fog transition.
 
-                    float &quot;mid_percent&quot;&lt;0.000000-1.000000&gt; // The progress of fog transition after 'mid_seconds' seconds.
+                    float &quot;mid_percent&quot;&lt;0.000000-1.000000&gt; // The progress of fog transition after &#x27;mid_seconds&#x27; seconds.
 
                     float &quot;max_seconds&quot;&lt;0.000000-*&gt; // Total amount of time takes to complete fog transition.
 
@@ -279,9 +294,9 @@
 
                 color &quot;fog_color&quot; // The color that the fog will take on.
 
-                float &quot;fog_start&quot; // The distance from the player that the fog will begin to appear. 'fog_start' must be less than or equal to 'fog_end'.
+                float &quot;fog_start&quot; // The distance from the player that the fog will begin to appear. &#x27;fog_start&#x27; must be less than or equal to &#x27;fog_end&#x27;.
 
-                float &quot;fog_end&quot;&lt;0.000000-*&gt; // The distance from the player that the fog will become fully opaque. 'fog_end' must be greater than or equal to 'fog_start'.
+                float &quot;fog_end&quot;&lt;0.000000-*&gt; // The distance from the player that the fog will become fully opaque. &#x27;fog_end&#x27; must be greater than or equal to &#x27;fog_start&#x27;.
 
                 string &quot;render_distance_type&quot;&lt;&quot;fixed&quot;, &quot;render&quot;&gt; // Determines how distance value is used. Fixed distance is measured in blocks. Dynamic distance is multiplied by the current render distance.
 
@@ -295,9 +310,9 @@
 
                         color &quot;fog_color&quot; // The color that the fog will take on.
 
-                        float &quot;fog_start&quot; // The distance from the player that the fog will begin to appear. 'fog_start' must be less than or equal to 'fog_end'.
+                        float &quot;fog_start&quot; // The distance from the player that the fog will begin to appear. &#x27;fog_start&#x27; must be less than or equal to &#x27;fog_end&#x27;.
 
-                        float &quot;fog_end&quot;&lt;0.000000-*&gt; // The distance from the player that the fog will become fully opaque. 'fog_end' must be greater than or equal to 'fog_start'.
+                        float &quot;fog_end&quot;&lt;0.000000-*&gt; // The distance from the player that the fog will become fully opaque. &#x27;fog_end&#x27; must be greater than or equal to &#x27;fog_start&#x27;.
 
                         string &quot;render_distance_type&quot;&lt;&quot;fixed&quot;, &quot;render&quot;&gt; // Determines how distance value is used. Fixed distance is measured in blocks. Dynamic distance is multiplied by the current render distance.
 
@@ -305,9 +320,9 @@
 
                     float &quot;min_percent&quot;&lt;0.000000-1.000000&gt; // The minimum progress of fog transition.
 
-                    float &quot;mid_seconds&quot;&lt;0.000000-*&gt; // The time takes to reach certain progress('mid_percent') of fog transition.
+                    float &quot;mid_seconds&quot;&lt;0.000000-*&gt; // The time takes to reach certain progress(&#x27;mid_percent&#x27;) of fog transition.
 
-                    float &quot;mid_percent&quot;&lt;0.000000-1.000000&gt; // The progress of fog transition after 'mid_seconds' seconds.
+                    float &quot;mid_percent&quot;&lt;0.000000-1.000000&gt; // The progress of fog transition after &#x27;mid_seconds&#x27; seconds.
 
                     float &quot;max_seconds&quot;&lt;0.000000-*&gt; // Total amount of time takes to complete fog transition.
 
@@ -331,9 +346,9 @@
 
                     float &quot;max_density&quot;&lt;0.000000-1.000000&gt; // The maximum amount of opaqueness that the ground fog will take on. A value from [0.0, 1.0].
 
-                    float &quot;max_density_height&quot;&lt;-64.000000-320.000000&gt; : opt // The height in blocks that the ground fog will become it's maximum density.
+                    float &quot;max_density_height&quot;&lt;-64.000000-320.000000&gt; : opt // The height in blocks that the ground fog will become it&#x27;s maximum density.
 
-                    float &quot;zero_density_height&quot;&lt;-64.000000-320.000000&gt; : opt // The height in blocks that the ground fog will be completely transparent and begin to appear. This value needs to be at least 1 higher than 'max_density_height'.
+                    float &quot;zero_density_height&quot;&lt;-64.000000-320.000000&gt; : opt // The height in blocks that the ground fog will be completely transparent and begin to appear. This value needs to be at least 1 higher than &#x27;max_density_height&#x27;.
 
                     bool &quot;uniform&quot; : opt // When set to true, the density will be uniform across all heights.
 
@@ -345,9 +360,9 @@
 
                     float &quot;max_density&quot;&lt;0.000000-1.000000&gt; // The maximum amount of opaqueness that the ground fog will take on. A value from [0.0, 1.0].
 
-                    float &quot;max_density_height&quot;&lt;-64.000000-320.000000&gt; : opt // The height in blocks that the ground fog will become it's maximum density.
+                    float &quot;max_density_height&quot;&lt;-64.000000-320.000000&gt; : opt // The height in blocks that the ground fog will become it&#x27;s maximum density.
 
-                    float &quot;zero_density_height&quot;&lt;-64.000000-320.000000&gt; : opt // The height in blocks that the ground fog will be completely transparent and begin to appear. This value needs to be at least 1 higher than 'max_density_height'.
+                    float &quot;zero_density_height&quot;&lt;-64.000000-320.000000&gt; : opt // The height in blocks that the ground fog will be completely transparent and begin to appear. This value needs to be at least 1 higher than &#x27;max_density_height&#x27;.
 
                     bool &quot;uniform&quot; : opt // When set to true, the density will be uniform across all heights.
 
@@ -359,9 +374,9 @@
 
                     float &quot;max_density&quot;&lt;0.000000-1.000000&gt; // The maximum amount of opaqueness that the ground fog will take on. A value from [0.0, 1.0].
 
-                    float &quot;max_density_height&quot;&lt;-64.000000-320.000000&gt; : opt // The height in blocks that the ground fog will become it's maximum density.
+                    float &quot;max_density_height&quot;&lt;-64.000000-320.000000&gt; : opt // The height in blocks that the ground fog will become it&#x27;s maximum density.
 
-                    float &quot;zero_density_height&quot;&lt;-64.000000-320.000000&gt; : opt // The height in blocks that the ground fog will be completely transparent and begin to appear. This value needs to be at least 1 higher than 'max_density_height'.
+                    float &quot;zero_density_height&quot;&lt;-64.000000-320.000000&gt; : opt // The height in blocks that the ground fog will be completely transparent and begin to appear. This value needs to be at least 1 higher than &#x27;max_density_height&#x27;.
 
                     bool &quot;uniform&quot; : opt // When set to true, the density will be uniform across all heights.
 
@@ -373,9 +388,9 @@
 
                     float &quot;max_density&quot;&lt;0.000000-1.000000&gt; // The maximum amount of opaqueness that the ground fog will take on. A value from [0.0, 1.0].
 
-                    float &quot;max_density_height&quot;&lt;-64.000000-320.000000&gt; : opt // The height in blocks that the ground fog will become it's maximum density.
+                    float &quot;max_density_height&quot;&lt;-64.000000-320.000000&gt; : opt // The height in blocks that the ground fog will become it&#x27;s maximum density.
 
-                    float &quot;zero_density_height&quot;&lt;-64.000000-320.000000&gt; : opt // The height in blocks that the ground fog will be completely transparent and begin to appear. This value needs to be at least 1 higher than 'max_density_height'.
+                    float &quot;zero_density_height&quot;&lt;-64.000000-320.000000&gt; : opt // The height in blocks that the ground fog will be completely transparent and begin to appear. This value needs to be at least 1 higher than &#x27;max_density_height&#x27;.
 
                     bool &quot;uniform&quot; : opt // When set to true, the density will be uniform across all heights.
 
@@ -387,9 +402,9 @@
 
                     float &quot;max_density&quot;&lt;0.000000-1.000000&gt; // The maximum amount of opaqueness that the ground fog will take on. A value from [0.0, 1.0].
 
-                    float &quot;max_density_height&quot;&lt;-64.000000-320.000000&gt; : opt // The height in blocks that the ground fog will become it's maximum density.
+                    float &quot;max_density_height&quot;&lt;-64.000000-320.000000&gt; : opt // The height in blocks that the ground fog will become it&#x27;s maximum density.
 
-                    float &quot;zero_density_height&quot;&lt;-64.000000-320.000000&gt; : opt // The height in blocks that the ground fog will be completely transparent and begin to appear. This value needs to be at least 1 higher than 'max_density_height'.
+                    float &quot;zero_density_height&quot;&lt;-64.000000-320.000000&gt; : opt // The height in blocks that the ground fog will be completely transparent and begin to appear. This value needs to be at least 1 higher than &#x27;max_density_height&#x27;.
 
                     bool &quot;uniform&quot; : opt // When set to true, the density will be uniform across all heights.
 
@@ -448,8 +463,16 @@
             </div>
         </div>
         </div>
+        </div>
 
 <div class="container" id="node_head_0_2">
+<div class="description" style="all: revert;">
+<link rel="stylesheet" href="/assets/styles/github-dark.css">
+<script defer src="/assets/libraries/highlight.min.js"></script>
+    <script defer>
+    document.addEventListener("DOMContentLoaded", function() {
+    hljs.highlightAll();
+});</script>
         <div class="object_name">
 <div class="object_inline_name"><h2 id="Biomes" style="font-size: null; text-align: left">Biomes</h2></div>
             <div class="object_description">
@@ -458,8 +481,16 @@
             </div>
         </div>
         </div>
+        </div>
 
 <div class="container" id="node_head_1_2">
+<div class="description" style="all: revert;">
+<link rel="stylesheet" href="/assets/styles/github-dark.css">
+<script defer src="/assets/libraries/highlight.min.js"></script>
+    <script defer>
+    document.addEventListener("DOMContentLoaded", function() {
+    hljs.highlightAll();
+});</script>
         <div class="object_name">
 <div class="object_inline_name"><h2 id="Command" style="font-size: null; text-align: left">Command</h2></div>
             <div class="object_description">
@@ -468,8 +499,16 @@
             </div>
         </div>
         </div>
+        </div>
 
 <div class="container" id="node_head_2_2">
+<div class="description" style="all: revert;">
+<link rel="stylesheet" href="/assets/styles/github-dark.css">
+<script defer src="/assets/libraries/highlight.min.js"></script>
+    <script defer>
+    document.addEventListener("DOMContentLoaded", function() {
+    hljs.highlightAll();
+});</script>
         <div class="object_name">
 <div class="object_inline_name"><h2 id="DataDefault" style="font-size: null; text-align: left">Data Default</h2></div>
             <div class="object_description">
@@ -478,8 +517,16 @@
             </div>
         </div>
         </div>
+        </div>
 
 <div class="container" id="node_head_3_2">
+<div class="description" style="all: revert;">
+<link rel="stylesheet" href="/assets/styles/github-dark.css">
+<script defer src="/assets/libraries/highlight.min.js"></script>
+    <script defer>
+    document.addEventListener("DOMContentLoaded", function() {
+    hljs.highlightAll();
+});</script>
         <div class="object_name">
 <div class="object_inline_name"><h2 id="EngineDefault" style="font-size: null; text-align: left">Engine Default</h2></div>
             <div class="object_description">
@@ -488,8 +535,16 @@
             </div>
         </div>
         </div>
+        </div>
 
 <div class="container" id="node_head_0_2">
+<div class="description" style="all: revert;">
+<link rel="stylesheet" href="/assets/styles/github-dark.css">
+<script defer src="/assets/libraries/highlight.min.js"></script>
+    <script defer>
+    document.addEventListener("DOMContentLoaded", function() {
+    hljs.highlightAll();
+});</script>
         <div class="object_name">
 <div class="object_inline_name"><h2 id="Pop" style="font-size: null; text-align: left">Pop</h2></div>
             <div class="object_description">
@@ -498,8 +553,16 @@
             </div>
         </div>
         </div>
+        </div>
 
 <div class="container" id="node_head_1_2">
+<div class="description" style="all: revert;">
+<link rel="stylesheet" href="/assets/styles/github-dark.css">
+<script defer src="/assets/libraries/highlight.min.js"></script>
+    <script defer>
+    document.addEventListener("DOMContentLoaded", function() {
+    hljs.highlightAll();
+});</script>
         <div class="object_name">
 <div class="object_inline_name"><h2 id="Push" style="font-size: null; text-align: left">Push</h2></div>
             <div class="object_description">
@@ -508,14 +571,23 @@
             </div>
         </div>
         </div>
+        </div>
 
 <div class="container" id="node_head_2_2">
+<div class="description" style="all: revert;">
+<link rel="stylesheet" href="/assets/styles/github-dark.css">
+<script defer src="/assets/libraries/highlight.min.js"></script>
+    <script defer>
+    document.addEventListener("DOMContentLoaded", function() {
+    hljs.highlightAll();
+});</script>
         <div class="object_name">
 <div class="object_inline_name"><h2 id="Remove" style="font-size: null; text-align: left">Remove</h2></div>
             <div class="object_description">
                 <p><p>Removes all matching fog settings, from the selected player(s), that matches the user-provided ID (i.e. as provided previously via one or more “/fog push” commands).</p>
 </p>
             </div>
+        </div>
         </div>
         </div>
 
@@ -526,6 +598,12 @@
                         <script src="/assets/libraries/index.min.js" defer></script>
                 <script>
                 window.onload = function () {
+                    const searchResultsDiv = document.createElement("div");
+                    searchResultsDiv.classList.add("search_container");
+                    const targetDiv = document.querySelector(".scroll");
+
+                    let searchResultsDivMade = false
+
                     let searchData = null;
                     async function LoadData() {
                         if (searchData !== null) {
@@ -547,6 +625,16 @@
                     let dataLoaded = false;
                     const searchbar = document.getElementById("search");
                     searchbar.addEventListener("input", async function() {
+                        try {
+                            let oldULS = document.querySelectorAll(".search_ul");
+                            for (let i = 0; i < oldULS.length; i++) {
+                                oldULS[i].remove();
+                            }
+                        } catch (error) {
+                            console.warn("the search container is still empty :3");
+                        }
+                        
+                        
                         searchData = await LoadData();
                         
                         if (!dataLoaded) {
@@ -560,18 +648,34 @@
                             }
                             dataLoaded = true;
                         }
-                        
-                        
-                        
+
+                        let searchBarContainer = document.querySelector(".search_container");
+                        let ul = document.createElement("ul");
+                        ul.classList.add("search_ul");
                         const searchResults = miniSearch.search(searchbar.value, { fuzzy: 0.2 });
                         if (searchResults.length > 0) {
-                            document.getElementById("searchbar_result").innerHTML = searchResults[0].id;
-                            document.getElementById("searchbar_result").style.display = "block";
-                            document.getElementById("searchbar_result").setAttribute("href", searchResults[0].href);
+                            if (!searchResultsDivMade){
+                                targetDiv.insertBefore(searchResultsDiv, targetDiv.children[1]);
+                                searchResultsDivMade = true;
+                            }
+                           
+                            ul.style.listStyle = "none";
+                            searchBarContainer.style.opacity = "1";
+                            for (let i = 0; i < searchResults.length && i <= 3; i++){
+                                let li = document.createElement("li");
+                                let p = document.createElement("a");
+                                p.classList.add("list_link");
+                                p.style.color = "beige";
+                                p.innerHTML = searchResults[i].id;
+                                p.setAttribute("href", searchResults[i].href);
+                                li.appendChild(p);
+                                ul.appendChild(li);
+                            }
                         }
                         else {
-                            document.getElementById("searchbar_result").innerHTML = "";
+                            searchResultsDivMade = false;
                         }
+                        searchBarContainer.appendChild(ul);
                     })
                 };
                 </script>

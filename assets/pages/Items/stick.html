@@ -4,7 +4,7 @@
         <head>
           <meta charset="UTF-8">
           <title>Stick</title>
-          <link rel="preload" href="/assets/images/background_dark_factory.webp" as="image">
+          <link rel="preload" href="/assets/images/end.jpg" as="image">
           <link rel="prefetch" href="/index.html">
           <link rel="prefetch" href="/settings.html">
           <link rel="stylesheet" href="/assets/styles/wiki_styles.css">
@@ -28,12 +28,20 @@
         </div>
         
 <div class="container" id="introduction">
+<div class="description" style="all: revert;">
+<link rel="stylesheet" href="/assets/styles/github-dark.css">
+<script defer src="/assets/libraries/highlight.min.js"></script>
+    <script defer>
+    document.addEventListener("DOMContentLoaded", function() {
+    hljs.highlightAll();
+});</script>
         <div class="object_name">
 <div class="object_inline_name"><h1 id="Stick" style="font-size: undefined; text-align: undefined">Stick</h1></div><img src="/assets/bedrock_samples/resource_pack/textures/items/stick.png" class="object_display_image_px" alt="object image cannot load!">
             <div class="object_description">
                 <p><p>The stick is a very simple, yet mighty item which is used for basically every tool you want to craft</p>
 </p>
             </div>
+        </div>
         </div>
         </div>
 
@@ -110,7 +118,7 @@
                 padding: 0;
                 font-size: 2vw"></p>
         <script defer>
-        class Switcher {
+        class Switcherrecipe_canvas {
             objectNames = [];
             objectTextures = [];
             objectHrefs = [];
@@ -125,12 +133,12 @@
                 this.objectID = objectID;
             }
         }
-        const switcher0 = new Switcher(["Bamboo"], ["/assets/bedrock_samples/resource_pack/textures/items/bamboo.png"], ["NONE"], ["1"], "ID204323");
-const switcher1 = new Switcher(["Charcoal"], ["/assets/bedrock_samples/resource_pack/textures/items/charcoal.png"], ["NONE"], ["1"], "ID62323");
-const switcher2 = new Switcher(["Coal"], ["/assets/bedrock_samples/resource_pack/textures/items/coal.png"], ["NONE"], ["4"], "ID412666");
-const switcherArray = [switcher0,switcher1,switcher2];
+        const switcher0recipe_canvas = new Switcherrecipe_canvas(["Bamboo"], ["/assets/bedrock_samples/resource_pack/textures/items/bamboo.png"], ["NONE"], ["1"], "ID204323");
+const switcher1recipe_canvas = new Switcherrecipe_canvas(["Charcoal"], ["/assets/bedrock_samples/resource_pack/textures/items/charcoal.png"], ["NONE"], ["1"], "ID62323");
+const switcher2recipe_canvas = new Switcherrecipe_canvas(["Coal"], ["/assets/bedrock_samples/resource_pack/textures/items/coal.png"], ["NONE"], ["4"], "ID412666");
+const switcherArrayrecipe_canvas = [switcher0recipe_canvas,switcher1recipe_canvas,switcher2recipe_canvas];
 
-function switcher(objects) {
+function switcherrecipe_canvas(objects) {
     let index = 0;
     const objectHTML = document.querySelector("#" + objects.objectID);
     const pObjectHTML = document.querySelector("#P" + objects.objectID);
@@ -154,8 +162,141 @@ function switcher(objects) {
 }
 
 window.addEventListener('DOMContentLoaded', () => {
-    for (switcheroo of switcherArray) {
-        switcher(switcheroo);
+    for (switcheroo of switcherArrayrecipe_canvas) {
+        switcherrecipe_canvas(switcheroo);
+    }
+});
+        </script>
+        <style>
+            .ui_item{
+            transition: scale 0.1s ease-in-out;
+            }
+            .ui_item:hover {
+            scale: 1.3;
+            }
+            </style>
+        </div>
+    </div>
+        
+        <div class="container" style="
+        padding: 0px;
+        backdrop-filter: blur(2px);
+        opacity: 1;
+        justify-content: center;
+        align-items: center;
+        display: grid;">
+        <div class="interface_display" style="
+        position: relative;
+        text-align: center;">
+        
+        <img src="/assets/images/ui/crafting_table/crafting_table.png" draggable="false" style="
+            image-rendering: pixelated;
+            position: relative;
+            width: 1000vh;
+            display: block;
+            max-width: 100%;
+            height: auto;">
+        
+        <a id="AID208277"><img id="ID208277" title="" class="ui_item" src="" style="
+            image-rendering: pixelated;
+            grid-area: 1 / 1;
+            height: auto;
+            width: 8%;
+            position: absolute;
+            transform-origin: center;
+            top: 20.8%;
+            left: 27.7%;
+            ">
+        </a>
+        <p id="PID208277" style="position: absolute;
+                top: 32.8%;
+                left: 33.5%;
+                margin: 0;
+                padding: 0;
+                font-size: 2vw"></p>
+        
+        <a id="AID416277"><img id="ID416277" title="" class="ui_item" src="" style="
+            image-rendering: pixelated;
+            grid-area: 1 / 1;
+            height: auto;
+            width: 8%;
+            position: absolute;
+            transform-origin: center;
+            top: 41.6%;
+            left: 27.7%;
+            ">
+        </a>
+        <p id="PID416277" style="position: absolute;
+                top: 53.2%;
+                left: 33.5%;
+                margin: 0;
+                padding: 0;
+                font-size: 2vw"></p>
+        
+        <a id="AID41671"><img id="ID41671" title="" class="ui_item" src="" style="
+            image-rendering: pixelated;
+            grid-area: 1 / 1;
+            height: auto;
+            width: 8%;
+            position: absolute;
+            transform-origin: center;
+            top: 41.6%;
+            left: 71%;
+            ">
+        </a>
+        <p id="PID41671" style="position: absolute;
+                top: 54.6%;
+                left: 77%;
+                margin: 0;
+                padding: 0;
+                font-size: 2vw"></p>
+        <script defer>
+        class Switcherui_table2 {
+            objectNames = [];
+            objectTextures = [];
+            objectHrefs = [];
+            objectCounts = [];
+            objectID;
+            
+            constructor(objectNames, objectTextures, objectHrefs, objectCounts, objectID) {
+                this.objectNames = objectNames;
+                this.objectTextures = objectTextures;
+                this.objectHrefs = objectHrefs;
+                this.objectCounts = objectCounts;
+                this.objectID = objectID;
+            }
+        }
+        const switcher0ui_table2 = new Switcherui_table2(["Charcoal","Coal"], ["/assets/bedrock_samples/resource_pack/textures/items/charcoal.png","/assets/bedrock_samples/resource_pack/textures/items/coal.png"], ["NONE","NONE"], ["2","1"], "ID208277");
+const switcher1ui_table2 = new Switcherui_table2(["Stick","Bamboo"], ["/assets/bedrock_samples/resource_pack/textures/items/stick.png","/assets/bedrock_samples/resource_pack/textures/items/bamboo.png"], ["/assets/pages/item/stick.html","NONE"], ["1","1"], "ID416277");
+const switcher2ui_table2 = new Switcherui_table2(["Torch"], ["/assets/bedrock_samples/resource_pack/textures/blocks/torch_on.png"], ["NONE"], ["4"], "ID41671");
+const switcherArrayui_table2 = [switcher0ui_table2,switcher1ui_table2,switcher2ui_table2];
+
+function switcherui_table2(objects) {
+    let index = 0;
+    const objectHTML = document.querySelector("#" + objects.objectID);
+    const pObjectHTML = document.querySelector("#P" + objects.objectID);
+    const aObjectHTML = document.querySelector("#A" + objects.objectID);
+    objectHTML.src = objects.objectTextures[index];
+    objectHTML.title = objects.objectNames[index];
+    if (objects.objectHrefs[index] != 'NONE'){
+        aObjectHTML.href = objects.objectHrefs[index];
+    }
+    pObjectHTML.innerText = objects.objectCounts[index];
+    index = (index + 1) % objects.objectTextures.length;
+    setInterval(() => {
+        objectHTML.src = objects.objectTextures[index];
+        objectHTML.title = objects.objectNames[index];
+        if (objects.objectHrefs[index] != 'NONE'){
+            aObjectHTML.href = objects.objectHrefs[index];
+        }
+        pObjectHTML.innerText = objects.objectCounts[index];
+        index = (index + 1) % objects.objectTextures.length;
+    }, 1000 + Math.random() * 1000);
+}
+
+window.addEventListener('DOMContentLoaded', () => {
+    for (switcheroo of switcherArrayui_table2) {
+        switcherui_table2(switcheroo);
     }
 });
         </script>
@@ -177,6 +318,12 @@ window.addEventListener('DOMContentLoaded', () => {
                         <script src="/assets/libraries/index.min.js" defer></script>
                 <script>
                 window.onload = function () {
+                    const searchResultsDiv = document.createElement("div");
+                    searchResultsDiv.classList.add("search_container");
+                    const targetDiv = document.querySelector(".scroll");
+
+                    let searchResultsDivMade = false
+
                     let searchData = null;
                     async function LoadData() {
                         if (searchData !== null) {
@@ -198,6 +345,16 @@ window.addEventListener('DOMContentLoaded', () => {
                     let dataLoaded = false;
                     const searchbar = document.getElementById("search");
                     searchbar.addEventListener("input", async function() {
+                        try {
+                            let oldULS = document.querySelectorAll(".search_ul");
+                            for (let i = 0; i < oldULS.length; i++) {
+                                oldULS[i].remove();
+                            }
+                        } catch (error) {
+                            console.warn("the search container is still empty :3");
+                        }
+                        
+                        
                         searchData = await LoadData();
                         
                         if (!dataLoaded) {
@@ -211,18 +368,34 @@ window.addEventListener('DOMContentLoaded', () => {
                             }
                             dataLoaded = true;
                         }
-                        
-                        
-                        
+
+                        let searchBarContainer = document.querySelector(".search_container");
+                        let ul = document.createElement("ul");
+                        ul.classList.add("search_ul");
                         const searchResults = miniSearch.search(searchbar.value, { fuzzy: 0.2 });
                         if (searchResults.length > 0) {
-                            document.getElementById("searchbar_result").innerHTML = searchResults[0].id;
-                            document.getElementById("searchbar_result").style.display = "block";
-                            document.getElementById("searchbar_result").setAttribute("href", searchResults[0].href);
+                            if (!searchResultsDivMade){
+                                targetDiv.insertBefore(searchResultsDiv, targetDiv.children[1]);
+                                searchResultsDivMade = true;
+                            }
+                           
+                            ul.style.listStyle = "none";
+                            searchBarContainer.style.opacity = "1";
+                            for (let i = 0; i < searchResults.length && i <= 3; i++){
+                                let li = document.createElement("li");
+                                let p = document.createElement("a");
+                                p.classList.add("list_link");
+                                p.style.color = "beige";
+                                p.innerHTML = searchResults[i].id;
+                                p.setAttribute("href", searchResults[i].href);
+                                li.appendChild(p);
+                                ul.appendChild(li);
+                            }
                         }
                         else {
-                            document.getElementById("searchbar_result").innerHTML = "";
+                            searchResultsDivMade = false;
                         }
+                        searchBarContainer.appendChild(ul);
                     })
                 };
                 </script>

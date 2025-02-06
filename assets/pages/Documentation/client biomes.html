@@ -4,7 +4,7 @@
         <head>
           <meta charset="UTF-8">
           <title>Client Biomes</title>
-          <link rel="preload" href="/assets/images/background_dark_factory.webp" as="image">
+          <link rel="preload" href="/assets/images/end.jpg" as="image">
           <link rel="prefetch" href="/index.html">
           <link rel="prefetch" href="/settings.html">
           <link rel="stylesheet" href="/assets/styles/wiki_styles.css">
@@ -28,6 +28,13 @@
         </div>
         
 <div class="container" id="title">
+<div class="description" style="all: revert;">
+<link rel="stylesheet" href="/assets/styles/github-dark.css">
+<script defer src="/assets/libraries/highlight.min.js"></script>
+    <script defer>
+    document.addEventListener("DOMContentLoaded", function() {
+    hljs.highlightAll();
+});</script>
         <div class="object_name">
 <div class="object_inline_name"><h1 id="ClientBiomes" style="font-size: null; text-align: center">Client Biomes</h1></div>
             <div class="object_description">
@@ -35,12 +42,13 @@
             </div>
         </div>
         </div>
+        </div>
 
     <div class="container" id="node_table_0_2_client_biome_components">
   <script defer src="/assets/libraries/gridjs.umd.js"></script>
   <h2 id="ClientBiomeComponents" style="padding: 10px">Client Biome Components</h2>
   <p style="margin-left: 1vw">Any components that this Client Biome uses</p>
-  <div id="wrappernode_table_0_2_client_biome_components" style="overflow-x: scroll; scrollbar-width: none;"></div>
+  <div id="wrappernode_table_0_2_client_biome_components" style="overflow: scroll; scrollbar-width: none;"></div>
 <script defer>
   document.addEventListener("DOMContentLoaded", function() {
         new gridjs.Grid({
@@ -49,11 +57,6 @@
     search: true,
     height:'100%',
     width:'100%',
-    style: {
-      table: {
-        width: '30vw',
-      },
-    }
   }).render(document.getElementById("wrappernode_table_0_2_client_biome_components"));
 });
 </script>
@@ -63,7 +66,7 @@
   <script defer src="/assets/libraries/gridjs.umd.js"></script>
   <h2 id="ClientBiomeDefinition" style="padding: 10px">Client Biome Definition</h2>
   <p style="margin-left: 1vw">Contains a description and components to define a Client Biome.</p>
-  <div id="wrappernode_table_1_2_client_biome_definition" style="overflow-x: scroll; scrollbar-width: none;"></div>
+  <div id="wrappernode_table_1_2_client_biome_definition" style="overflow: scroll; scrollbar-width: none;"></div>
 <script defer>
   document.addEventListener("DOMContentLoaded", function() {
         new gridjs.Grid({
@@ -72,11 +75,6 @@
     search: true,
     height:'100%',
     width:'100%',
-    style: {
-      table: {
-        width: '30vw',
-      },
-    }
   }).render(document.getElementById("wrappernode_table_1_2_client_biome_definition"));
 });
 </script>
@@ -86,7 +84,7 @@
   <script defer src="/assets/libraries/gridjs.umd.js"></script>
   <h2 id="ClientBiomeDescription" style="padding: 10px">Client Biome Description</h2>
   <p style="margin-left: 1vw">Contains non-component settings for a Client Biome.</p>
-  <div id="wrappernode_table_2_2_client_biome_description" style="overflow-x: scroll; scrollbar-width: none;"></div>
+  <div id="wrappernode_table_2_2_client_biome_description" style="overflow: scroll; scrollbar-width: none;"></div>
 <script defer>
   document.addEventListener("DOMContentLoaded", function() {
         new gridjs.Grid({
@@ -95,11 +93,6 @@
     search: true,
     height:'100%',
     width:'100%',
-    style: {
-      table: {
-        width: '30vw',
-      },
-    }
   }).render(document.getElementById("wrappernode_table_2_2_client_biome_description"));
 });
 </script>
@@ -109,7 +102,7 @@
   <script defer src="/assets/libraries/gridjs.umd.js"></script>
   <h2 id="ClientBiomeJSONFile" style="padding: 10px">Client Biome JSON File</h2>
   <p style="margin-left: 1vw">Contains a format version and a Client Biome definition</p>
-  <div id="wrappernode_table_3_2_client_biome_json_file" style="overflow-x: scroll; scrollbar-width: none;"></div>
+  <div id="wrappernode_table_3_2_client_biome_json_file" style="overflow: scroll; scrollbar-width: none;"></div>
 <script defer>
   document.addEventListener("DOMContentLoaded", function() {
         new gridjs.Grid({
@@ -118,11 +111,6 @@
     search: true,
     height:'100%',
     width:'100%',
-    style: {
-      table: {
-        width: '30vw',
-      },
-    }
   }).render(document.getElementById("wrappernode_table_3_2_client_biome_json_file"));
 });
 </script>
@@ -132,7 +120,7 @@
   <script defer src="/assets/libraries/gridjs.umd.js"></script>
   <h2 id="FoliageColorMap" style="padding: 10px">Foliage Color Map</h2>
   <p style="margin-left: 1vw">Object specifying a color map for foliage instead of a specific color.</p>
-  <div id="wrappernode_table_4_2_foliage_color_map" style="overflow-x: scroll; scrollbar-width: none;"></div>
+  <div id="wrappernode_table_4_2_foliage_color_map" style="overflow: scroll; scrollbar-width: none;"></div>
 <script defer>
   document.addEventListener("DOMContentLoaded", function() {
         new gridjs.Grid({
@@ -141,11 +129,6 @@
     search: true,
     height:'100%',
     width:'100%',
-    style: {
-      table: {
-        width: '30vw',
-      },
-    }
   }).render(document.getElementById("wrappernode_table_4_2_foliage_color_map"));
 });
 </script>
@@ -155,7 +138,7 @@
   <script defer src="/assets/libraries/gridjs.umd.js"></script>
   <h2 id="GrassColorMap" style="padding: 10px">Grass Color Map</h2>
   <p style="margin-left: 1vw">Object specifying a color map for grass instead of a specific color.</p>
-  <div id="wrappernode_table_5_2_grass_color_map" style="overflow-x: scroll; scrollbar-width: none;"></div>
+  <div id="wrappernode_table_5_2_grass_color_map" style="overflow: scroll; scrollbar-width: none;"></div>
 <script defer>
   document.addEventListener("DOMContentLoaded", function() {
         new gridjs.Grid({
@@ -164,11 +147,6 @@
     search: true,
     height:'100%',
     width:'100%',
-    style: {
-      table: {
-        width: '30vw',
-      },
-    }
   }).render(document.getElementById("wrappernode_table_5_2_grass_color_map"));
 });
 </script>
@@ -178,7 +156,7 @@
   <script defer src="/assets/libraries/gridjs.umd.js"></script>
   <h2 id="minecraft:ambient_sounds" style="padding: 10px">minecraft:ambient_sounds</h2>
   <p style="margin-left: 1vw">Set the ambient sounds for the biome. These sounds must be in the 'individual_named_sounds' in a 'sounds.json' file.</p>
-  <div id="wrappernode_table_6_2_minecraft:ambient_sounds" style="overflow-x: scroll; scrollbar-width: none;"></div>
+  <div id="wrappernode_table_6_2_minecraft:ambient_sounds" style="overflow: scroll; scrollbar-width: none;"></div>
 <script defer>
   document.addEventListener("DOMContentLoaded", function() {
         new gridjs.Grid({
@@ -187,11 +165,6 @@
     search: true,
     height:'100%',
     width:'100%',
-    style: {
-      table: {
-        width: '30vw',
-      },
-    }
   }).render(document.getElementById("wrappernode_table_6_2_minecraft:ambient_sounds"));
 });
 </script>
@@ -201,7 +174,7 @@
   <script defer src="/assets/libraries/gridjs.umd.js"></script>
   <h2 id="minecraft:biome_music" style="padding: 10px">minecraft:biome_music</h2>
   <p style="margin-left: 1vw">Affect how music plays within the biome</p>
-  <div id="wrappernode_table_7_2_minecraft:biome_music" style="overflow-x: scroll; scrollbar-width: none;"></div>
+  <div id="wrappernode_table_7_2_minecraft:biome_music" style="overflow: scroll; scrollbar-width: none;"></div>
 <script defer>
   document.addEventListener("DOMContentLoaded", function() {
         new gridjs.Grid({
@@ -210,11 +183,6 @@
     search: true,
     height:'100%',
     width:'100%',
-    style: {
-      table: {
-        width: '30vw',
-      },
-    }
   }).render(document.getElementById("wrappernode_table_7_2_minecraft:biome_music"));
 });
 </script>
@@ -224,7 +192,7 @@
   <script defer src="/assets/libraries/gridjs.umd.js"></script>
   <h2 id="minecraft:fog_appearance" style="padding: 10px">minecraft:fog_appearance</h2>
   <p style="margin-left: 1vw">Set the fog settings used during rendering. Biomes without this component will have default fog settings.</p>
-  <div id="wrappernode_table_8_2_minecraft:fog_appearance" style="overflow-x: scroll; scrollbar-width: none;"></div>
+  <div id="wrappernode_table_8_2_minecraft:fog_appearance" style="overflow: scroll; scrollbar-width: none;"></div>
 <script defer>
   document.addEventListener("DOMContentLoaded", function() {
         new gridjs.Grid({
@@ -233,11 +201,6 @@
     search: true,
     height:'100%',
     width:'100%',
-    style: {
-      table: {
-        width: '30vw',
-      },
-    }
   }).render(document.getElementById("wrappernode_table_8_2_minecraft:fog_appearance"));
 });
 </script>
@@ -247,7 +210,7 @@
   <script defer src="/assets/libraries/gridjs.umd.js"></script>
   <h2 id="minecraft:foliage_appearance" style="padding: 10px">minecraft:foliage_appearance</h2>
   <p style="margin-left: 1vw">Set the foliage color or color map used during rendering. Biomes without this component will have default foliage appearance.</p>
-  <div id="wrappernode_table_9_2_minecraft:foliage_appearance" style="overflow-x: scroll; scrollbar-width: none;"></div>
+  <div id="wrappernode_table_9_2_minecraft:foliage_appearance" style="overflow: scroll; scrollbar-width: none;"></div>
 <script defer>
   document.addEventListener("DOMContentLoaded", function() {
         new gridjs.Grid({
@@ -256,11 +219,6 @@
     search: true,
     height:'100%',
     width:'100%',
-    style: {
-      table: {
-        width: '30vw',
-      },
-    }
   }).render(document.getElementById("wrappernode_table_9_2_minecraft:foliage_appearance"));
 });
 </script>
@@ -270,7 +228,7 @@
   <script defer src="/assets/libraries/gridjs.umd.js"></script>
   <h2 id="minecraft:grass_appearance" style="padding: 10px">minecraft:grass_appearance</h2>
   <p style="margin-left: 1vw">Set the grass color or color map used during rendering. Biomes without this component will have default grass appearance.</p>
-  <div id="wrappernode_table_10_2_minecraft:grass_appearance" style="overflow-x: scroll; scrollbar-width: none;"></div>
+  <div id="wrappernode_table_10_2_minecraft:grass_appearance" style="overflow: scroll; scrollbar-width: none;"></div>
 <script defer>
   document.addEventListener("DOMContentLoaded", function() {
         new gridjs.Grid({
@@ -279,11 +237,6 @@
     search: true,
     height:'100%',
     width:'100%',
-    style: {
-      table: {
-        width: '30vw',
-      },
-    }
   }).render(document.getElementById("wrappernode_table_10_2_minecraft:grass_appearance"));
 });
 </script>
@@ -293,7 +246,7 @@
   <script defer src="/assets/libraries/gridjs.umd.js"></script>
   <h2 id="minecraft:sky_color" style="padding: 10px">minecraft:sky_color</h2>
   <p style="margin-left: 1vw">Set the sky color used during rendering. Biomes without this component will have default sky color behavior.</p>
-  <div id="wrappernode_table_11_2_minecraft:sky_color" style="overflow-x: scroll; scrollbar-width: none;"></div>
+  <div id="wrappernode_table_11_2_minecraft:sky_color" style="overflow: scroll; scrollbar-width: none;"></div>
 <script defer>
   document.addEventListener("DOMContentLoaded", function() {
         new gridjs.Grid({
@@ -302,11 +255,6 @@
     search: true,
     height:'100%',
     width:'100%',
-    style: {
-      table: {
-        width: '30vw',
-      },
-    }
   }).render(document.getElementById("wrappernode_table_11_2_minecraft:sky_color"));
 });
 </script>
@@ -316,7 +264,7 @@
   <script defer src="/assets/libraries/gridjs.umd.js"></script>
   <h2 id="minecraft:water_appearance" style="padding: 10px">minecraft:water_appearance</h2>
   <p style="margin-left: 1vw">Set the water surface color used during rendering. Biomes without this component will have default water surface color behavior.</p>
-  <div id="wrappernode_table_12_2_minecraft:water_appearance" style="overflow-x: scroll; scrollbar-width: none;"></div>
+  <div id="wrappernode_table_12_2_minecraft:water_appearance" style="overflow: scroll; scrollbar-width: none;"></div>
 <script defer>
   document.addEventListener("DOMContentLoaded", function() {
         new gridjs.Grid({
@@ -325,11 +273,6 @@
     search: true,
     height:'100%',
     width:'100%',
-    style: {
-      table: {
-        width: '30vw',
-      },
-    }
   }).render(document.getElementById("wrappernode_table_12_2_minecraft:water_appearance"));
 });
 </script>
@@ -342,6 +285,12 @@
                         <script src="/assets/libraries/index.min.js" defer></script>
                 <script>
                 window.onload = function () {
+                    const searchResultsDiv = document.createElement("div");
+                    searchResultsDiv.classList.add("search_container");
+                    const targetDiv = document.querySelector(".scroll");
+
+                    let searchResultsDivMade = false
+
                     let searchData = null;
                     async function LoadData() {
                         if (searchData !== null) {
@@ -363,6 +312,16 @@
                     let dataLoaded = false;
                     const searchbar = document.getElementById("search");
                     searchbar.addEventListener("input", async function() {
+                        try {
+                            let oldULS = document.querySelectorAll(".search_ul");
+                            for (let i = 0; i < oldULS.length; i++) {
+                                oldULS[i].remove();
+                            }
+                        } catch (error) {
+                            console.warn("the search container is still empty :3");
+                        }
+                        
+                        
                         searchData = await LoadData();
                         
                         if (!dataLoaded) {
@@ -376,18 +335,34 @@
                             }
                             dataLoaded = true;
                         }
-                        
-                        
-                        
+
+                        let searchBarContainer = document.querySelector(".search_container");
+                        let ul = document.createElement("ul");
+                        ul.classList.add("search_ul");
                         const searchResults = miniSearch.search(searchbar.value, { fuzzy: 0.2 });
                         if (searchResults.length > 0) {
-                            document.getElementById("searchbar_result").innerHTML = searchResults[0].id;
-                            document.getElementById("searchbar_result").style.display = "block";
-                            document.getElementById("searchbar_result").setAttribute("href", searchResults[0].href);
+                            if (!searchResultsDivMade){
+                                targetDiv.insertBefore(searchResultsDiv, targetDiv.children[1]);
+                                searchResultsDivMade = true;
+                            }
+                           
+                            ul.style.listStyle = "none";
+                            searchBarContainer.style.opacity = "1";
+                            for (let i = 0; i < searchResults.length && i <= 3; i++){
+                                let li = document.createElement("li");
+                                let p = document.createElement("a");
+                                p.classList.add("list_link");
+                                p.style.color = "beige";
+                                p.innerHTML = searchResults[i].id;
+                                p.setAttribute("href", searchResults[i].href);
+                                li.appendChild(p);
+                                ul.appendChild(li);
+                            }
                         }
                         else {
-                            document.getElementById("searchbar_result").innerHTML = "";
+                            searchResultsDivMade = false;
                         }
+                        searchBarContainer.appendChild(ul);
                     })
                 };
                 </script>

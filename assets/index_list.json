@@ -21,7 +21,13 @@
     "Introduction": "/assets/pages/Info/introduction.html",
     "Timeline": "/assets/pages/Info/timeline.html"
   },
+  "endstone": {
+    "endstone_plugin_tutorials": "/assets/pages/endstone/endstone_plugin_tutorials.html"
+  },
   "Items": {
     "Stick": "/assets/pages/Items/stick.html"
+  },
+  "index": {
+    "index": "/assets/pages/index/index.html"
   }
 }
