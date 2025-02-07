@@ -34,6 +34,9 @@ body {
 .scroll {
     overflow-y: scroll;
     height: 100dvh;
+    scrollbar-width: auto;
+    overflow-x: scroll;
+    scrollbar-color: #ffffff80 #ffa50000;
 }
 
 h1 {
@@ -237,9 +240,8 @@ th, td{
 .subcontainer-holder {
     display: flex;
     flex-wrap: wrap;
-    position: relative; /* Added for pseudo-element positioning */
     background-color: rgba(70, 70, 70, 0.45);
-    padding: 5px;
+    position: relative;
     padding-right: 10px;
     margin-top: 1.5vh;
     margin-left: 10vw;
@@ -267,8 +269,7 @@ th, td{
 }
 
 .subcontainer {
-    display: block;
-    position: relative; /* Added for pseudo-element positioning */
+    position: relative;
     background-color: rgba(70, 70, 70, 0.45);
     padding: 5px;
     padding-right: 10px;
@@ -291,10 +292,10 @@ th, td{
     border-bottom: none;
     content-visibility: auto;
     
-    flex: 0 0 calc(50% - 10px);
     box-sizing: border-box;
+    flex: 1 1 40%;
+    min-width: 0;
 }
-
 
 .index_container {
     background-color: rgba(70, 70, 70, 0.45);
@@ -387,6 +388,14 @@ th, td{
     }
     .inline_container {
         transition: backdrop-filter 0.2s ease-in-out;
+    }
+    .subcontainer-holder {
+      transition: backdrop-filter 0.2s ease-in-out;
+        margin-left: 2vw;
+        margin-right: 2vw;
+    }
+    .subcontainer {
+      flex: 1 1 100%;
     }
 }
 
