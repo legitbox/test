@@ -229,6 +229,70 @@ th, td{
     box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.13);
     border-bottom: none;
     content-visibility: auto;
+    
+    flex: 0 0 calc(50% - 10px);
+    box-sizing: border-box;
+}
+
+.subcontainer-holder {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative; /* Added for pseudo-element positioning */
+    background-color: rgba(70, 70, 70, 0.45);
+    padding: 5px;
+    padding-right: 10px;
+    margin-top: 1.5vh;
+    margin-left: 10vw;
+    margin-right: 10vw;
+    border-radius: 5px;
+    
+    scrollbar-width: none;
+    
+    transition: backdrop-filter 1.5s ease-in-out;
+    backdrop-filter: blur(0px);
+    
+    will-change: backdrop-filter;
+    border: 3px solid rgba(255, 255, 255, 0.04);
+    border-left: 3px solid rgba(255, 255, 255, 0.01);
+    border-right: 3px solid rgba(255, 255, 255, 0.01);
+    
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.13);
+    -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.13);
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.13);
+    border-bottom: none;
+    content-visibility: auto;
+    
+    flex: 0 0 calc(50% - 10px);
+    box-sizing: border-box;
+}
+
+.subcontainer {
+    display: block;
+    position: relative; /* Added for pseudo-element positioning */
+    background-color: rgba(70, 70, 70, 0.45);
+    padding: 5px;
+    padding-right: 10px;
+    margin: 5px;
+    border-radius: 5px;
+    
+    scrollbar-width: none;
+    
+    transition: backdrop-filter 1.5s ease-in-out;
+    backdrop-filter: blur(0px);
+    
+    will-change: backdrop-filter;
+    border: 3px solid rgba(255, 255, 255, 0.04);
+    border-left: 3px solid rgba(255, 255, 255, 0.01);
+    border-right: 3px solid rgba(255, 255, 255, 0.01);
+    
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.13);
+    -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.13);
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.13);
+    border-bottom: none;
+    content-visibility: auto;
+    
+    flex: 0 0 calc(50% - 10px);
+    box-sizing: border-box;
 }
 
 
