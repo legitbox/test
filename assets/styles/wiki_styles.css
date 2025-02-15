@@ -24,6 +24,7 @@ body {
     align-items: center;
     font-family: '', sans-serif;
     background: url("/assets/images/tech.webp");
+    transform: translateZ(0);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
