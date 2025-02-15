@@ -13,19 +13,15 @@
           <meta name="viewport" content="width=device-width, initial-scale=1" />
           <meta property="og:title" content="Entities" />
           <meta property="og:image" content="/assets/images/melon.png"/>
-  <script>
-    if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('./service-worker.js', { scope: '/' })
-        .then(registration => {
-          console.log('Service Worker registered with scope:', registration.scope);
-        })
-        .catch(err => {
-          console.error('Service Worker registration failed:', err);
-        });
-    } else {
-      console.warn('Service Workers are not supported in this browser.');
-    }
-  </script>
+          <script>
+          if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+              navigator.serviceWorker.register('/assets/js/workers/CacheWorker.js')
+                .then(registration => console.log('SW registered'))
+                .catch(err => console.log('SW registration failed:', err));
+            });
+          }
+          </script>
         </head>
         
         <body>

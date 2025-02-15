@@ -1,4 +1,4 @@
-document.querySelectorAll(".list_link, #settings_title, #home_button").forEach((link) => {
+document.querySelectorAll(".list_link, #settings_title, #home_button .wb-row").forEach((link) => {
   link.addEventListener("click", (e) => {
     e.preventDefault();
 
