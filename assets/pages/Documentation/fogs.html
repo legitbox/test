@@ -24,8 +24,8 @@
           </script>
         </head>
         
-        <body>
-        <div class="scroll">
+        <body data-barba="wrapper">
+        <div class="scroll" data-barba="container" data-barba-namespace="home">
         <div class="navbar">
           <nav>
             <ul>
@@ -546,6 +546,24 @@
         </div>
         </div>
 
+              <script src="https://unpkg.com/@barba/core"></script>
+          <script>
+          barba.init({
+            transitions: [{
+              name: 'opacity-transition',
+              leave(data) {
+                return gsap.to(data.current.container, {
+                  opacity: 0
+                });
+              },
+              enter(data) {
+                return gsap.from(data.next.container, {
+                  opacity: 0
+                });
+              }
+            }]
+          });
+          </script>
     <script src="/assets/js/LanguageHandler.js"></script>
         <script src="/assets/js/occlusionPilot.js"></script>
         <script src="/assets/js/preloadPilot.js"></script>
