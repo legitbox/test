@@ -10,7 +10,7 @@
   --wb-error-color: #b5373b;
   --wb-node-text-color: #ffffff;
   --wb-border-color: #56534c;
-  --wb-bg-highlight-color: #26a0da;
+  --wb-bg-highlight-color: rgba(255, 255, 255, 0.32);
   --wb-header-color: #ffffff;
   --wb-background-color: rgba(255, 255, 255, 0.06);
   --wb-alternate-row-color: #f7f7f7;
@@ -25,9 +25,9 @@
   --wb-grid-color: rgba(222, 222, 222, 0.1);
   --wb-active-color: rgba(229, 243, 251, 0.2);
   --wb-active-cell-color: rgb(125.1417322835, 198.1496062992, 232.8582677165);
-  --wb-active-border-color: #70c0e7;
+  --wb-active-border-color: rgba(255, 255, 255, 0.14);
   --wb-active-hover-color: rgba(255, 255, 255, 0.3);
-  --wb-active-hover-border-color: #26a0da;
+  --wb-active-hover-border-color: rgba(255, 255, 255, 0.35);
   --wb-active-column-color: rgb(247.1401574803, 251.5590551181, 253.6598425197);
   --wb-active-header-column-color: rgb(196.5, 196.5, 196.5);
   --wb-active-color-grayscale: rgba(255, 255, 255, 0.18);
