@@ -44,12 +44,6 @@ self.addEventListener('fetch', event => {
                 .then(cached => cached || fetchAndCache(event.request, CACHE_NAMES.LIBRARIES))
         );
     }
-    else if (isImageRequest(event.request)) {
-        event.respondWith(
-            fetchAndCache(event.request, CACHE_NAMES.IMAGES)
-                .catch(() => caches.match(event.request))
-        );
-    }
 });
 
 async function fetchAndCache(request, cacheName) {
@@ -59,9 +53,4 @@ async function fetchAndCache(request, cacheName) {
     const cache = await caches.open(cacheName);
     cache.put(request, response.clone());
     return response;
-}
-
-function isImageRequest(request) {
-    return request.destination === 'image' ||
-        request.url.match(/\.(png|jpg|jpeg|webp|gif|svg)(\?.*)?$/i);
 }
