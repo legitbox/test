@@ -24,7 +24,6 @@
           </script>
         </head>
         
-        <body>
         <div class="scroll">
         <div class="navbar">
           <nav>
@@ -9696,28 +9695,11 @@
 </script>
 
 </div>
-              <script src="https://unpkg.com/@barba/core"></script>
-          <script>
-          barba.init({
-            transitions: [{
-              name: 'opacity-transition',
-              leave(data) {
-                return gsap.to(data.current.container, {
-                  opacity: 0
-                });
-              },
-              enter(data) {
-                return gsap.from(data.next.container, {
-                  opacity: 0
-                });
-              }
-            }]
-          });
-          </script>
-    <script src="/assets/js/LanguageHandler.js"></script>
-        <script src="/assets/js/occlusionPilot.js"></script>
-        <script src="/assets/js/preloadPilot.js"></script>
-        <script src="/assets/js/chunkPilot.js"></script>
+    <body>
+    <script defer src="/assets/js/LanguageHandler.js"></script>
+        <script defer src="/assets/js/occlusionPilot.js"></script>
+        <script defer src="/assets/js/preloadPilot.js"></script>
+        <script defer src="/assets/js/chunkPilot.js"></script>
         <link rel="stylesheet" href="/assets/styles/github-dark.css">
         <script defer src="/assets/libraries/highlight.min.js"></script>
         <script defer>

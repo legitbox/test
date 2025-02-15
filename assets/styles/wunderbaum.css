@@ -107,6 +107,7 @@ div.wunderbaum div.wb-row {
   height: var(--wb-row-outer-height);
   line-height: var(--wb-row-outer-height);
   border: 1px solid transparent;
+  margin-top: 5px;
 }
 div.wunderbaum.wb-fixed-col span.wb-col:first-of-type {
   position: sticky;
@@ -316,7 +317,7 @@ div.wunderbaum.wb-grid div.wb-node-list div.wb-row span.wb-col > select {
 }
 div.wunderbaum.wb-grid div.wb-node-list div.wb-row span.wb-col > input:focus,
 div.wunderbaum.wb-grid div.wb-node-list div.wb-row span.wb-col > select:focus {
-  border: 1px dashed #70c0e7;
+  border: 1px dashed rgba(255, 255, 255, 0.35);
 }
 div.wunderbaum.wb-grid.wb-cell-mode div.wb-row:not(.wb-colspan).wb-active span.wb-col.wb-active {
   background-color: var(--wb-active-cell-color-grayscale);
@@ -483,6 +484,7 @@ div.wunderbaum.wb-checkbox-auto-hide:focus .wb-row.wb-active i.wb-checkbox, div.
 
 i.wb-icon {
   position: relative;
+  margin-right: 5px;
 }
 i.wb-icon > span.wb-badge {
   position: absolute;
