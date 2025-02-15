@@ -2,7 +2,7 @@
   {
     "title": "Documentation",
     "expanded": false,
-    "icon": "/assets/images/folder.svg",
+    "icon": "/assets/images/wunderbaum/folder.svg",
     "children": [
       {
         "title": "Schemas",
@@ -89,7 +89,7 @@
   {
     "title": "Item",
     "expanded": false,
-    "icon": "/assets/images/folder.svg",
+    "icon": "/assets/images/wunderbaum/folder.svg",
     "children": [
       {
         "title": "Cool Bannana",
@@ -101,7 +101,7 @@
   {
     "title": "Items",
     "expanded": false,
-    "icon": "/assets/images/folder.svg",
+    "icon": "/assets/images/wunderbaum/folder.svg",
     "children": [
       {
         "title": "Stick",
@@ -113,7 +113,7 @@
   {
     "title": "endstone",
     "expanded": false,
-    "icon": "/assets/images/folder.svg",
+    "icon": "/assets/images/wunderbaum/folder.svg",
     "children": [
       {
         "title": "endstone_plugin_tutorials",
@@ -125,7 +125,7 @@
   {
     "title": "Info",
     "expanded": false,
-    "icon": "/assets/images/folder.svg",
+    "icon": "/assets/images/wunderbaum/folder.svg",
     "children": [
       {
         "title": "Timeline",
@@ -142,7 +142,7 @@
   {
     "title": "index",
     "expanded": false,
-    "icon": "/assets/images/folder.svg",
+    "icon": "/assets/images/wunderbaum/folder.svg",
     "children": [
       {
         "title": "index",
