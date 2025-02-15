@@ -9,7 +9,7 @@
   "default_header_color": "#ceb6ff",
   "use_background_image": true,
   "default_website_background_color": "rgb(0,0,0)",
-  "default_container_background_color": "rgba(70, 70, 70, 0.45)",
+  "default_container_background_color": "rgba(60, 60, 60, 0.6)",
   "default_background_image_path": "/assets/images/end.jpg",
   "default_border_color": "rgba(182, 255, 157, 0.6)",
   "default_border_fill_color": "rgba(153, 213, 117, 0.3)"

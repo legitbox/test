@@ -4,7 +4,7 @@
         <head>
           <meta charset="UTF-8">
           <title>Addons</title>
-          <link rel="preload" href="/assets/images/end.jpg" as="image">
+          <link rel="preload" href="/assets/images/end.jpg as="image">
           <link rel="prefetch" href="/index.html">
           <link rel="prefetch" href="/settings.html">
           <link rel="stylesheet" href="/assets/styles/wiki_styles.css">
@@ -13,6 +13,19 @@
           <meta name="viewport" content="width=device-width, initial-scale=1" />
           <meta property="og:title" content="Addons" />
           <meta property="og:image" content="/assets/images/melon.png"/>
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('./service-worker.js', { scope: '/' })
+        .then(registration => {
+          console.log('Service Worker registered with scope:', registration.scope);
+        })
+        .catch(err => {
+          console.error('Service Worker registration failed:', err);
+        });
+    } else {
+      console.warn('Service Workers are not supported in this browser.');
+    }
+  </script>
         </head>
         
         <body>
@@ -45,13 +58,6 @@
         </div>
 
     <div class="container" id="node_table_0_2_auxvaluetoblockstatesmap">
-    <style>
-  .gridjs .gridjs-container {
-    scrollbar-width: auto;
-    overflow-x: scroll;
-    scrollbar-color: #ffffff2e #ffa50000;
-  }
-  </style>
   <script defer src="/assets/libraries/gridjs.umd.js"></script>
   <h2 id="AuxValueToBlockStatesMap" style="padding: 10px">AuxValueToBlockStatesMap</h2>
   <p style="margin-left: 1vw"></p>
@@ -70,13 +76,6 @@
 
 </div>
     <div class="container" id="node_table_1_2_blockstates">
-    <style>
-  .gridjs .gridjs-container {
-    scrollbar-width: auto;
-    overflow-x: scroll;
-    scrollbar-color: #ffffff2e #ffa50000;
-  }
-  </style>
   <script defer src="/assets/libraries/gridjs.umd.js"></script>
   <h2 id="BlockStates" style="padding: 10px">BlockStates</h2>
   <p style="margin-left: 1vw">List of all Vanilla BlockStates.</p>
@@ -95,13 +94,6 @@
 
 </div>
     <div class="container" id="node_table_2_2_blocktraits">
-    <style>
-  .gridjs .gridjs-container {
-    scrollbar-width: auto;
-    overflow-x: scroll;
-    scrollbar-color: #ffffff2e #ffa50000;
-  }
-  </style>
   <script defer src="/assets/libraries/gridjs.umd.js"></script>
   <h2 id="BlockTraits" style="padding: 10px">BlockTraits</h2>
   <p style="margin-left: 1vw">List of all Block Traits and the BlockStates they include.</p>
@@ -154,13 +146,6 @@
 </div>
 
     <div class="container" id="node_table_3_2_blocks">
-    <style>
-  .gridjs .gridjs-container {
-    scrollbar-width: auto;
-    overflow-x: scroll;
-    scrollbar-color: #ffffff2e #ffa50000;
-  }
-  </style>
   <script defer src="/assets/libraries/gridjs.umd.js"></script>
   <h2 id="Blocks" style="padding: 10px">Blocks</h2>
   <p style="margin-left: 1vw"></p>
@@ -33309,13 +33294,6 @@
         </div>
 
     <div class="container" id="node_table_0_2_capabilities">
-    <style>
-  .gridjs .gridjs-container {
-    scrollbar-width: auto;
-    overflow-x: scroll;
-    scrollbar-color: #ffffff2e #ffa50000;
-  }
-  </style>
   <script defer src="/assets/libraries/gridjs.umd.js"></script>
   <h2 id="capabilities" style="padding: 10px">capabilities</h2>
   <p style="margin-left: 1vw">These are the different features that the pack makes use of that aren't necessarily enabled by default.</p>
@@ -33334,13 +33312,6 @@
 
 </div>
     <div class="container" id="node_table_1_2_dependencies">
-    <style>
-  .gridjs .gridjs-container {
-    scrollbar-width: auto;
-    overflow-x: scroll;
-    scrollbar-color: #ffffff2e #ffa50000;
-  }
-  </style>
   <script defer src="/assets/libraries/gridjs.umd.js"></script>
   <h2 id="dependencies" style="padding: 10px">dependencies</h2>
   <p style="margin-left: 1vw">This section describes the packs that this pack depends on in order to work. Any packs defined here will be automatically added to the world when this one is added if they are present, or an error will be shown if they aren't. Each entry has the following parameters:</p>
@@ -33377,13 +33348,6 @@
         </div>
 
     <div class="container" id="node_table_3_2_header">
-    <style>
-  .gridjs .gridjs-container {
-    scrollbar-width: auto;
-    overflow-x: scroll;
-    scrollbar-color: #ffffff2e #ffa50000;
-  }
-  </style>
   <script defer src="/assets/libraries/gridjs.umd.js"></script>
   <h2 id="header" style="padding: 10px">header</h2>
   <p style="margin-left: 1vw">This is the heading of the manifest and is required for the manifest to be valid.</p>
@@ -33402,13 +33366,6 @@
 
 </div>
     <div class="container" id="node_table_4_2_metadata">
-    <style>
-  .gridjs .gridjs-container {
-    scrollbar-width: auto;
-    overflow-x: scroll;
-    scrollbar-color: #ffffff2e #ffa50000;
-  }
-  </style>
   <script defer src="/assets/libraries/gridjs.umd.js"></script>
   <h2 id="metadata" style="padding: 10px">metadata</h2>
   <p style="margin-left: 1vw">This section contains additional data about your pack and is otherwise optional.</p>
@@ -33427,13 +33384,6 @@
 
 </div>
     <div class="container" id="node_table_5_2_modules">
-    <style>
-  .gridjs .gridjs-container {
-    scrollbar-width: auto;
-    overflow-x: scroll;
-    scrollbar-color: #ffffff2e #ffa50000;
-  }
-  </style>
   <script defer src="/assets/libraries/gridjs.umd.js"></script>
   <h2 id="modules" style="padding: 10px">modules</h2>
   <p style="margin-left: 1vw">This section describes the modules that comprise the pack. Each entry here defines one of the kinds of contents of the pack.</p>
@@ -33476,8 +33426,8 @@
                     
                     
                     let miniSearch = new MiniSearch({
-                      fields: ['id'],
-                      storeFields: ['id', 'href'],
+                      fields: ['title', "category"],
+                      storeFields: ['title', 'path'],
                       searchOptions: {
                           prefix: true
                       }
@@ -33498,13 +33448,8 @@
                         searchData = await LoadData();
                         
                         if (!dataLoaded) {
-                            for (const key in searchData){
-                                for (const subkey in searchData[key]){
-                                    miniSearch.add({
-                                        "id": subkey,
-                                        "href": searchData[key][subkey],
-                                    });
-                                }
+                            for (let key in searchData) {
+                                miniSearch.add(key, key);
                             }
                             dataLoaded = true;
                         }

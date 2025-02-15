@@ -4,7 +4,7 @@
         <head>
           <meta charset="UTF-8">
           <title>Stick</title>
-          <link rel="preload" href="/assets/images/end.jpg" as="image">
+          <link rel="preload" href="/assets/images/end.jpg as="image">
           <link rel="prefetch" href="/index.html">
           <link rel="prefetch" href="/settings.html">
           <link rel="stylesheet" href="/assets/styles/wiki_styles.css">
@@ -13,6 +13,19 @@
           <meta name="viewport" content="width=device-width, initial-scale=1" />
           <meta property="og:title" content="Stick" />
           <meta property="og:image" content="/assets/bedrock_samples/resource_pack/textures/items/stick.png"/>
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('./service-worker.js', { scope: '/' })
+        .then(registration => {
+          console.log('Service Worker registered with scope:', registration.scope);
+        })
+        .catch(err => {
+          console.error('Service Worker registration failed:', err);
+        });
+    } else {
+      console.warn('Service Workers are not supported in this browser.');
+    }
+  </script>
         </head>
         
         <body>
@@ -27,19 +40,6 @@
           </nav>
         </div>
         
-        <div id="subcontainersubcontainer" class="subcontainer-holder">
-        <script>
-document.addEventListener('DOMContentLoaded', () => {
-  const parentDiv = document.querySelector('#subcontainersubcontainer');
-  const containerDivs = parentDiv.querySelectorAll(':scope > div.container');
-  
-  containerDivs.forEach(div => {
-    div.classList.replace('container', 'subcontainer');
-  });
-});
-</script>
-
-
 <div class="container" id="introduction">
 <div class="description" style="all: revert;">
 <link rel="stylesheet" href="/assets/styles/github-dark.css">
@@ -323,7 +323,7 @@ window.addEventListener('DOMContentLoaded', () => {
             </style>
         </div>
     </div>
-        </div>
+        
     <script src="/assets/js/LanguageHandler.js"></script>
         <script src="/assets/js/occlusionPilot.js"></script>
         <script src="/assets/js/preloadPilot.js"></script>
@@ -349,8 +349,8 @@ window.addEventListener('DOMContentLoaded', () => {
                     
                     
                     let miniSearch = new MiniSearch({
-                      fields: ['id'],
-                      storeFields: ['id', 'href'],
+                      fields: ['title', "category"],
+                      storeFields: ['title', 'path'],
                       searchOptions: {
                           prefix: true
                       }
@@ -371,13 +371,8 @@ window.addEventListener('DOMContentLoaded', () => {
                         searchData = await LoadData();
                         
                         if (!dataLoaded) {
-                            for (const key in searchData){
-                                for (const subkey in searchData[key]){
-                                    miniSearch.add({
-                                        "id": subkey,
-                                        "href": searchData[key][subkey],
-                                    });
-                                }
+                            for (let key in searchData) {
+                                miniSearch.add(key, key);
                             }
                             dataLoaded = true;
                         }

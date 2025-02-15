@@ -1,33 +1,142 @@
-{
-  "Documentation": {
-    "Item": "/assets/pages/Documentation/item.html",
-    "Recipes": "/assets/pages/Documentation/recipes.html",
-    "Addons": "/assets/pages/Documentation/addons.html",
-    "Features": "/assets/pages/Documentation/features.html",
-    "Entity Events": "/assets/pages/Documentation/entity events.html",
-    "Animations": "/assets/pages/Documentation/animations.html",
-    "Client Biomes": "/assets/pages/Documentation/client biomes.html",
-    "Molang": "/assets/pages/Documentation/molang.html",
-    "Biomes": "/assets/pages/Documentation/biomes.html",
-    "Blocks": "/assets/pages/Documentation/blocks.html",
-    "Fogs": "/assets/pages/Documentation/fogs.html",
-    "Texture Sets": "/assets/pages/Documentation/texture sets.html",
-    "Entities": "/assets/pages/Documentation/entities.html",
-    "Particles": "/assets/pages/Documentation/particles.html",
-    "Schemas": "/assets/pages/Documentation/schemas.html",
-    "Entity Timeline Events": "/assets/pages/Documentation/entity timeline events.html"
+[
+  {
+    "title": "Documentation",
+    "expanded": false,
+    "icon": "/assets/images/folder.svg",
+    "children": [
+      {
+        "title": "Schemas",
+        "href": "/assets/pages/Documentation/schemas.html",
+        "icon": "/assets/images/melon.png"
+      },
+      {
+        "title": "Molang",
+        "href": "/assets/pages/Documentation/molang.html",
+        "icon": "/assets/images/melon.png"
+      },
+      {
+        "title": "Entity Timeline Events",
+        "href": "/assets/pages/Documentation/entity timeline events.html",
+        "icon": "/assets/images/melon.png"
+      },
+      {
+        "title": "Recipes",
+        "href": "/assets/pages/Documentation/recipes.html",
+        "icon": "/assets/images/melon.png"
+      },
+      {
+        "title": "Fogs",
+        "href": "/assets/pages/Documentation/fogs.html",
+        "icon": "/assets/images/melon.png"
+      },
+      {
+        "title": "Addons",
+        "href": "/assets/pages/Documentation/addons.html",
+        "icon": "/assets/images/melon.png"
+      },
+      {
+        "title": "Animations",
+        "href": "/assets/pages/Documentation/animations.html",
+        "icon": "/assets/images/melon.png"
+      },
+      {
+        "title": "Entity Events",
+        "href": "/assets/pages/Documentation/entity events.html",
+        "icon": "/assets/images/melon.png"
+      },
+      {
+        "title": "Particles",
+        "href": "/assets/pages/Documentation/particles.html",
+        "icon": "/assets/images/melon.png"
+      },
+      {
+        "title": "Entities",
+        "href": "/assets/pages/Documentation/entities.html",
+        "icon": "/assets/images/melon.png"
+      },
+      {
+        "title": "Blocks",
+        "href": "/assets/pages/Documentation/blocks.html",
+        "icon": "/assets/images/melon.png"
+      },
+      {
+        "title": "Client Biome",
+        "href": "/assets/pages/Documentation/client biome.html",
+        "icon": "/assets/images/melon.png"
+      },
+      {
+        "title": "Features",
+        "href": "/assets/pages/Documentation/features.html",
+        "icon": "/assets/images/melon.png"
+      },
+      {
+        "title": "Texture Sets",
+        "href": "/assets/pages/Documentation/texture sets.html",
+        "icon": "/assets/images/melon.png"
+      },
+      {
+        "title": "Items",
+        "href": "/assets/pages/Documentation/items.html",
+        "icon": "/assets/images/melon.png"
+      },
+      {
+        "title": "Biomes",
+        "href": "/assets/pages/Documentation/biomes.html",
+        "icon": "/assets/images/melon.png"
+      }
+    ]
   },
-  "Info": {
-    "Introduction": "/assets/pages/Info/introduction.html",
-    "Timeline": "/assets/pages/Info/timeline.html"
+  {
+    "title": "Items",
+    "expanded": false,
+    "icon": "/assets/images/folder.svg",
+    "children": [
+      {
+        "title": "Stick",
+        "href": "/assets/pages/Items/stick.html",
+        "icon": "/assets/bedrock_samples/resource_pack/textures/items/stick.png"
+      }
+    ]
   },
-  "endstone": {
-    "endstone_plugin_tutorials": "/assets/pages/endstone/endstone_plugin_tutorials.html"
+  {
+    "title": "endstone",
+    "expanded": false,
+    "icon": "/assets/images/folder.svg",
+    "children": [
+      {
+        "title": "endstone_plugin_tutorials",
+        "href": "/assets/pages/endstone/endstone_plugin_tutorials.html",
+        "icon": "/assets/images/shrimple_wiki_icon.png"
+      }
+    ]
   },
-  "Items": {
-    "Stick": "/assets/pages/Items/stick.html"
+  {
+    "title": "Info",
+    "expanded": false,
+    "icon": "/assets/images/folder.svg",
+    "children": [
+      {
+        "title": "Timeline",
+        "href": "/assets/pages/Info/timeline.html",
+        "icon": ""
+      },
+      {
+        "title": "Introduction",
+        "href": "/assets/pages/Info/introduction.html",
+        "icon": "/assets/images/shrimple_wiki_icon.png"
+      }
+    ]
   },
-  "index": {
-    "index": "/assets/pages/index/index.html"
+  {
+    "title": "index",
+    "expanded": false,
+    "icon": "/assets/images/folder.svg",
+    "children": [
+      {
+        "title": "index",
+        "href": "/assets/pages/index/index.html",
+        "icon": "/assets/images/melon.png"
+      }
+    ]
   }
-}
+]

@@ -4,7 +4,7 @@
         <head>
           <meta charset="UTF-8">
           <title>index</title>
-          <link rel="preload" href="/assets/images/end.jpg" as="image">
+          <link rel="preload" href="/assets/images/end.jpg as="image">
           <link rel="prefetch" href="/index.html">
           <link rel="prefetch" href="/settings.html">
           <link rel="stylesheet" href="/assets/styles/wiki_styles.css">
@@ -13,6 +13,19 @@
           <meta name="viewport" content="width=device-width, initial-scale=1" />
           <meta property="og:title" content="index" />
           <meta property="og:image" content="/assets/images/melon.png"/>
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('./service-worker.js', { scope: '/' })
+        .then(registration => {
+          console.log('Service Worker registered with scope:', registration.scope);
+        })
+        .catch(err => {
+          console.error('Service Worker registration failed:', err);
+        });
+    } else {
+      console.warn('Service Workers are not supported in this browser.');
+    }
+  </script>
         </head>
         
         <body>
@@ -45,6 +58,46 @@
         </div>
         </div>
 
+        <div class="container">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/wunderbaum@0/dist/wunderbaum.min.css"
+    />
+        <script defer src="/assets/libraries/wunderbaum.umd.min.js"></script>
+        <script>
+    async function fetchJSON(url) {
+        const response = await fetch(url);
+        const data = await response.json();
+        return data;
+    }
+    async function main() {
+        const treeData = fetchJSON("/assets/index_list.json");
+        document.addEventListener("DOMContentLoaded", (event) => {
+          const tree = new mar10.Wunderbaum({
+            element: document.getElementById("index-tree"),
+            source: treeData,
+            keyboard: false,
+            init: (e) => {
+              e.tree.setFocus();
+            },
+            activate: (e) => {
+                let nodeHref = e.node.data.href;
+                
+                if (nodeHref !== undefined) {
+                    window.location = e.node.data.href;
+                }
+            },
+          });
+        });
+    }
+    main();
+  </script>
+        <div
+      id="index-tree"
+      class="wb-skeleton wb-initializing wb-fade-expander"
+    ></div>
+</div>
+        
     <script src="/assets/js/LanguageHandler.js"></script>
         <script src="/assets/js/occlusionPilot.js"></script>
         <script src="/assets/js/preloadPilot.js"></script>
@@ -70,8 +123,8 @@
                     
                     
                     let miniSearch = new MiniSearch({
-                      fields: ['id'],
-                      storeFields: ['id', 'href'],
+                      fields: ['title', "category"],
+                      storeFields: ['title', 'path'],
                       searchOptions: {
                           prefix: true
                       }
@@ -92,13 +145,8 @@
                         searchData = await LoadData();
                         
                         if (!dataLoaded) {
-                            for (const key in searchData){
-                                for (const subkey in searchData[key]){
-                                    miniSearch.add({
-                                        "id": subkey,
-                                        "href": searchData[key][subkey],
-                                    });
-                                }
+                            for (let key in searchData) {
+                                miniSearch.add(key, key);
                             }
                             dataLoaded = true;
                         }

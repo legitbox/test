@@ -4,7 +4,7 @@
         <head>
           <meta charset="UTF-8">
           <title>Blocks</title>
-          <link rel="preload" href="/assets/images/end.jpg" as="image">
+          <link rel="preload" href="/assets/images/end.jpg as="image">
           <link rel="prefetch" href="/index.html">
           <link rel="prefetch" href="/settings.html">
           <link rel="stylesheet" href="/assets/styles/wiki_styles.css">
@@ -13,6 +13,19 @@
           <meta name="viewport" content="width=device-width, initial-scale=1" />
           <meta property="og:title" content="Blocks" />
           <meta property="og:image" content="/assets/images/melon.png"/>
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('./service-worker.js', { scope: '/' })
+        .then(registration => {
+          console.log('Service Worker registered with scope:', registration.scope);
+        })
+        .catch(err => {
+          console.error('Service Worker registration failed:', err);
+        });
+    } else {
+      console.warn('Service Workers are not supported in this browser.');
+    }
+  </script>
         </head>
         
         <body>
@@ -45,13 +58,6 @@
         </div>
 
     <div class="container" id="node_table_0_2_block_components">
-    <style>
-  .gridjs .gridjs-container {
-    scrollbar-width: auto;
-    overflow-x: scroll;
-    scrollbar-color: #ffffff2e #ffa50000;
-  }
-  </style>
   <script defer src="/assets/libraries/gridjs.umd.js"></script>
   <h2 id="BlockComponents" style="padding: 10px">Block Components</h2>
   <p style="margin-left: 1vw"></p>
@@ -70,13 +76,6 @@
 
 </div>
     <div class="container" id="node_table_1_2_block_definition_properties">
-    <style>
-  .gridjs .gridjs-container {
-    scrollbar-width: auto;
-    overflow-x: scroll;
-    scrollbar-color: #ffffff2e #ffa50000;
-  }
-  </style>
   <script defer src="/assets/libraries/gridjs.umd.js"></script>
   <h2 id="BlockDefinitionProperties" style="padding: 10px">Block Definition Properties</h2>
   <p style="margin-left: 1vw">These properties are part of the Block Definition. This helps the system determine how to parse and initialize this block.</p>
@@ -126,13 +125,6 @@
 </div>
 
     <div class="container" id="node_table_2_2_block_description_properties">
-    <style>
-  .gridjs .gridjs-container {
-    scrollbar-width: auto;
-    overflow-x: scroll;
-    scrollbar-color: #ffffff2e #ffa50000;
-  }
-  </style>
   <script defer src="/assets/libraries/gridjs.umd.js"></script>
   <h2 id="BlockDescriptionProperties" style="padding: 10px">Block Description Properties</h2>
   <p style="margin-left: 1vw"></p>
@@ -151,13 +143,6 @@
 
 </div>
     <div class="container" id="node_table_3_2_block_event_responses">
-    <style>
-  .gridjs .gridjs-container {
-    scrollbar-width: auto;
-    overflow-x: scroll;
-    scrollbar-color: #ffffff2e #ffa50000;
-  }
-  </style>
   <script defer src="/assets/libraries/gridjs.umd.js"></script>
   <h2 id="BlockEventResponses" style="padding: 10px">Block Event Responses</h2>
   <p style="margin-left: 1vw">Event responses for block trigger components.</p>
@@ -208,13 +193,6 @@
 </div>
 
     <div class="container" id="node_table_4_2_block_trigger_components">
-    <style>
-  .gridjs .gridjs-container {
-    scrollbar-width: auto;
-    overflow-x: scroll;
-    scrollbar-color: #ffffff2e #ffa50000;
-  }
-  </style>
   <script defer src="/assets/libraries/gridjs.umd.js"></script>
   <h2 id="BlockTriggerComponents" style="padding: 10px">Block Trigger Components</h2>
   <p style="margin-left: 1vw"></p>
@@ -257,8 +235,8 @@
                     
                     
                     let miniSearch = new MiniSearch({
-                      fields: ['id'],
-                      storeFields: ['id', 'href'],
+                      fields: ['title', "category"],
+                      storeFields: ['title', 'path'],
                       searchOptions: {
                           prefix: true
                       }
@@ -279,13 +257,8 @@
                         searchData = await LoadData();
                         
                         if (!dataLoaded) {
-                            for (const key in searchData){
-                                for (const subkey in searchData[key]){
-                                    miniSearch.add({
-                                        "id": subkey,
-                                        "href": searchData[key][subkey],
-                                    });
-                                }
+                            for (let key in searchData) {
+                                miniSearch.add(key, key);
                             }
                             dataLoaded = true;
                         }

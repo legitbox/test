@@ -4,7 +4,7 @@
         <head>
           <meta charset="UTF-8">
           <title>Recipes</title>
-          <link rel="preload" href="/assets/images/end.jpg" as="image">
+          <link rel="preload" href="/assets/images/end.jpg as="image">
           <link rel="prefetch" href="/index.html">
           <link rel="prefetch" href="/settings.html">
           <link rel="stylesheet" href="/assets/styles/wiki_styles.css">
@@ -13,6 +13,19 @@
           <meta name="viewport" content="width=device-width, initial-scale=1" />
           <meta property="og:title" content="Recipes" />
           <meta property="og:image" content="/assets/images/melon.png"/>
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('./service-worker.js', { scope: '/' })
+        .then(registration => {
+          console.log('Service Worker registered with scope:', registration.scope);
+        })
+        .catch(err => {
+          console.error('Service Worker registration failed:', err);
+        });
+    } else {
+      console.warn('Service Workers are not supported in this browser.');
+    }
+  </script>
         </head>
         
         <body>
@@ -90,13 +103,6 @@
 </div>
 
     <div class="container" id="node_table_0_3_parameters">
-    <style>
-  .gridjs .gridjs-container {
-    scrollbar-width: auto;
-    overflow-x: scroll;
-    scrollbar-color: #ffffff2e #ffa50000;
-  }
-  </style>
   <script defer src="/assets/libraries/gridjs.umd.js"></script>
   <h3 id="Parameters" style="padding: 10px">Parameters</h3>
   <p style="margin-left: 1vw"></p>
@@ -159,13 +165,6 @@
 </div>
 
     <div class="container" id="node_table_0_3_parameters">
-    <style>
-  .gridjs .gridjs-container {
-    scrollbar-width: auto;
-    overflow-x: scroll;
-    scrollbar-color: #ffffff2e #ffa50000;
-  }
-  </style>
   <script defer src="/assets/libraries/gridjs.umd.js"></script>
   <h3 id="Parameters" style="padding: 10px">Parameters</h3>
   <p style="margin-left: 1vw"></p>
@@ -228,13 +227,6 @@
 </div>
 
     <div class="container" id="node_table_0_3_parameters">
-    <style>
-  .gridjs .gridjs-container {
-    scrollbar-width: auto;
-    overflow-x: scroll;
-    scrollbar-color: #ffffff2e #ffa50000;
-  }
-  </style>
   <script defer src="/assets/libraries/gridjs.umd.js"></script>
   <h3 id="Parameters" style="padding: 10px">Parameters</h3>
   <p style="margin-left: 1vw"></p>
@@ -310,13 +302,6 @@
 </div>
 
     <div class="container" id="node_table_0_3_parameters">
-    <style>
-  .gridjs .gridjs-container {
-    scrollbar-width: auto;
-    overflow-x: scroll;
-    scrollbar-color: #ffffff2e #ffa50000;
-  }
-  </style>
   <script defer src="/assets/libraries/gridjs.umd.js"></script>
   <h3 id="Parameters" style="padding: 10px">Parameters</h3>
   <p style="margin-left: 1vw"></p>
@@ -383,13 +368,6 @@
 </div>
 
     <div class="container" id="node_table_0_3_parameters">
-    <style>
-  .gridjs .gridjs-container {
-    scrollbar-width: auto;
-    overflow-x: scroll;
-    scrollbar-color: #ffffff2e #ffa50000;
-  }
-  </style>
   <script defer src="/assets/libraries/gridjs.umd.js"></script>
   <h3 id="Parameters" style="padding: 10px">Parameters</h3>
   <p style="margin-left: 1vw"></p>
@@ -454,13 +432,6 @@
 </div>
 
     <div class="container" id="node_table_0_3_parameters">
-    <style>
-  .gridjs .gridjs-container {
-    scrollbar-width: auto;
-    overflow-x: scroll;
-    scrollbar-color: #ffffff2e #ffa50000;
-  }
-  </style>
   <script defer src="/assets/libraries/gridjs.umd.js"></script>
   <h3 id="Parameters" style="padding: 10px">Parameters</h3>
   <p style="margin-left: 1vw"></p>
@@ -524,13 +495,6 @@
 </div>
 
     <div class="container" id="node_table_0_3_parameters">
-    <style>
-  .gridjs .gridjs-container {
-    scrollbar-width: auto;
-    overflow-x: scroll;
-    scrollbar-color: #ffffff2e #ffa50000;
-  }
-  </style>
   <script defer src="/assets/libraries/gridjs.umd.js"></script>
   <h3 id="Parameters" style="padding: 10px">Parameters</h3>
   <p style="margin-left: 1vw"></p>
@@ -573,8 +537,8 @@
                     
                     
                     let miniSearch = new MiniSearch({
-                      fields: ['id'],
-                      storeFields: ['id', 'href'],
+                      fields: ['title', "category"],
+                      storeFields: ['title', 'path'],
                       searchOptions: {
                           prefix: true
                       }
@@ -595,13 +559,8 @@
                         searchData = await LoadData();
                         
                         if (!dataLoaded) {
-                            for (const key in searchData){
-                                for (const subkey in searchData[key]){
-                                    miniSearch.add({
-                                        "id": subkey,
-                                        "href": searchData[key][subkey],
-                                    });
-                                }
+                            for (let key in searchData) {
+                                miniSearch.add(key, key);
                             }
                             dataLoaded = true;
                         }

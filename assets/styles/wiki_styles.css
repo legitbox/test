@@ -34,9 +34,6 @@ body {
 .scroll {
     overflow-y: scroll;
     height: 100dvh;
-    scrollbar-width: auto;
-    overflow-x: scroll;
-    scrollbar-color: #ffffff80 #ffa50000;
 }
 
 h1 {
@@ -47,7 +44,7 @@ h1 {
     margin-top: -1.5vh;
     margin-left: 2vw;
     margin-right: 2vw;
-    background-color: rgba(70, 70, 70, 0.45);
+    background-color: rgba(60, 60, 60, 0.6);
     padding-top: 0.2vh;
     padding-bottom: 0.2vh;
     background-repeat: repeat;
@@ -56,14 +53,7 @@ h1 {
     transition: backdrop-filter 0.2s ease-in-out;
     backdrop-filter: blur(2px);
     will-change: backdrop-filter;
-    border: 3px solid rgba(255, 255, 255, 0.04);
-    border-left: 3px solid rgba(255, 255, 255, 0.01);
-    border-right: 3px solid rgba(255, 255, 255, 0.01);
-    border-bottom: none;
-    
-    -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.13);
-    -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.13);
-    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.13);
+    border: 3px solid rgba(255, 255, 255, 0.05);
 }
 
 
@@ -168,7 +158,7 @@ th, td{
         
 .search{
     font-family: inherit;
-    background-color: rgba(70, 70, 70, 0.45);
+    background-color: rgba(60, 60, 60, 0.6);
     backdrop-filter: blur(10px);
     font-size: 2vw;
     border-radius: 4px;
@@ -185,7 +175,7 @@ th, td{
 
 .gridjs-input{
     font-family: inherit;
-    background-color: rgba(70, 70, 70, 0.45);
+    background-color: rgba(60, 60, 60, 0.6);
     backdrop-filter: blur(10px);
     font-size: 1vw;
     border-radius: 4px;
@@ -208,8 +198,7 @@ th, td{
 
 .container {
     display: block;
-    position: relative; /* Added for pseudo-element positioning */
-    background-color: rgba(70, 70, 70, 0.45);
+    background-color: rgba(60, 60, 60, 0.6);
     padding: 5px;
     padding-right: 10px;
     margin-top: 1.5vh;
@@ -221,84 +210,15 @@ th, td{
     
     transition: backdrop-filter 1.5s ease-in-out;
     backdrop-filter: blur(0px);
-    
     will-change: backdrop-filter;
-    border: 3px solid rgba(255, 255, 255, 0.04);
-    border-left: 3px solid rgba(255, 255, 255, 0.01);
-    border-right: 3px solid rgba(255, 255, 255, 0.01);
-    
-    -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.13);
-    -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.13);
-    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.13);
-    border-bottom: none;
+    border: 3px solid rgba(255, 255, 255, 0.05);
     content-visibility: auto;
-    
-    flex: 0 0 calc(50% - 10px);
-    box-sizing: border-box;
 }
 
-.subcontainer-holder {
-    display: flex;
-    flex-wrap: wrap;
-    background-color: rgba(70, 70, 70, 0.45);
-    position: relative;
-    padding-right: 10px;
-    margin-top: 1.5vh;
-    margin-left: 10vw;
-    margin-right: 10vw;
-    border-radius: 5px;
-    
-    scrollbar-width: none;
-    
-    transition: backdrop-filter 1.5s ease-in-out;
-    backdrop-filter: blur(0px);
-    
-    will-change: backdrop-filter;
-    border: 3px solid rgba(255, 255, 255, 0.04);
-    border-left: 3px solid rgba(255, 255, 255, 0.01);
-    border-right: 3px solid rgba(255, 255, 255, 0.01);
-    
-    -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.13);
-    -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.13);
-    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.13);
-    border-bottom: none;
-    content-visibility: auto;
-    
-    flex: 0 0 calc(50% - 10px);
-    box-sizing: border-box;
-}
 
-.subcontainer {
-    position: relative;
-    background-color: rgba(70, 70, 70, 0.45);
-    padding: 5px;
-    padding-right: 10px;
-    margin: 5px;
-    border-radius: 5px;
-    
-    scrollbar-width: none;
-    
-    transition: backdrop-filter 1.5s ease-in-out;
-    backdrop-filter: blur(0px);
-    
-    will-change: backdrop-filter;
-    border: 3px solid rgba(255, 255, 255, 0.04);
-    border-left: 3px solid rgba(255, 255, 255, 0.01);
-    border-right: 3px solid rgba(255, 255, 255, 0.01);
-    
-    -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.13);
-    -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.13);
-    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.13);
-    border-bottom: none;
-    content-visibility: auto;
-    
-    box-sizing: border-box;
-    flex: 1 1 40%;
-    min-width: 0;
-}
 
 .index_container {
-    background-color: rgba(70, 70, 70, 0.45);
+    background-color: rgba(60, 60, 60, 0.6);
     padding: 5px;
     padding-right: 10px;
     margin-top: 2vh;
@@ -312,20 +232,13 @@ th, td{
     transition: backdrop-filter 1.5s ease-in-out;
     backdrop-filter: blur(0px);
     will-change: backdrop-filter, opacity;
-    border: 3px solid rgba(255, 255, 255, 0.04);
-    border-left: 3px solid rgba(255, 255, 255, 0.01);
-    border-right: 3px solid rgba(255, 255, 255, 0.01);
-    
-    -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.13);
-    -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.13);
-    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.13);
-    border-bottom: none;
+    border: 3px solid rgba(255, 255, 255, 0.05);
 }
 
 .search_container {
     opacity: 1;
     transition: opacity 0.5s ease-in-out;
-    background-color: rgba(70, 70, 70, 0.45);
+    background-color: rgba(60, 60, 60, 0.6);
     padding: 5px;
     padding-right: 10px;
     margin-top: 2vh;
@@ -340,15 +253,7 @@ th, td{
     transition: backdrop-filter 1.5s ease-in-out;
     backdrop-filter: blur(0px);
     will-change: backdrop-filter;
-    border: 3px solid rgba(255, 255, 255, 0.04);
-    border-left: 3px solid rgba(255, 255, 255, 0.01);
-    border-right: 3px solid rgba(255, 255, 255, 0.01);
-    border-bottom: none;
-    
-    -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.13);
-    -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.13);
-    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.13);
-    
+    border: 3px solid rgba(255, 255, 255, 0.05);
 }
 
 .container::-webkit-scrollbar {
@@ -356,7 +261,7 @@ th, td{
 }
 
 .inline_container {
-    background-color: rgba(70, 70, 70, 0.45);
+    background-color: rgba(60, 60, 60, 0.6);
     padding: 2px;
     padding-right: 0;
     margin-top: 2vh;
@@ -367,14 +272,7 @@ th, td{
     transition: backdrop-filter 1.5s ease-in-out;
     backdrop-filter: blur(0px);
     will-change: backdrop-filter;
-    border: 3px solid rgba(255, 255, 255, 0.04);
-    border-left: 3px solid rgba(255, 255, 255, 0.01);
-    border-right: 3px solid rgba(255, 255, 255, 0.01);
-    border-bottom: none;
-    
-    -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.13);
-    -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.13);
-    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.13);
+    border: 3px solid rgba(255, 255, 255, 0.05);
 }
 
 @media screen and (max-width: 980px) {
@@ -388,14 +286,6 @@ th, td{
     }
     .inline_container {
         transition: backdrop-filter 0.2s ease-in-out;
-    }
-    .subcontainer-holder {
-      transition: backdrop-filter 0.2s ease-in-out;
-        margin-left: 2vw;
-        margin-right: 2vw;
-    }
-    .subcontainer {
-      flex: 1 1 100%;
     }
 }
 

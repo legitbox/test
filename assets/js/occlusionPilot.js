@@ -13,6 +13,18 @@ const observer = new IntersectionObserver(
     { root: null, rootMargin: "500px", threshold: 0 }
 );
 
+if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/assets/js/workers/CacheWorker.js')
+            .then(registration => {
+                console.log('ServiceWorker registration successful');
+            })
+            .catch(err => {
+                console.log('ServiceWorker registration failed: ', err);
+            });
+    });
+}
+
 const pageData = document.getElementsByClassName("scroll");
 let blurTimeout;
 let el = pageData[0].querySelectorAll(
