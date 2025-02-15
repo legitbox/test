@@ -1,6 +1,6 @@
 
         <!DOCTYPE html>
-        <html lang="en">
+        <html lang="en" style="background: #2c2c2c">
         <head>
           <meta charset="UTF-8">
           <title>index</title>
@@ -81,16 +81,7 @@
                 let nodeHref = e.node.data.href;
                 
                 if (nodeHref !== undefined) {
-                    fetch(nodeHref, { method: "GET", cache: "force-cache" })
-                      .then((response) => {
-                        if (response.ok) {
-                          window.location = nodeHref;
-                        }
-                      })
-                      .catch((error) => {
-                        console.error("Error preloading page:", error);
-                        window.location = nodeHref;
-                      });
+                    window.location = nodeHref;
                 }
             },
           });
