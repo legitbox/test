@@ -23,12 +23,16 @@ body {
     justify-content: left;
     align-items: center;
     font-family: '', sans-serif;
-    background: url("/assets/images/end.jpg");
+    background: url("/assets/images/tech.png");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: scroll;
     background-size: cover;
+}
+
+wb-title {
+ color: rgb(255, 255, 255);
 }
 
 .scroll {

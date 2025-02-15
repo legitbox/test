@@ -87,6 +87,18 @@
     ]
   },
   {
+    "title": "Item",
+    "expanded": false,
+    "icon": "/assets/images/folder.svg",
+    "children": [
+      {
+        "title": "Cool Bannana",
+        "href": "/assets/pages/Item/cool bannana.html",
+        "icon": "assets/images/assets/example_item.png"
+      }
+    ]
+  },
+  {
     "title": "Items",
     "expanded": false,
     "icon": "/assets/images/folder.svg",

@@ -3,16 +3,16 @@
         <html lang="en">
         <head>
           <meta charset="UTF-8">
-          <title>index</title>
+          <title>Cool Bannana</title>
           <link rel="preload" href="/assets/images/tech.png as="image">
           <link rel="prefetch" href="/index.html">
           <link rel="prefetch" href="/settings.html">
           <link rel="stylesheet" href="/assets/styles/wiki_styles.css">
-          <link rel="icon" href="/assets/images/melon.png" type="image/png">
-          <meta name="description" content="index">
+          <link rel="icon" href="assets/images/assets/example_item.png" type="image/png">
+          <meta name="description" content="Cool Bannana">
           <meta name="viewport" content="width=device-width, initial-scale=1" />
-          <meta property="og:title" content="index" />
-          <meta property="og:image" content="/assets/images/melon.png"/>
+          <meta property="og:title" content="Cool Bannana" />
+          <meta property="og:image" content="assets/images/assets/example_item.png"/>
           <script>
           if ('serviceWorker' in navigator) {
             window.addEventListener('load', () => {
@@ -45,73 +45,15 @@
     hljs.highlightAll();
 });</script>
         <div class="object_name">
-<div class="object_inline_name"><h1 id="Index" style="font-size: null; text-align: center">Index</h1></div>
+<div class="object_inline_name"><h2 id="CoolBannana-spadix:bannana" style="font-size: null; text-align: center">Cool Bannana - spadix:bannana</h2></div>
             <div class="object_description">
-                <p><p>Index</p>
+                <p><p>A cool bannana, for a cool showcase!</p>
 </p>
             </div>
         </div>
         </div>
         </div>
 
-        <div class="container">
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/wunderbaum@0/dist/wunderbaum.min.css"
-    />
-    <style>
-    .wb-skeleton {
-        background-color: rgba(0,0,0,0);
-    }
-</style>
-        <script defer src="/assets/libraries/wunderbaum.umd.min.js"></script>
-        <script>
-    async function fetchJSON(url) {
-        const response = await fetch(url);
-        const data = await response.json();
-        return data;
-    }
-    async function main() {
-        const wunderbaumContainer = document.getElementById(undefined);
-        
-        
-        
-        const treeData = fetchJSON("/assets/index_list.json");
-        document.addEventListener("DOMContentLoaded", (event) => {
-          const tree = new mar10.Wunderbaum({
-            element: document.getElementById("undefined"),
-            source: treeData,
-            keyboard: false,
-            init: (e) => {
-              e.tree.setFocus();
-            },
-            activate: (e) => {
-                let nodeHref = e.node.data.href;
-                
-                if (nodeHref !== undefined) {
-                    fetch(nodeHref, { method: "GET", cache: "force-cache" })
-                      .then((response) => {
-                        if (response.ok) {
-                          window.location = nodeHref;
-                        }
-                      })
-                      .catch((error) => {
-                        console.error("Error preloading page:", error);
-                        window.location = nodeHref;
-                      });
-                }
-            },
-          });
-        });
-    }
-    main();
-  </script>
-        <div
-      id="undefined"
-      class="wb-skeleton wb-initializing wb-fade-expander"
-    ></div>
-</div>
-        
     <script src="/assets/js/LanguageHandler.js"></script>
         <script src="/assets/js/occlusionPilot.js"></script>
         <script src="/assets/js/preloadPilot.js"></script>
