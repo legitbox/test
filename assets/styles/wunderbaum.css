@@ -54,6 +54,10 @@ div.wunderbaum * {
   box-sizing: border-box;
 }
 
+div.wunderbaum:focus-visible{
+  outline-style: none;
+}
+
 div.wunderbaum {
   height: 100%;
   min-height: 4px;
@@ -107,7 +111,6 @@ div.wunderbaum div.wb-row {
   height: var(--wb-row-outer-height);
   line-height: var(--wb-row-outer-height);
   border: 1px solid transparent;
-  margin-top: 5px;
 }
 div.wunderbaum.wb-fixed-col span.wb-col:first-of-type {
   position: sticky;

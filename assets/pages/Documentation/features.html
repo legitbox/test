@@ -39,9 +39,6 @@
 <div class="description" style="all: revert;">
         <div class="object_name">
 <div class="object_inline_name"><h1 id="Features" style="font-size: null; text-align: center">Features</h1></div>
-            <div class="object_description">
-                <p></p>
-            </div>
         </div>
         </div>
         </div>
@@ -49,13 +46,10 @@
 <div class="container" id="node_head_0_2">
 <div class="description" style="all: revert;">
         <div class="object_name">
-<div class="object_inline_name"><h2 id="minecraft:aggregate_feature" style="font-size: null; text-align: left">minecraft:aggregate_feature</h2></div>
-            <div class="object_description">
-                <p><p>‘minecraft:aggregate_feature’ places a collection of features in an arbitary order. All features in the collection use the same input position. Features should not depend on each other, as there is no guarantee on the order the features will be placed.</p>
+<div class="object_inline_name"><h2 id="minecraft:aggregate_feature" style="font-size: null; text-align: left">minecraft:aggregate_feature</h2></div><div class="object_description"><p>‘minecraft:aggregate_feature’ places a collection of features in an arbitary order. All features in the collection use the same input position. Features should not depend on each other, as there is no guarantee on the order the features will be placed.</p>
 <p>Succeeds if: At lease one feature is placed successfully.</p>
 <p>Fails if: All features fail to be placed.</p>
-</p>
-            </div>
+</div>
         </div>
         </div>
         </div>
@@ -82,13 +76,10 @@
 <div class="container" id="node_head_1_2">
 <div class="description" style="all: revert;">
         <div class="object_name">
-<div class="object_inline_name"><h2 id="minecraft:sequence_feature" style="font-size: null; text-align: left">minecraft:sequence_feature</h2></div>
-            <div class="object_description">
-                <p><p>‘minecraft:sequence_feature’ places a collection of features sequentially, in the order they appear in data. The output position of the previous feature is used as the input position for the next. For example, a tree feature is placed at (0, 0, 0) and places blocks up to (0, 10, 0). The next feature in the sequence begins at (0, 10, 0).</p>
+<div class="object_inline_name"><h2 id="minecraft:sequence_feature" style="font-size: null; text-align: left">minecraft:sequence_feature</h2></div><div class="object_description"><p>‘minecraft:sequence_feature’ places a collection of features sequentially, in the order they appear in data. The output position of the previous feature is used as the input position for the next. For example, a tree feature is placed at (0, 0, 0) and places blocks up to (0, 10, 0). The next feature in the sequence begins at (0, 10, 0).</p>
 <p>Succeeds if: All features in the sequence are successfully placed.</p>
 <p>Fails if: Any feature in the sequence fails to be placed. Features that have not yet been placed at the time of failure are skipped.</p>
-</p>
-            </div>
+</div>
         </div>
         </div>
         </div>
@@ -114,13 +105,10 @@
 <div class="container" id="node_head_2_2">
 <div class="description" style="all: revert;">
         <div class="object_name">
-<div class="object_inline_name"><h2 id="minecraft:beards_and_shavers" style="font-size: null; text-align: left">minecraft:beards_and_shavers</h2></div>
-            <div class="object_description">
-                <p><p>‘minecraft:beards_and_shavers’ will build a ‘beard’ or ‘shave’ out space so as to provide a clear space for a feature to place.</p>
+<div class="object_inline_name"><h2 id="minecraft:beards_and_shavers" style="font-size: null; text-align: left">minecraft:beards_and_shavers</h2></div><div class="object_description"><p>‘minecraft:beards_and_shavers’ will build a ‘beard’ or ‘shave’ out space so as to provide a clear space for a feature to place.</p>
 <p>Succeeds if: a beard/shave is made (this should always happen).</p>
 <p>Fails if: will always return placement pos, but interior feature placement not guaranteed.</p>
-</p>
-            </div>
+</div>
         </div>
         </div>
         </div>
@@ -147,11 +135,8 @@
 <div class="container" id="node_head_3_2">
 <div class="description" style="all: revert;">
         <div class="object_name">
-<div class="object_inline_name"><h2 id="minecraft:cave_carver_feature" style="font-size: null; text-align: left">minecraft:cave_carver_feature</h2></div>
-            <div class="object_description">
-                <p><p>‘minecraft:cave_carver_feature’ carves a cave through the world in the current chunk, and in every chunk around the current chunk in an 8 radial pattern.This feature will also only work when placed specifically in the pass “pregeneration_pass”.</p>
-</p>
-            </div>
+<div class="object_inline_name"><h2 id="minecraft:cave_carver_feature" style="font-size: null; text-align: left">minecraft:cave_carver_feature</h2></div><div class="object_description"><p>‘minecraft:cave_carver_feature’ carves a cave through the world in the current chunk, and in every chunk around the current chunk in an 8 radial pattern.This feature will also only work when placed specifically in the pass “pregeneration_pass”.</p>
+</div>
         </div>
         </div>
         </div>
@@ -176,14 +161,11 @@
 <div class="container" id="node_head_4_2">
 <div class="description" style="all: revert;">
         <div class="object_name">
-<div class="object_inline_name"><h2 id="minecraft:conditional_list" style="font-size: null; text-align: left">minecraft:conditional_list</h2></div>
-            <div class="object_description">
-                <p><p>‘minecraft:conditional_list’ Places the first suitable feature within a collection.</p>
+<div class="object_inline_name"><h2 id="minecraft:conditional_list" style="font-size: null; text-align: left">minecraft:conditional_list</h2></div><div class="object_description"><p>‘minecraft:conditional_list’ Places the first suitable feature within a collection.</p>
 <p>These conditional features will be evaluated in order.</p>
 <p>Succeeds if: A condition is successfully resolved.</p>
 <p>Fails if: No condition is successfully resolved.</p>
-</p>
-            </div>
+</div>
         </div>
         </div>
         </div>
@@ -205,12 +187,9 @@
 <div class="container" id="node_head_5_2">
 <div class="description" style="all: revert;">
         <div class="object_name">
-<div class="object_inline_name"><h2 id="minecraft:fossil_feature" style="font-size: null; text-align: left">minecraft:fossil_feature</h2></div>
-            <div class="object_description">
-                <p><p>‘minecraft:fossil_feature’ generates a skeletal structure composed of bone blocks and parametric ore blocks.Succeeds if: The fossil is placed.</p>
+<div class="object_inline_name"><h2 id="minecraft:fossil_feature" style="font-size: null; text-align: left">minecraft:fossil_feature</h2></div><div class="object_description"><p>‘minecraft:fossil_feature’ generates a skeletal structure composed of bone blocks and parametric ore blocks.Succeeds if: The fossil is placed.</p>
 <p>Fails if: The fossil is not placed because it overlaps with another structure or because its bounding box has too many corners occupied by air or fluid.</p>
-</p>
-            </div>
+</div>
         </div>
         </div>
         </div>
@@ -234,12 +213,9 @@
 <div class="container" id="node_head_6_2">
 <div class="description" style="all: revert;">
         <div class="object_name">
-<div class="object_inline_name"><h2 id="minecraft:geode_feature" style="font-size: null; text-align: left">minecraft:geode_feature</h2></div>
-            <div class="object_description">
-                <p><p>‘minecraft:geode_feature’ generates a rock formation to simulate a geode. Each layer of, and block within, the geode can be replaced. Succeeds if: At least one block within the geode is placed.</p>
+<div class="object_inline_name"><h2 id="minecraft:geode_feature" style="font-size: null; text-align: left">minecraft:geode_feature</h2></div><div class="object_description"><p>‘minecraft:geode_feature’ generates a rock formation to simulate a geode. Each layer of, and block within, the geode can be replaced. Succeeds if: At least one block within the geode is placed.</p>
 <p>Fails if: All blocks within the geode fail to be placed.</p>
-</p>
-            </div>
+</div>
         </div>
         </div>
         </div>
@@ -289,13 +265,10 @@
 <div class="container" id="node_head_7_2">
 <div class="description" style="all: revert;">
         <div class="object_name">
-<div class="object_inline_name"><h2 id="minecraft:growing_plant_feature" style="font-size: null; text-align: left">minecraft:growing_plant_feature</h2></div>
-            <div class="object_description">
-                <p><p>‘minecraft:growing_plant_feature’ places a growing plant in the world. A growing plant is a column that is anchored either to the ceiling or the floor, based on its growth direction.</p>
+<div class="object_inline_name"><h2 id="minecraft:growing_plant_feature" style="font-size: null; text-align: left">minecraft:growing_plant_feature</h2></div><div class="object_description"><p>‘minecraft:growing_plant_feature’ places a growing plant in the world. A growing plant is a column that is anchored either to the ceiling or the floor, based on its growth direction.</p>
 <p>The growing plant has a body and a head, where the head is the tip of the plant, and the body consists of the remainder blocks.</p>
 <p>This feature can be used to define growing plants with variable body and head blocks, e.g. Cave Vines.</p>
-</p>
-            </div>
+</div>
         </div>
         </div>
         </div>
@@ -333,11 +306,8 @@
 <div class="container" id="node_head_8_2">
 <div class="description" style="all: revert;">
         <div class="object_name">
-<div class="object_inline_name"><h2 id="minecraft:nether_cave_carver_feature" style="font-size: null; text-align: left">minecraft:nether_cave_carver_feature</h2></div>
-            <div class="object_description">
-                <p><p>‘minecraft:nether_cave_carver_feature’ carves a cave through the Nether in the current chunk, and in every chunk around the current chunk in an 8 radial pattern.This feature will also only work when placed specifically in the pass “pregeneration_pass”.</p>
-</p>
-            </div>
+<div class="object_inline_name"><h2 id="minecraft:nether_cave_carver_feature" style="font-size: null; text-align: left">minecraft:nether_cave_carver_feature</h2></div><div class="object_description"><p>‘minecraft:nether_cave_carver_feature’ carves a cave through the Nether in the current chunk, and in every chunk around the current chunk in an 8 radial pattern.This feature will also only work when placed specifically in the pass “pregeneration_pass”.</p>
+</div>
         </div>
         </div>
         </div>
@@ -361,14 +331,11 @@
 <div class="container" id="node_head_9_2">
 <div class="description" style="all: revert;">
         <div class="object_name">
-<div class="object_inline_name"><h2 id="minecraft:multiface_feature" style="font-size: null; text-align: left">minecraft:multiface_feature</h2></div>
-            <div class="object_description">
-                <p><p>‘minecraft:multiface_feature’ places one or a few multiface blocks on floors/walls/ceilings. Despite the name, any block can be placed by this feature. During placement, existing world blocks are checked to see if this feature can be placed on them based on the list provided in the ‘can_place_on’ field. If no ‘can_replace_on’ field is specified, the ‘place_block’ block can be placed on any existing block.</p>
+<div class="object_inline_name"><h2 id="minecraft:multiface_feature" style="font-size: null; text-align: left">minecraft:multiface_feature</h2></div><div class="object_description"><p>‘minecraft:multiface_feature’ places one or a few multiface blocks on floors/walls/ceilings. Despite the name, any block can be placed by this feature. During placement, existing world blocks are checked to see if this feature can be placed on them based on the list provided in the ‘can_place_on’ field. If no ‘can_replace_on’ field is specified, the ‘place_block’ block can be placed on any existing block.</p>
 <p>This feature will also try to spread the ‘place_block’ block around the location in world the feature is placed.</p>
 <p>Succeeds if: At least one block is successfully placed.</p>
 <p>Fails if: All block placements fail.</p>
-</p>
-            </div>
+</div>
         </div>
         </div>
         </div>
@@ -399,13 +366,10 @@
 <div class="container" id="node_head_10_2">
 <div class="description" style="all: revert;">
         <div class="object_name">
-<div class="object_inline_name"><h2 id="minecraft:ore_feature" style="font-size: null; text-align: left">minecraft:ore_feature</h2></div>
-            <div class="object_description">
-                <p><p>‘minecraft:ore_feature’ places a vein of blocks to simulate ore deposits. Despite the name, any block can be placed by this feature. During placement, existing world blocks are checked to see if they can be replaced by the new ore block based on the list provided in the ‘may_replace’ field of a ‘replace_rules’ entry. If no ‘may_replace’ field is specified in a ‘replace_rule’ entry, the ore block can replace any existing block.</p>
+<div class="object_inline_name"><h2 id="minecraft:ore_feature" style="font-size: null; text-align: left">minecraft:ore_feature</h2></div><div class="object_description"><p>‘minecraft:ore_feature’ places a vein of blocks to simulate ore deposits. Despite the name, any block can be placed by this feature. During placement, existing world blocks are checked to see if they can be replaced by the new ore block based on the list provided in the ‘may_replace’ field of a ‘replace_rules’ entry. If no ‘may_replace’ field is specified in a ‘replace_rule’ entry, the ore block can replace any existing block.</p>
 <p>Succeeds if: At least one ore block is successfully placed.</p>
 <p>Fails if: All ore block placements fail.</p>
-</p>
-            </div>
+</div>
         </div>
         </div>
         </div>
@@ -471,11 +435,8 @@
 <div class="container" id="node_head_11_2">
 <div class="description" style="all: revert;">
         <div class="object_name">
-<div class="object_inline_name"><h2 id="minecraft:partially_exposed_blob_feature" style="font-size: null; text-align: left">minecraft:partially_exposed_blob_feature</h2></div>
-            <div class="object_description">
-                <p><p>‘minecraft:partially_exposed_blob_feature’ generates a blob of the specified block with the specified dimensions For the most part the blob is embedded in the specified surface, however a single side is allowed to be exposed.</p>
-</p>
-            </div>
+<div class="object_inline_name"><h2 id="minecraft:partially_exposed_blob_feature" style="font-size: null; text-align: left">minecraft:partially_exposed_blob_feature</h2></div><div class="object_description"><p>‘minecraft:partially_exposed_blob_feature’ generates a blob of the specified block with the specified dimensions For the most part the blob is embedded in the specified surface, however a single side is allowed to be exposed.</p>
+</div>
         </div>
         </div>
         </div>
@@ -501,13 +462,10 @@
 <div class="container" id="node_head_12_2">
 <div class="description" style="all: revert;">
         <div class="object_name">
-<div class="object_inline_name"><h2 id="minecraft:rect_layout" style="font-size: null; text-align: left">minecraft:rect_layout</h2></div>
-            <div class="object_description">
-                <p><p>‘minecraft:rect_layout’ scans the surface of a Chunk, calling place() on the surface of each block column.</p>
+<div class="object_inline_name"><h2 id="minecraft:rect_layout" style="font-size: null; text-align: left">minecraft:rect_layout</h2></div><div class="object_description"><p>‘minecraft:rect_layout’ scans the surface of a Chunk, calling place() on the surface of each block column.</p>
 <p>Succeeds if: A Feature is successfully placed within a Chunk.</p>
 <p>Fails if: No Feature could be placed within a Chunk.</p>
-</p>
-            </div>
+</div>
         </div>
         </div>
         </div>
@@ -535,13 +493,10 @@
 <div class="container" id="node_head_13_2">
 <div class="description" style="all: revert;">
         <div class="object_name">
-<div class="object_inline_name"><h2 id="minecraft:scan_surface" style="font-size: null; text-align: left">minecraft:scan_surface</h2></div>
-            <div class="object_description">
-                <p><p>‘minecraft:scan_surface’ scans the surface of a Chunk, calling place() on the surface of each block column.</p>
+<div class="object_inline_name"><h2 id="minecraft:scan_surface" style="font-size: null; text-align: left">minecraft:scan_surface</h2></div><div class="object_description"><p>‘minecraft:scan_surface’ scans the surface of a Chunk, calling place() on the surface of each block column.</p>
 <p>Succeeds if: A Feature was successfully placed during the scan.</p>
 <p>Fails if: No Feature was placed during the course of the scan.</p>
-</p>
-            </div>
+</div>
         </div>
         </div>
         </div>
@@ -556,13 +511,10 @@
 <div class="container" id="node_head_14_2">
 <div class="description" style="all: revert;">
         <div class="object_name">
-<div class="object_inline_name"><h2 id="minecraft:scatter_feature" style="font-size: null; text-align: left">minecraft:scatter_feature</h2></div>
-            <div class="object_description">
-                <p><p>‘minecraft:scatter_feature’ scatters a feature throughout a chunk. The ‘x’, ‘y’, and ‘z’ fields are per-coordinate parameters. Note that coordinates represent an offset from the input position, not an absolute position. Coordinates may be a single value, a random distribution, or Molang expression that resolves to a numeric value. The ‘coordinate_eval_order’ field is provided for finer control of coordinate resolution (particularly when using the ‘grid’ distribution). ‘iterations’ controls how many individual placements should occur if the ‘scatter_chance’ check succeeds. The ‘scatter_chance’ check happens once, so either all placements will run or none will.</p>
+<div class="object_inline_name"><h2 id="minecraft:scatter_feature" style="font-size: null; text-align: left">minecraft:scatter_feature</h2></div><div class="object_description"><p>‘minecraft:scatter_feature’ scatters a feature throughout a chunk. The ‘x’, ‘y’, and ‘z’ fields are per-coordinate parameters. Note that coordinates represent an offset from the input position, not an absolute position. Coordinates may be a single value, a random distribution, or Molang expression that resolves to a numeric value. The ‘coordinate_eval_order’ field is provided for finer control of coordinate resolution (particularly when using the ‘grid’ distribution). ‘iterations’ controls how many individual placements should occur if the ‘scatter_chance’ check succeeds. The ‘scatter_chance’ check happens once, so either all placements will run or none will.</p>
 <p>Succeeds if: At least one feature placement succeeds.</p>
 <p>Fails if: All feature placements fail.</p>
-</p>
-            </div>
+</div>
         </div>
         </div>
         </div>
@@ -598,11 +550,8 @@
 <div class="container" id="node_head_15_2">
 <div class="description" style="all: revert;">
         <div class="object_name">
-<div class="object_inline_name"><h2 id="minecraft:sculk_patch_feature" style="font-size: null; text-align: left">minecraft:sculk_patch_feature</h2></div>
-            <div class="object_description">
-                <p><p>Feature type ‘minecraft:sculk_patch_feature’ has not yet been documented.</p>
-</p>
-            </div>
+<div class="object_inline_name"><h2 id="minecraft:sculk_patch_feature" style="font-size: null; text-align: left">minecraft:sculk_patch_feature</h2></div><div class="object_description"><p>Feature type ‘minecraft:sculk_patch_feature’ has not yet been documented.</p>
+</div>
         </div>
         </div>
         </div>
@@ -610,13 +559,10 @@
 <div class="container" id="node_head_16_2">
 <div class="description" style="all: revert;">
         <div class="object_name">
-<div class="object_inline_name"><h2 id="minecraft:search_feature" style="font-size: null; text-align: left">minecraft:search_feature</h2></div>
-            <div class="object_description">
-                <p><p>‘minecraft:search_feature’ sweeps a volume searching for a valid placement location for its referenced feature. The ‘search_volume’ field specifies the axis-aligned bounding box that defines the boundaries of the search. The search sweeps along the axis defined by the ‘search_axis’ field, layer by layer. For example, if ‘search_axis’ = ‘-x’, blocks with greater x values will be checked before blocks with lower x values. Each layer is searched from the bottom-left to the top-right before moving to the next layer along the axis. By default, only one valid position must be found, but this can be altered by specifying the ‘required_successes’ field. If fewer than the required successes are found, no placement will occur.</p>
+<div class="object_inline_name"><h2 id="minecraft:search_feature" style="font-size: null; text-align: left">minecraft:search_feature</h2></div><div class="object_description"><p>‘minecraft:search_feature’ sweeps a volume searching for a valid placement location for its referenced feature. The ‘search_volume’ field specifies the axis-aligned bounding box that defines the boundaries of the search. The search sweeps along the axis defined by the ‘search_axis’ field, layer by layer. For example, if ‘search_axis’ = ‘-x’, blocks with greater x values will be checked before blocks with lower x values. Each layer is searched from the bottom-left to the top-right before moving to the next layer along the axis. By default, only one valid position must be found, but this can be altered by specifying the ‘required_successes’ field. If fewer than the required successes are found, no placement will occur.</p>
 <p>Succeeds if: The number of valid positions is equal to the value specified by ‘required_successes’.</p>
 <p>Fails if: The number of valid positions is less than the value specified by ‘required_successes’.</p>
-</p>
-            </div>
+</div>
         </div>
         </div>
         </div>
@@ -645,13 +591,10 @@
 <div class="container" id="node_head_17_2">
 <div class="description" style="all: revert;">
         <div class="object_name">
-<div class="object_inline_name"><h2 id="minecraft:single_block_feature" style="font-size: null; text-align: left">minecraft:single_block_feature</h2></div>
-            <div class="object_description">
-                <p><p>‘minecraft:single_block_feature’ places a single block in the world. The ‘places_block’ field supports a single block or a list of weighted blocks, where the weight defines how likely it is for that block to be selected. The ‘may_attach_to’ and ‘may_replace’ fields are allowlists which specify where the block can be placed. If these fields are omitted, the block can be placed anywhere. The ‘may_not_attach_to’ field is a denylist that specifies what blocks can’t be close to the placement location. The ‘randomize_rotation’ field will randomize the block’s cardinal orientation. The block’s internal survivability and placement rules can optionally be enforced with the ‘enforce_survivability_rules’ and ‘enforce_placement_rules’ fields. These rules are specified per-block and are typically designed to produce high quality gameplay or natural behavior. However, enabling this enforcement may make it harder to debug placement failures.</p>
+<div class="object_inline_name"><h2 id="minecraft:single_block_feature" style="font-size: null; text-align: left">minecraft:single_block_feature</h2></div><div class="object_description"><p>‘minecraft:single_block_feature’ places a single block in the world. The ‘places_block’ field supports a single block or a list of weighted blocks, where the weight defines how likely it is for that block to be selected. The ‘may_attach_to’ and ‘may_replace’ fields are allowlists which specify where the block can be placed. If these fields are omitted, the block can be placed anywhere. The ‘may_not_attach_to’ field is a denylist that specifies what blocks can’t be close to the placement location. The ‘randomize_rotation’ field will randomize the block’s cardinal orientation. The block’s internal survivability and placement rules can optionally be enforced with the ‘enforce_survivability_rules’ and ‘enforce_placement_rules’ fields. These rules are specified per-block and are typically designed to produce high quality gameplay or natural behavior. However, enabling this enforcement may make it harder to debug placement failures.</p>
 <p>Succeeds if: The block is successfully placed in the world.</p>
 <p>Fails if: The block fails to be placed.</p>
-</p>
-            </div>
+</div>
         </div>
         </div>
         </div>
@@ -702,11 +645,8 @@
 <div class="container" id="node_head_18_2">
 <div class="description" style="all: revert;">
         <div class="object_name">
-<div class="object_inline_name"><h2 id="minecraft:snap_to_surface_feature" style="font-size: null; text-align: left">minecraft:snap_to_surface_feature</h2></div>
-            <div class="object_description">
-                <p><p>‘minecraft:snap_to_surface_feature’ snaps the y-value of a feature placement pos to the floor or the ceiling within the provided ‘vertical_search_range’. The placement biome is preserved. If the snap position goes outside of the placement biome, placement will fail.</p>
-</p>
-            </div>
+<div class="object_inline_name"><h2 id="minecraft:snap_to_surface_feature" style="font-size: null; text-align: left">minecraft:snap_to_surface_feature</h2></div><div class="object_description"><p>‘minecraft:snap_to_surface_feature’ snaps the y-value of a feature placement pos to the floor or the ceiling within the provided ‘vertical_search_range’. The placement biome is preserved. If the snap position goes outside of the placement biome, placement will fail.</p>
+</div>
         </div>
         </div>
         </div>
@@ -736,13 +676,10 @@
 <div class="container" id="node_head_19_2">
 <div class="description" style="all: revert;">
         <div class="object_name">
-<div class="object_inline_name"><h2 id="minecraft:structure_template_feature" style="font-size: null; text-align: left">minecraft:structure_template_feature</h2></div>
-            <div class="object_description">
-                <p><p>‘minecraft:structure_template_feature’ places a structure in the world. The structure must be stored as a .mcstructure file in the “structures” subdirectory of a behavior pack. It is possible to reference structures that are part of other behavior packs, they do not need to come from the same behavior pack as this feature. Constraints can be defined to specify where the structure is allowed to be placed. During placement, the feature will search for a position within the ‘adjustment_radius’ that satisfies all constraints. If none are found, the structure will not be placed.</p>
+<div class="object_inline_name"><h2 id="minecraft:structure_template_feature" style="font-size: null; text-align: left">minecraft:structure_template_feature</h2></div><div class="object_description"><p>‘minecraft:structure_template_feature’ places a structure in the world. The structure must be stored as a .mcstructure file in the “structures” subdirectory of a behavior pack. It is possible to reference structures that are part of other behavior packs, they do not need to come from the same behavior pack as this feature. Constraints can be defined to specify where the structure is allowed to be placed. During placement, the feature will search for a position within the ‘adjustment_radius’ that satisfies all constraints. If none are found, the structure will not be placed.</p>
 <p>Succeeds if: The structure is placed in the world.</p>
 <p>Fails if: The structure fails to be placed within the world.</p>
-</p>
-            </div>
+</div>
         </div>
         </div>
         </div>
@@ -775,11 +712,8 @@
 <div class="container" id="node_head_20_2">
 <div class="description" style="all: revert;">
         <div class="object_name">
-<div class="object_inline_name"><h2 id="minecraft:surface_relative_threshold_feature" style="font-size: null; text-align: left">minecraft:surface_relative_threshold_feature</h2></div>
-            <div class="object_description">
-                <p><p>‘minecraft:surface_relative_threshold_feature’ determines whether the provided position is below the estimated surface level of the world, and places a feature if so.If the provided position is above configured surface or the surface is not available, placement will fail. This feature only works for Overworld generators using world generation 1.18 or later.</p>
-</p>
-            </div>
+<div class="object_inline_name"><h2 id="minecraft:surface_relative_threshold_feature" style="font-size: null; text-align: left">minecraft:surface_relative_threshold_feature</h2></div><div class="object_description"><p>‘minecraft:surface_relative_threshold_feature’ determines whether the provided position is below the estimated surface level of the world, and places a feature if so.If the provided position is above configured surface or the surface is not available, placement will fail. This feature only works for Overworld generators using world generation 1.18 or later.</p>
+</div>
         </div>
         </div>
         </div>
@@ -803,12 +737,9 @@
 <div class="container" id="node_head_21_2">
 <div class="description" style="all: revert;">
         <div class="object_name">
-<div class="object_inline_name"><h2 id="minecraft:underwater_cave_carver_feature" style="font-size: null; text-align: left">minecraft:underwater_cave_carver_feature</h2></div>
-            <div class="object_description">
-                <p><p>‘minecraft:underwater_cave_carver_feature’ carves a cave through the world in the current chunk, and in every chunk around the current chunk in an 8 radial pattern.This feature will specifically target creating caves only below sea level.</p>
+<div class="object_inline_name"><h2 id="minecraft:underwater_cave_carver_feature" style="font-size: null; text-align: left">minecraft:underwater_cave_carver_feature</h2></div><div class="object_description"><p>‘minecraft:underwater_cave_carver_feature’ carves a cave through the world in the current chunk, and in every chunk around the current chunk in an 8 radial pattern.This feature will specifically target creating caves only below sea level.</p>
 <p>This feature will also only work when placed specifically in the pass “pregeneration_pass”.</p>
-</p>
-            </div>
+</div>
         </div>
         </div>
         </div>
@@ -833,14 +764,11 @@
 <div class="container" id="node_head_22_2">
 <div class="description" style="all: revert;">
         <div class="object_name">
-<div class="object_inline_name"><h2 id="minecraft:tree_feature" style="font-size: null; text-align: left">minecraft:tree_feature</h2></div>
-            <div class="object_description">
-                <p><p>‘minecraft:tree_feature’ will place a tree in the world. A tree consists of a column that is anchored to a base block with set parameters for what it can be placed on and canopy that extends from the column.</p>
+<div class="object_inline_name"><h2 id="minecraft:tree_feature" style="font-size: null; text-align: left">minecraft:tree_feature</h2></div><div class="object_description"><p>‘minecraft:tree_feature’ will place a tree in the world. A tree consists of a column that is anchored to a base block with set parameters for what it can be placed on and canopy that extends from the column.</p>
 <p>Trees support multiple types of canopies, trunks, and roots. Trees will only grow in certain biomes if the ‘may_grow_on’ property includes the blocks commonly found on the surface of that biome.</p>
 <p>Succeeds if: The tree is placed in the world.</p>
 <p>Fails if: The tree fails to be placed within the world.</p>
-</p>
-            </div>
+</div>
         </div>
         </div>
         </div>
@@ -953,13 +881,10 @@
 <div class="container" id="node_head_23_2">
 <div class="description" style="all: revert;">
         <div class="object_name">
-<div class="object_inline_name"><h2 id="minecraft:vegetation_patch_feature" style="font-size: null; text-align: left">minecraft:vegetation_patch_feature</h2></div>
-            <div class="object_description">
-                <p><p>‘minecraft:vegetation_patch_feature’ scatters a vegetation feature in an area. The vegetation feature’s appearance can be modified by adjusting the radius and depth that it will generate.</p>
+<div class="object_inline_name"><h2 id="minecraft:vegetation_patch_feature" style="font-size: null; text-align: left">minecraft:vegetation_patch_feature</h2></div><div class="object_description"><p>‘minecraft:vegetation_patch_feature’ scatters a vegetation feature in an area. The vegetation feature’s appearance can be modified by adjusting the radius and depth that it will generate.</p>
 <p>Succeeds if: At least one ground base block was placed.</p>
 <p>Fails if: No ground base blocks were placed.</p>
-</p>
-            </div>
+</div>
         </div>
         </div>
         </div>
@@ -1010,13 +935,10 @@
 <div class="container" id="node_head_24_2">
 <div class="description" style="all: revert;">
         <div class="object_name">
-<div class="object_inline_name"><h2 id="minecraft:weighted_random_feature" style="font-size: null; text-align: left">minecraft:weighted_random_feature</h2></div>
-            <div class="object_description">
-                <p><p>‘minecraft:weighted_random_feature’ randomly selects and places a feature based on a weight value. Weights are relative, with higher values making selection more likely.</p>
+<div class="object_inline_name"><h2 id="minecraft:weighted_random_feature" style="font-size: null; text-align: left">minecraft:weighted_random_feature</h2></div><div class="object_description"><p>‘minecraft:weighted_random_feature’ randomly selects and places a feature based on a weight value. Weights are relative, with higher values making selection more likely.</p>
 <p>Succeeds if: The selected feature is placed.</p>
 <p>Fails if: The selected feature fails to be placed.</p>
-</p>
-            </div>
+</div>
         </div>
         </div>
         </div>

@@ -176,6 +176,7 @@ th, td{
     padding-top: 1vh;
     padding-bottom: 1vh;
     color: #ceb6ff;
+    min-width: 10vw;
 }
 
 .gridjs-input{

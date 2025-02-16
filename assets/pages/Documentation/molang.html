@@ -39,9 +39,6 @@
 <div class="description" style="all: revert;">
         <div class="object_name">
 <div class="object_inline_name"><h1 id="Molang" style="font-size: null; text-align: center">Molang</h1></div>
-            <div class="object_description">
-                <p></p>
-            </div>
         </div>
         </div>
         </div>
@@ -49,11 +46,8 @@
 <div class="container" id="node_head_0_2">
 <div class="description" style="all: revert;">
         <div class="object_name">
-<div class="object_inline_name"><h2 id="CaseSensitivity" style="font-size: null; text-align: left">Case Sensitivity</h2></div>
-            <div class="object_description">
-                <p><p>All things in Molang are case-INsensitive, with the exception of strings, which maintain the case provided.</p>
-</p>
-            </div>
+<div class="object_inline_name"><h2 id="CaseSensitivity" style="font-size: null; text-align: left">Case Sensitivity</h2></div><div class="object_description"><p>All things in Molang are case-INsensitive, with the exception of strings, which maintain the case provided.</p>
+</div>
         </div>
         </div>
         </div>
@@ -97,9 +91,7 @@
 <div class="container" id="node_head_3_2">
 <div class="description" style="all: revert;">
         <div class="object_name">
-<div class="object_inline_name"><h2 id="Variables" style="font-size: null; text-align: left">Variables</h2></div>
-            <div class="object_description">
-                <p><p>There are three variable lifetimes a variable may belong to: Temporary, Entity, and Context:</p>
+<div class="object_inline_name"><h2 id="Variables" style="font-size: null; text-align: left">Variables</h2></div><div class="object_description"><p>There are three variable lifetimes a variable may belong to: Temporary, Entity, and Context:</p>
 <ul>
 <li>
 <p>Temporary variables (eg: <code>temp.moo = 1;</code>) are read/write and valid for the scope they are defined in, as per C rules.  For performance reasons their lifetime is global to the current expression execution and may return a valid value outside of the outermost scope they are defined in for an expression.  Be careful in complex expressions.  We will be adding content errors for invalid accesses as soon as possible.</p>
@@ -111,8 +103,7 @@
 <p>Context variables (eg: <code>context.moo</code>) are read-only and specified by the game in certain situations. Details on what variables are specified and when will be available in the documentation of the area where that Molang expression is used (such as behaviors defining what context variables they expose).</p>
 </li>
 </ul>
-</p>
-            </div>
+</div>
         </div>
         </div>
         </div>
@@ -121,9 +112,6 @@
 <div class="description" style="all: revert;">
         <div class="object_name">
 <div class="object_inline_name"><h2 id="Values" style="font-size: null; text-align: left">Values</h2></div>
-            <div class="object_description">
-                <p></p>
-            </div>
         </div>
         </div>
         </div>
@@ -131,9 +119,7 @@
 <div class="container" id="node_head_0_3">
 <div class="description" style="all: revert;">
         <div class="object_name">
-
-            <div class="object_description">
-                <p><ul>
+<div class="object_description"><ul>
 <li>
 <p>All numerical values are floats.</p>
 </li>
@@ -150,8 +136,7 @@
 <p>Other supported types are:</p>
 </li>
 </ul>
-</p>
-            </div>
+</div>
         </div>
         </div>
         </div>
@@ -172,13 +157,10 @@ Struct (see 'structs' section below)</code></pre>
 <div class="container" id="node_head_2_3">
 <div class="description" style="all: revert;">
         <div class="object_name">
-
-            <div class="object_description">
-                <p><ul>
+<div class="object_description"><ul>
 <li>Errors (such as divide by zero, missing variables, null references, etc) generally return a value of 0.0.</li>
 </ul>
-</p>
-            </div>
+</div>
         </div>
         </div>
         </div>
@@ -186,11 +168,8 @@ Struct (see 'structs' section below)</code></pre>
 <div class="container" id="node_head_5_2">
 <div class="description" style="all: revert;">
         <div class="object_name">
-<div class="object_inline_name"><h2 id="QueryFunctions" style="font-size: null; text-align: left">Query Functions</h2></div>
-            <div class="object_description">
-                <p><p>Query functions (eg: <code>query.is_baby</code> or <code>query.is_item_equipped('main_hand')</code>) allow expressions to read game data.  If a query function takes no arguments, do not use parentheses. Otherwise, use parentheses and separate arguments with commas. For a full list of query functions, see below.</p>
-</p>
-            </div>
+<div class="object_inline_name"><h2 id="QueryFunctions" style="font-size: null; text-align: left">Query Functions</h2></div><div class="object_description"><p>Query functions (eg: <code>query.is_baby</code> or <code>query.is_item_equipped('main_hand')</code>) allow expressions to read game data.  If a query function takes no arguments, do not use parentheses. Otherwise, use parentheses and separate arguments with commas. For a full list of query functions, see below.</p>
+</div>
         </div>
         </div>
         </div>
@@ -198,11 +177,8 @@ Struct (see 'structs' section below)</code></pre>
 <div class="container" id="node_head_6_2">
 <div class="description" style="all: revert;">
         <div class="object_name">
-<div class="object_inline_name"><h2 id="Aliases" style="font-size: null; text-align: left">Aliases</h2></div>
-            <div class="object_description">
-                <p><p>To reduce typing burden and increase clarity when reading and writing Molang, the following keyword aliases can make life a bit easier.  Note that left and right sides function identically.</p>
-</p>
-            </div>
+<div class="object_inline_name"><h2 id="Aliases" style="font-size: null; text-align: left">Aliases</h2></div><div class="object_description"><p>To reduce typing burden and increase clarity when reading and writing Molang, the following keyword aliases can make life a bit easier.  Note that left and right sides function identically.</p>
+</div>
         </div>
         </div>
         </div>
@@ -228,11 +204,8 @@ Struct (see 'structs' section below)</code></pre>
 <div class="container" id="node_head_1_3">
 <div class="description" style="all: revert;">
         <div class="object_name">
-
-            <div class="object_description">
-                <p><p>As an example…</p>
-</p>
-            </div>
+<div class="object_description"><p>As an example…</p>
+</div>
         </div>
         </div>
         </div>
@@ -247,11 +220,8 @@ Struct (see 'structs' section below)</code></pre>
 <div class="container" id="node_head_3_3">
 <div class="description" style="all: revert;">
         <div class="object_name">
-
-            <div class="object_description">
-                <p><p>…can also be written as:</p>
-</p>
-            </div>
+<div class="object_description"><p>…can also be written as:</p>
+</div>
         </div>
         </div>
         </div>
@@ -266,11 +236,8 @@ Struct (see 'structs' section below)</code></pre>
 <div class="container" id="node_head_5_3">
 <div class="description" style="all: revert;">
         <div class="object_name">
-
-            <div class="object_description">
-                <p><p>Either syntax will work, and can be intermixed as desired. eg:</p>
-</p>
-            </div>
+<div class="object_description"><p>Either syntax will work, and can be intermixed as desired. eg:</p>
+</div>
         </div>
         </div>
         </div>
@@ -285,11 +252,8 @@ Struct (see 'structs' section below)</code></pre>
 <div class="container" id="node_head_7_2">
 <div class="description" style="all: revert;">
         <div class="object_name">
-<div class="object_inline_name"><h2 id="Structs" style="font-size: null; text-align: left">Structs</h2></div>
-            <div class="object_description">
-                <p><p>Structures of data, unlike C, are implicitly defined by usage.  Their purpose is to more efficiently pass data around, such as passing <code>v.location</code> rather than <code>v.x</code>, <code>v.y</code>, and <code>v.z</code>.  eg:</p>
-</p>
-            </div>
+<div class="object_inline_name"><h2 id="Structs" style="font-size: null; text-align: left">Structs</h2></div><div class="object_description"><p>Structures of data, unlike C, are implicitly defined by usage.  Their purpose is to more efficiently pass data around, such as passing <code>v.location</code> rather than <code>v.x</code>, <code>v.y</code>, and <code>v.z</code>.  eg:</p>
+</div>
         </div>
         </div>
         </div>
@@ -307,11 +271,8 @@ v.another_mobs_location = v.another_mob_set_elsewhere->v.location;</code></pre>
 <div class="container" id="node_head_1_3">
 <div class="description" style="all: revert;">
         <div class="object_name">
-
-            <div class="object_description">
-                <p><p>For some more usage examples, each of the following expressions return 1.23</p>
-</p>
-            </div>
+<div class="object_description"><p>For some more usage examples, each of the following expressions return 1.23</p>
+</div>
         </div>
         </div>
         </div>
@@ -354,11 +315,8 @@ v.another_mobs_location = v.another_mob_set_elsewhere->v.location;</code></pre>
 <div class="container" id="node_head_7_3">
 <div class="description" style="all: revert;">
         <div class="object_name">
-
-            <div class="object_description">
-                <p><p>Note that structures can be arbitrarily deep in their nesting/recursiveness.  That said, it is recommended that you don’t copy full structures inside other structures to avoid exploding memory, and not making structures too deep as there is a slight performance cost for each layer.</p>
-</p>
-            </div>
+<div class="object_description"><p>Note that structures can be arbitrarily deep in their nesting/recursiveness.  That said, it is recommended that you don’t copy full structures inside other structures to avoid exploding memory, and not making structures too deep as there is a slight performance cost for each layer.</p>
+</div>
         </div>
         </div>
         </div>
@@ -366,12 +324,9 @@ v.another_mobs_location = v.another_mob_set_elsewhere->v.location;</code></pre>
 <div class="container" id="node_head_8_2">
 <div class="description" style="all: revert;">
         <div class="object_name">
-<div class="object_inline_name"><h2 id="Strings" style="font-size: null; text-align: left">Strings</h2></div>
-            <div class="object_description">
-                <p><p>Strings in Molang are surrounded by single quotes, eg: <code>'minecraft:pig'</code> or <code>'hello world!'</code>. An empty string is defined as two consecutive single quotes.  String operations only support <code>==</code> and <code>!=</code> at this time.</p>
+<div class="object_inline_name"><h2 id="Strings" style="font-size: null; text-align: left">Strings</h2></div><div class="object_description"><p>Strings in Molang are surrounded by single quotes, eg: <code>'minecraft:pig'</code> or <code>'hello world!'</code>. An empty string is defined as two consecutive single quotes.  String operations only support <code>==</code> and <code>!=</code> at this time.</p>
 <p>Note: strings don’t support the ’ character as there is no support for escape characters at this time.</p>
-</p>
-            </div>
+</div>
         </div>
         </div>
         </div>
@@ -398,9 +353,6 @@ v.another_mobs_location = v.another_mob_set_elsewhere->v.location;</code></pre>
 <div class="description" style="all: revert;">
         <div class="object_name">
 <div class="object_inline_name"><h2 id="->ArrowOperator" style="font-size: null; text-align: left">->  Arrow Operator</h2></div>
-            <div class="object_description">
-                <p></p>
-            </div>
         </div>
         </div>
         </div>
@@ -408,12 +360,9 @@ v.another_mobs_location = v.another_mob_set_elsewhere->v.location;</code></pre>
 <div class="container" id="node_head_0_3">
 <div class="description" style="all: revert;">
         <div class="object_name">
-
-            <div class="object_description">
-                <p><p>Some return values of query function, or values stored in temp/entity/context variables can be a reference to another entity.  The <code>-&gt;</code> operator allows an expression to access variables or run queries on that entity.  For example, the example below will find all pigs within four meters of the current entity (including itself if it’s a pig), and increment a variable <code>v.x</code> on itself if the block immediately above each pig is flammable (such as an oak button) :</p>
+<div class="object_description"><p>Some return values of query function, or values stored in temp/entity/context variables can be a reference to another entity.  The <code>-&gt;</code> operator allows an expression to access variables or run queries on that entity.  For example, the example below will find all pigs within four meters of the current entity (including itself if it’s a pig), and increment a variable <code>v.x</code> on itself if the block immediately above each pig is flammable (such as an oak button) :</p>
 <p>Note that in the case where the left-hand side of the <code>-&gt;</code> operator has an error (value is null, the entity was killed previously, or some other issue), the expression will not evaluate the right-hand side and will return 0. This implementation style was a choice between performance and not requiring content creators to overly worry about checking for potentially bad values everywhere.</p>
-</p>
-            </div>
+</div>
         </div>
         </div>
         </div>
@@ -432,9 +381,6 @@ for_each(v.pig, query.get_nearby_entities(4, 'minecraft:pig'), {
 <div class="description" style="all: revert;">
         <div class="object_name">
 <div class="object_inline_name"><h3 id="PublicVariables" style="font-size: null; text-align: left">Public Variables</h3></div>
-            <div class="object_description">
-                <p></p>
-            </div>
         </div>
         </div>
         </div>
@@ -442,11 +388,8 @@ for_each(v.pig, query.get_nearby_entities(4, 'minecraft:pig'), {
 <div class="container" id="node_head_0_4">
 <div class="description" style="all: revert;">
         <div class="object_name">
-
-            <div class="object_description">
-                <p><p>In general, variables of a mob are considered private to that mob and cannot be accessed by another.  To expose read-only access of a variable to other mobs, you need to set the ‘public’ setting on that variable in the owning entity’s resource definition.  It is also recommended to default-initialize the variable.</p>
-</p>
-            </div>
+<div class="object_description"><p>In general, variables of a mob are considered private to that mob and cannot be accessed by another.  To expose read-only access of a variable to other mobs, you need to set the ‘public’ setting on that variable in the owning entity’s resource definition.  It is also recommended to default-initialize the variable.</p>
+</div>
         </div>
         </div>
         </div>
@@ -478,11 +421,8 @@ for_each(v.pig, query.get_nearby_entities(4, 'minecraft:pig'), {
 <div class="container" id="node_head_11_2">
 <div class="description" style="all: revert;">
         <div class="object_name">
-<div class="object_inline_name"><h2 id="{}BraceScopeDelimiters" style="font-size: null; text-align: left">{ } Brace Scope Delimiters</h2></div>
-            <div class="object_description">
-                <p><p>One can group a series of statements into a single group by wrapping them in <code>{</code> and <code>}</code> symbols.  This is used primarily in loops and conditional statements:</p>
-</p>
-            </div>
+<div class="object_inline_name"><h2 id="{}BraceScopeDelimiters" style="font-size: null; text-align: left">{ } Brace Scope Delimiters</h2></div><div class="object_description"><p>One can group a series of statements into a single group by wrapping them in <code>{</code> and <code>}</code> symbols.  This is used primarily in loops and conditional statements:</p>
+</div>
         </div>
         </div>
         </div>
@@ -503,14 +443,11 @@ for_each(v.pig, query.get_nearby_entities(4, 'minecraft:pig'), {
 <div class="container" id="node_head_12_2">
 <div class="description" style="all: revert;">
         <div class="object_name">
-<div class="object_inline_name"><h2 id="Conditionals" style="font-size: null; text-align: left">Conditionals</h2></div>
-            <div class="object_description">
-                <p><p>The conditional ‘?’ operator allows for two convenient ways to implement simple branching logic.</p>
+<div class="object_inline_name"><h2 id="Conditionals" style="font-size: null; text-align: left">Conditionals</h2></div><div class="object_description"><p>The conditional ‘?’ operator allows for two convenient ways to implement simple branching logic.</p>
 <p>The first way is to use ‘?’ by itself to conditionally execute part of an expression, for example <code>A ? B</code>. The part after the ‘?’ is only run if the part before it evaluates to a true boolean.</p>
 <p>The second way is to use ‘?’ with a ‘:’ as a ‘conditional ternary’, for example <code>A ? B : C</code>. If the part before the ‘?’ is evaluated as true, the part before the ‘:’ is returned. Otherwise the part after is returned.</p>
 <p>NOTE: Nested ternary expressions without parentheses were incorrectly parsed before a Versioned Change was made to fix it (see ‘Versioned Changes’ below).</p>
-</p>
-            </div>
+</div>
         </div>
         </div>
         </div>
@@ -527,11 +464,8 @@ v.larger_value = (v.a > v.b) ? v.a : v.b;</code></pre>
 <div class="container" id="node_head_13_2">
 <div class="description" style="all: revert;">
         <div class="object_name">
-<div class="object_inline_name"><h2 id="loop" style="font-size: null; text-align: left">loop</h2></div>
-            <div class="object_description">
-                <p><p>Sometimes you want to execute an expression multiple times.  Rather than copy-pasting it a bunch, you can use <code>loop(&lt;count&gt;, &lt;expression&gt;);</code>.  We have placed some arbitrary restrictions on these for safety for now. The maximum loop counter is (as of this document being written) 1024.  Also, note that while you can nest loops inside loops pretty much as deep as you want, be careful you don’t make a loop so long it will hang your game.</p>
-</p>
-            </div>
+<div class="object_inline_name"><h2 id="loop" style="font-size: null; text-align: left">loop</h2></div><div class="object_description"><p>Sometimes you want to execute an expression multiple times.  Rather than copy-pasting it a bunch, you can use <code>loop(&lt;count&gt;, &lt;expression&gt;);</code>.  We have placed some arbitrary restrictions on these for safety for now. The maximum loop counter is (as of this document being written) 1024.  Also, note that while you can nest loops inside loops pretty much as deep as you want, be careful you don’t make a loop so long it will hang your game.</p>
+</div>
         </div>
         </div>
         </div>
@@ -552,11 +486,8 @@ loop(10, {
 <div class="container" id="node_head_14_2">
 <div class="description" style="all: revert;">
         <div class="object_name">
-<div class="object_inline_name"><h2 id="for_each" style="font-size: null; text-align: left">for_each</h2></div>
-            <div class="object_description">
-                <p><p><code>query.get_nearby_entities</code> (see below) returns an array of entities.  In order to iterate through them, you can use the following new built-in function <code>for_each</code>.  It takes three parameters: <code>for_each(&lt;variable&gt;, &lt;array&gt;, &lt;expression&gt;);</code>  The variable can be any variable, either a <code>temp.</code> or <code>variable.</code>, although I’d recommend using <code>temp.</code> to not pollute the entity’s variable space.  The expression is any Molang expression you want to execute for each entry in the array)</p>
-</p>
-            </div>
+<div class="object_inline_name"><h2 id="for_each" style="font-size: null; text-align: left">for_each</h2></div><div class="object_description"><p><code>query.get_nearby_entities</code> (see below) returns an array of entities.  In order to iterate through them, you can use the following new built-in function <code>for_each</code>.  It takes three parameters: <code>for_each(&lt;variable&gt;, &lt;array&gt;, &lt;expression&gt;);</code>  The variable can be any variable, either a <code>temp.</code> or <code>variable.</code>, although I’d recommend using <code>temp.</code> to not pollute the entity’s variable space.  The expression is any Molang expression you want to execute for each entry in the array)</p>
+</div>
         </div>
         </div>
         </div>
@@ -575,9 +506,6 @@ for_each(t.pig, query.get_nearby_entities(4, 'minecraft:pig'), {
 <div class="description" style="all: revert;">
         <div class="object_name">
 <div class="object_inline_name"><h2 id="break" style="font-size: null; text-align: left">break</h2></div>
-            <div class="object_description">
-                <p></p>
-            </div>
         </div>
         </div>
         </div>
@@ -585,11 +513,8 @@ for_each(t.pig, query.get_nearby_entities(4, 'minecraft:pig'), {
 <div class="container" id="node_head_0_3">
 <div class="description" style="all: revert;">
         <div class="object_name">
-
-            <div class="object_description">
-                <p><p>This will exit out of a <code>loop</code> or <code>for_each</code> early.  Eg:</p>
-</p>
-            </div>
+<div class="object_description"><p>This will exit out of a <code>loop</code> or <code>for_each</code> early.  Eg:</p>
+</div>
         </div>
         </div>
         </div>
@@ -606,11 +531,8 @@ loop(10, {t.x = v.x + v.y; v.x = v.y; v.y = t.x; (v.y > 20) ? break;});</code></
 <div class="container" id="node_head_2_3">
 <div class="description" style="all: revert;">
         <div class="object_name">
-
-            <div class="object_description">
-                <p><p>This will immediately exit the inner-most active loop, as per C-style language rules.  If you have:</p>
-</p>
-            </div>
+<div class="object_description"><p>This will immediately exit the inner-most active loop, as per C-style language rules.  If you have:</p>
+</div>
         </div>
         </div>
         </div>
@@ -626,11 +548,8 @@ loop(10, {loop(10, {v.x = v.x + 1; (v.x > 5) ? break;});});</code></pre>
 <div class="container" id="node_head_4_3">
 <div class="description" style="all: revert;">
         <div class="object_name">
-
-            <div class="object_description">
-                <p><p>The <code>break</code> statement will terminate the inner loop when <code>v.x &gt; 5</code>, and continue processing the outer loop’s expression.  Note that as v.x is not reset between the outer loops, the second time into the inner loop this will add one more to <code>v.x</code> and then exit the inner loop again, resulting in a final value of <code>v.x</code> of <code>6 + 1 + 1 + 1 + ... + 1</code> = <code>15</code>.)</p>
-</p>
-            </div>
+<div class="object_description"><p>The <code>break</code> statement will terminate the inner loop when <code>v.x &gt; 5</code>, and continue processing the outer loop’s expression.  Note that as v.x is not reset between the outer loops, the second time into the inner loop this will add one more to <code>v.x</code> and then exit the inner loop again, resulting in a final value of <code>v.x</code> of <code>6 + 1 + 1 + 1 + ... + 1</code> = <code>15</code>.)</p>
+</div>
         </div>
         </div>
         </div>
@@ -638,11 +557,8 @@ loop(10, {loop(10, {v.x = v.x + 1; (v.x > 5) ? break;});});</code></pre>
 <div class="container" id="node_head_16_2">
 <div class="description" style="all: revert;">
         <div class="object_name">
-<div class="object_inline_name"><h2 id="continue" style="font-size: null; text-align: left">continue</h2></div>
-            <div class="object_description">
-                <p><p><code>continue</code> functions as per C-style language rules.  Currently only supported in <code>loop</code> and <code>for_each</code>, this will skip to the next iteration of the current loop.  See <code>break</code> above for more details on inner/outer loops.  The following example will result in v.x becoming 6.0, as the increment will be skipped once it reaches that value.  Note that it is better to break out of the loop in this contrived example, as it would be more performant than continuing to perform all 10 iterations.</p>
-</p>
-            </div>
+<div class="object_inline_name"><h2 id="continue" style="font-size: null; text-align: left">continue</h2></div><div class="object_description"><p><code>continue</code> functions as per C-style language rules.  Currently only supported in <code>loop</code> and <code>for_each</code>, this will skip to the next iteration of the current loop.  See <code>break</code> above for more details on inner/outer loops.  The following example will result in v.x becoming 6.0, as the increment will be skipped once it reaches that value.  Note that it is better to break out of the loop in this contrived example, as it would be more performant than continuing to perform all 10 iterations.</p>
+</div>
         </div>
         </div>
         </div>
@@ -661,11 +577,8 @@ loop(10, {
 <div class="container" id="node_head_17_2">
 <div class="description" style="all: revert;">
         <div class="object_name">
-<div class="object_inline_name"><h2 id="??NullCoalescingOperator" style="font-size: null; text-align: left">?? Null Coalescing Operator</h2></div>
-            <div class="object_description">
-                <p><p>Similar to how the null-coalescing operator works in C#, one can now reference a variable that may or may not exist without seeing a content error.  If it doesn’t, you can now provide a default value to use.  Previously, if a variable didn’t exist you would get a content error.  This was to make sure variables were always initialized correctly to avoid uninitialized variable bugs.  Unfortunately this then required initialize scripts, or in some cases some complex work-arounds to make sure variables were initialized.  Now, if you know a variable won’t be initialized in the first run of a script, you can use the following:</p>
-</p>
-            </div>
+<div class="object_inline_name"><h2 id="??NullCoalescingOperator" style="font-size: null; text-align: left">?? Null Coalescing Operator</h2></div><div class="object_description"><p>Similar to how the null-coalescing operator works in C#, one can now reference a variable that may or may not exist without seeing a content error.  If it doesn’t, you can now provide a default value to use.  Previously, if a variable didn’t exist you would get a content error.  This was to make sure variables were always initialized correctly to avoid uninitialized variable bugs.  Unfortunately this then required initialize scripts, or in some cases some complex work-arounds to make sure variables were initialized.  Now, if you know a variable won’t be initialized in the first run of a script, you can use the following:</p>
+</div>
         </div>
         </div>
         </div>
@@ -680,9 +593,7 @@ loop(10, {
 <div class="container" id="node_head_1_3">
 <div class="description" style="all: revert;">
         <div class="object_name">
-
-            <div class="object_description">
-                <p><p>This will use the value of <code>variable.x</code> if it is valid, or else 1.2 if <code>variable.x</code>:</p>
+<div class="object_description"><p>This will use the value of <code>variable.x</code> if it is valid, or else 1.2 if <code>variable.x</code>:</p>
 <ul>
 <li>
 <p>has not yet been initialized</p>
@@ -699,8 +610,7 @@ loop(10, {
 </ul>
 <p>Note that the <code>??</code> operator will work with <code>variable.</code>s, <code>temp.</code>s, and <code>context.</code>s that hold numbers or entity references, but not resources such as materials, textures, or geometries (as those must exist and be valid else it’s a content error).  If the first argument would result in something that can’t be resolved, it will return the second argument.</p>
 <p><em>Reminder: the standing rule of thumb in Molang is that if something would error or be a bad value, it is converted to 0.0 (and generally throw a content error on screen in non-publish builds.  Note that content errors may prevent uploading content to the Marketplace, so please ensure expressions aren’t going to do bad things such as dividing by zero).</em></p>
-</p>
-            </div>
+</div>
         </div>
         </div>
         </div>
@@ -709,9 +619,6 @@ loop(10, {
 <div class="description" style="all: revert;">
         <div class="object_name">
 <div class="object_inline_name"><h2 id="SimplevsComplexExpressions" style="font-size: null; text-align: left">Simple vs Complex Expressions</h2></div>
-            <div class="object_description">
-                <p></p>
-            </div>
         </div>
         </div>
         </div>
@@ -719,11 +626,8 @@ loop(10, {
 <div class="container" id="node_head_0_3">
 <div class="description" style="all: revert;">
         <div class="object_name">
-
-            <div class="object_description">
-                <p><p>A simple expression is a single statement, the value of which is returned to the system that evaluated the expression.  eg:</p>
-</p>
-            </div>
+<div class="object_description"><p>A simple expression is a single statement, the value of which is returned to the system that evaluated the expression.  eg:</p>
+</div>
         </div>
         </div>
         </div>
@@ -738,11 +642,8 @@ loop(10, {
 <div class="container" id="node_head_1_3">
 <div class="description" style="all: revert;">
         <div class="object_name">
-
-            <div class="object_description">
-                <p><p>A complex expression is one with multiple statements, each ending in a ‘;’.  Each statement is evaluated in order.  In the current implementation, the last statement requires the use of the return keyword and defines the resulting value of the expression.  eg:</p>
-</p>
-            </div>
+<div class="object_description"><p>A complex expression is one with multiple statements, each ending in a ‘;’.  Each statement is evaluated in order.  In the current implementation, the last statement requires the use of the return keyword and defines the resulting value of the expression.  eg:</p>
+</div>
         </div>
         </div>
         </div>
@@ -759,11 +660,8 @@ return temp.moo * temp.moo + temp.baa;</code></pre>
 <div class="container" id="node_head_2_3">
 <div class="description" style="all: revert;">
         <div class="object_name">
-
-            <div class="object_description">
-                <p><p>Note that in a simple expression, <code>;</code> is not allowed, whereas in a complex expression, each statement requires a <code>;</code> including the last.  Also, note that if you don’t <code>return</code> a value from a complex expression, the expression will evaluate to 0.0.</p>
-</p>
-            </div>
+<div class="object_description"><p>Note that in a simple expression, <code>;</code> is not allowed, whereas in a complex expression, each statement requires a <code>;</code> including the last.  Also, note that if you don’t <code>return</code> a value from a complex expression, the expression will evaluate to 0.0.</p>
+</div>
         </div>
         </div>
         </div>
@@ -771,11 +669,8 @@ return temp.moo * temp.moo + temp.baa;</code></pre>
 <div class="container" id="node_head_0_2">
 <div class="description" style="all: revert;">
         <div class="object_name">
-<div class="object_inline_name"><h2 id="EntityDefinitionScripts" style="font-size: null; text-align: left">Entity Definition Scripts</h2></div>
-            <div class="object_description">
-                <p><p>In the definition file there is a section for pre-computing values.  These are executed immediately before animation and render controllers are processed, and stored in the entity.  The purpose is to pre-compute any expensive and complex values you may want to reuse in your scripts, long-living index variable updates, or generally any one-off computation per render tick.</p>
-</p>
-            </div>
+<div class="object_inline_name"><h2 id="EntityDefinitionScripts" style="font-size: null; text-align: left">Entity Definition Scripts</h2></div><div class="object_description"><p>In the definition file there is a section for pre-computing values.  These are executed immediately before animation and render controllers are processed, and stored in the entity.  The purpose is to pre-compute any expensive and complex values you may want to reuse in your scripts, long-living index variable updates, or generally any one-off computation per render tick.</p>
+</div>
         </div>
         </div>
         </div>
@@ -795,11 +690,8 @@ return temp.moo * temp.moo + temp.baa;</code></pre>
 <div class="container" id="node_head_1_2">
 <div class="description" style="all: revert;">
         <div class="object_name">
-<div class="object_inline_name"><h2 id="AnimationandAnimationControllerFiles" style="font-size: null; text-align: left">Animation and Animation Controller Files</h2></div>
-            <div class="object_description">
-                <p><p>These are numerical operations to control which animations are playing and how to animate bones.  “variable.variable_name” and “query.function_name” refer to the entity currently being rendered.  They have access to everything in the language except material, texture, and geometry types.</p>
-</p>
-            </div>
+<div class="object_inline_name"><h2 id="AnimationandAnimationControllerFiles" style="font-size: null; text-align: left">Animation and Animation Controller Files</h2></div><div class="object_description"><p>These are numerical operations to control which animations are playing and how to animate bones.  “variable.variable_name” and “query.function_name” refer to the entity currently being rendered.  They have access to everything in the language except material, texture, and geometry types.</p>
+</div>
         </div>
         </div>
         </div>
@@ -807,14 +699,11 @@ return temp.moo * temp.moo + temp.baa;</code></pre>
 <div class="container" id="node_head_2_2">
 <div class="description" style="all: revert;">
         <div class="object_name">
-<div class="object_inline_name"><h2 id="RenderControllers" style="font-size: null; text-align: left">Render Controllers</h2></div>
-            <div class="object_description">
-                <p><p>There are a few different kinds of expressions here, where context implies what is allowed.  As with animations, the entity accessors refer to the current entity, however depending on the context one also has access to materials, textures, and geometries.  There are two sections in a render controller:</p>
+<div class="object_inline_name"><h2 id="RenderControllers" style="font-size: null; text-align: left">Render Controllers</h2></div><div class="object_description"><p>There are a few different kinds of expressions here, where context implies what is allowed.  As with animations, the entity accessors refer to the current entity, however depending on the context one also has access to materials, textures, and geometries.  There are two sections in a render controller:</p>
 <p>-Array definitions (optional)</p>
 <p>-Resource usage (required)</p>
 <p>The array definition section allows you to create arrays of resources by resource type if you so desire.  These can then be referenced in the resource usage section.</p>
-</p>
-            </div>
+</div>
         </div>
         </div>
         </div>
@@ -822,11 +711,8 @@ return temp.moo * temp.moo + temp.baa;</code></pre>
 <div class="container" id="node_head_0_3">
 <div class="description" style="all: revert;">
         <div class="object_name">
-<div class="object_inline_name"><h3 id="ArrayExpressions" style="font-size: null; text-align: left">Array Expressions</h3></div>
-            <div class="object_description">
-                <p><p>For each of the three resource types (materials, textures, and geometry), you can define an array of resources.  The name of the resource is the nice-name from the definition file.  Using materials as an example:</p>
-</p>
-            </div>
+<div class="object_inline_name"><h3 id="ArrayExpressions" style="font-size: null; text-align: left">Array Expressions</h3></div><div class="object_description"><p>For each of the three resource types (materials, textures, and geometry), you can define an array of resources.  The name of the resource is the nice-name from the definition file.  Using materials as an example:</p>
+</div>
         </div>
         </div>
         </div>
@@ -851,12 +737,9 @@ return temp.moo * temp.moo + temp.baa;</code></pre>
 <div class="container" id="node_head_1_4">
 <div class="description" style="all: revert;">
         <div class="object_name">
-
-            <div class="object_description">
-                <p><p>Note that all elements of an array must be of the same type.  eg: a texture array must only contain textures.</p>
+<div class="object_description"><p>Note that all elements of an array must be of the same type.  eg: a texture array must only contain textures.</p>
 <p>An array can reference any combination of zero or more arrays (including duplicates if desired) and/or zero or more materials (again, including duplicates if you like), and you can have as many arrays as you like, each with as many elements as you like.  If an array includes arrays in its members, they do not need to be the same length.  When indexing into an array in the resource usage section, you use numerical expressions.  If the resulting number is negative, it will use zero as the index.  Any non - negative index will converted to an integer, and will wrap based on the size of the array:</p>
-</p>
-            </div>
+</div>
         </div>
         </div>
         </div>
@@ -871,12 +754,9 @@ return temp.moo * temp.moo + temp.baa;</code></pre>
 <div class="container" id="node_head_1_3">
 <div class="description" style="all: revert;">
         <div class="object_name">
-<div class="object_inline_name"><h3 id="ResourceExpression" style="font-size: null; text-align: left">Resource Expression</h3></div>
-            <div class="object_description">
-                <p><p>A resource expression must return a single resource of a specific type depending on the context.</p>
+<div class="object_inline_name"><h3 id="ResourceExpression" style="font-size: null; text-align: left">Resource Expression</h3></div><div class="object_description"><p>A resource expression must return a single resource of a specific type depending on the context.</p>
 <p>For example, in the “geometry” section, you must produce an expression that will result in a single geometry.  Some examples:</p>
-</p>
-            </div>
+</div>
         </div>
         </div>
         </div>
@@ -913,9 +793,6 @@ return temp.moo * temp.moo + temp.baa;</code></pre>
 <div class="description" style="all: revert;">
         <div class="object_name">
 <div class="object_inline_name"><h3 id="ResourceSections" style="font-size: null; text-align: left">Resource Sections</h3></div>
-            <div class="object_description">
-                <p></p>
-            </div>
         </div>
         </div>
         </div>
@@ -923,11 +800,8 @@ return temp.moo * temp.moo + temp.baa;</code></pre>
 <div class="container" id="node_head_0_4">
 <div class="description" style="all: revert;">
         <div class="object_name">
-<div class="object_inline_name"><h4 id="Geometry" style="font-size: null; text-align: left">Geometry</h4></div>
-            <div class="object_description">
-                <p><p>The geometry section specifies which geometry to use when rendering.  As you can specify as many render controllers as you like in the definition file, a single render controller is only concerned with how to render a single geometry.  Note that a geometry can be arbitrarily complex using any number of bones and polygons.</p>
-</p>
-            </div>
+<div class="object_inline_name"><h4 id="Geometry" style="font-size: null; text-align: left">Geometry</h4></div><div class="object_description"><p>The geometry section specifies which geometry to use when rendering.  As you can specify as many render controllers as you like in the definition file, a single render controller is only concerned with how to render a single geometry.  Note that a geometry can be arbitrarily complex using any number of bones and polygons.</p>
+</div>
         </div>
         </div>
         </div>
@@ -935,11 +809,8 @@ return temp.moo * temp.moo + temp.baa;</code></pre>
 <div class="container" id="node_head_1_4">
 <div class="description" style="all: revert;">
         <div class="object_name">
-<div class="object_inline_name"><h4 id="Materials" style="font-size: null; text-align: left">Materials</h4></div>
-            <div class="object_description">
-                <p><p>The materials section specifies how to map what material to what bone of the geometry.  A single material is mapped to a whole bone.  Material expressions are evaluated in the order listed.  The first part of each statement is the name of the model part to apply the material to, and the second part is the material to use.  The model part name can use * for wild - card matching of characters.  For example:</p>
-</p>
-            </div>
+<div class="object_inline_name"><h4 id="Materials" style="font-size: null; text-align: left">Materials</h4></div><div class="object_description"><p>The materials section specifies how to map what material to what bone of the geometry.  A single material is mapped to a whole bone.  Material expressions are evaluated in the order listed.  The first part of each statement is the name of the model part to apply the material to, and the second part is the material to use.  The model part name can use * for wild - card matching of characters.  For example:</p>
+</div>
         </div>
         </div>
         </div>
@@ -959,9 +830,7 @@ return temp.moo * temp.moo + temp.baa;</code></pre>
 <div class="container" id="node_head_1_5">
 <div class="description" style="all: revert;">
         <div class="object_name">
-
-            <div class="object_description">
-                <p><ul>
+<div class="object_description"><ul>
 <li>
 <p>This will start by applying Material.default to all model parts.</p>
 </li>
@@ -975,8 +844,7 @@ return temp.moo * temp.moo + temp.baa;</code></pre>
 <p>Lastly, if will find any model part starting with, ending with, or containing “Saddle” (case sensitive) and change its material to either material.leather_saddle or material.iron_saddle depending on the previously set entity variable variable.is_leather_saddle.</p>
 </li>
 </ul>
-</p>
-            </div>
+</div>
         </div>
         </div>
         </div>
@@ -1028,9 +896,6 @@ return temp.moo * temp.moo + temp.baa;</code></pre>
 <div class="description" style="all: revert;">
         <div class="object_name">
 <div class="object_inline_name"><h2 id="ListofExperimentalEntityQueries" style="font-size: null; text-align: left">List of Experimental Entity Queries</h2></div>
-            <div class="object_description">
-                <p></p>
-            </div>
         </div>
         </div>
         </div>
