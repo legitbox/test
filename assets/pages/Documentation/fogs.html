@@ -30,7 +30,7 @@
             <ul>
               <li><a href="/index.html" id="home_button">home</a></li>
               <li><input id="search" placeholder="search..." class="search"></li>
-                <li><a id="searchbar_result" href="" style="display: none"></a></li>
+                <li><a id="searchbar_result"></a></li>
             </ul>
           </nav>
         </div>
@@ -530,13 +530,10 @@
             hljs.highlightAll();
         });
         </script>
-                        <script src="/assets/libraries/index.min.js" defer></script>
-                <script>
+                <script src="/assets/libraries/index.min.js" defer></script>
+                <script defer>
                 window.onload = function () {
-                    const searchResultsDiv = document.createElement("div");
-                    searchResultsDiv.classList.add("search_container");
-                    const targetDiv = document.querySelector(".scroll");
-
+                    let searchBarResult = document.getElementById("searchbar_result");
                     let searchResultsDivMade = false
 
                     let searchData = null;
@@ -549,65 +546,44 @@
                         return searchData;
                     }
                     
-                    
-                    let miniSearch = new MiniSearch({
-                      fields: ['title', "category"],
-                      storeFields: ['title', 'path'],
-                      searchOptions: {
-                          prefix: true
-                      }
-                    })
-                    let dataLoaded = false;
-                    const searchbar = document.getElementById("search");
-                    searchbar.addEventListener("input", async function() {
-                        try {
-                            let oldULS = document.querySelectorAll(".search_ul");
-                            for (let i = 0; i < oldULS.length; i++) {
-                                oldULS[i].remove();
-                            }
-                        } catch (error) {
-                            console.warn("the search container is still empty :3");
+                    async function main() {
+                      let miniSearch = new MiniSearch({
+                        fields: ['title', "category"],
+                        storeFields: ['href', 'title'],
+                        searchOptions: {
+                            prefix: true
                         }
-                        
-                        
-                        searchData = await LoadData();
-                        
-                        if (!dataLoaded) {
-                            for (let key in searchData) {
-                                miniSearch.add(key, key);
-                            }
-                            dataLoaded = true;
-                        }
-
-                        let searchBarContainer = document.querySelector(".search_container");
-                        let ul = document.createElement("ul");
-                        ul.classList.add("search_ul");
-                        const searchResults = miniSearch.search(searchbar.value, { fuzzy: 0.2 });
-                        if (searchResults.length > 0) {
-                            if (!searchResultsDivMade){
-                                targetDiv.insertBefore(searchResultsDiv, targetDiv.children[1]);
-                                searchResultsDivMade = true;
-                            }
-                           
-                            ul.style.listStyle = "none";
-                            searchBarContainer.style.opacity = "1";
-                            for (let i = 0; i < searchResults.length && i <= 3; i++){
-                                let li = document.createElement("li");
-                                let p = document.createElement("a");
-                                p.classList.add("list_link");
-                                p.style.color = "beige";
-                                p.innerHTML = searchResults[i].id;
-                                p.setAttribute("href", searchResults[i].href);
-                                li.appendChild(p);
-                                ul.appendChild(li);
-                            }
-                        }
-                        else {
-                            searchResultsDivMade = false;
-                        }
-                        searchBarContainer.appendChild(ul);
-                    })
-                };
+                      })
+                      searchData = await LoadData();
+                          const parsedSearchData = searchData.flatMap(parent => 
+                            parent.children.map(child => ({
+                              id: child.href,
+                              title: child.title,
+                              category: parent.title,
+                              href: child.href,
+                              icon: child.icon
+                            }))
+                          );
+                      miniSearch.addAll(parsedSearchData);
+                      let dataLoaded = false;
+                      const searchbar = document.getElementById("search");
+                      searchbar.addEventListener("input", async function() {
+                          try {
+                              const searchResults = miniSearch.search(searchbar.value, { fuzzy: 0.2 });
+                              if (searchResults.length > 0) {
+                                  if (!searchResultsDivMade){
+                                      console.log(searchResults[0].title);
+                                      searchBarResult.textContent = searchResults[0].title
+                                      searchBarResult.href = searchResults[0].id
+                                  }
+                          }
+                          } catch (error) {
+                              console.warn("the search container is still empty :3");
+                          }
+                      })
+                    }
+                    main();
+                }
                 </script>
                 </div>
         </body>
