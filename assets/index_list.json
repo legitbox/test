@@ -138,17 +138,5 @@
         "icon": "/assets/images/shrimple_wiki_icon.png"
       }
     ]
-  },
-  {
-    "title": "index",
-    "expanded": false,
-    "icon": "/assets/images/wunderbaum/folder.svg",
-    "children": [
-      {
-        "title": "index",
-        "href": "/assets/pages/index/index.html",
-        "icon": "/assets/images/melon.png"
-      }
-    ]
   }
 ]
