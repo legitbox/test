@@ -111,6 +111,18 @@
     ]
   },
   {
+    "title": "PanSpark",
+    "expanded": false,
+    "icon": "/assets/images/wunderbaum/folder.svg",
+    "children": [
+      {
+        "title": "PanSpark",
+        "href": "/assets/pages/PanSpark/panspark.html",
+        "icon": "/assets/images/PanSpark4.png"
+      }
+    ]
+  },
+  {
     "title": "endstone",
     "expanded": false,
     "icon": "/assets/images/wunderbaum/folder.svg",
