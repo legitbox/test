@@ -9,7 +9,6 @@ html {
     src: url('/assets/fonts/SpaceGrotesk-VariableFont_wght.woff2') format('woff2');
 }
 
-
 body {
     overflow: hidden;
     -webkit-overflow-scrolling: touch;

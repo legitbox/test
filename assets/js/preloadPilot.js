@@ -3,6 +3,7 @@ document.querySelectorAll(".list_link, #settings_title, #home_button .wb-row").f
     e.preventDefault();
 
     const href = e.target.getAttribute("href");
+    let html = document.getElementsByName("html")[0];
     if (href) {
       fetch(href, { method: "GET", cache: "force-cache" })
           .then((response) => {
