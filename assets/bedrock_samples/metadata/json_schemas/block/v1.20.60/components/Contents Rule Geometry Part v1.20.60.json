@@ -5,10 +5,12 @@
     "type": "object",
     "properties": {
         "bone": {
-            "type": "string"
+            "type": "string",
+            "$metaProperties": {}
         },
         "cube": {
             "type": "integer",
+            "$metaProperties": {},
             "minimum": 0.0
         },
         "face": {
@@ -16,15 +18,17 @@
             "type": "string",
             "enum": [
                 "down",
-                "up",
+                "east",
                 "north",
                 "south",
-                "west",
-                "east"
-            ]
+                "up",
+                "west"
+            ],
+            "$metaProperties": {}
         }
     },
     "required": [
         "bone"
-    ]
+    ],
+    "$metaProperties": {}
 }

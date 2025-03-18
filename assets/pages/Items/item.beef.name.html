@@ -1,0 +1,124 @@
+
+        <!DOCTYPE html>
+        <html lang="en" style="background: #2c2c2c;">
+        <head>
+          <meta charset="UTF-8">
+          <title>item.beef.name</title>
+          <link rel="preload" href="/assets/images/tech.webp as="image" fetchpriority="high">
+          <link rel="prefetch" href="/index.html">
+          <link rel="prefetch" href="/settings.html">
+          <link rel="stylesheet" href="/assets/styles/wiki_styles.css">
+          <link rel="icon" href="/assets/images/melon.png" type="image/png">
+          <meta name="description" content="item.beef.name">
+          <meta name="viewport" content="width=device-width, initial-scale=1" />
+          <meta property="og:title" content="item.beef.name" />
+          <meta property="og:image" content="/assets/images/melon.png"/>
+          <script>
+          if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+              navigator.serviceWorker.register('/assets/js/workers/CacheWorker.js')
+                .then(registration => console.log('SW registered'))
+                .catch(err => console.log('SW registration failed:', err));
+            });
+          }
+          </script>
+        </head>
+        
+        <div class="scroll">
+        <div class="navbar">
+          <nav>
+            <ul>
+              <li><a href="/index.html" id="home_button">home</a></li>
+              <li><input id="search" placeholder="search..." class="search"></li>
+                <li><a id="searchbar_result"></a></li>
+            </ul>
+          </nav>
+        </div>
+        
+<div class="container" id="title">
+<div class="description" style="all: revert;">
+        <div class="object_name">
+<div class="object_inline_name"><h2 id="item.beef.name-spadix:beef" style="font-size: undefined; text-align: center">item.beef.name - spadix:beef</h2></div><div class="object_description"><p>A cool beef item</p>
+</div>
+        </div>
+        </div>
+        </div>
+
+<div class="container" id="tags">
+<div class="description" style="all: revert;">
+        <div class="object_name">
+<div class="object_inline_name"><h2 id="Tags" style="font-size: undefined; text-align: left">Tags</h2></div><div class="object_description"><p><code>&quot;minecraft:is_food&quot;</code></p>
+</div>
+        </div>
+        </div>
+        </div>
+
+    <body>
+    <script defer src="/assets/js/LanguageHandler.js"></script>
+        <script defer src="/assets/js/occlusionPilot.js"></script>
+        <script defer src="/assets/js/preloadPilot.js"></script>
+        <script defer src="/assets/libraries/gridjs.umd.js"></script>
+        <link rel="stylesheet" href="/assets/styles/github-dark.css">
+        <script defer src="/assets/libraries/highlight.min.js"></script>
+        <script defer>
+        document.addEventListener("DOMContentLoaded", function() {
+            hljs.highlightAll();
+        });
+        </script>
+                <script src="/assets/libraries/index.min.js" defer></script>
+                <script defer>
+                window.onload = function () {
+                    let searchBarResult = document.getElementById("searchbar_result");
+                    let searchResultsDivMade = false
+
+                    let searchData = null;
+                    async function LoadData() {
+                        if (searchData !== null) {
+                            return searchData;
+                        }
+                        const res = await fetch('/assets/index_list.json');
+                        searchData = await res.json();
+                        return searchData;
+                    }
+                    
+                    async function main() {
+                      let miniSearch = new MiniSearch({
+                        fields: ['title', "category"],
+                        storeFields: ['href', 'title'],
+                        searchOptions: {
+                            prefix: true
+                        }
+                      })
+                      searchData = await LoadData();
+                          const parsedSearchData = searchData.flatMap(parent => 
+                            parent.children.map(child => ({
+                              id: child.href,
+                              title: child.title,
+                              category: parent.title,
+                              href: child.href,
+                              icon: child.icon
+                            }))
+                          );
+                      miniSearch.addAll(parsedSearchData);
+                      let dataLoaded = false;
+                      const searchbar = document.getElementById("search");
+                      searchbar.addEventListener("input", async function() {
+                          try {
+                              const searchResults = miniSearch.search(searchbar.value, { fuzzy: 0.2 });
+                              if (searchResults.length > 0) {
+                                  if (!searchResultsDivMade){
+                                      console.log(searchResults[0].title);
+                                      searchBarResult.textContent = searchResults[0].title
+                                      searchBarResult.href = searchResults[0].id
+                                  }
+                          }
+                          } catch (error) {
+                              console.warn("the search container is still empty :3");
+                          }
+                      })
+                    }
+                    main();
+                }
+                </script>
+                </div>
+        </body>

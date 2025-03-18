@@ -4,7 +4,6 @@
     "definitions": {
         "2176758423": {
             "title": "Scatter Chance",
-            "description": "Scatter probability represented by an expression or an object with a numerator and denominator.",
             "oneOf": [
                 {
                     "$ref": "#/definitions/3178719147"
@@ -13,13 +12,13 @@
                     "type": "object",
                     "properties": {
                         "denominator": {
-                            "description": "Denominator for scatter probability.",
                             "type": "integer",
+                            "$metaProperties": {},
                             "minimum": 1.0
                         },
                         "numerator": {
-                            "description": "Numerator for scatter probability.",
                             "type": "integer",
+                            "$metaProperties": {},
                             "minimum": 1.0
                         }
                     },
@@ -28,7 +27,8 @@
                         "numerator"
                     ]
                 }
-            ]
+            ],
+            "$metaProperties": {}
         },
         "2267778531": {
             "title": "struct SharedTypes::Legacy::ExpressionNode::StringRepresentation",
@@ -40,10 +40,12 @@
                     "type": "object",
                     "properties": {
                         "expression": {
-                            "type": "string"
+                            "type": "string",
+                            "$metaProperties": {}
                         },
                         "version": {
-                            "type": "integer"
+                            "type": "integer",
+                            "$metaProperties": {}
                         }
                     },
                     "required": [
@@ -51,7 +53,8 @@
                         "version"
                     ]
                 }
-            ]
+            ],
+            "$metaProperties": {}
         },
         "3178719147": {
             "title": "struct SharedTypes::Legacy::ExpressionNode",
@@ -62,11 +65,11 @@
                 {
                     "type": "number"
                 }
-            ]
+            ],
+            "$metaProperties": {}
         },
         "4150871210": {
             "title": "Coordinate Range",
-            "description": "Represents the scatter distrubution over a coordinate (x/y/z), can also be built by an expression.",
             "oneOf": [
                 {
                     "$ref": "#/definitions/3178719147"
@@ -76,35 +79,35 @@
                     "properties": {
                         "distribution": {
                             "title": "Random Distribution Type",
-                            "description": "Type of distribution. Supported distributions are defined by \"Random Distribution Type\".",
                             "type": "string",
                             "enum": [
-                                "uniform",
+                                "fixed_grid",
                                 "gaussian",
                                 "inverse_gaussian",
+                                "jittered_grid",
                                 "triangle",
-                                "fixed_grid",
-                                "jittered_grid"
-                            ]
+                                "uniform"
+                            ],
+                            "$metaProperties": {}
                         },
                         "extent": {
                             "title": "sequence container",
-                            "description": "Lower and upper bound (inclusive) of the scatter range, as an offset from the input point to scatter around.",
                             "type": "array",
                             "items": {
                                 "$ref": "#/definitions/3178719147"
                             },
+                            "$metaProperties": {},
                             "minItems": 2,
                             "maxItems": 2
                         },
                         "grid_offset": {
-                            "description": "When the distribution type is grid, defines the offset along this axis.",
                             "type": "integer",
+                            "$metaProperties": {},
                             "minimum": 0.0
                         },
                         "step_size": {
-                            "description": "When the distribution type is grid, defines the distance between steps along this axis.",
                             "type": "integer",
+                            "$metaProperties": {},
                             "minimum": 1.0
                         }
                     },
@@ -113,16 +116,15 @@
                         "extent"
                     ]
                 }
-            ]
+            ],
+            "$metaProperties": {}
         }
     },
     "title": "Scatter Params",
-    "description": "Controls the scatter distribution of a particular object.",
     "type": "object",
     "properties": {
         "coordinate_eval_order": {
             "title": "Coordinate Evaluation Order",
-            "description": "The order in which coordinates will be evaluated. Should be used when a coordinate depends on another. If omitted, defaults to \"xzy\". Supported orders are defined by \"Coordinate Evaluation Order\".",
             "type": "string",
             "enum": [
                 "xyz",
@@ -131,27 +133,28 @@
                 "yzx",
                 "zxy",
                 "zyx"
-            ]
+            ],
+            "$metaProperties": {}
         },
         "iterations": {
-            "description": "Number of scattered positions to generate.",
-            "$ref": "#/definitions/3178719147"
+            "$ref": "#/definitions/3178719147",
+            "$metaProperties": {}
         },
         "scatter_chance": {
-            "description": "Probability that this scatter will occur. Not evaluated each iteration; either no iterations will run, or all will.",
-            "$ref": "#/definitions/2176758423"
+            "$ref": "#/definitions/2176758423",
+            "$metaProperties": {}
         },
         "x": {
-            "description": "Distribution for the coordinate (evaluated each iteration).",
-            "$ref": "#/definitions/4150871210"
+            "$ref": "#/definitions/4150871210",
+            "$metaProperties": {}
         },
         "y": {
-            "description": "Distribution for the coordinate (evaluated each iteration).",
-            "$ref": "#/definitions/4150871210"
+            "$ref": "#/definitions/4150871210",
+            "$metaProperties": {}
         },
         "z": {
-            "description": "Distribution for the coordinate (evaluated each iteration).",
-            "$ref": "#/definitions/4150871210"
+            "$ref": "#/definitions/4150871210",
+            "$metaProperties": {}
         }
     },
     "required": [
@@ -159,5 +162,6 @@
         "x",
         "y",
         "z"
-    ]
+    ],
+    "$metaProperties": {}
 }

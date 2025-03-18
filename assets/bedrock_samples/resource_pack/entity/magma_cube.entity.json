@@ -7,10 +7,10 @@
         "default": "magma_cube"
       },
       "textures": {
-        "default": "textures/entity/slime/magmacube_v2"
+        "default": "textures/entity/slime/magmacube"
       },
       "geometry": {
-        "default": "geometry.magma_cube_v2"
+        "default": "geometry.lavaslime"
       },
       "scripts": {
         "pre_animation": [

@@ -1,22 +1,74 @@
 [
   {
+    "title": "Items",
+    "expanded": false,
+    "icon": "/assets/images/wunderbaum/folder.svg",
+    "children": [
+      {
+        "title": "item.torchflower_seeds.name",
+        "href": "/assets/pages/Items/item.torchflower_seeds.name.html",
+        "icon": "/assets/images/melon.png"
+      },
+      {
+        "title": "item.wheat_seeds.name",
+        "href": "/assets/pages/Items/item.wheat_seeds.name.html",
+        "icon": "/assets/images/melon.png"
+      },
+      {
+        "title": "Stick",
+        "href": "/assets/pages/Items/stick.html",
+        "icon": "/assets/bedrock_samples/resource_pack/textures/items/stick.png"
+      },
+      {
+        "title": "Paint Brush",
+        "href": "/assets/pages/Items/paint brush.html",
+        "icon": "assets/images/brush_handle.png"
+      },
+      {
+        "title": "item.beef.name",
+        "href": "/assets/pages/Items/item.beef.name.html",
+        "icon": "/assets/images/melon.png"
+      },
+      {
+        "title": "Cool Banana",
+        "href": "/assets/pages/Items/cool banana.html",
+        "icon": "assets/images/banana.png"
+      },
+      {
+        "title": "Golden Cool Banana",
+        "href": "/assets/pages/Items/golden cool banana.html",
+        "icon": "assets/images/golden_banana.png"
+      },
+      {
+        "title": "item.melon_seeds.name",
+        "href": "/assets/pages/Items/item.melon_seeds.name.html",
+        "icon": "/assets/images/melon.png"
+      },
+      {
+        "title": "item.pumpkin_seeds.name",
+        "href": "/assets/pages/Items/item.pumpkin_seeds.name.html",
+        "icon": "/assets/images/melon.png"
+      },
+      {
+        "title": "item.beetroot_seeds.name",
+        "href": "/assets/pages/Items/item.beetroot_seeds.name.html",
+        "icon": "/assets/images/melon.png"
+      },
+      {
+        "title": "item.baked_potato.name",
+        "href": "/assets/pages/Items/item.baked_potato.name.html",
+        "icon": "/assets/images/melon.png"
+      }
+    ]
+  },
+  {
     "title": "Documentation",
     "expanded": false,
     "icon": "/assets/images/wunderbaum/folder.svg",
     "children": [
       {
-        "title": "Schemas",
-        "href": "/assets/pages/Documentation/schemas.html",
-        "icon": "/assets/images/melon.png"
-      },
-      {
-        "title": "Molang",
-        "href": "/assets/pages/Documentation/molang.html",
-        "icon": "/assets/images/melon.png"
-      },
-      {
-        "title": "Entity Timeline Events",
-        "href": "/assets/pages/Documentation/entity timeline events.html",
+        "title": "Items",
+        "href": "/assets/pages/Documentation/items.html",
         "icon": "/assets/images/melon.png"
       },
       {
@@ -25,18 +77,13 @@
         "icon": "/assets/images/melon.png"
       },
       {
-        "title": "Fogs",
-        "href": "/assets/pages/Documentation/fogs.html",
-        "icon": "/assets/images/melon.png"
-      },
-      {
         "title": "Addons",
         "href": "/assets/pages/Documentation/addons.html",
         "icon": "/assets/images/melon.png"
       },
       {
-        "title": "Animations",
-        "href": "/assets/pages/Documentation/animations.html",
+        "title": "Features",
+        "href": "/assets/pages/Documentation/features.html",
         "icon": "/assets/images/melon.png"
       },
       {
@@ -45,13 +92,18 @@
         "icon": "/assets/images/melon.png"
       },
       {
-        "title": "Particles",
-        "href": "/assets/pages/Documentation/particles.html",
+        "title": "Animations",
+        "href": "/assets/pages/Documentation/animations.html",
         "icon": "/assets/images/melon.png"
       },
       {
-        "title": "Entities",
-        "href": "/assets/pages/Documentation/entities.html",
+        "title": "Molang",
+        "href": "/assets/pages/Documentation/molang.html",
+        "icon": "/assets/images/melon.png"
+      },
+      {
+        "title": "Biomes",
+        "href": "/assets/pages/Documentation/biomes.html",
         "icon": "/assets/images/melon.png"
       },
       {
@@ -65,8 +117,8 @@
         "icon": "/assets/images/melon.png"
       },
       {
-        "title": "Features",
-        "href": "/assets/pages/Documentation/features.html",
+        "title": "Fogs",
+        "href": "/assets/pages/Documentation/fogs.html",
         "icon": "/assets/images/melon.png"
       },
       {
@@ -75,38 +127,41 @@
         "icon": "/assets/images/melon.png"
       },
       {
-        "title": "Items",
-        "href": "/assets/pages/Documentation/items.html",
+        "title": "Entities",
+        "href": "/assets/pages/Documentation/entities.html",
         "icon": "/assets/images/melon.png"
       },
       {
-        "title": "Biomes",
-        "href": "/assets/pages/Documentation/biomes.html",
+        "title": "Particles",
+        "href": "/assets/pages/Documentation/particles.html",
+        "icon": "/assets/images/melon.png"
+      },
+      {
+        "title": "Schemas",
+        "href": "/assets/pages/Documentation/schemas.html",
+        "icon": "/assets/images/melon.png"
+      },
+      {
+        "title": "Entity Timeline Events",
+        "href": "/assets/pages/Documentation/entity timeline events.html",
         "icon": "/assets/images/melon.png"
       }
     ]
   },
   {
-    "title": "Item",
+    "title": "Info",
     "expanded": false,
     "icon": "/assets/images/wunderbaum/folder.svg",
     "children": [
       {
-        "title": "Cool Bannana",
-        "href": "/assets/pages/Item/cool bannana.html",
-        "icon": "assets/images/assets/example_item.png"
-      }
-    ]
-  },
-  {
-    "title": "Items",
-    "expanded": false,
-    "icon": "/assets/images/wunderbaum/folder.svg",
-    "children": [
+        "title": "Introduction",
+        "href": "/assets/pages/Info/introduction.html",
+        "icon": "/assets/images/shrimple_wiki_icon.png"
+      },
       {
-        "title": "Stick",
-        "href": "/assets/pages/Items/stick.html",
-        "icon": "/assets/bedrock_samples/resource_pack/textures/items/stick.png"
+        "title": "Timeline",
+        "href": "/assets/pages/Info/timeline.html",
+        "icon": ""
       }
     ]
   },
@@ -123,30 +178,42 @@
     ]
   },
   {
-    "title": "endstone",
+    "title": "Endstone",
     "expanded": false,
     "icon": "/assets/images/wunderbaum/folder.svg",
     "children": [
       {
-        "title": "endstone_plugin_tutorials",
-        "href": "/assets/pages/endstone/endstone_plugin_tutorials.html",
+        "title": "Endstone Plugin Tutorials",
+        "href": "/assets/pages/Endstone/endstone plugin tutorials.html",
         "icon": "/assets/images/shrimple_wiki_icon.png"
       }
     ]
   },
   {
-    "title": "Info",
+    "title": "Blocks",
     "expanded": false,
     "icon": "/assets/images/wunderbaum/folder.svg",
     "children": [
       {
-        "title": "Timeline",
-        "href": "/assets/pages/Info/timeline.html",
-        "icon": ""
+        "title": "Canvas Block",
+        "href": "/assets/pages/Blocks/canvas block.html",
+        "icon": "assets/images/canvas_block.png"
       },
       {
-        "title": "Introduction",
-        "href": "/assets/pages/Info/introduction.html",
+        "title": "Banana Block",
+        "href": "/assets/pages/Blocks/banana block.html",
+        "icon": "assets/images/banana_block.png"
+      }
+    ]
+  },
+  {
+    "title": "Testing",
+    "expanded": false,
+    "icon": "/assets/images/wunderbaum/folder.svg",
+    "children": [
+      {
+        "title": "Plugin Test Page",
+        "href": "/assets/pages/Testing/plugin test page.html",
         "icon": "/assets/images/shrimple_wiki_icon.png"
       }
     ]

@@ -374,7 +374,7 @@
                      "from_module" : {
                         "name" : "@minecraft/server",
                         "uuid" : "b26a4d4c-afdf-4690-88f8-931846312678",
-                        "version" : "1.17.0"
+                        "version" : "1.8.0"
                      },
                      "is_bind_type" : true,
                      "is_errorable" : false,
@@ -660,44 +660,11 @@
                         "from_module" : {
                            "name" : "@minecraft/server",
                            "uuid" : "b26a4d4c-afdf-4690-88f8-931846312678",
-                           "version" : "1.17.0"
+                           "version" : "1.8.0"
                         },
                         "is_bind_type" : true,
                         "is_errorable" : false,
                         "name" : "Vector3"
-                     }
-                  },
-                  {
-                     "details" : {
-                        "default_value" : "null"
-                     },
-                     "name" : "structureDimension",
-                     "type" : {
-                        "is_bind_type" : false,
-                        "is_errorable" : false,
-                        "name" : "optional",
-                        "optional_type" : {
-                           "is_bind_type" : false,
-                           "is_errorable" : false,
-                           "name" : "variant",
-                           "variant_types" : [
-                              {
-                                 "from_module" : {
-                                    "name" : "@minecraft/server",
-                                    "uuid" : "b26a4d4c-afdf-4690-88f8-931846312678",
-                                    "version" : "1.17.0"
-                                 },
-                                 "is_bind_type" : true,
-                                 "is_errorable" : false,
-                                 "name" : "DimensionType"
-                              },
-                              {
-                                 "is_bind_type" : false,
-                                 "is_errorable" : false,
-                                 "name" : "string"
-                              }
-                           ]
-                        }
                      }
                   }
                ],
@@ -710,30 +677,8 @@
                   }
                ],
                "return_type" : {
-                  "error_types" : [
-                     {
-                        "from_module" : {
-                           "name" : "@minecraft/common",
-                           "uuid" : "77ec12b4-1b2b-4c98-8d34-d1cd63f849d5",
-                           "version" : "1.1.0"
-                        },
-                        "is_bind_type" : true,
-                        "is_errorable" : false,
-                        "name" : "EngineError"
-                     },
-                     {
-                        "from_module" : {
-                           "name" : "@minecraft/common",
-                           "uuid" : "77ec12b4-1b2b-4c98-8d34-d1cd63f849d5",
-                           "version" : "1.1.0"
-                        },
-                        "is_bind_type" : true,
-                        "is_errorable" : false,
-                        "name" : "InvalidArgumentError"
-                     }
-                  ],
                   "is_bind_type" : true,
-                  "is_errorable" : true,
+                  "is_errorable" : false,
                   "name" : "RegistrationBuilder"
                }
             },
@@ -811,7 +756,7 @@
                         "from_module" : {
                            "name" : "@minecraft/server",
                            "uuid" : "b26a4d4c-afdf-4690-88f8-931846312678",
-                           "version" : "1.17.0"
+                           "version" : "1.8.0"
                         },
                         "is_bind_type" : true,
                         "is_errorable" : false,
@@ -880,7 +825,7 @@
                   "from_module" : {
                      "name" : "@minecraft/server",
                      "uuid" : "b26a4d4c-afdf-4690-88f8-931846312678",
-                     "version" : "1.17.0"
+                     "version" : "1.8.0"
                   },
                   "is_bind_type" : true,
                   "is_errorable" : true,
@@ -956,7 +901,7 @@
                "from_module" : {
                   "name" : "@minecraft/server",
                   "uuid" : "b26a4d4c-afdf-4690-88f8-931846312678",
-                  "version" : "1.17.0"
+                  "version" : "1.8.0"
                },
                "is_bind_type" : true,
                "is_errorable" : false,
@@ -990,7 +935,7 @@
                         "from_module" : {
                            "name" : "@minecraft/server",
                            "uuid" : "b26a4d4c-afdf-4690-88f8-931846312678",
-                           "version" : "1.17.0"
+                           "version" : "1.8.0"
                         },
                         "is_bind_type" : true,
                         "is_errorable" : false,
@@ -1021,7 +966,7 @@
                         "from_module" : {
                            "name" : "@minecraft/server",
                            "uuid" : "b26a4d4c-afdf-4690-88f8-931846312678",
-                           "version" : "1.17.0"
+                           "version" : "1.8.0"
                         },
                         "is_bind_type" : true,
                         "is_errorable" : false,
@@ -1037,7 +982,7 @@
                         "from_module" : {
                            "name" : "@minecraft/server",
                            "uuid" : "b26a4d4c-afdf-4690-88f8-931846312678",
-                           "version" : "1.17.0"
+                           "version" : "1.8.0"
                         },
                         "is_bind_type" : true,
                         "is_errorable" : false,
@@ -1142,7 +1087,7 @@
                         "from_module" : {
                            "name" : "@minecraft/server",
                            "uuid" : "b26a4d4c-afdf-4690-88f8-931846312678",
-                           "version" : "1.17.0"
+                           "version" : "1.8.0"
                         },
                         "is_bind_type" : true,
                         "is_errorable" : false,
@@ -1216,7 +1161,7 @@
                         "from_module" : {
                            "name" : "@minecraft/server",
                            "uuid" : "b26a4d4c-afdf-4690-88f8-931846312678",
-                           "version" : "1.17.0"
+                           "version" : "1.8.0"
                         },
                         "is_bind_type" : true,
                         "is_errorable" : false,
@@ -1232,7 +1177,7 @@
                         "from_module" : {
                            "name" : "@minecraft/server",
                            "uuid" : "b26a4d4c-afdf-4690-88f8-931846312678",
-                           "version" : "1.17.0"
+                           "version" : "1.8.0"
                         },
                         "is_bind_type" : true,
                         "is_errorable" : false,
@@ -1263,7 +1208,7 @@
                         "from_module" : {
                            "name" : "@minecraft/server",
                            "uuid" : "b26a4d4c-afdf-4690-88f8-931846312678",
-                           "version" : "1.17.0"
+                           "version" : "1.8.0"
                         },
                         "is_bind_type" : true,
                         "is_errorable" : false,
@@ -1310,7 +1255,7 @@
                         "from_module" : {
                            "name" : "@minecraft/server",
                            "uuid" : "b26a4d4c-afdf-4690-88f8-931846312678",
-                           "version" : "1.17.0"
+                           "version" : "1.8.0"
                         },
                         "is_bind_type" : true,
                         "is_errorable" : false,
@@ -1352,7 +1297,7 @@
                         "from_module" : {
                            "name" : "@minecraft/server",
                            "uuid" : "b26a4d4c-afdf-4690-88f8-931846312678",
-                           "version" : "1.17.0"
+                           "version" : "1.8.0"
                         },
                         "is_bind_type" : true,
                         "is_errorable" : false,
@@ -1394,7 +1339,7 @@
                         "from_module" : {
                            "name" : "@minecraft/server",
                            "uuid" : "b26a4d4c-afdf-4690-88f8-931846312678",
-                           "version" : "1.17.0"
+                           "version" : "1.8.0"
                         },
                         "is_bind_type" : true,
                         "is_errorable" : false,
@@ -1568,7 +1513,7 @@
                         "from_module" : {
                            "name" : "@minecraft/server",
                            "uuid" : "b26a4d4c-afdf-4690-88f8-931846312678",
-                           "version" : "1.17.0"
+                           "version" : "1.8.0"
                         },
                         "is_bind_type" : true,
                         "is_errorable" : false,
@@ -1615,7 +1560,7 @@
                         "from_module" : {
                            "name" : "@minecraft/server",
                            "uuid" : "b26a4d4c-afdf-4690-88f8-931846312678",
-                           "version" : "1.17.0"
+                           "version" : "1.8.0"
                         },
                         "is_bind_type" : true,
                         "is_errorable" : false,
@@ -1662,7 +1607,7 @@
                         "from_module" : {
                            "name" : "@minecraft/server",
                            "uuid" : "b26a4d4c-afdf-4690-88f8-931846312678",
-                           "version" : "1.17.0"
+                           "version" : "1.8.0"
                         },
                         "is_bind_type" : true,
                         "is_errorable" : false,
@@ -1710,7 +1655,7 @@
                         "from_module" : {
                            "name" : "@minecraft/server",
                            "uuid" : "b26a4d4c-afdf-4690-88f8-931846312678",
-                           "version" : "1.17.0"
+                           "version" : "1.8.0"
                         },
                         "is_bind_type" : true,
                         "is_errorable" : false,
@@ -1758,7 +1703,7 @@
                         "from_module" : {
                            "name" : "@minecraft/server",
                            "uuid" : "b26a4d4c-afdf-4690-88f8-931846312678",
-                           "version" : "1.17.0"
+                           "version" : "1.8.0"
                         },
                         "is_bind_type" : true,
                         "is_errorable" : false,
@@ -1807,7 +1752,7 @@
                            "from_module" : {
                               "name" : "@minecraft/server",
                               "uuid" : "b26a4d4c-afdf-4690-88f8-931846312678",
-                              "version" : "1.17.0"
+                              "version" : "1.8.0"
                            },
                            "is_bind_type" : true,
                            "is_errorable" : false,
@@ -1941,7 +1886,7 @@
                         "from_module" : {
                            "name" : "@minecraft/server",
                            "uuid" : "b26a4d4c-afdf-4690-88f8-931846312678",
-                           "version" : "1.17.0"
+                           "version" : "1.8.0"
                         },
                         "is_bind_type" : true,
                         "is_errorable" : false,
@@ -2154,7 +2099,7 @@
                      "from_module" : {
                         "name" : "@minecraft/server",
                         "uuid" : "b26a4d4c-afdf-4690-88f8-931846312678",
-                        "version" : "1.17.0"
+                        "version" : "1.8.0"
                      },
                      "is_bind_type" : true,
                      "is_errorable" : false,
@@ -2187,7 +2132,7 @@
                         "from_module" : {
                            "name" : "@minecraft/server",
                            "uuid" : "b26a4d4c-afdf-4690-88f8-931846312678",
-                           "version" : "1.17.0"
+                           "version" : "1.8.0"
                         },
                         "is_bind_type" : true,
                         "is_errorable" : false,
@@ -2267,7 +2212,7 @@
                         "from_module" : {
                            "name" : "@minecraft/server",
                            "uuid" : "b26a4d4c-afdf-4690-88f8-931846312678",
-                           "version" : "1.17.0"
+                           "version" : "1.8.0"
                         },
                         "is_bind_type" : true,
                         "is_errorable" : false,
@@ -2283,7 +2228,7 @@
                         "from_module" : {
                            "name" : "@minecraft/server",
                            "uuid" : "b26a4d4c-afdf-4690-88f8-931846312678",
-                           "version" : "1.17.0"
+                           "version" : "1.8.0"
                         },
                         "is_bind_type" : true,
                         "is_errorable" : false,
@@ -2303,7 +2248,7 @@
                            "from_module" : {
                               "name" : "@minecraft/server",
                               "uuid" : "b26a4d4c-afdf-4690-88f8-931846312678",
-                              "version" : "1.17.0"
+                              "version" : "1.8.0"
                            },
                            "is_bind_type" : true,
                            "is_errorable" : false,
@@ -2335,7 +2280,7 @@
                         "from_module" : {
                            "name" : "@minecraft/server",
                            "uuid" : "b26a4d4c-afdf-4690-88f8-931846312678",
-                           "version" : "1.17.0"
+                           "version" : "1.8.0"
                         },
                         "is_bind_type" : true,
                         "is_errorable" : false,
@@ -2349,7 +2294,7 @@
                         "from_module" : {
                            "name" : "@minecraft/server",
                            "uuid" : "b26a4d4c-afdf-4690-88f8-931846312678",
-                           "version" : "1.17.0"
+                           "version" : "1.8.0"
                         },
                         "is_bind_type" : true,
                         "is_errorable" : false,
@@ -2365,7 +2310,7 @@
                         "from_module" : {
                            "name" : "@minecraft/server",
                            "uuid" : "b26a4d4c-afdf-4690-88f8-931846312678",
-                           "version" : "1.17.0"
+                           "version" : "1.8.0"
                         },
                         "is_bind_type" : true,
                         "is_errorable" : false,
@@ -2385,7 +2330,7 @@
                            "from_module" : {
                               "name" : "@minecraft/server",
                               "uuid" : "b26a4d4c-afdf-4690-88f8-931846312678",
-                              "version" : "1.17.0"
+                              "version" : "1.8.0"
                            },
                            "is_bind_type" : true,
                            "is_errorable" : false,
@@ -2418,7 +2363,7 @@
                   "from_module" : {
                      "name" : "@minecraft/server",
                      "uuid" : "b26a4d4c-afdf-4690-88f8-931846312678",
-                     "version" : "1.17.0"
+                     "version" : "1.8.0"
                   },
                   "is_bind_type" : true,
                   "is_errorable" : true,
@@ -2574,7 +2519,7 @@
                               "from_module" : {
                                  "name" : "@minecraft/server",
                                  "uuid" : "b26a4d4c-afdf-4690-88f8-931846312678",
-                                 "version" : "1.17.0"
+                                 "version" : "1.8.0"
                               },
                               "is_bind_type" : true,
                               "is_errorable" : false,
@@ -2595,7 +2540,7 @@
                         "from_module" : {
                            "name" : "@minecraft/server",
                            "uuid" : "b26a4d4c-afdf-4690-88f8-931846312678",
-                           "version" : "1.17.0"
+                           "version" : "1.8.0"
                         },
                         "is_bind_type" : true,
                         "is_errorable" : false,
@@ -2644,7 +2589,7 @@
                         "from_module" : {
                            "name" : "@minecraft/server",
                            "uuid" : "b26a4d4c-afdf-4690-88f8-931846312678",
-                           "version" : "1.17.0"
+                           "version" : "1.8.0"
                         },
                         "is_bind_type" : true,
                         "is_errorable" : false,
@@ -2661,7 +2606,7 @@
                                  "from_module" : {
                                     "name" : "@minecraft/server",
                                     "uuid" : "b26a4d4c-afdf-4690-88f8-931846312678",
-                                    "version" : "1.17.0"
+                                    "version" : "1.8.0"
                                  },
                                  "is_bind_type" : true,
                                  "is_errorable" : false,
@@ -2710,7 +2655,7 @@
                         "from_module" : {
                            "name" : "@minecraft/server",
                            "uuid" : "b26a4d4c-afdf-4690-88f8-931846312678",
-                           "version" : "1.17.0"
+                           "version" : "1.8.0"
                         },
                         "is_bind_type" : true,
                         "is_errorable" : false,
@@ -2724,7 +2669,7 @@
                         "from_module" : {
                            "name" : "@minecraft/server",
                            "uuid" : "b26a4d4c-afdf-4690-88f8-931846312678",
-                           "version" : "1.17.0"
+                           "version" : "1.8.0"
                         },
                         "is_bind_type" : true,
                         "is_errorable" : false,
@@ -2773,7 +2718,7 @@
                         "from_module" : {
                            "name" : "@minecraft/server",
                            "uuid" : "b26a4d4c-afdf-4690-88f8-931846312678",
-                           "version" : "1.17.0"
+                           "version" : "1.8.0"
                         },
                         "is_bind_type" : true,
                         "is_errorable" : false,
@@ -2787,7 +2732,7 @@
                         "from_module" : {
                            "name" : "@minecraft/server",
                            "uuid" : "b26a4d4c-afdf-4690-88f8-931846312678",
-                           "version" : "1.17.0"
+                           "version" : "1.8.0"
                         },
                         "is_bind_type" : true,
                         "is_errorable" : false,
@@ -2825,7 +2770,7 @@
                         "from_module" : {
                            "name" : "@minecraft/server",
                            "uuid" : "b26a4d4c-afdf-4690-88f8-931846312678",
-                           "version" : "1.17.0"
+                           "version" : "1.8.0"
                         },
                         "is_bind_type" : true,
                         "is_errorable" : false,
@@ -2913,7 +2858,7 @@
                         "from_module" : {
                            "name" : "@minecraft/server",
                            "uuid" : "b26a4d4c-afdf-4690-88f8-931846312678",
-                           "version" : "1.17.0"
+                           "version" : "1.8.0"
                         },
                         "is_bind_type" : true,
                         "is_errorable" : false,
@@ -2980,7 +2925,7 @@
                         "from_module" : {
                            "name" : "@minecraft/server",
                            "uuid" : "b26a4d4c-afdf-4690-88f8-931846312678",
-                           "version" : "1.17.0"
+                           "version" : "1.8.0"
                         },
                         "is_bind_type" : true,
                         "is_errorable" : false,
@@ -3029,7 +2974,7 @@
                         "from_module" : {
                            "name" : "@minecraft/server",
                            "uuid" : "b26a4d4c-afdf-4690-88f8-931846312678",
-                           "version" : "1.17.0"
+                           "version" : "1.8.0"
                         },
                         "is_bind_type" : true,
                         "is_errorable" : false,
@@ -3043,7 +2988,7 @@
                         "from_module" : {
                            "name" : "@minecraft/server",
                            "uuid" : "b26a4d4c-afdf-4690-88f8-931846312678",
-                           "version" : "1.17.0"
+                           "version" : "1.8.0"
                         },
                         "is_bind_type" : true,
                         "is_errorable" : false,
@@ -3092,7 +3037,7 @@
                         "from_module" : {
                            "name" : "@minecraft/server",
                            "uuid" : "b26a4d4c-afdf-4690-88f8-931846312678",
-                           "version" : "1.17.0"
+                           "version" : "1.8.0"
                         },
                         "is_bind_type" : true,
                         "is_errorable" : false,
@@ -3150,7 +3095,7 @@
                         "from_module" : {
                            "name" : "@minecraft/server",
                            "uuid" : "b26a4d4c-afdf-4690-88f8-931846312678",
-                           "version" : "1.17.0"
+                           "version" : "1.8.0"
                         },
                         "is_bind_type" : true,
                         "is_errorable" : false,
@@ -3260,7 +3205,7 @@
                         "from_module" : {
                            "name" : "@minecraft/server",
                            "uuid" : "b26a4d4c-afdf-4690-88f8-931846312678",
-                           "version" : "1.17.0"
+                           "version" : "1.8.0"
                         },
                         "is_bind_type" : true,
                         "is_errorable" : false,
@@ -3286,7 +3231,7 @@
                                  "from_module" : {
                                     "name" : "@minecraft/server",
                                     "uuid" : "b26a4d4c-afdf-4690-88f8-931846312678",
-                                    "version" : "1.17.0"
+                                    "version" : "1.8.0"
                                  },
                                  "is_bind_type" : true,
                                  "is_errorable" : false,
@@ -3344,7 +3289,7 @@
                         "from_module" : {
                            "name" : "@minecraft/server",
                            "uuid" : "b26a4d4c-afdf-4690-88f8-931846312678",
-                           "version" : "1.17.0"
+                           "version" : "1.8.0"
                         },
                         "is_bind_type" : true,
                         "is_errorable" : false,
@@ -3393,7 +3338,7 @@
                         "from_module" : {
                            "name" : "@minecraft/server",
                            "uuid" : "b26a4d4c-afdf-4690-88f8-931846312678",
-                           "version" : "1.17.0"
+                           "version" : "1.8.0"
                         },
                         "is_bind_type" : true,
                         "is_errorable" : false,
@@ -3447,7 +3392,7 @@
                               "from_module" : {
                                  "name" : "@minecraft/server",
                                  "uuid" : "b26a4d4c-afdf-4690-88f8-931846312678",
-                                 "version" : "1.17.0"
+                                 "version" : "1.8.0"
                               },
                               "is_bind_type" : true,
                               "is_errorable" : false,
@@ -3468,7 +3413,7 @@
                         "from_module" : {
                            "name" : "@minecraft/server",
                            "uuid" : "b26a4d4c-afdf-4690-88f8-931846312678",
-                           "version" : "1.17.0"
+                           "version" : "1.8.0"
                         },
                         "is_bind_type" : true,
                         "is_errorable" : false,
@@ -3543,7 +3488,7 @@
                               "from_module" : {
                                  "name" : "@minecraft/server",
                                  "uuid" : "b26a4d4c-afdf-4690-88f8-931846312678",
-                                 "version" : "1.17.0"
+                                 "version" : "1.8.0"
                               },
                               "is_bind_type" : true,
                               "is_errorable" : false,
@@ -3564,7 +3509,7 @@
                         "from_module" : {
                            "name" : "@minecraft/server",
                            "uuid" : "b26a4d4c-afdf-4690-88f8-931846312678",
-                           "version" : "1.17.0"
+                           "version" : "1.8.0"
                         },
                         "is_bind_type" : true,
                         "is_errorable" : false,
@@ -3630,7 +3575,7 @@
                         "from_module" : {
                            "name" : "@minecraft/server",
                            "uuid" : "b26a4d4c-afdf-4690-88f8-931846312678",
-                           "version" : "1.17.0"
+                           "version" : "1.8.0"
                         },
                         "is_bind_type" : true,
                         "is_errorable" : false,
@@ -3684,7 +3629,7 @@
                         "from_module" : {
                            "name" : "@minecraft/server",
                            "uuid" : "b26a4d4c-afdf-4690-88f8-931846312678",
-                           "version" : "1.17.0"
+                           "version" : "1.8.0"
                         },
                         "is_bind_type" : true,
                         "is_errorable" : false,
@@ -3793,7 +3738,7 @@
                         "from_module" : {
                            "name" : "@minecraft/server",
                            "uuid" : "b26a4d4c-afdf-4690-88f8-931846312678",
-                           "version" : "1.17.0"
+                           "version" : "1.8.0"
                         },
                         "is_bind_type" : true,
                         "is_errorable" : false,
@@ -3820,7 +3765,7 @@
                   "from_module" : {
                      "name" : "@minecraft/server",
                      "uuid" : "b26a4d4c-afdf-4690-88f8-931846312678",
-                     "version" : "1.17.0"
+                     "version" : "1.8.0"
                   },
                   "is_bind_type" : true,
                   "is_errorable" : true,
@@ -3848,7 +3793,7 @@
                   "from_module" : {
                      "name" : "@minecraft/server",
                      "uuid" : "b26a4d4c-afdf-4690-88f8-931846312678",
-                     "version" : "1.17.0"
+                     "version" : "1.8.0"
                   },
                   "is_bind_type" : true,
                   "is_errorable" : true,
@@ -3864,7 +3809,7 @@
                         "from_module" : {
                            "name" : "@minecraft/server",
                            "uuid" : "b26a4d4c-afdf-4690-88f8-931846312678",
-                           "version" : "1.17.0"
+                           "version" : "1.8.0"
                         },
                         "is_bind_type" : true,
                         "is_errorable" : false,
@@ -3902,7 +3847,7 @@
                         "from_module" : {
                            "name" : "@minecraft/server",
                            "uuid" : "b26a4d4c-afdf-4690-88f8-931846312678",
-                           "version" : "1.17.0"
+                           "version" : "1.8.0"
                         },
                         "is_bind_type" : true,
                         "is_errorable" : false,
@@ -3950,7 +3895,7 @@
                   "from_module" : {
                      "name" : "@minecraft/server",
                      "uuid" : "b26a4d4c-afdf-4690-88f8-931846312678",
-                     "version" : "1.17.0"
+                     "version" : "1.8.0"
                   },
                   "is_bind_type" : true,
                   "is_errorable" : false,
@@ -4027,7 +3972,7 @@
                         "from_module" : {
                            "name" : "@minecraft/server",
                            "uuid" : "b26a4d4c-afdf-4690-88f8-931846312678",
-                           "version" : "1.17.0"
+                           "version" : "1.8.0"
                         },
                         "is_bind_type" : true,
                         "is_errorable" : false,
@@ -4081,7 +4026,7 @@
                         "from_module" : {
                            "name" : "@minecraft/server",
                            "uuid" : "b26a4d4c-afdf-4690-88f8-931846312678",
-                           "version" : "1.17.0"
+                           "version" : "1.8.0"
                         },
                         "is_bind_type" : true,
                         "is_errorable" : false,
@@ -4152,7 +4097,7 @@
                         "from_module" : {
                            "name" : "@minecraft/server",
                            "uuid" : "b26a4d4c-afdf-4690-88f8-931846312678",
-                           "version" : "1.17.0"
+                           "version" : "1.8.0"
                         },
                         "is_bind_type" : true,
                         "is_errorable" : false,
@@ -4190,7 +4135,7 @@
                         "from_module" : {
                            "name" : "@minecraft/server",
                            "uuid" : "b26a4d4c-afdf-4690-88f8-931846312678",
-                           "version" : "1.17.0"
+                           "version" : "1.8.0"
                         },
                         "is_bind_type" : true,
                         "is_errorable" : false,
@@ -4244,7 +4189,7 @@
                         "from_module" : {
                            "name" : "@minecraft/server",
                            "uuid" : "b26a4d4c-afdf-4690-88f8-931846312678",
-                           "version" : "1.17.0"
+                           "version" : "1.8.0"
                         },
                         "is_bind_type" : true,
                         "is_errorable" : false,
@@ -4271,7 +4216,7 @@
                   "from_module" : {
                      "name" : "@minecraft/server",
                      "uuid" : "b26a4d4c-afdf-4690-88f8-931846312678",
-                     "version" : "1.17.0"
+                     "version" : "1.8.0"
                   },
                   "is_bind_type" : true,
                   "is_errorable" : true,
@@ -4287,7 +4232,7 @@
                         "from_module" : {
                            "name" : "@minecraft/server",
                            "uuid" : "b26a4d4c-afdf-4690-88f8-931846312678",
-                           "version" : "1.17.0"
+                           "version" : "1.8.0"
                         },
                         "is_bind_type" : true,
                         "is_errorable" : false,
@@ -4314,7 +4259,7 @@
                   "from_module" : {
                      "name" : "@minecraft/server",
                      "uuid" : "b26a4d4c-afdf-4690-88f8-931846312678",
-                     "version" : "1.17.0"
+                     "version" : "1.8.0"
                   },
                   "is_bind_type" : true,
                   "is_errorable" : true,
@@ -4356,7 +4301,7 @@
                         "from_module" : {
                            "name" : "@minecraft/server",
                            "uuid" : "b26a4d4c-afdf-4690-88f8-931846312678",
-                           "version" : "1.17.0"
+                           "version" : "1.8.0"
                         },
                         "is_bind_type" : true,
                         "is_errorable" : false,
@@ -4383,7 +4328,7 @@
                   "from_module" : {
                      "name" : "@minecraft/server",
                      "uuid" : "b26a4d4c-afdf-4690-88f8-931846312678",
-                     "version" : "1.17.0"
+                     "version" : "1.8.0"
                   },
                   "is_bind_type" : true,
                   "is_errorable" : true,
@@ -4399,7 +4344,7 @@
                         "from_module" : {
                            "name" : "@minecraft/server",
                            "uuid" : "b26a4d4c-afdf-4690-88f8-931846312678",
-                           "version" : "1.17.0"
+                           "version" : "1.8.0"
                         },
                         "is_bind_type" : true,
                         "is_errorable" : false,
@@ -4426,7 +4371,7 @@
                   "from_module" : {
                      "name" : "@minecraft/server",
                      "uuid" : "b26a4d4c-afdf-4690-88f8-931846312678",
-                     "version" : "1.17.0"
+                     "version" : "1.8.0"
                   },
                   "is_bind_type" : true,
                   "is_errorable" : true,
@@ -4542,7 +4487,7 @@
                         "from_module" : {
                            "name" : "@minecraft/server",
                            "uuid" : "b26a4d4c-afdf-4690-88f8-931846312678",
-                           "version" : "1.17.0"
+                           "version" : "1.8.0"
                         },
                         "is_bind_type" : true,
                         "is_errorable" : false,
@@ -4556,7 +4501,7 @@
                         "from_module" : {
                            "name" : "@minecraft/server",
                            "uuid" : "b26a4d4c-afdf-4690-88f8-931846312678",
-                           "version" : "1.17.0"
+                           "version" : "1.8.0"
                         },
                         "is_bind_type" : true,
                         "is_errorable" : false,
@@ -4599,7 +4544,7 @@
                               "from_module" : {
                                  "name" : "@minecraft/server",
                                  "uuid" : "b26a4d4c-afdf-4690-88f8-931846312678",
-                                 "version" : "1.17.0"
+                                 "version" : "1.8.0"
                               },
                               "is_bind_type" : true,
                               "is_errorable" : false,
@@ -4620,7 +4565,7 @@
                         "from_module" : {
                            "name" : "@minecraft/server",
                            "uuid" : "b26a4d4c-afdf-4690-88f8-931846312678",
-                           "version" : "1.17.0"
+                           "version" : "1.8.0"
                         },
                         "is_bind_type" : true,
                         "is_errorable" : false,
@@ -4658,7 +4603,7 @@
                         "from_module" : {
                            "name" : "@minecraft/server",
                            "uuid" : "b26a4d4c-afdf-4690-88f8-931846312678",
-                           "version" : "1.17.0"
+                           "version" : "1.8.0"
                         },
                         "is_bind_type" : true,
                         "is_errorable" : false,
@@ -4672,7 +4617,7 @@
                         "from_module" : {
                            "name" : "@minecraft/server",
                            "uuid" : "b26a4d4c-afdf-4690-88f8-931846312678",
-                           "version" : "1.17.0"
+                           "version" : "1.8.0"
                         },
                         "is_bind_type" : true,
                         "is_errorable" : false,
@@ -4710,7 +4655,7 @@
                         "from_module" : {
                            "name" : "@minecraft/server",
                            "uuid" : "b26a4d4c-afdf-4690-88f8-931846312678",
-                           "version" : "1.17.0"
+                           "version" : "1.8.0"
                         },
                         "is_bind_type" : true,
                         "is_errorable" : false,
@@ -4773,7 +4718,7 @@
                         "from_module" : {
                            "name" : "@minecraft/server",
                            "uuid" : "b26a4d4c-afdf-4690-88f8-931846312678",
-                           "version" : "1.17.0"
+                           "version" : "1.8.0"
                         },
                         "is_bind_type" : true,
                         "is_errorable" : false,
@@ -4800,7 +4745,7 @@
                   "from_module" : {
                      "name" : "@minecraft/server",
                      "uuid" : "b26a4d4c-afdf-4690-88f8-931846312678",
-                     "version" : "1.17.0"
+                     "version" : "1.8.0"
                   },
                   "is_bind_type" : true,
                   "is_errorable" : true,
@@ -4825,7 +4770,7 @@
                         "from_module" : {
                            "name" : "@minecraft/server",
                            "uuid" : "b26a4d4c-afdf-4690-88f8-931846312678",
-                           "version" : "1.17.0"
+                           "version" : "1.8.0"
                         },
                         "is_bind_type" : true,
                         "is_errorable" : false,
@@ -4852,7 +4797,7 @@
                   "from_module" : {
                      "name" : "@minecraft/server",
                      "uuid" : "b26a4d4c-afdf-4690-88f8-931846312678",
-                     "version" : "1.17.0"
+                     "version" : "1.8.0"
                   },
                   "is_bind_type" : true,
                   "is_errorable" : true,
@@ -4868,7 +4813,7 @@
                         "from_module" : {
                            "name" : "@minecraft/server",
                            "uuid" : "b26a4d4c-afdf-4690-88f8-931846312678",
-                           "version" : "1.17.0"
+                           "version" : "1.8.0"
                         },
                         "is_bind_type" : true,
                         "is_errorable" : false,
@@ -4882,7 +4827,7 @@
                         "from_module" : {
                            "name" : "@minecraft/server",
                            "uuid" : "b26a4d4c-afdf-4690-88f8-931846312678",
-                           "version" : "1.17.0"
+                           "version" : "1.8.0"
                         },
                         "is_bind_type" : true,
                         "is_errorable" : false,
@@ -4909,7 +4854,7 @@
                   "from_module" : {
                      "name" : "@minecraft/server",
                      "uuid" : "b26a4d4c-afdf-4690-88f8-931846312678",
-                     "version" : "1.17.0"
+                     "version" : "1.8.0"
                   },
                   "is_bind_type" : true,
                   "is_errorable" : true,
@@ -4925,7 +4870,7 @@
                         "from_module" : {
                            "name" : "@minecraft/server",
                            "uuid" : "b26a4d4c-afdf-4690-88f8-931846312678",
-                           "version" : "1.17.0"
+                           "version" : "1.8.0"
                         },
                         "is_bind_type" : true,
                         "is_errorable" : false,
@@ -4952,7 +4897,7 @@
                         "from_module" : {
                            "name" : "@minecraft/server",
                            "uuid" : "b26a4d4c-afdf-4690-88f8-931846312678",
-                           "version" : "1.17.0"
+                           "version" : "1.8.0"
                         },
                         "is_bind_type" : true,
                         "is_errorable" : false,
@@ -4999,7 +4944,7 @@
                         "from_module" : {
                            "name" : "@minecraft/server",
                            "uuid" : "b26a4d4c-afdf-4690-88f8-931846312678",
-                           "version" : "1.17.0"
+                           "version" : "1.8.0"
                         },
                         "is_bind_type" : true,
                         "is_errorable" : false,
@@ -5026,7 +4971,7 @@
                   "from_module" : {
                      "name" : "@minecraft/server",
                      "uuid" : "b26a4d4c-afdf-4690-88f8-931846312678",
-                     "version" : "1.17.0"
+                     "version" : "1.8.0"
                   },
                   "is_bind_type" : true,
                   "is_errorable" : true,
@@ -5051,7 +4996,7 @@
                         "from_module" : {
                            "name" : "@minecraft/server",
                            "uuid" : "b26a4d4c-afdf-4690-88f8-931846312678",
-                           "version" : "1.17.0"
+                           "version" : "1.8.0"
                         },
                         "is_bind_type" : true,
                         "is_errorable" : false,
@@ -5078,7 +5023,7 @@
                   "from_module" : {
                      "name" : "@minecraft/server",
                      "uuid" : "b26a4d4c-afdf-4690-88f8-931846312678",
-                     "version" : "1.17.0"
+                     "version" : "1.8.0"
                   },
                   "is_bind_type" : true,
                   "is_errorable" : true,
@@ -5094,7 +5039,7 @@
                         "from_module" : {
                            "name" : "@minecraft/server",
                            "uuid" : "b26a4d4c-afdf-4690-88f8-931846312678",
-                           "version" : "1.17.0"
+                           "version" : "1.8.0"
                         },
                         "is_bind_type" : true,
                         "is_errorable" : false,
@@ -5108,7 +5053,7 @@
                         "from_module" : {
                            "name" : "@minecraft/server",
                            "uuid" : "b26a4d4c-afdf-4690-88f8-931846312678",
-                           "version" : "1.17.0"
+                           "version" : "1.8.0"
                         },
                         "is_bind_type" : true,
                         "is_errorable" : false,
@@ -5122,7 +5067,7 @@
                         "from_module" : {
                            "name" : "@minecraft/server",
                            "uuid" : "b26a4d4c-afdf-4690-88f8-931846312678",
-                           "version" : "1.17.0"
+                           "version" : "1.8.0"
                         },
                         "is_bind_type" : true,
                         "is_errorable" : false,
@@ -5348,7 +5293,7 @@
                               "from_module" : {
                                  "name" : "@minecraft/server",
                                  "uuid" : "b26a4d4c-afdf-4690-88f8-931846312678",
-                                 "version" : "1.17.0"
+                                 "version" : "1.8.0"
                               },
                               "is_bind_type" : true,
                               "is_errorable" : false,
@@ -5369,7 +5314,7 @@
                         "from_module" : {
                            "name" : "@minecraft/server",
                            "uuid" : "b26a4d4c-afdf-4690-88f8-931846312678",
-                           "version" : "1.17.0"
+                           "version" : "1.8.0"
                         },
                         "is_bind_type" : true,
                         "is_errorable" : false,
@@ -5436,7 +5381,7 @@
                         "from_module" : {
                            "name" : "@minecraft/server",
                            "uuid" : "b26a4d4c-afdf-4690-88f8-931846312678",
-                           "version" : "1.17.0"
+                           "version" : "1.8.0"
                         },
                         "is_bind_type" : true,
                         "is_errorable" : false,
@@ -5485,7 +5430,7 @@
                         "from_module" : {
                            "name" : "@minecraft/server",
                            "uuid" : "b26a4d4c-afdf-4690-88f8-931846312678",
-                           "version" : "1.17.0"
+                           "version" : "1.8.0"
                         },
                         "is_bind_type" : true,
                         "is_errorable" : false,
@@ -5527,7 +5472,7 @@
                         "from_module" : {
                            "name" : "@minecraft/server",
                            "uuid" : "b26a4d4c-afdf-4690-88f8-931846312678",
-                           "version" : "1.17.0"
+                           "version" : "1.8.0"
                         },
                         "is_bind_type" : true,
                         "is_errorable" : false,
@@ -5633,7 +5578,7 @@
                         "from_module" : {
                            "name" : "@minecraft/server",
                            "uuid" : "b26a4d4c-afdf-4690-88f8-931846312678",
-                           "version" : "1.17.0"
+                           "version" : "1.8.0"
                         },
                         "is_bind_type" : true,
                         "is_errorable" : false,
@@ -5647,7 +5592,7 @@
                         "from_module" : {
                            "name" : "@minecraft/server",
                            "uuid" : "b26a4d4c-afdf-4690-88f8-931846312678",
-                           "version" : "1.17.0"
+                           "version" : "1.8.0"
                         },
                         "is_bind_type" : true,
                         "is_errorable" : false,
@@ -5702,7 +5647,7 @@
                         "from_module" : {
                            "name" : "@minecraft/server",
                            "uuid" : "b26a4d4c-afdf-4690-88f8-931846312678",
-                           "version" : "1.17.0"
+                           "version" : "1.8.0"
                         },
                         "is_bind_type" : true,
                         "is_errorable" : false,
@@ -5716,7 +5661,7 @@
                         "from_module" : {
                            "name" : "@minecraft/server",
                            "uuid" : "b26a4d4c-afdf-4690-88f8-931846312678",
-                           "version" : "1.17.0"
+                           "version" : "1.8.0"
                         },
                         "is_bind_type" : true,
                         "is_errorable" : false,
@@ -5771,7 +5716,7 @@
                         "from_module" : {
                            "name" : "@minecraft/server",
                            "uuid" : "b26a4d4c-afdf-4690-88f8-931846312678",
-                           "version" : "1.17.0"
+                           "version" : "1.8.0"
                         },
                         "is_bind_type" : true,
                         "is_errorable" : false,
@@ -5798,7 +5743,7 @@
                   "from_module" : {
                      "name" : "@minecraft/server",
                      "uuid" : "b26a4d4c-afdf-4690-88f8-931846312678",
-                     "version" : "1.17.0"
+                     "version" : "1.8.0"
                   },
                   "is_bind_type" : true,
                   "is_errorable" : true,
@@ -5814,7 +5759,7 @@
                         "from_module" : {
                            "name" : "@minecraft/server",
                            "uuid" : "b26a4d4c-afdf-4690-88f8-931846312678",
-                           "version" : "1.17.0"
+                           "version" : "1.8.0"
                         },
                         "is_bind_type" : true,
                         "is_errorable" : false,
@@ -5841,7 +5786,7 @@
                   "from_module" : {
                      "name" : "@minecraft/server",
                      "uuid" : "b26a4d4c-afdf-4690-88f8-931846312678",
-                     "version" : "1.17.0"
+                     "version" : "1.8.0"
                   },
                   "is_bind_type" : true,
                   "is_errorable" : true,
@@ -5868,7 +5813,7 @@
       {
          "name" : "@minecraft/server",
          "uuid" : "b26a4d4c-afdf-4690-88f8-931846312678",
-         "version" : "1.17.0"
+         "version" : "1.8.0"
       }
    ],
    "enums" : [
@@ -6210,7 +6155,7 @@
                   "from_module" : {
                      "name" : "@minecraft/server",
                      "uuid" : "b26a4d4c-afdf-4690-88f8-931846312678",
-                     "version" : "1.17.0"
+                     "version" : "1.8.0"
                   },
                   "is_bind_type" : true,
                   "is_errorable" : false,
@@ -6224,7 +6169,7 @@
                   "from_module" : {
                      "name" : "@minecraft/server",
                      "uuid" : "b26a4d4c-afdf-4690-88f8-931846312678",
-                     "version" : "1.17.0"
+                     "version" : "1.8.0"
                   },
                   "is_bind_type" : true,
                   "is_errorable" : false,
@@ -6295,7 +6240,7 @@
          }
       }
    ],
-   "minecraft_version" : "1.21.60-beta.10",
+   "minecraft_version" : "1.21.50-beta.7",
    "module_type" : "script",
    "name" : "@minecraft/server-gametest",
    "objects" : [],
