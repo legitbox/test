@@ -14,7 +14,7 @@ body {
     -webkit-overflow-scrolling: touch;
     content-visibility: auto;
     background-color: rgb(0,0,0);
-    color: rgb(255, 255, 255);
+    color: rgb(250, 248, 246);
     margin: 0;
     padding: 0;
     scrollbar-width: none;
@@ -32,7 +32,7 @@ body {
 }
 
 wb-title {
- color: rgb(255, 255, 255);
+ color: rgb(250, 248, 246);
 }
 
 .scroll {
@@ -48,7 +48,7 @@ h1 {
     margin-top: -1.5vh;
     margin-left: 2vw;
     margin-right: 2vw;
-    background-color: rgba(60, 60, 60, 0.6);
+    background-color: rgba(25, 25, 25, 0.6);
     padding-top: 0.2vh;
     padding-bottom: 0.2vh;
     background-repeat: repeat;
@@ -77,7 +77,7 @@ h1 {
 
 .navbar ul li a {
     text-decoration: none;
-    color: rgb(255, 255, 255);
+    color: rgb(250, 248, 246);
     font-size: 3vh;
     display: inline-block;
     transition: transform 0.1s ease;
@@ -88,7 +88,7 @@ h1 {
 }
 
 .object_description {
-    color: rgb(255, 255, 255);
+    color: rgb(250, 248, 246);
     border-radius: 1vh;
     font-family: "", sans-serif;
     font-size: 2vh;
@@ -162,7 +162,7 @@ th, td{
         
 .search{
     font-family: inherit;
-    background-color: rgba(60, 60, 60, 0.6);
+    background-color: rgba(25, 25, 25, 0.6);
     backdrop-filter: blur(10px);
     font-size: 2vw;
     border-radius: 4px;
@@ -180,7 +180,7 @@ th, td{
 
 .gridjs-input{
     font-family: inherit;
-    background-color: rgba(60, 60, 60, 0.6);
+    background-color: rgba(25, 25, 25, 0.6);
     backdrop-filter: blur(10px);
     font-size: 1vw;
     border-radius: 4px;
@@ -201,9 +201,13 @@ th, td{
     }
 }
 
+a {
+ color: #ceb6ff;
+}
+
 .container {
     display: block;
-    background-color: rgba(60, 60, 60, 0.6);
+    background-color: rgba(25, 25, 25, 0.6);
     padding: 5px;
     padding-right: 10px;
     margin-top: 1.5vh;
@@ -223,7 +227,7 @@ th, td{
 
 
 .index_container {
-    background-color: rgba(60, 60, 60, 0.6);
+    background-color: rgba(25, 25, 25, 0.6);
     padding: 5px;
     padding-right: 10px;
     margin-top: 2vh;
@@ -243,7 +247,7 @@ th, td{
 .search_container {
     opacity: 1;
     transition: opacity 0.5s ease-in-out;
-    background-color: rgba(60, 60, 60, 0.6);
+    background-color: rgba(25, 25, 25, 0.6);
     padding: 5px;
     padding-right: 10px;
     margin-top: 2vh;
@@ -266,7 +270,7 @@ th, td{
 }
 
 .inline_container {
-    background-color: rgba(60, 60, 60, 0.6);
+    background-color: rgba(25, 25, 25, 0.6);
     padding: 2px;
     padding-right: 0;
     margin-top: 2vh;
@@ -311,7 +315,7 @@ th {
 .list_link{
     font-size: 2vh;
     text-decoration: none;
-    color: rgb(255, 255, 255);
+    color: rgb(250, 248, 246);
     transition-duration: 0.2s;
 }
 

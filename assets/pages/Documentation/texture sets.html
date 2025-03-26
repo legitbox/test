@@ -23,6 +23,7 @@
           }
           </script>
         </head>
+        <body>
         
         <div class="scroll">
         <div class="navbar">
@@ -46,7 +47,7 @@
 <div class="container" id="node_head_0_2">
 <div class="description" style="all: revert;">
         <div class="object_name">
-<div class="object_inline_name"><h2 id="TextureSetJsonSchema" style="font-size: null; text-align: left">Texture Set Json Schema</h2></div><div class="object_description"><pre><code class="hljs">
+<div class="object_inline_name"><h2 id="TextureSetJsonSchema" style="font-size: null; text-align: left">Texture Set Json Schema</h2></div><div class="object_description" style="text-align: undefined"><pre><code class="hljs">
 --------
 
 {
@@ -86,7 +87,7 @@
 <div class="container" id="node_head_1_2">
 <div class="description" style="all: revert;">
         <div class="object_name">
-<div class="object_inline_name"><h2 id="Layers" style="font-size: null; text-align: left">Layers</h2></div><div class="object_description"><p>A texture_set.json file may specify several layers.</p>
+<div class="object_inline_name"><h2 id="Layers" style="font-size: null; text-align: left">Layers</h2></div><div class="object_description" style="text-align: undefined"><p>A texture_set.json file may specify several layers.</p>
 <p>Layers are references to texture image resources. they can also be defined in .json as values for uniform solid values as an alternative to referencing texture images in a pack.</p>
 </div>
         </div>
@@ -96,7 +97,7 @@
 <div class="container" id="node_head_0_3">
 <div class="description" style="all: revert;">
         <div class="object_name">
-<div class="object_inline_name"><h3 id="Color" style="font-size: null; text-align: left">Color</h3></div><div class="object_description"><ul>
+<div class="object_inline_name"><h3 id="Color" style="font-size: null; text-align: left">Color</h3></div><div class="object_description" style="text-align: undefined"><ul>
 <li>
 <p>This is an RGB 3-channel image (defaults to uniform alpha of 1.0), or an RGBA 4-channel image, or a 4 value array for a uniform color with alpha.</p>
 </li>
@@ -118,7 +119,7 @@
 <div class="container" id="node_head_1_3">
 <div class="description" style="all: revert;">
         <div class="object_name">
-<div class="object_inline_name"><h3 id="Normal" style="font-size: null; text-align: left">Normal</h3></div><div class="object_description"><ul>
+<div class="object_inline_name"><h3 id="Normal" style="font-size: null; text-align: left">Normal</h3></div><div class="object_description" style="text-align: undefined"><ul>
 <li>
 <p>3-channel normal map image (or 4-channel where the 4th channel is ignored).</p>
 </li>
@@ -134,7 +135,7 @@
 <div class="container" id="node_head_2_3">
 <div class="description" style="all: revert;">
         <div class="object_name">
-<div class="object_inline_name"><h3 id="Heightmap" style="font-size: null; text-align: left">Heightmap</h3></div><div class="object_description"><ul>
+<div class="object_inline_name"><h3 id="Heightmap" style="font-size: null; text-align: left">Heightmap</h3></div><div class="object_description" style="text-align: undefined"><ul>
 <li>
 <p>1-channel layer image or a single value in json for a uniform heightmap.</p>
 </li>
@@ -150,7 +151,7 @@
 <div class="container" id="node_head_3_3">
 <div class="description" style="all: revert;">
         <div class="object_name">
-<div class="object_inline_name"><h3 id="Metalness_emissive_roughness" style="font-size: null; text-align: left">Metalness_emissive_roughness</h3></div><div class="object_description"><ul>
+<div class="object_inline_name"><h3 id="Metalness_emissive_roughness" style="font-size: null; text-align: left">Metalness_emissive_roughness</h3></div><div class="object_description" style="text-align: undefined"><ul>
 <li>
 <p>3-channel image (or 4-channel where the 4th channel is ignored) or a 3 value array for a uniform MER.</p>
 </li>
@@ -166,7 +167,7 @@
 <div class="container" id="node_head_2_2">
 <div class="description" style="all: revert;">
         <div class="object_name">
-<div class="object_inline_name"><h2 id="Specifyinguniformvalues" style="font-size: null; text-align: left">Specifying uniform values</h2></div><div class="object_description"><p>Instead of referencing a texture image for a Texture Set layer, values can instead be specified in the *texture_set.json file,			which is effectively the equivalent to referencing a texture image filled uniformly with that value or values for the respective channels.</p>
+<div class="object_inline_name"><h2 id="Specifyinguniformvalues" style="font-size: null; text-align: left">Specifying uniform values</h2></div><div class="object_description" style="text-align: undefined"><p>Instead of referencing a texture image for a Texture Set layer, values can instead be specified in the *texture_set.json file,			which is effectively the equivalent to referencing a texture image filled uniformly with that value or values for the respective channels.</p>
 <p>The values in the json can be specified in any of the following formats:</p>
 <ul>
 <li>
@@ -239,7 +240,7 @@
 <div class="container" id="node_head_4_2">
 <div class="description" style="all: revert;">
         <div class="object_name">
-<div class="object_inline_name"><h2 id="Invalid*.texture_set.json" style="font-size: null; text-align: left">Invalid *.texture_set.json</h2></div><div class="object_description"><p>If a Texture Set is invalid, we’ll log a CONTENT_ERROR and the Texture Set will not be used.</p>
+<div class="object_inline_name"><h2 id="Invalid*.texture_set.json" style="font-size: null; text-align: left">Invalid *.texture_set.json</h2></div><div class="object_description" style="text-align: undefined"><p>If a Texture Set is invalid, we’ll log a CONTENT_ERROR and the Texture Set will not be used.</p>
 <p>A Texture Set is invalid if:</p>
 <ul>
 <li>
@@ -274,7 +275,7 @@
 <div class="container" id="node_head_5_2">
 <div class="description" style="all: revert;">
         <div class="object_name">
-<div class="object_inline_name"><h2 id="ResourceStackBehaviour" style="font-size: null; text-align: left">Resource Stack Behaviour</h2></div><div class="object_description"><ul>
+<div class="object_inline_name"><h2 id="ResourceStackBehaviour" style="font-size: null; text-align: left">Resource Stack Behaviour</h2></div><div class="object_description" style="text-align: undefined"><ul>
 <li>
 <p>Texture Set definitions can only reference images that exist in the same resource pack as the definition.</p>
 </li>
@@ -293,17 +294,17 @@
 <div class="container" id="node_head_6_2">
 <div class="description" style="all: revert;">
         <div class="object_name">
-<div class="object_inline_name"><h2 id="ReferencingTextureResources" style="font-size: null; text-align: left">Referencing Texture Resources</h2></div><div class="object_description"><p>The priority of file extensions, in case you have duplicate image references, is: .tga &gt; .png &gt; .jpg &gt; .jpeg. For example: 			if grass.png and grass.tga both exist in the folder, grass.tga will be chosen. This also applies to other data driven files, like actor json referencing a texture resource.</p>
+<div class="object_inline_name"><h2 id="ReferencingTextureResources" style="font-size: null; text-align: left">Referencing Texture Resources</h2></div><div class="object_description" style="text-align: undefined"><p>The priority of file extensions, in case you have duplicate image references, is: .tga &gt; .png &gt; .jpg &gt; .jpeg. For example: 			if grass.png and grass.tga both exist in the folder, grass.tga will be chosen. This also applies to other data driven files, like actor json referencing a texture resource.</p>
 </div>
         </div>
         </div>
         </div>
 
-    <body>
     <script defer src="/assets/js/LanguageHandler.js"></script>
         <script defer src="/assets/js/occlusionPilot.js"></script>
         <script defer src="/assets/js/preloadPilot.js"></script>
         <script defer src="/assets/libraries/gridjs.umd.js"></script>
+        <script defer src="/assets/libraries/htmx.min.js"></script>
         <link rel="stylesheet" href="/assets/styles/github-dark.css">
         <script defer src="/assets/libraries/highlight.min.js"></script>
         <script defer>
@@ -368,3 +369,4 @@
                 </script>
                 </div>
         </body>
+</html>

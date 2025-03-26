@@ -8,11 +8,11 @@
           <link rel="prefetch" href="/index.html">
           <link rel="prefetch" href="/settings.html">
           <link rel="stylesheet" href="/assets/styles/wiki_styles.css">
-          <link rel="icon" href="assets/images/banana.png" type="image/png">
+          <link rel="icon" href="/assets/images/banana.png" type="image/png">
           <meta name="description" content="Cool Banana">
           <meta name="viewport" content="width=device-width, initial-scale=1" />
           <meta property="og:title" content="Cool Banana" />
-          <meta property="og:image" content="assets/images/banana.png"/>
+          <meta property="og:image" content="/assets/images/banana.png"/>
           <script>
           if ('serviceWorker' in navigator) {
             window.addEventListener('load', () => {
@@ -23,6 +23,7 @@
           }
           </script>
         </head>
+        <body>
         
         <div class="scroll">
         <div class="navbar">
@@ -38,26 +39,26 @@
 <div class="container" id="title">
 <div class="description" style="all: revert;">
         <div class="object_name">
-<div class="object_inline_name"><h2 id="CoolBanana-minecraft:apple" style="font-size: undefined; text-align: center">Cool Banana - minecraft:apple</h2></div><div class="object_description"><p>A cool banana, for a cool showcase!</p>
+<div class="object_inline_name"><h2 id="spadix:item-minecraft:apple" style="font-size: undefined; text-align: left">spadix:item - minecraft:apple</h2></div><img src="/assets/images/banana.png" class="object_display_image_px" alt="object image cannot load!"><div class="object_description" style="text-align: undefined"><p>A cool banana, for a cool showcase!</p>
 </div>
         </div>
         </div>
         </div>
 
-<div class="container" id="tags">
+<div class="container" id="item:tags">
 <div class="description" style="all: revert;">
         <div class="object_name">
-<div class="object_inline_name"><h2 id="Tags" style="font-size: undefined; text-align: left">Tags</h2></div><div class="object_description"><p><code>&quot;minecraft:is_food&quot;</code></p>
+<div class="object_inline_name"><h2 id="ItemTags" style="font-size: undefined; text-align: left">Item Tags</h2></div><div class="object_description" style="text-align: undefined"><p><code>&quot;minecraft:is_food&quot;</code></p>
 </div>
         </div>
         </div>
         </div>
 
-    <body>
     <script defer src="/assets/js/LanguageHandler.js"></script>
         <script defer src="/assets/js/occlusionPilot.js"></script>
         <script defer src="/assets/js/preloadPilot.js"></script>
         <script defer src="/assets/libraries/gridjs.umd.js"></script>
+        <script defer src="/assets/libraries/htmx.min.js"></script>
         <link rel="stylesheet" href="/assets/styles/github-dark.css">
         <script defer src="/assets/libraries/highlight.min.js"></script>
         <script defer>
@@ -122,3 +123,4 @@
                 </script>
                 </div>
         </body>
+</html>

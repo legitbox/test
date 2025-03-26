@@ -23,6 +23,7 @@
           }
           </script>
         </head>
+        <body>
         
         <div class="scroll">
         <div class="navbar">
@@ -38,7 +39,7 @@
 <div class="container" id="introduction">
 <div class="description" style="all: revert;">
         <div class="object_name">
-<div class="object_inline_name"><h1 id="Stick" style="font-size: undefined; text-align: undefined">Stick</h1></div><div class="object_description"><p>The stick is a very simple, yet mighty item which is used for basically every tool you want to craft</p>
+<div class="object_inline_name"><h1 id="Stick" style="font-size: undefined; text-align: undefined">Stick</h1></div><div class="object_description" style="text-align: undefined"><p>The stick is a very simple, yet mighty item which is used for basically every tool you want to craft</p>
 </div>
         </div>
         </div>
@@ -130,7 +131,7 @@
             objectHrefs = [];
             objectCounts = [];
             objectID;
-            
+
             constructor(objectNames, objectTextures, objectHrefs, objectCounts, objectID) {
                 this.objectNames = objectNames;
                 this.objectTextures = objectTextures;
@@ -174,7 +175,7 @@ function switcherrecipe_canvas(objects) {
 }
 
 window.addEventListener('DOMContentLoaded', () => {
-    for (switcheroo of switcherArrayrecipe_canvas) {
+    for (switcheroo of switcherArrayrecipe_canvas) { 
         switcherrecipe_canvas(switcheroo);
     }
 });
@@ -189,7 +190,6 @@ window.addEventListener('DOMContentLoaded', () => {
             </style>
         </div>
     </div>
-    <p>text lmao</p>
     </div>
         
 <div class="container" style="display: flex">
@@ -278,7 +278,7 @@ window.addEventListener('DOMContentLoaded', () => {
             objectHrefs = [];
             objectCounts = [];
             objectID;
-            
+
             constructor(objectNames, objectTextures, objectHrefs, objectCounts, objectID) {
                 this.objectNames = objectNames;
                 this.objectTextures = objectTextures;
@@ -322,7 +322,7 @@ function switcherui_table2(objects) {
 }
 
 window.addEventListener('DOMContentLoaded', () => {
-    for (switcheroo of switcherArrayui_table2) {
+    for (switcheroo of switcherArrayui_table2) { 
         switcherui_table2(switcheroo);
     }
 });
@@ -337,14 +337,13 @@ window.addEventListener('DOMContentLoaded', () => {
             </style>
         </div>
     </div>
-    <p>text lmao</p>
     </div>
         
-    <body>
     <script defer src="/assets/js/LanguageHandler.js"></script>
         <script defer src="/assets/js/occlusionPilot.js"></script>
         <script defer src="/assets/js/preloadPilot.js"></script>
         <script defer src="/assets/libraries/gridjs.umd.js"></script>
+        <script defer src="/assets/libraries/htmx.min.js"></script>
         <link rel="stylesheet" href="/assets/styles/github-dark.css">
         <script defer src="/assets/libraries/highlight.min.js"></script>
         <script defer>
@@ -409,3 +408,4 @@ window.addEventListener('DOMContentLoaded', () => {
                 </script>
                 </div>
         </body>
+</html>

@@ -23,6 +23,7 @@
           }
           </script>
         </head>
+        <body>
         
         <div class="scroll">
         <div class="navbar">
@@ -46,7 +47,7 @@
 <div class="container" id="node_head_0_2">
 <div class="description" style="all: revert;">
         <div class="object_name">
-<div class="object_description"><p>Animation controllers decide which animations to play when.  Each controller contains a list of states that play one or more animations, each of which can be blended by a Molang expression if so desired.  Controller files are stored as JSON in the animation_controllers folder</p>
+<div class="object_description" style="text-align: undefined"><p>Animation controllers decide which animations to play when.  Each controller contains a list of states that play one or more animations, each of which can be blended by a Molang expression if so desired.  Controller files are stored as JSON in the animation_controllers folder</p>
 </div>
         </div>
         </div>
@@ -84,7 +85,7 @@
 <div class="container" id="node_head_1_2">
 <div class="description" style="all: revert;">
         <div class="object_name">
-<div class="object_inline_name"><h2 id="StateBlending" style="font-size: null; text-align: left">State Blending</h2></div><div class="object_description"><p>If you would like there to be a cross-fade between states when transitioning, simply set “blend_transition” to the time you would like the system to take in blending between the two states.  This is done as a simple lerp between the two states over the time specified.</p>
+<div class="object_inline_name"><h2 id="StateBlending" style="font-size: null; text-align: left">State Blending</h2></div><div class="object_description" style="text-align: undefined"><p>If you would like there to be a cross-fade between states when transitioning, simply set “blend_transition” to the time you would like the system to take in blending between the two states.  This is done as a simple lerp between the two states over the time specified.</p>
 </div>
         </div>
         </div>
@@ -116,7 +117,7 @@
 <div class="container" id="node_head_2_2">
 <div class="description" style="all: revert;">
         <div class="object_name">
-<div class="object_inline_name"><h2 id="StateTransitions" style="font-size: null; text-align: left">State Transitions</h2></div><div class="object_description"><p>A state can specify any number of transition scripts, listed in order.  Each transition has a target state to switch to, and a script for whether it should switch or not.  For each transition in order, evaluate the script, and if it returns non-zero, switch to the specified state immediately.  NOTE: Only one transition will be processed per frame.</p>
+<div class="object_inline_name"><h2 id="StateTransitions" style="font-size: null; text-align: left">State Transitions</h2></div><div class="object_description" style="text-align: undefined"><p>A state can specify any number of transition scripts, listed in order.  Each transition has a target state to switch to, and a script for whether it should switch or not.  For each transition in order, evaluate the script, and if it returns non-zero, switch to the specified state immediately.  NOTE: Only one transition will be processed per frame.</p>
 </div>
         </div>
         </div>
@@ -176,7 +177,7 @@
 <div class="container" id="node_head_3_2">
 <div class="description" style="all: revert;">
         <div class="object_name">
-<div class="object_inline_name"><h2 id="States" style="font-size: null; text-align: left">States</h2></div><div class="object_description"><p>A state defines a group of animations to process (each of which can have it’s own blend value). Each state has an optional variables section, listing any number of variables that referenced animations can use.  Each state also has one or more animations, using the name given in the entity’s definition json.</p>
+<div class="object_inline_name"><h2 id="States" style="font-size: null; text-align: left">States</h2></div><div class="object_description" style="text-align: undefined"><p>A state defines a group of animations to process (each of which can have it’s own blend value). Each state has an optional variables section, listing any number of variables that referenced animations can use.  Each state also has one or more animations, using the name given in the entity’s definition json.</p>
 </div>
         </div>
         </div>
@@ -185,7 +186,7 @@
 <div class="container" id="node_head_0_3">
 <div class="description" style="all: revert;">
         <div class="object_name">
-<div class="object_inline_name"><h3 id="StateVariables" style="font-size: null; text-align: left">State Variables</h3></div><div class="object_description"><p>Variables are either set by the game or by a user defined script that can be found in the entity definition json found in definitions/entity/&lt;entity_name&gt;.json.  Variables have their value set by a Molang Expression.  They can also have their value remapped via a linearly-interpolated curve.</p>
+<div class="object_inline_name"><h3 id="StateVariables" style="font-size: null; text-align: left">State Variables</h3></div><div class="object_description" style="text-align: undefined"><p>Variables are either set by the game or by a user defined script that can be found in the entity definition json found in definitions/entity/&lt;entity_name&gt;.json.  Variables have their value set by a Molang Expression.  They can also have their value remapped via a linearly-interpolated curve.</p>
 </div>
         </div>
         </div>
@@ -194,7 +195,7 @@
 <div class="container" id="node_head_0_4">
 <div class="description" style="all: revert;">
         <div class="object_name">
-<div class="object_inline_name"><h4 id="ForExample:" style="font-size: null; text-align: left">For Example:</h4></div><div class="object_description"><p>This defines a controller with a single state.  It will create a variable <code>variable.ground_speed_curve</code> that lives on the entity only while processing the animation controller for that frame.  It will take the value of <code>query.ground_speed</code>, then remap it to between 0.2 and 0.7 based on the value of <code>query.ground_speed</code> going from 0.0 to 1.0It will play one animation walk that will blend from 0.0 to 1.0 as the ground speed increases from stopped to 2.3 m/s.  The remap curve can have any number of entries.  The animation controller will then play the entity-referenced <code>wiggle_nose</code> animations, followed by the <code>walk</code> animation, scaling the latter by the value of <code>variable.ground_speed_curve</code></p>
+<div class="object_inline_name"><h4 id="ForExample:" style="font-size: null; text-align: left">For Example:</h4></div><div class="object_description" style="text-align: undefined"><p>This defines a controller with a single state.  It will create a variable <code>variable.ground_speed_curve</code> that lives on the entity only while processing the animation controller for that frame.  It will take the value of <code>query.ground_speed</code>, then remap it to between 0.2 and 0.7 based on the value of <code>query.ground_speed</code> going from 0.0 to 1.0It will play one animation walk that will blend from 0.0 to 1.0 as the ground speed increases from stopped to 2.3 m/s.  The remap curve can have any number of entries.  The animation controller will then play the entity-referenced <code>wiggle_nose</code> animations, followed by the <code>walk</code> animation, scaling the latter by the value of <code>variable.ground_speed_curve</code></p>
 </div>
         </div>
         </div>
@@ -235,7 +236,7 @@
 <div class="container" id="node_head_1_3">
 <div class="description" style="all: revert;">
         <div class="object_name">
-<div class="object_inline_name"><h3 id="User-DefinedScriptExample" style="font-size: null; text-align: left">User-Defined Script Example</h3></div><div class="object_description"><p>This script will set foo to the result of the sine of query.life_time to later be used in the animation or animation controller.</p>
+<div class="object_inline_name"><h3 id="User-DefinedScriptExample" style="font-size: null; text-align: left">User-Defined Script Example</h3></div><div class="object_description" style="text-align: undefined"><p>This script will set foo to the result of the sine of query.life_time to later be used in the animation or animation controller.</p>
 <p>Note: “pre_animation” tells the script to figure out the values of those variables once a frame, before animation occurs, so that the animation can use those values in their own formulas. If a variable didn’t exist, it will create a new variable and its default value will be 0.0</p>
 </div>
         </div>
@@ -245,7 +246,7 @@
 <div class="container" id="node_head_0_4">
 <div class="description" style="all: revert;">
         <div class="object_name">
-<div class="object_description"><p>Note in this example that because foo is equal to a sin wave, that its values will range from -1 to 1.  This means that you will have a period from 0 to -1 to 0 where only “base_pose” will play and then an equal amount of time where Walk will play on top of base_pose as foo goes from 0 to 1 back to 0.  Base_pose will have a blend value of 1.0.</p>
+<div class="object_description" style="text-align: undefined"><p>Note in this example that because foo is equal to a sin wave, that its values will range from -1 to 1.  This means that you will have a period from 0 to -1 to 0 where only “base_pose” will play and then an equal amount of time where Walk will play on top of base_pose as foo goes from 0 to 1 back to 0.  Base_pose will have a blend value of 1.0.</p>
 </div>
         </div>
         </div>
@@ -304,7 +305,7 @@
 <div class="container" id="node_head_0_3">
 <div class="description" style="all: revert;">
         <div class="object_name">
-<div class="object_inline_name"><h3 id="AnimationController" style="font-size: null; text-align: left">Animation Controller</h3></div><div class="object_description"><p>One needs to be able to control how animations are played, when, and how they interact with other animations.  to group animations While a lot of this can be managed in the entity definition <code>scripts/animate</code> section, animation controllers give you the functionality of a state machine into states and control them as a block.  Animations in an animation controller state can be animation controllers themselves, allowing for arbitrarily complex animation hierarchies.</p>
+<div class="object_inline_name"><h3 id="AnimationController" style="font-size: null; text-align: left">Animation Controller</h3></div><div class="object_description" style="text-align: undefined"><p>One needs to be able to control how animations are played, when, and how they interact with other animations.  to group animations While a lot of this can be managed in the entity definition <code>scripts/animate</code> section, animation controllers give you the functionality of a state machine into states and control them as a block.  Animations in an animation controller state can be animation controllers themselves, allowing for arbitrarily complex animation hierarchies.</p>
 </div>
         </div>
         </div>
@@ -345,7 +346,7 @@
 <div class="container" id="node_head_1_3">
 <div class="description" style="all: revert;">
         <div class="object_name">
-<div class="object_inline_name"><h3 id="Animations" style="font-size: null; text-align: undefined">Animations</h3></div><div class="object_description"><p>At the beginning of each frame, the skeleton is reset to its default pose from its geometry definition and then animations are applied per-channel-additively in order.  Note that the channels (x, y, and z) are added separately across animations first, then converted to a transform once all animations have been cumulatively applied.</p>
+<div class="object_inline_name"><h3 id="Animations" style="font-size: null; text-align: undefined">Animations</h3></div><div class="object_description" style="text-align: undefined"><p>At the beginning of each frame, the skeleton is reset to its default pose from its geometry definition and then animations are applied per-channel-additively in order.  Note that the channels (x, y, and z) are added separately across animations first, then converted to a transform once all animations have been cumulatively applied.</p>
 </div>
         </div>
         </div>
@@ -405,7 +406,7 @@
 <div class="container" id="node_head_2_3">
 <div class="description" style="all: revert;">
         <div class="object_name">
-<div class="object_description"><p>In order to define what animations an entity has, you must add both an <code>animations</code> and a <code>scripts/animate</code> section to an entity’s entity definition file.</p>
+<div class="object_description" style="text-align: undefined"><p>In order to define what animations an entity has, you must add both an <code>animations</code> and a <code>scripts/animate</code> section to an entity’s entity definition file.</p>
 </div>
         </div>
         </div>
@@ -414,7 +415,7 @@
 <div class="container" id="node_head_0_4">
 <div class="description" style="all: revert;">
         <div class="object_name">
-<div class="object_description"><p>Here you can see the entity definition for pig.json:</p>
+<div class="object_description" style="text-align: undefined"><p>Here you can see the entity definition for pig.json:</p>
 </div>
         </div>
         </div>
@@ -465,7 +466,7 @@
 <div class="container" id="node_head_1_4">
 <div class="description" style="all: revert;">
         <div class="object_name">
-<div class="object_description"><p>Note: the walk animation for pig is the same for cows and sheep, and thus uses animation.quadruped.walk instead of defining its own.  This means you will not see the move animation in the pig.json animation file either.  If you would like to make a custom pig walk you can change this line to point to your custom animation.</p>
+<div class="object_description" style="text-align: undefined"><p>Note: the walk animation for pig is the same for cows and sheep, and thus uses animation.quadruped.walk instead of defining its own.  This means you will not see the move animation in the pig.json animation file either.  If you would like to make a custom pig walk you can change this line to point to your custom animation.</p>
 <p>Animations are specified as a short name, followed by their full resource name.  The short name is used in animation controllers and the <code>scripts/animate</code> list, while the long name is used in the animations file.</p>
 <p>In the <code>scripts/animate</code> section, you list the animations to play and in which order.  You can either specify an animation directly, or specify a blend expression.</p>
 </div>
@@ -476,7 +477,7 @@
 <div class="container" id="node_head_1_2">
 <div class="description" style="all: revert;">
         <div class="object_name">
-<div class="object_description"><p>Animations are channel based (rotation, position, or scale), and within that, they are key-framed:</p>
+<div class="object_description" style="text-align: undefined"><p>Animations are channel based (rotation, position, or scale), and within that, they are key-framed:</p>
 <p>EntityAnimation: animation name</p>
 <p>__BoneAnimation[]: bone name to animation for this animation</p>
 <p>____AnimationChannel[]: rotation, scale, or translation to animate</p>
@@ -490,7 +491,7 @@
 <div class="container" id="node_head_2_2">
 <div class="description" style="all: revert;">
         <div class="object_name">
-<div class="object_description"><p>The major change with 1.17.30 is:</p>
+<div class="object_description" style="text-align: undefined"><p>The major change with 1.17.30 is:</p>
 <ul>
 <li>Molang expressions inside transitions that contain capital letters are properly evaluated now. Strings inside such expressions are not forced to lowercase anymore and work as expected.</li>
 </ul>
@@ -502,7 +503,7 @@
 <div class="container" id="node_head_3_2">
 <div class="description" style="all: revert;">
         <div class="object_name">
-<div class="object_description"><p>The major change with 1.18.10 is:</p>
+<div class="object_description" style="text-align: undefined"><p>The major change with 1.18.10 is:</p>
 <ul>
 <li>Fixed an issue where animation controller events defined in the default state would get skipped if the controller immediately transitioned to another state.</li>
 </ul>
@@ -514,7 +515,7 @@
 <div class="container" id="node_head_4_2">
 <div class="description" style="all: revert;">
         <div class="object_name">
-<div class="object_description"><p>The major change with 1.18.20 is:</p>
+<div class="object_description" style="text-align: undefined"><p>The major change with 1.18.20 is:</p>
 <ul>
 <li>Molang expressions inside animation scripts for actor resource definition (pre_animation and initialize) that contain capital letters are properly evaluated now. Strings inside such expressions are not forced to lowercase anymore and work as expected.</li>
 </ul>
@@ -526,7 +527,7 @@
 <div class="container" id="node_head_5_2">
 <div class="description" style="all: revert;">
         <div class="object_name">
-<div class="object_description"><p>There have been few changes as we clean things up based on feedback and as we push the tech along the road <a href="http://map.To">map.To</a> upgrade previous scripts, you’ll want to do the following steps to all of your Molang scripts in the order listed:</p>
+<div class="object_description" style="text-align: undefined"><p>There have been few changes as we clean things up based on feedback and as we push the tech along the road <a href="http://map.To">map.To</a> upgrade previous scripts, you’ll want to do the following steps to all of your Molang scripts in the order listed:</p>
 <ol>
 <li>
 <p>entity.flags.foo --&gt; query.foo</p>
@@ -558,7 +559,7 @@
 <div class="container" id="node_head_6_2">
 <div class="description" style="all: revert;">
         <div class="object_name">
-<div class="object_description"><p>The three major changes with 1.10 are</p>
+<div class="object_description" style="text-align: undefined"><p>The three major changes with 1.10 are</p>
 <ul>
 <li>
 <p>the ability to have animations reference other animations in an arbitrarily deep hierarchy.</p>
@@ -579,7 +580,7 @@
 <div class="container" id="node_head_0_2">
 <div class="description" style="all: revert;">
         <div class="object_name">
-<div class="object_description"><p>Currently only linear interpolation is supported.  Key frame “pre” and “post” settings allow control of the interpolation curve at any key frame.</p>
+<div class="object_description" style="text-align: undefined"><p>Currently only linear interpolation is supported.  Key frame “pre” and “post” settings allow control of the interpolation curve at any key frame.</p>
 </div>
         </div>
         </div>
@@ -588,7 +589,7 @@
 <div class="container" id="node_head_0_3">
 <div class="description" style="all: revert;">
         <div class="object_name">
-<div class="object_description"><p>This example spins the bone “head” around the y axis 1 rotation in 1 second.</p>
+<div class="object_description" style="text-align: undefined"><p>This example spins the bone “head” around the y axis 1 rotation in 1 second.</p>
 <p>Note that because interpolation is linear, at .25 seconds the head will be rotated to 90 degrees.</p>
 </div>
         </div>
@@ -611,7 +612,7 @@
 <div class="container" id="node_head_1_3">
 <div class="description" style="all: revert;">
         <div class="object_name">
-<div class="object_description"><p>Discontinuous just means that there won’t be a smooth transition between key frames.  It is useful if you want something to happen immediately.</p>
+<div class="object_description" style="text-align: undefined"><p>Discontinuous just means that there won’t be a smooth transition between key frames.  It is useful if you want something to happen immediately.</p>
 <p>This example scales the bone “head”:</p>
 <ol>
 <li>
@@ -831,7 +832,7 @@
 <div class="container" id="node_head_1_3">
 <div class="description" style="all: revert;">
         <div class="object_name">
-<div class="object_description"><p>NOTE: The arrays for Materials and Part visibility are applied in the order specified.  Materials and Part visibility specified later in the file will override previous materials or parts.</p>
+<div class="object_description" style="text-align: undefined"><p>NOTE: The arrays for Materials and Part visibility are applied in the order specified.  Materials and Part visibility specified later in the file will override previous materials or parts.</p>
 </div>
         </div>
         </div>
@@ -852,7 +853,7 @@
 <div class="container" id="node_head_1_2">
 <div class="description" style="all: revert;">
         <div class="object_name">
-<div class="object_description"><p>To begin create a new folder named “render_controllers” in the root of the Resource Pack you want to add the new Render Controller JSON inside.</p>
+<div class="object_description" style="text-align: undefined"><p>To begin create a new folder named “render_controllers” in the root of the Resource Pack you want to add the new Render Controller JSON inside.</p>
 </div>
         </div>
         </div>
@@ -877,11 +878,11 @@
   </div>
 </div>
 
-    <body>
     <script defer src="/assets/js/LanguageHandler.js"></script>
         <script defer src="/assets/js/occlusionPilot.js"></script>
         <script defer src="/assets/js/preloadPilot.js"></script>
         <script defer src="/assets/libraries/gridjs.umd.js"></script>
+        <script defer src="/assets/libraries/htmx.min.js"></script>
         <link rel="stylesheet" href="/assets/styles/github-dark.css">
         <script defer src="/assets/libraries/highlight.min.js"></script>
         <script defer>
@@ -946,3 +947,4 @@
                 </script>
                 </div>
         </body>
+</html>

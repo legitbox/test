@@ -7,12 +7,12 @@
       {
         "title": "item.torchflower_seeds.name",
         "href": "/assets/pages/Items/item.torchflower_seeds.name.html",
-        "icon": "/assets/images/melon.png"
+        "icon": ""
       },
       {
         "title": "item.wheat_seeds.name",
         "href": "/assets/pages/Items/item.wheat_seeds.name.html",
-        "icon": "/assets/images/melon.png"
+        "icon": ""
       },
       {
         "title": "Stick",
@@ -22,42 +22,42 @@
       {
         "title": "Paint Brush",
         "href": "/assets/pages/Items/paint brush.html",
-        "icon": "assets/images/brush_handle.png"
+        "icon": "/assets/images/brush_handle.png"
       },
       {
         "title": "item.beef.name",
         "href": "/assets/pages/Items/item.beef.name.html",
-        "icon": "/assets/images/melon.png"
+        "icon": ""
       },
       {
         "title": "Cool Banana",
         "href": "/assets/pages/Items/cool banana.html",
-        "icon": "assets/images/banana.png"
+        "icon": "/assets/images/banana.png"
       },
       {
         "title": "Golden Cool Banana",
         "href": "/assets/pages/Items/golden cool banana.html",
-        "icon": "assets/images/golden_banana.png"
+        "icon": "/assets/images/golden_banana.png"
       },
       {
         "title": "item.melon_seeds.name",
         "href": "/assets/pages/Items/item.melon_seeds.name.html",
-        "icon": "/assets/images/melon.png"
+        "icon": ""
       },
       {
         "title": "item.pumpkin_seeds.name",
         "href": "/assets/pages/Items/item.pumpkin_seeds.name.html",
-        "icon": "/assets/images/melon.png"
+        "icon": ""
       },
       {
         "title": "item.beetroot_seeds.name",
         "href": "/assets/pages/Items/item.beetroot_seeds.name.html",
-        "icon": "/assets/images/melon.png"
+        "icon": ""
       },
       {
         "title": "item.baked_potato.name",
         "href": "/assets/pages/Items/item.baked_potato.name.html",
-        "icon": "/assets/images/melon.png"
+        "icon": ""
       }
     ]
   },
@@ -197,12 +197,12 @@
       {
         "title": "Canvas Block",
         "href": "/assets/pages/Blocks/canvas block.html",
-        "icon": "assets/images/canvas_block.png"
+        "icon": "/assets/images/canvas_block.png"
       },
       {
         "title": "Banana Block",
         "href": "/assets/pages/Blocks/banana block.html",
-        "icon": "assets/images/banana_block.png"
+        "icon": "/assets/images/banana_block.png"
       }
     ]
   },

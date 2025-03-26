@@ -11,7 +11,6 @@ const LIBRARY_FILES = [
     'gridjs.umd.js',
     'highlight.min.js',
     'index.min.js',
-    'microlight.js',
     'wunderbaum.umd.min.js'
 ];
 

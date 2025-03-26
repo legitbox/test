@@ -23,6 +23,7 @@
           }
           </script>
         </head>
+        <body>
         
         <div class="scroll">
         <div class="navbar">
@@ -50,11 +51,10 @@
 <script defer>
   document.addEventListener("DOMContentLoaded", function() {
         new gridjs.Grid({
-    data: [["format_version","","","Specifies the version of the game this entity was made in. If the version is lower than the current version, any changes made to the entity in the vanilla version will be applied to it."],["minecraft:item","","","Item definition includes the \"description\" and \"components\" sections."]],
     columns: ["Name","Default Value","Type","Description"],
+    pagination: undefined,
+    data: [["format_version","","","Specifies the version of the game this entity was made in. If the version is lower than the current version, any changes made to the entity in the vanilla version will be applied to it."],["minecraft:item","","","Item definition includes the \"description\" and \"components\" sections."]],
     search: true,
-    height:'100%',
-    width:'100%',
   }).render(document.getElementById("wrappernode_table_0_2_item_definition_properties"));
 });
 </script>
@@ -87,11 +87,11 @@
   </div>
 </div>
 
-    <body>
     <script defer src="/assets/js/LanguageHandler.js"></script>
         <script defer src="/assets/js/occlusionPilot.js"></script>
         <script defer src="/assets/js/preloadPilot.js"></script>
         <script defer src="/assets/libraries/gridjs.umd.js"></script>
+        <script defer src="/assets/libraries/htmx.min.js"></script>
         <link rel="stylesheet" href="/assets/styles/github-dark.css">
         <script defer src="/assets/libraries/highlight.min.js"></script>
         <script defer>
@@ -156,3 +156,4 @@
                 </script>
                 </div>
         </body>
+</html>
