@@ -3,15 +3,15 @@
         <html lang="en" style="background: #2c2c2c;">
         <head>
           <meta charset="UTF-8">
-          <title>index</title>
+          <title>Items</title>
           <link rel="preload" href="/assets/images/tech.webp as="image" fetchpriority="high">
           <link rel="prefetch" href="/index.html">
           <link rel="prefetch" href="/settings.html">
           <link rel="stylesheet" href="/assets/styles/wiki_styles.css">
           <link rel="icon" href="/assets/images/melon.png" type="image/png">
-          <meta name="description" content="index">
+          <meta name="description" content="Items">
           <meta name="viewport" content="width=device-width, initial-scale=1" />
-          <meta property="og:title" content="index" />
+          <meta property="og:title" content="Items" />
           <meta property="og:image" content="/assets/images/melon.png"/>
           <script>
           if ('serviceWorker' in navigator) {
@@ -39,55 +39,54 @@
 <div class="container" id="title">
 <div class="description" style="all: revert;">
         <div class="object_name">
-<div class="object_inline_name"><h1 id="ShrimpleDocs" style="font-size: null; text-align: center">Shrimple Docs</h1></div><div class="object_description" style="text-align: center"><p>This is the official documentation wiki site for Neoreva team creations,<br>
-like Spadix, Shrimple Docs, PanSpark and outside projects like Endstone</p>
-<p>Below is a tree selection system for all existing documenation pages inside Shrimple Docs :3</p>
-</div>
+<div class="object_inline_name"><h1 id="Item" style="font-size: null; text-align: center">Item</h1></div>
         </div>
         </div>
         </div>
 
-        <div class="container" style="min-height: auto; max-height: 100vh">    
-    <link
-      rel="stylesheet"
-      href="/assets/styles/wunderbaum.css"
-    />
-    <style>
-    .wb-skeleton {
-        background-color: rgba(0,0,0,0);
-    }
-</style>
-        <script defer src="/assets/libraries/wunderbaum.umd.min.js"></script>
-        <script>
-        var INDEX_LIST_PATH = "/assets/index_list.json"
-        const ID = "undefined"
-        document.addEventListener("DOMContentLoaded", async function loadWunderbaum() {
-  const response = await fetch(INDEX_LIST_PATH);
-  const treeData = await response.json();
-  // @ts-ignore: Phantom type
-  new mar10.Wunderbaum({
-    element: document.getElementById(ID),
-    source: treeData,
-    // keyboard: false,
-    init: (e)=>{
-      e.tree.setFocus();
+    <div class="container" id="node_table_0_2_item_definition_properties">
+  <h2 id="ItemDefinitionProperties" style="padding: 10px">Item Definition Properties</h2>
+  <p style="margin-left: 1vw">Properties are part of the Item Definition. They help the system determine how to parse and initialize the item.</p>
+  <div id="wrappernode_table_0_2_item_definition_properties" style="overflow: scroll; scrollbar-width: none;"></div>
+<script defer>
+  document.addEventListener("DOMContentLoaded", function() {
+        new gridjs.Grid({
+    columns: ["Name","Default Value","Type","Description"],
+    pagination: undefined,
+    data: [["format_version","","","Specifies the version of the game this entity was made in. If the version is lower than the current version, any changes made to the entity in the vanilla version will be applied to it."],["minecraft:item","","","Item definition includes the \"description\" and \"components\" sections."]],
+    search: true,
+  }).render(document.getElementById("wrappernode_table_0_2_item_definition_properties"));
+});
+</script>
+
+</div>
+<div class="container" id="node_example_0_0_2">
+  <h2 class="object_name" id="Example">{ Example }</h2>
+  <div style="margin-left: 1.5vw">
+    <pre><code>{
+  "format_version": "1.20.20",
+  "minecraft:item": {
+    "description": {
+      "identifier": "minecraft:blaze_rod"
     },
-    activate: (e)=>{
-      const nodeHref = e.node.data.href;
-      if (nodeHref !== undefined) {
-        // deno-lint-ignore no-window
-        window.location = nodeHref;
+    "components": {
+      "minecraft:fuel": {
+        "duration": 120.0
+      },
+      "minecraft:max_stack_size": 64,
+      "minecraft:icon": {
+        "texture": "blaze_rod"
+      },
+      "minecraft:hand_equipped": true,
+      "minecraft:display_name": {
+        "value": "Blaze Rod"
       }
     }
-  });
-})
-  </script>
-        <div
-      id="undefined"
-      class="wb-skeleton wb-initializing wb-fade-expander"
-    ></div>
+  }
+}</code></pre>
+  </div>
 </div>
-        
+
     <script defer src="/assets/js/LanguageHandler.js"></script>
         <script defer src="/assets/js/occlusionPilot.js"></script>
         <script defer src="/assets/js/preloadPilot.js"></script>

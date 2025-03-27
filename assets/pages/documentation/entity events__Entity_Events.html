@@ -3,15 +3,15 @@
         <html lang="en" style="background: #2c2c2c;">
         <head>
           <meta charset="UTF-8">
-          <title>index</title>
+          <title>Entity Events</title>
           <link rel="preload" href="/assets/images/tech.webp as="image" fetchpriority="high">
           <link rel="prefetch" href="/index.html">
           <link rel="prefetch" href="/settings.html">
           <link rel="stylesheet" href="/assets/styles/wiki_styles.css">
           <link rel="icon" href="/assets/images/melon.png" type="image/png">
-          <meta name="description" content="index">
+          <meta name="description" content="Entity Events">
           <meta name="viewport" content="width=device-width, initial-scale=1" />
-          <meta property="og:title" content="index" />
+          <meta property="og:title" content="Entity Events" />
           <meta property="og:image" content="/assets/images/melon.png"/>
           <script>
           if ('serviceWorker' in navigator) {
@@ -39,55 +39,11 @@
 <div class="container" id="title">
 <div class="description" style="all: revert;">
         <div class="object_name">
-<div class="object_inline_name"><h1 id="ShrimpleDocs" style="font-size: null; text-align: center">Shrimple Docs</h1></div><div class="object_description" style="text-align: center"><p>This is the official documentation wiki site for Neoreva team creations,<br>
-like Spadix, Shrimple Docs, PanSpark and outside projects like Endstone</p>
-<p>Below is a tree selection system for all existing documenation pages inside Shrimple Docs :3</p>
-</div>
+<div class="object_inline_name"><h1 id="EntityEvents" style="font-size: null; text-align: center">Entity Events</h1></div>
         </div>
         </div>
         </div>
 
-        <div class="container" style="min-height: auto; max-height: 100vh">    
-    <link
-      rel="stylesheet"
-      href="/assets/styles/wunderbaum.css"
-    />
-    <style>
-    .wb-skeleton {
-        background-color: rgba(0,0,0,0);
-    }
-</style>
-        <script defer src="/assets/libraries/wunderbaum.umd.min.js"></script>
-        <script>
-        var INDEX_LIST_PATH = "/assets/index_list.json"
-        const ID = "undefined"
-        document.addEventListener("DOMContentLoaded", async function loadWunderbaum() {
-  const response = await fetch(INDEX_LIST_PATH);
-  const treeData = await response.json();
-  // @ts-ignore: Phantom type
-  new mar10.Wunderbaum({
-    element: document.getElementById(ID),
-    source: treeData,
-    // keyboard: false,
-    init: (e)=>{
-      e.tree.setFocus();
-    },
-    activate: (e)=>{
-      const nodeHref = e.node.data.href;
-      if (nodeHref !== undefined) {
-        // deno-lint-ignore no-window
-        window.location = nodeHref;
-      }
-    }
-  });
-})
-  </script>
-        <div
-      id="undefined"
-      class="wb-skeleton wb-initializing wb-fade-expander"
-    ></div>
-</div>
-        
     <script defer src="/assets/js/LanguageHandler.js"></script>
         <script defer src="/assets/js/occlusionPilot.js"></script>
         <script defer src="/assets/js/preloadPilot.js"></script>

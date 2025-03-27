@@ -3,16 +3,16 @@
         <html lang="en" style="background: #2c2c2c;">
         <head>
           <meta charset="UTF-8">
-          <title>index</title>
+          <title>Introduction</title>
           <link rel="preload" href="/assets/images/tech.webp as="image" fetchpriority="high">
           <link rel="prefetch" href="/index.html">
           <link rel="prefetch" href="/settings.html">
           <link rel="stylesheet" href="/assets/styles/wiki_styles.css">
-          <link rel="icon" href="/assets/images/melon.png" type="image/png">
-          <meta name="description" content="index">
+          <link rel="icon" href="/assets/images/shrimple_wiki_icon.png" type="image/png">
+          <meta name="description" content="Introduction">
           <meta name="viewport" content="width=device-width, initial-scale=1" />
-          <meta property="og:title" content="index" />
-          <meta property="og:image" content="/assets/images/melon.png"/>
+          <meta property="og:title" content="Introduction" />
+          <meta property="og:image" content="/assets/images/shrimple_wiki_icon.png"/>
           <script>
           if ('serviceWorker' in navigator) {
             window.addEventListener('load', () => {
@@ -36,58 +36,81 @@
           </nav>
         </div>
         
-<div class="container" id="title">
+<div class="container" id="introduction">
 <div class="description" style="all: revert;">
         <div class="object_name">
-<div class="object_inline_name"><h1 id="ShrimpleDocs" style="font-size: null; text-align: center">Shrimple Docs</h1></div><div class="object_description" style="text-align: center"><p>This is the official documentation wiki site for Neoreva team creations,<br>
-like Spadix, Shrimple Docs, PanSpark and outside projects like Endstone</p>
-<p>Below is a tree selection system for all existing documenation pages inside Shrimple Docs :3</p>
+<div class="object_inline_name"><h1 id="Notsomuchofanintroduction" style="font-size: undefined; text-align: undefined">Not so much of an introduction</h1></div><div class="object_description" style="text-align: undefined"><p>Shrimple wiki is a simple tool designed to create static pages using static HTML/CSS generation using JSON.</p>
+<p>The entire structure is based on a container system. For example, this description box you are reading right now is a “description” container defined inside the page structure JSON file.</p>
 </div>
         </div>
         </div>
         </div>
 
-        <div class="container" style="min-height: auto; max-height: 100vh">    
-    <link
-      rel="stylesheet"
-      href="/assets/styles/wunderbaum.css"
-    />
-    <style>
-    .wb-skeleton {
-        background-color: rgba(0,0,0,0);
-    }
-</style>
-        <script defer src="/assets/libraries/wunderbaum.umd.min.js"></script>
-        <script>
-        var INDEX_LIST_PATH = "/assets/index_list.json"
-        const ID = "undefined"
-        document.addEventListener("DOMContentLoaded", async function loadWunderbaum() {
-  const response = await fetch(INDEX_LIST_PATH);
-  const treeData = await response.json();
-  // @ts-ignore: Phantom type
-  new mar10.Wunderbaum({
-    element: document.getElementById(ID),
-    source: treeData,
-    // keyboard: false,
-    init: (e)=>{
-      e.tree.setFocus();
-    },
-    activate: (e)=>{
-      const nodeHref = e.node.data.href;
-      if (nodeHref !== undefined) {
-        // deno-lint-ignore no-window
-        window.location = nodeHref;
-      }
-    }
-  });
-})
-  </script>
-        <div
-      id="undefined"
-      class="wb-skeleton wb-initializing wb-fade-expander"
-    ></div>
+<div class="container" id="possibilities">
+<div class="description" style="all: revert;">
+        <div class="object_name">
+<div class="object_description" style="text-align: undefined"><p>Since the design is modular and uses JSON for its structure generation, this allows us to create lots of custom components for easy use inside Spadix projects, as well as in custom websites that can have wikis for other Minecraft mods (like Java) or even other games.</p>
+<p>Time for some features:</p>
+<p><em>Markdown support</em></p>
+<table>
+<thead>
+<tr>
+<th>Very</th>
+<th>Shrimple</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Easy</td>
+<td>to use</td>
+</tr>
+</tbody>
+</table>
 </div>
-        
+        </div>
+        </div>
+        </div>
+
+<div class="container" id="coding">
+  <h2 class="object_name" id="ACoolElixirScript">{ A Cool Elixir Script }</h2>
+  <div style="margin-left: 1.5vw">
+    <pre><code>defmodule SimpleCalculator do
+  def start do
+    IO.puts("Welcome to the Elixir Calculator!")
+    IO.puts("Choose an operation:")
+    IO.puts("1) Addition (+)")
+    IO.puts("2) Subtraction (-)")
+    IO.puts("3) Multiplication (*)")
+    IO.puts("4) Division (/)")
+    
+    operation = IO.gets("Enter the number of the operation: ") |> String.trim() |> String.to_integer()
+
+    num1 = IO.gets("Enter the first number: ") |> String.trim() |> String.to_float()
+    num2 = IO.gets("Enter the second number: ") |> String.trim() |> String.to_float()
+
+    result =
+      case operation do
+        1 -> num1 + num2
+        2 -> num1 - num2
+        3 -> num1 * num2
+        4 -> 
+          if num2 == 0 do
+            "Error: Division by zero is not allowed."
+          else
+            num1 / num2
+          end
+        _ -> "Invalid operation selected."
+      end
+
+    IO.puts("Result: #{result}")
+  end
+end
+
+SimpleCalculator.start()
+</code></pre>
+  </div>
+</div>
+
     <script defer src="/assets/js/LanguageHandler.js"></script>
         <script defer src="/assets/js/occlusionPilot.js"></script>
         <script defer src="/assets/js/preloadPilot.js"></script>

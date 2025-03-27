@@ -48,6 +48,9 @@ h1 {
     margin-top: -1.5vh;
     margin-left: 2vw;
     margin-right: 2vw;
+    position: sticky;
+    top: -2vh;
+    z-index: 1984;
     background-color: rgba(25, 25, 25, 0.6);
     padding-top: 0.2vh;
     padding-bottom: 0.2vh;
@@ -176,6 +179,7 @@ th, td{
     padding-bottom: 1vh;
     color: #ceb6ff;
     min-width: 10vw;
+    border: 3px solid rgba(255, 255, 255, 0.05);
 }
 
 .gridjs-input{

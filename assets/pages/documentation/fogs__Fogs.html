@@ -1,0 +1,592 @@
+
+        <!DOCTYPE html>
+        <html lang="en" style="background: #2c2c2c;">
+        <head>
+          <meta charset="UTF-8">
+          <title>Fogs</title>
+          <link rel="preload" href="/assets/images/tech.webp as="image" fetchpriority="high">
+          <link rel="prefetch" href="/index.html">
+          <link rel="prefetch" href="/settings.html">
+          <link rel="stylesheet" href="/assets/styles/wiki_styles.css">
+          <link rel="icon" href="/assets/images/melon.png" type="image/png">
+          <meta name="description" content="Fogs">
+          <meta name="viewport" content="width=device-width, initial-scale=1" />
+          <meta property="og:title" content="Fogs" />
+          <meta property="og:image" content="/assets/images/melon.png"/>
+          <script>
+          if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+              navigator.serviceWorker.register('/assets/js/workers/CacheWorker.js')
+                .then(registration => console.log('SW registered'))
+                .catch(err => console.log('SW registration failed:', err));
+            });
+          }
+          </script>
+        </head>
+        <body>
+        
+        <div class="scroll">
+        <div class="navbar">
+          <nav>
+            <ul>
+              <li><a href="/index.html" id="home_button">Home</a></li>
+              <li><div><input id="search" placeholder="search..." class="search"></li>
+                <li><a id="searchbar_result"></a></li>
+            </ul>
+          </nav>
+        </div>
+        
+<div class="container" id="title">
+<div class="description" style="all: revert;">
+        <div class="object_name">
+<div class="object_inline_name"><h1 id="Fogs" style="font-size: null; text-align: center">Fogs</h1></div>
+        </div>
+        </div>
+        </div>
+
+<div class="container" id="node_head_0_2">
+<div class="description" style="all: revert;">
+        <div class="object_name">
+<div class="object_inline_name"><h2 id="FogSchema" style="font-size: null; text-align: left">Fog Schema</h2></div><div class="object_description" style="text-align: undefined"><pre><code class="hljs">
+--------
+
+{
+
+    version &quot;format_version&quot;
+
+    object &quot;minecraft:fog_settings&quot;
+
+    {
+
+        object &quot;description&quot;
+
+        {
+
+            string &quot;identifier&quot; // The identifier for these fog settings. The identifier must include a namespace.
+
+        }
+
+        object &quot;distance&quot; : opt // The distance fog settings for different camera locations.
+
+        {
+
+            object &quot;air&quot; : opt // The fog settings when the camera is in the air.
+
+            {
+
+                color &quot;fog_color&quot; // The color that the fog will take on.
+
+                float &quot;fog_start&quot; // The distance from the player that the fog will begin to appear. &#x27;fog_start&#x27; must be less than or equal to &#x27;fog_end&#x27;.
+
+                float &quot;fog_end&quot;&lt;0.000000-*&gt; // The distance from the player that the fog will become fully opaque. &#x27;fog_end&#x27; must be greater than or equal to &#x27;fog_start&#x27;.
+
+                string &quot;render_distance_type&quot;&lt;&quot;fixed&quot;, &quot;render&quot;&gt; // Determines how distance value is used. Fixed distance is measured in blocks. Dynamic distance is multiplied by the current render distance.
+
+                object &quot;transition_fog&quot; : opt // Additional fog data which will slowly transition to the distance fog of current biome.
+
+                {
+
+                    object &quot;init_fog&quot; // Initial fog that will slowly transition into water distance fog of the biome when player goes into water.
+
+                    {
+
+                        color &quot;fog_color&quot; // The color that the fog will take on.
+
+                        float &quot;fog_start&quot; // The distance from the player that the fog will begin to appear. &#x27;fog_start&#x27; must be less than or equal to &#x27;fog_end&#x27;.
+
+                        float &quot;fog_end&quot;&lt;0.000000-*&gt; // The distance from the player that the fog will become fully opaque. &#x27;fog_end&#x27; must be greater than or equal to &#x27;fog_start&#x27;.
+
+                        string &quot;render_distance_type&quot;&lt;&quot;fixed&quot;, &quot;render&quot;&gt; // Determines how distance value is used. Fixed distance is measured in blocks. Dynamic distance is multiplied by the current render distance.
+
+                    }
+
+                    float &quot;min_percent&quot;&lt;0.000000-1.000000&gt; // The minimum progress of fog transition.
+
+                    float &quot;mid_seconds&quot;&lt;0.000000-*&gt; // The time takes to reach certain progress(&#x27;mid_percent&#x27;) of fog transition.
+
+                    float &quot;mid_percent&quot;&lt;0.000000-1.000000&gt; // The progress of fog transition after &#x27;mid_seconds&#x27; seconds.
+
+                    float &quot;max_seconds&quot;&lt;0.000000-*&gt; // Total amount of time takes to complete fog transition.
+
+                }
+
+            }
+
+            object &quot;weather&quot; : opt // The fog settings for when the camera is in the air with active weather (rain, snow, etc..).
+
+            {
+
+                color &quot;fog_color&quot; // The color that the fog will take on.
+
+                float &quot;fog_start&quot; // The distance from the player that the fog will begin to appear. &#x27;fog_start&#x27; must be less than or equal to &#x27;fog_end&#x27;.
+
+                float &quot;fog_end&quot;&lt;0.000000-*&gt; // The distance from the player that the fog will become fully opaque. &#x27;fog_end&#x27; must be greater than or equal to &#x27;fog_start&#x27;.
+
+                string &quot;render_distance_type&quot;&lt;&quot;fixed&quot;, &quot;render&quot;&gt; // Determines how distance value is used. Fixed distance is measured in blocks. Dynamic distance is multiplied by the current render distance.
+
+                object &quot;transition_fog&quot; : opt // Additional fog data which will slowly transition to the distance fog of current biome.
+
+                {
+
+                    object &quot;init_fog&quot; // Initial fog that will slowly transition into water distance fog of the biome when player goes into water.
+
+                    {
+
+                        color &quot;fog_color&quot; // The color that the fog will take on.
+
+                        float &quot;fog_start&quot; // The distance from the player that the fog will begin to appear. &#x27;fog_start&#x27; must be less than or equal to &#x27;fog_end&#x27;.
+
+                        float &quot;fog_end&quot;&lt;0.000000-*&gt; // The distance from the player that the fog will become fully opaque. &#x27;fog_end&#x27; must be greater than or equal to &#x27;fog_start&#x27;.
+
+                        string &quot;render_distance_type&quot;&lt;&quot;fixed&quot;, &quot;render&quot;&gt; // Determines how distance value is used. Fixed distance is measured in blocks. Dynamic distance is multiplied by the current render distance.
+
+                    }
+
+                    float &quot;min_percent&quot;&lt;0.000000-1.000000&gt; // The minimum progress of fog transition.
+
+                    float &quot;mid_seconds&quot;&lt;0.000000-*&gt; // The time takes to reach certain progress(&#x27;mid_percent&#x27;) of fog transition.
+
+                    float &quot;mid_percent&quot;&lt;0.000000-1.000000&gt; // The progress of fog transition after &#x27;mid_seconds&#x27; seconds.
+
+                    float &quot;max_seconds&quot;&lt;0.000000-*&gt; // Total amount of time takes to complete fog transition.
+
+                }
+
+            }
+
+            object &quot;water&quot; : opt // The fog settings when the camera is in water.
+
+            {
+
+                color &quot;fog_color&quot; // The color that the fog will take on.
+
+                float &quot;fog_start&quot; // The distance from the player that the fog will begin to appear. &#x27;fog_start&#x27; must be less than or equal to &#x27;fog_end&#x27;.
+
+                float &quot;fog_end&quot;&lt;0.000000-*&gt; // The distance from the player that the fog will become fully opaque. &#x27;fog_end&#x27; must be greater than or equal to &#x27;fog_start&#x27;.
+
+                string &quot;render_distance_type&quot;&lt;&quot;fixed&quot;, &quot;render&quot;&gt; // Determines how distance value is used. Fixed distance is measured in blocks. Dynamic distance is multiplied by the current render distance.
+
+                object &quot;transition_fog&quot; : opt // Additional fog data which will slowly transition to the distance fog of current biome.
+
+                {
+
+                    object &quot;init_fog&quot; // Initial fog that will slowly transition into water distance fog of the biome when player goes into water.
+
+                    {
+
+                        color &quot;fog_color&quot; // The color that the fog will take on.
+
+                        float &quot;fog_start&quot; // The distance from the player that the fog will begin to appear. &#x27;fog_start&#x27; must be less than or equal to &#x27;fog_end&#x27;.
+
+                        float &quot;fog_end&quot;&lt;0.000000-*&gt; // The distance from the player that the fog will become fully opaque. &#x27;fog_end&#x27; must be greater than or equal to &#x27;fog_start&#x27;.
+
+                        string &quot;render_distance_type&quot;&lt;&quot;fixed&quot;, &quot;render&quot;&gt; // Determines how distance value is used. Fixed distance is measured in blocks. Dynamic distance is multiplied by the current render distance.
+
+                    }
+
+                    float &quot;min_percent&quot;&lt;0.000000-1.000000&gt; // The minimum progress of fog transition.
+
+                    float &quot;mid_seconds&quot;&lt;0.000000-*&gt; // The time takes to reach certain progress(&#x27;mid_percent&#x27;) of fog transition.
+
+                    float &quot;mid_percent&quot;&lt;0.000000-1.000000&gt; // The progress of fog transition after &#x27;mid_seconds&#x27; seconds.
+
+                    float &quot;max_seconds&quot;&lt;0.000000-*&gt; // Total amount of time takes to complete fog transition.
+
+                }
+
+            }
+
+            object &quot;lava&quot; : opt // The fog settings when the camera is in lava.
+
+            {
+
+                color &quot;fog_color&quot; // The color that the fog will take on.
+
+                float &quot;fog_start&quot; // The distance from the player that the fog will begin to appear. &#x27;fog_start&#x27; must be less than or equal to &#x27;fog_end&#x27;.
+
+                float &quot;fog_end&quot;&lt;0.000000-*&gt; // The distance from the player that the fog will become fully opaque. &#x27;fog_end&#x27; must be greater than or equal to &#x27;fog_start&#x27;.
+
+                string &quot;render_distance_type&quot;&lt;&quot;fixed&quot;, &quot;render&quot;&gt; // Determines how distance value is used. Fixed distance is measured in blocks. Dynamic distance is multiplied by the current render distance.
+
+                object &quot;transition_fog&quot; : opt // Additional fog data which will slowly transition to the distance fog of current biome.
+
+                {
+
+                    object &quot;init_fog&quot; // Initial fog that will slowly transition into water distance fog of the biome when player goes into water.
+
+                    {
+
+                        color &quot;fog_color&quot; // The color that the fog will take on.
+
+                        float &quot;fog_start&quot; // The distance from the player that the fog will begin to appear. &#x27;fog_start&#x27; must be less than or equal to &#x27;fog_end&#x27;.
+
+                        float &quot;fog_end&quot;&lt;0.000000-*&gt; // The distance from the player that the fog will become fully opaque. &#x27;fog_end&#x27; must be greater than or equal to &#x27;fog_start&#x27;.
+
+                        string &quot;render_distance_type&quot;&lt;&quot;fixed&quot;, &quot;render&quot;&gt; // Determines how distance value is used. Fixed distance is measured in blocks. Dynamic distance is multiplied by the current render distance.
+
+                    }
+
+                    float &quot;min_percent&quot;&lt;0.000000-1.000000&gt; // The minimum progress of fog transition.
+
+                    float &quot;mid_seconds&quot;&lt;0.000000-*&gt; // The time takes to reach certain progress(&#x27;mid_percent&#x27;) of fog transition.
+
+                    float &quot;mid_percent&quot;&lt;0.000000-1.000000&gt; // The progress of fog transition after &#x27;mid_seconds&#x27; seconds.
+
+                    float &quot;max_seconds&quot;&lt;0.000000-*&gt; // Total amount of time takes to complete fog transition.
+
+                }
+
+            }
+
+            object &quot;lava_resistance&quot; : opt // The fog settings when the camera is in lava and the player has the lava resistance effect active.
+
+            {
+
+                color &quot;fog_color&quot; // The color that the fog will take on.
+
+                float &quot;fog_start&quot; // The distance from the player that the fog will begin to appear. &#x27;fog_start&#x27; must be less than or equal to &#x27;fog_end&#x27;.
+
+                float &quot;fog_end&quot;&lt;0.000000-*&gt; // The distance from the player that the fog will become fully opaque. &#x27;fog_end&#x27; must be greater than or equal to &#x27;fog_start&#x27;.
+
+                string &quot;render_distance_type&quot;&lt;&quot;fixed&quot;, &quot;render&quot;&gt; // Determines how distance value is used. Fixed distance is measured in blocks. Dynamic distance is multiplied by the current render distance.
+
+                object &quot;transition_fog&quot; : opt // Additional fog data which will slowly transition to the distance fog of current biome.
+
+                {
+
+                    object &quot;init_fog&quot; // Initial fog that will slowly transition into water distance fog of the biome when player goes into water.
+
+                    {
+
+                        color &quot;fog_color&quot; // The color that the fog will take on.
+
+                        float &quot;fog_start&quot; // The distance from the player that the fog will begin to appear. &#x27;fog_start&#x27; must be less than or equal to &#x27;fog_end&#x27;.
+
+                        float &quot;fog_end&quot;&lt;0.000000-*&gt; // The distance from the player that the fog will become fully opaque. &#x27;fog_end&#x27; must be greater than or equal to &#x27;fog_start&#x27;.
+
+                        string &quot;render_distance_type&quot;&lt;&quot;fixed&quot;, &quot;render&quot;&gt; // Determines how distance value is used. Fixed distance is measured in blocks. Dynamic distance is multiplied by the current render distance.
+
+                    }
+
+                    float &quot;min_percent&quot;&lt;0.000000-1.000000&gt; // The minimum progress of fog transition.
+
+                    float &quot;mid_seconds&quot;&lt;0.000000-*&gt; // The time takes to reach certain progress(&#x27;mid_percent&#x27;) of fog transition.
+
+                    float &quot;mid_percent&quot;&lt;0.000000-1.000000&gt; // The progress of fog transition after &#x27;mid_seconds&#x27; seconds.
+
+                    float &quot;max_seconds&quot;&lt;0.000000-*&gt; // Total amount of time takes to complete fog transition.
+
+                }
+
+            }
+
+            object &quot;powder_snow&quot; : opt // The fog settings when the camera is inside a Powder Snow block.
+
+            {
+
+                color &quot;fog_color&quot; // The color that the fog will take on.
+
+                float &quot;fog_start&quot; // The distance from the player that the fog will begin to appear. &#x27;fog_start&#x27; must be less than or equal to &#x27;fog_end&#x27;.
+
+                float &quot;fog_end&quot;&lt;0.000000-*&gt; // The distance from the player that the fog will become fully opaque. &#x27;fog_end&#x27; must be greater than or equal to &#x27;fog_start&#x27;.
+
+                string &quot;render_distance_type&quot;&lt;&quot;fixed&quot;, &quot;render&quot;&gt; // Determines how distance value is used. Fixed distance is measured in blocks. Dynamic distance is multiplied by the current render distance.
+
+                object &quot;transition_fog&quot; : opt // Additional fog data which will slowly transition to the distance fog of current biome.
+
+                {
+
+                    object &quot;init_fog&quot; // Initial fog that will slowly transition into water distance fog of the biome when player goes into water.
+
+                    {
+
+                        color &quot;fog_color&quot; // The color that the fog will take on.
+
+                        float &quot;fog_start&quot; // The distance from the player that the fog will begin to appear. &#x27;fog_start&#x27; must be less than or equal to &#x27;fog_end&#x27;.
+
+                        float &quot;fog_end&quot;&lt;0.000000-*&gt; // The distance from the player that the fog will become fully opaque. &#x27;fog_end&#x27; must be greater than or equal to &#x27;fog_start&#x27;.
+
+                        string &quot;render_distance_type&quot;&lt;&quot;fixed&quot;, &quot;render&quot;&gt; // Determines how distance value is used. Fixed distance is measured in blocks. Dynamic distance is multiplied by the current render distance.
+
+                    }
+
+                    float &quot;min_percent&quot;&lt;0.000000-1.000000&gt; // The minimum progress of fog transition.
+
+                    float &quot;mid_seconds&quot;&lt;0.000000-*&gt; // The time takes to reach certain progress(&#x27;mid_percent&#x27;) of fog transition.
+
+                    float &quot;mid_percent&quot;&lt;0.000000-1.000000&gt; // The progress of fog transition after &#x27;mid_seconds&#x27; seconds.
+
+                    float &quot;max_seconds&quot;&lt;0.000000-*&gt; // Total amount of time takes to complete fog transition.
+
+                }
+
+            }
+
+        }
+
+        object &quot;volumetric&quot; : opt // The volumetric fog settings.
+
+        {
+
+            object &quot;density&quot; : opt // The density settings for different camera locations.
+
+            {
+
+                object &quot;air&quot; : opt // Fog density values as light passes through air blocks.
+
+                {
+
+                    float &quot;max_density&quot;&lt;0.000000-1.000000&gt; // The maximum amount of opaqueness that the ground fog will take on. A value from [0.0, 1.0].
+
+                    float &quot;max_density_height&quot;&lt;-64.000000-320.000000&gt; : opt // The height in blocks that the ground fog will become it&#x27;s maximum density.
+
+                    float &quot;zero_density_height&quot;&lt;-64.000000-320.000000&gt; : opt // The height in blocks that the ground fog will be completely transparent and begin to appear. This value needs to be at least 1 higher than &#x27;max_density_height&#x27;.
+
+                    bool &quot;uniform&quot; : opt // When set to true, the density will be uniform across all heights.
+
+                }
+
+                object &quot;weather&quot; : opt // Fog density values as light passes through air blocks with active weather (rain, snow, etc..).
+
+                {
+
+                    float &quot;max_density&quot;&lt;0.000000-1.000000&gt; // The maximum amount of opaqueness that the ground fog will take on. A value from [0.0, 1.0].
+
+                    float &quot;max_density_height&quot;&lt;-64.000000-320.000000&gt; : opt // The height in blocks that the ground fog will become it&#x27;s maximum density.
+
+                    float &quot;zero_density_height&quot;&lt;-64.000000-320.000000&gt; : opt // The height in blocks that the ground fog will be completely transparent and begin to appear. This value needs to be at least 1 higher than &#x27;max_density_height&#x27;.
+
+                    bool &quot;uniform&quot; : opt // When set to true, the density will be uniform across all heights.
+
+                }
+
+                object &quot;water&quot; : opt // Fog density values as light passes through water blocks.
+
+                {
+
+                    float &quot;max_density&quot;&lt;0.000000-1.000000&gt; // The maximum amount of opaqueness that the ground fog will take on. A value from [0.0, 1.0].
+
+                    float &quot;max_density_height&quot;&lt;-64.000000-320.000000&gt; : opt // The height in blocks that the ground fog will become it&#x27;s maximum density.
+
+                    float &quot;zero_density_height&quot;&lt;-64.000000-320.000000&gt; : opt // The height in blocks that the ground fog will be completely transparent and begin to appear. This value needs to be at least 1 higher than &#x27;max_density_height&#x27;.
+
+                    bool &quot;uniform&quot; : opt // When set to true, the density will be uniform across all heights.
+
+                }
+
+                object &quot;lava&quot; : opt // Fog density values as light passes through lava blocks.
+
+                {
+
+                    float &quot;max_density&quot;&lt;0.000000-1.000000&gt; // The maximum amount of opaqueness that the ground fog will take on. A value from [0.0, 1.0].
+
+                    float &quot;max_density_height&quot;&lt;-64.000000-320.000000&gt; : opt // The height in blocks that the ground fog will become it&#x27;s maximum density.
+
+                    float &quot;zero_density_height&quot;&lt;-64.000000-320.000000&gt; : opt // The height in blocks that the ground fog will be completely transparent and begin to appear. This value needs to be at least 1 higher than &#x27;max_density_height&#x27;.
+
+                    bool &quot;uniform&quot; : opt // When set to true, the density will be uniform across all heights.
+
+                }
+
+                object &quot;lava_resistance&quot; : opt // Fog density values as light passes through lava blocks while the player has lava resistance.
+
+                {
+
+                    float &quot;max_density&quot;&lt;0.000000-1.000000&gt; // The maximum amount of opaqueness that the ground fog will take on. A value from [0.0, 1.0].
+
+                    float &quot;max_density_height&quot;&lt;-64.000000-320.000000&gt; : opt // The height in blocks that the ground fog will become it&#x27;s maximum density.
+
+                    float &quot;zero_density_height&quot;&lt;-64.000000-320.000000&gt; : opt // The height in blocks that the ground fog will be completely transparent and begin to appear. This value needs to be at least 1 higher than &#x27;max_density_height&#x27;.
+
+                    bool &quot;uniform&quot; : opt // When set to true, the density will be uniform across all heights.
+
+                }
+
+            }
+
+            object &quot;media_coefficients&quot; : opt // The coefficient settings for the volumetric fog in different blocks.
+
+            {
+
+                object &quot;air&quot; : opt // Fog coefficient values while light passes through air.
+
+                {
+
+                    color &quot;scattering&quot; // Proportion of light that is scattered per block.
+
+                    color &quot;absorption&quot; // Proportion of light that is absorbed (lost) per block.
+
+                }
+
+                object &quot;water&quot; : opt // Fog coefficient values while light passes through water.
+
+                {
+
+                    color &quot;scattering&quot; // Proportion of light that is scattered per block.
+
+                    color &quot;absorption&quot; // Proportion of light that is absorbed (lost) per block.
+
+                }
+
+                object &quot;cloud&quot; : opt // Fog coefficient values while light passes through clouds.
+
+                {
+
+                    color &quot;scattering&quot; // Proportion of light that is scattered per block.
+
+                    color &quot;absorption&quot; // Proportion of light that is absorbed (lost) per block.
+
+                }
+
+            }
+
+        }
+
+    }
+
+}
+
+
+
+----------
+
+</code></pre>
+</div>
+        </div>
+        </div>
+        </div>
+
+<div class="container" id="node_head_0_2">
+<div class="description" style="all: revert;">
+        <div class="object_name">
+<div class="object_inline_name"><h2 id="Biomes" style="font-size: null; text-align: left">Biomes</h2></div><div class="object_description" style="text-align: undefined"><p>The biome layer is an average of all the settings defined by the biomes around the player’s position. The biome settings are defined in “biomes_client.json” as well for each individual biome.</p>
+</div>
+        </div>
+        </div>
+        </div>
+
+<div class="container" id="node_head_1_2">
+<div class="description" style="all: revert;">
+        <div class="object_name">
+<div class="object_inline_name"><h2 id="Command" style="font-size: null; text-align: left">Command</h2></div><div class="object_description" style="text-align: undefined"><p>The command layer is all the settings set by the “/fog” command and evaluated it as one stack from top to bottom. More detail in the “Fog Command” section.</p>
+</div>
+        </div>
+        </div>
+        </div>
+
+<div class="container" id="node_head_2_2">
+<div class="description" style="all: revert;">
+        <div class="object_name">
+<div class="object_inline_name"><h2 id="DataDefault" style="font-size: null; text-align: left">Data Default</h2></div><div class="object_description" style="text-align: undefined"><p>Defined in “biomes_client.json” under “default” if it references a fog definition via “fog_identifier”.</p>
+</div>
+        </div>
+        </div>
+        </div>
+
+<div class="container" id="node_head_3_2">
+<div class="description" style="all: revert;">
+        <div class="object_name">
+<div class="object_inline_name"><h2 id="EngineDefault" style="font-size: null; text-align: left">Engine Default</h2></div><div class="object_description" style="text-align: undefined"><p>Hard coded values in case there are no data driven values; the implicit bottom of the stack.</p>
+</div>
+        </div>
+        </div>
+        </div>
+
+<div class="container" id="node_head_0_2">
+<div class="description" style="all: revert;">
+        <div class="object_name">
+<div class="object_inline_name"><h2 id="Pop" style="font-size: null; text-align: undefined">Pop</h2></div><div class="object_description" style="text-align: undefined"><p>Removes the top-most fog setting, from selected player(s), that matches the user provided ID (i.e. as provided previously via a “/fog push” command).</p>
+</div>
+        </div>
+        </div>
+        </div>
+
+<div class="container" id="node_head_1_2">
+<div class="description" style="all: revert;">
+        <div class="object_name">
+<div class="object_description" style="text-align: undefined"><p>Pushes a new fog setting, to specified player(s), along with a user provided ID, onto the top of the Fog Command layers of the players’ active fog stacks.</p>
+</div>
+        </div>
+        </div>
+        </div>
+
+<div class="container" id="node_head_2_2">
+<div class="description" style="all: revert;">
+        <div class="object_name">
+<div class="object_description" style="text-align: undefined"><p>Removes all matching fog settings, from the selected player(s), that matches the user-provided ID (i.e. as provided previously via one or more “/fog push” commands).</p>
+</div>
+        </div>
+        </div>
+        </div>
+
+    <script defer src="/assets/js/LanguageHandler.js"></script>
+        <script defer src="/assets/js/occlusionPilot.js"></script>
+        <script defer src="/assets/js/preloadPilot.js"></script>
+        <script defer src="/assets/libraries/gridjs.umd.js"></script>
+        <script defer src="/assets/libraries/htmx.min.js"></script>
+       <link rel="stylesheet" href="/assets/styles/github-dark.css">
+        <script defer src="/assets/libraries/highlight.min.js"></script>
+        <script defer>
+        document.addEventListener("DOMContentLoaded", function() {
+            hljs.highlightAll();
+        });
+        </script>
+
+
+        <link rel="stylesheet" href="/assets/styles/github-dark.css">
+        <script src="/assets/libraries/index.min.js"></script>
+                <script>
+                window.onload = function () {
+                    let searchBarResult = document.getElementById("searchbar_result");
+                    let searchResultsDivMade = false
+
+                    let searchData = null;
+                    async function LoadData() {
+                        if (searchData !== null) {
+                            return searchData;
+                        }
+                        const res = await fetch('/assets/index_list.json');
+                        searchData = await res.json();
+                        return searchData;
+                    }
+                    
+                    async function main() {
+                      let miniSearch = new MiniSearch({
+                        fields: ['title', "category"],
+                        storeFields: ['href', 'title'],
+                        searchOptions: {
+                            prefix: true
+                        }
+                      })
+                      searchData = await LoadData();
+                          const parsedSearchData = searchData.flatMap(parent => 
+                            parent.children.map(child => ({
+                              id: child.href,
+                              title: child.title,
+                              category: parent.title,
+                              href: child.href,
+                              icon: child.icon
+                            }))
+                          );
+                      miniSearch.addAll(parsedSearchData);
+                      let dataLoaded = false;
+                      const searchbar = document.getElementById("search");
+                      searchbar.addEventListener("input", async function() {
+                          try {
+                              const searchResults = miniSearch.search(searchbar.value, { fuzzy: 0.2 });
+                              if (searchResults.length > 0) {
+                                  if (!searchResultsDivMade){
+                                      searchBarResult.textContent = searchResults[0].title
+                                      searchBarResult.href = searchResults[0].id
+                                  }
+                          }
+                          } catch (error) {
+                              console.warn("the search container is still empty :3");
+                          }
+                      })
+                    }
+                    main();
+                }
+                </script>
+        </div>
+    </body>
