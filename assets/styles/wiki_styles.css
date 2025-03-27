@@ -63,6 +63,12 @@ h1 {
     border: 3px solid rgba(255, 255, 255, 0.05);
 }
 
+@media screen and (max-width: 980px) {
+  .navbar { 
+     top: 90vh;
+  }
+}
+
 .navbar ul {
     list-style-type: none;
     display: flex;
@@ -148,8 +154,8 @@ h1 {
 }
 
 th, td{
-    border: 2px solid rgba(0, 0, 0, 0.08);
-    background-color: rgba(153, 213, 117, 0.3);
+    border: 2px solid rgba(255, 255, 255, 0.14);
+    background-color: rgba(255, 255, 255, 0.11);
     padding: 10px;
 }
 
@@ -183,7 +189,7 @@ th, td{
 .gridjs-input{
     font-family: inherit;
     background-color: rgba(25, 25, 25, 0.6);
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(5px);
     font-size: 1vw;
     border-radius: 4px;
     outline: none;   
@@ -358,8 +364,8 @@ div.wunderbaum{
 }
 
 .recipe_table th, .recipe_table td {
-    border: 2px solid rgba(0, 0, 0, 0.08);
-    background-color: rgba(153, 213, 117, 0.3);
+    border: 2px solid rgba(255, 255, 255, 0.14);
+    background-color: rgba(255, 255, 255, 0.11);
     padding: 5px;
 }
 
@@ -395,7 +401,7 @@ div.wunderbaum{
 }
 
 .recipe_table_result th, .recipe_table_result td {
-    border: 2px solid rgba(0, 0, 0, 0.08);
-    background-color: rgba(153, 213, 117, 0.3);
+    border: 2px solid rgba(255, 255, 255, 0.14);
+    background-color: rgba(255, 255, 255, 0.11);
     padding: 10px;
 }

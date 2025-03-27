@@ -1,7 +1,7 @@
 {
   "object_image_rendering_mode": "pixelated",
   "object_image_size": 64,
-  "container_blur_amount": 10,
+  "container_blur_amount": 5,
   "default_font_family": "",
   "default_font_path": "/assets/fonts/SpaceGrotesk-VariableFont_wght.woff2",
   "default_font_type": "woff2",
@@ -11,6 +11,6 @@
   "default_website_background_color": "rgb(0,0,0)",
   "default_container_background_color": "rgba(25, 25, 25, 0.6)",
   "default_background_image_path": "/assets/images/tech.webp",
-  "default_border_color": "rgba(0, 0, 0, 0.08)",
-  "default_border_fill_color": "rgba(153, 213, 117, 0.3)"
+  "default_border_color": "rgba(255, 255, 255, 0.14)",
+  "default_border_fill_color": "rgba(255, 255, 255, 0.11)"
 }

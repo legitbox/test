@@ -32,7 +32,7 @@ let el = pageData[0].querySelectorAll(
     ".container, .navbar, .index_container, .inline_container",
 );
 for (const item of el){
-    item.style.backdropFilter = "blur(7px)";
+    item.style.backdropFilter = "blur(5px)";
 }
 
 pageData[0].addEventListener("scroll", function () {
@@ -42,7 +42,7 @@ pageData[0].addEventListener("scroll", function () {
     }
     blurTimeout = setTimeout(() => {
         for (const item of el) {
-            item.style.backdropFilter = "blur(7px)";
+            item.style.backdropFilter = "blur(5px)";
         }
     }, 100);
 });
