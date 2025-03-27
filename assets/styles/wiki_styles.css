@@ -165,7 +165,7 @@ th, td{
 .search{
     font-family: inherit;
     background-color: rgba(25, 25, 25, 0.6);
-    font-size: 2vw;
+    font-size: 3vh;
     border-radius: 4px;
     outline: none;   
     border: 0;
