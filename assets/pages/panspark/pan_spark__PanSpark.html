@@ -1,0 +1,175 @@
+
+        <!DOCTYPE html>
+        <html lang="en" style="background: #2c2c2c;">
+        <head>
+          <meta charset="UTF-8">
+          <title>PanSpark</title>
+          <link rel="preload" href="/assets/images/tech.webp as="image" fetchpriority="high">
+          <link rel="prefetch" href="/index.html">
+          <link rel="prefetch" href="/settings.html">
+          <link rel="stylesheet" href="/assets/styles/wiki_styles.css">
+          <link rel="icon" href="/assets/images/PanSpark4.png" type="image/png">
+          <meta name="description" content="PanSpark">
+          <meta name="viewport" content="width=device-width, initial-scale=1" />
+          <meta property="og:title" content="PanSpark" />
+          <meta property="og:image" content="/assets/images/PanSpark4.png"/>
+          <script>
+          if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+              navigator.serviceWorker.register('/assets/js/workers/CacheWorker.js')
+                .then(registration => console.log('SW registered'))
+                .catch(err => console.log('SW registration failed:', err));
+            });
+          }
+          </script>
+        </head>
+        <body>
+        
+        <div class="scroll">
+        <div class="navbar">
+          <nav>
+            <ul>
+              <li><a href="/index.html" id="home_button">Home</a></li>
+              <li><div><input id="search" placeholder="search..." class="search"></li>
+                <li><a id="searchbar_result"></a></li>
+            </ul>
+          </nav>
+        </div>
+        
+<div class="container" id="pansparkintro">
+<div class="description" style="all: revert;">
+        <div class="object_name">
+<div class="object_inline_name"><h1 id="PanSpark" style="font-size: null; text-align: center">PanSpark</h1></div><div class="object_description" style="text-align: undefined"><p>an assembly language that is inspired by the syntax of the Sparc assembly language, but simplified to a level where it can be easily understood by a human</p>
+<p>PancakeSpark is primarily written in JavaScript, designed to be run in games that require basic computers or microcontroller device simulation, with the support of I/O operations and easy interactions with the game world itself.</p>
+<p>the most basic example could be a basic controller in Minecraft, that has 1 input and 3 outputs</p>
+<p>with being able to operate both digital and analogue redstone signals.</p>
+</div>
+        </div>
+        </div>
+        </div>
+
+<div class="container" id="pansparkdifferences">
+<div class="description" style="all: revert;">
+        <div class="object_name">
+<div class="object_inline_name"><h1 id="Differencesandsyntaxsugar" style="font-size: null; text-align: center">Differences and syntax sugar</h1></div><div class="object_description" style="text-align: undefined"><ul>
+<li>
+<p>You can define a comment by wrapping it in <code>//</code>, for example <code>// this is a comment //</code></p>
+</li>
+<li>
+<p>Just like in languages like C, to allow the entire program to be stored in a single line string after programming it, you have to end your line by writing <code>;</code>, for example <code>mov 5, crabs;</code></p>
+</li>
+</ul>
+</div>
+        </div>
+        </div>
+        </div>
+
+<div class="container" id="pansparkterminology">
+<div class="description" style="all: revert;">
+        <div class="object_name">
+<div class="object_inline_name"><h1 id="Terminology" style="font-size: null; text-align: center">Terminology</h1></div><div class="object_description" style="text-align: undefined"><ul>
+<li>
+<p><code>variable</code>, like in common programming languages it represents a place in memory where a specific value can be stored, in the most shrimple terms, it is a register that has an assigned name and a value</p>
+</li>
+<li>
+<p><code>registers</code>, just like a variable, but it an existing space in memory, where you can control preset operations within a controller, like a robot arm, led’s, displays etc.</p>
+</li>
+</ul>
+</div>
+        </div>
+        </div>
+        </div>
+
+<div class="container" id="pansparkoperationsbasic">
+<div class="description" style="all: revert;">
+        <div class="object_name">
+<div class="object_inline_name"><h1 id="BasicOperations" style="font-size: null; text-align: center">Basic Operations</h1></div><div class="object_description" style="text-align: undefined"><ul>
+<li>
+<p><code>set</code> , allows the user to create and change a variable or access and change a registers and its value in memory like this: <code>set &lt;value&gt;, &lt;variable or register name&gt;;</code>, for example: <code>set 5, number_one;</code> would set a numeric value of 5 in memory with the name of <code>number_one</code>, unlike other assembly languages it would also allow, or it would let you set a value of a register like this <code>set 1, led0;</code>, you can also use a value inside a variable or a register to set the new value of a variable, for example <code>set result, number2;</code></p>
+</li>
+<li>
+<p><code>cmp</code> , allows to compare two variables and execute a function if the result is true, which redirects the execution and after completing it, if it wasn’t returned or redirected, it continues on the function it started, for example <code>cmp number1, number2, run_piston;</code> will check if <code>%number1</code> is equal to <code>number2</code> and if they are equal, the run_piston function will be executed</p>
+</li>
+<li>
+<p><code>add</code>, allows to add a value to existing variables or registers, for example <code>add 9, num10;</code> will add 9 to the variable <code>num10</code>, you can also add variable values to an another variable or a register, for example <code>add speed, &amp;minecart_speed</code>; would add the value of <code>speed</code> to the register <code>&amp;minecart_speed</code></p>
+</li>
+<li>
+<p><code>ret</code> this is a simple return function, stops execution <code>unfinished</code></p>
+</li>
+</ul>
+</div>
+        </div>
+        </div>
+        </div>
+
+    <script defer src="/assets/js/LanguageHandler.js"></script>
+        <script defer src="/assets/js/occlusionPilot.js"></script>
+        <script defer src="/assets/js/preloadPilot.js"></script>
+        <script defer src="/assets/libraries/gridjs.umd.js"></script>
+        <script defer src="/assets/libraries/htmx.min.js"></script>
+       <link rel="stylesheet" href="/assets/styles/github-dark.css">
+        <script defer src="/assets/libraries/highlight.min.js"></script>
+        <script defer>
+        document.addEventListener("DOMContentLoaded", function() {
+            hljs.highlightAll();
+        });
+        </script>
+
+
+        <link rel="stylesheet" href="/assets/styles/github-dark.css">
+        <script src="/assets/libraries/index.min.js"></script>
+                <script>
+                window.onload = function () {
+                    let searchBarResult = document.getElementById("searchbar_result");
+                    let searchResultsDivMade = false
+
+                    let searchData = null;
+                    async function LoadData() {
+                        if (searchData !== null) {
+                            return searchData;
+                        }
+                        const res = await fetch('/assets/index_list.json');
+                        searchData = await res.json();
+                        return searchData;
+                    }
+                    
+                    async function main() {
+                      let miniSearch = new MiniSearch({
+                        fields: ['title', "category"],
+                        storeFields: ['href', 'title'],
+                        searchOptions: {
+                            prefix: true
+                        }
+                      })
+                      searchData = await LoadData();
+                          const parsedSearchData = searchData.flatMap(parent => 
+                            parent.children.map(child => ({
+                              id: child.href,
+                              title: child.title,
+                              category: parent.title,
+                              href: child.href,
+                              icon: child.icon
+                            }))
+                          );
+                      miniSearch.addAll(parsedSearchData);
+                      let dataLoaded = false;
+                      const searchbar = document.getElementById("search");
+                      searchbar.addEventListener("input", async function() {
+                          try {
+                              const searchResults = miniSearch.search(searchbar.value, { fuzzy: 0.2 });
+                              if (searchResults.length > 0) {
+                                  if (!searchResultsDivMade){
+                                      searchBarResult.textContent = searchResults[0].title
+                                      searchBarResult.href = searchResults[0].id
+                                  }
+                          }
+                          } catch (error) {
+                              console.warn("the search container is still empty :3");
+                          }
+                      })
+                    }
+                    main();
+                }
+                </script>
+        </div>
+    </body>
