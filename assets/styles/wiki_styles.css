@@ -63,12 +63,6 @@ h1 {
     border: 3px solid rgba(255, 255, 255, 0.05);
 }
 
-@media screen and (max-width: 980px) {
-  .navbar { 
-     top: 90vh;
-  }
-}
-
 .navbar ul {
     list-style-type: none;
     display: flex;
