@@ -8,11 +8,11 @@
 :host {
   --wb-font-stack: Helvetica, sans-serif;
   --wb-error-color: #b5373b;
-  --wb-node-text-color: #ffffff;
-  --wb-border-color: #56534c;
+  --wb-node-text-color: #fff9f3;
+  --wb-border-color: rgba(255, 255, 255, 0);
   --wb-bg-highlight-color: rgba(255, 255, 255, 0.32);
   --wb-header-color: #ffffff;
-  --wb-background-color: rgba(255, 255, 255, 0.06);
+  --wb-background-color: rgba(255, 255, 255, 0);
   --wb-alternate-row-color: #f7f7f7;
   --wb-alternate-row-color-hover: #f3f3f3;
   --wb-focus-border-color: rgba(255, 255, 255, 0.2);

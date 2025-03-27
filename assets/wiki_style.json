@@ -1,7 +1,7 @@
 {
   "object_image_rendering_mode": "pixelated",
   "object_image_size": 64,
-  "container_blur_amount": 2,
+  "container_blur_amount": 10,
   "default_font_family": "",
   "default_font_path": "/assets/fonts/SpaceGrotesk-VariableFont_wght.woff2",
   "default_font_type": "woff2",
