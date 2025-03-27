@@ -33,7 +33,7 @@ let el = pageData[0].querySelectorAll(
 );
 for (const item of el){
     item.style.backdropFilter = "blur(5px)";
-    item.style.boxShadow = "5px 5px 1px 1px rgba(0, 0, 0, 0.40)";
+    item.style.boxShadow = "3px 3px 1px 1px rgba(0, 0, 0, 0.5)";
 }
 
 pageData[0].addEventListener("scroll", function () {
@@ -45,7 +45,7 @@ pageData[0].addEventListener("scroll", function () {
     blurTimeout = setTimeout(() => {
         for (const item of el) {
             item.style.backdropFilter = "blur(5px)";
-            item.style.boxShadow = "5px 5px 1px 1px rgba(0, 0, 0, 0.40)";
+            item.style.boxShadow = "3px 3px 1px 1px rgba(0, 0, 0, 0.5)";
         }
     }, 100);
 });

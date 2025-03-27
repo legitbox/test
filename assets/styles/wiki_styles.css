@@ -61,7 +61,7 @@ h1 {
     backdrop-filter: blur(2px);
     will-change: backdrop-filter;
     border: 3px solid rgba(255, 255, 255, 0.05);
-    box-shadow: 5px 5px 1px 1px rgba(0, 0, 0, 0.40);
+    box-shadow: 3px 3px 1px 1px rgba(0, 0, 0, 0.5);
 }
 
 .navbar ul {
@@ -226,7 +226,7 @@ a {
     will-change: backdrop-filter, box-shadow;
     border: 3px solid rgba(255, 255, 255, 0.05);
     content-visibility: auto;
-    box-shadow: 5px 5px 1px 1px rgba(0, 0, 0, 0.40);
+    box-shadow: 3px 3px 1px 1px rgba(0, 0, 0, 0.5);
 }
 
 
