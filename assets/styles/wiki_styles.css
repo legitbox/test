@@ -57,7 +57,7 @@ h1 {
     background-repeat: repeat;
     background-size: contain;
     border-radius: 4px;
-    transition: backdrop-filter 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    transition: backdrop-filter 0.2s ease-in-out, box-shadow 2s ease-in-out;
     backdrop-filter: blur(2px);
     will-change: backdrop-filter;
     border: 3px solid rgba(255, 255, 255, 0.05);
@@ -221,7 +221,7 @@ a {
     
     scrollbar-width: none;
     
-    transition: backdrop-filter 1.5s ease-in-out, box-shadow 1.5s ease-in-out;
+    transition: backdrop-filter 1.5s ease-in-out, box-shadow 2s ease-in-out;
     backdrop-filter: blur(0px);
     will-change: backdrop-filter, box-shadow;
     border: 3px solid rgba(255, 255, 255, 0.05);
@@ -291,7 +291,7 @@ a {
 
 @media screen and (max-width: 980px) {
     .container {
-        transition: backdrop-filter 0.2s ease-in-out;
+        transition: backdrop-filter 0.2s ease-in-out, box-shadow 2s ease-in-out;
         margin-left: 2vw;
         margin-right: 2vw;
     }
