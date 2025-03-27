@@ -33,16 +33,19 @@ let el = pageData[0].querySelectorAll(
 );
 for (const item of el){
     item.style.backdropFilter = "blur(5px)";
+    item.style.boxShadow = "5px 5px 1px 1px #0000008f";
 }
 
 pageData[0].addEventListener("scroll", function () {
     for (const item of el) {
         item.style.backdropFilter = "blur(0px)";
+        item.style.boxShadow = "none";
         clearTimeout(blurTimeout);
     }
     blurTimeout = setTimeout(() => {
         for (const item of el) {
             item.style.backdropFilter = "blur(5px)";
+            item.style.boxShadow = "5px 5px 1px 1px #0000008f";
         }
     }, 100);
 });
