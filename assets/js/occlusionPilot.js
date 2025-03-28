@@ -29,11 +29,18 @@ const pageData = document.getElementsByClassName("scroll");
 let blurTimeout;
 let el = pageData[0].querySelectorAll(
 
-    ".container, .navbar, .index_container, .inline_container",
+    ".container, .index_container, .inline_container",
 );
+let el2 = pageData[0].querySelectorAll(
+    ".navbar",
+);
+
 for (const item of el){
     item.style.backdropFilter = "blur(5px)";
     item.style.boxShadow = "3px 3px 1px 1px rgba(0, 0, 0, 0.5)";
+}
+for (const item of el2){
+    item.style.backdropFilter = "blur(5px)";
 }
 
 pageData[0].addEventListener("scroll", function () {
@@ -42,10 +49,18 @@ pageData[0].addEventListener("scroll", function () {
         item.style.boxShadow = "none";
         clearTimeout(blurTimeout);
     }
+    for (const item of el2) {
+        item.style.backdropFilter = "blur(0px)";
+        item.style.boxShadow = "none";
+    }
+
     blurTimeout = setTimeout(() => {
         for (const item of el) {
             item.style.backdropFilter = "blur(5px)";
             item.style.boxShadow = "3px 3px 1px 1px rgba(0, 0, 0, 0.5)";
+        }
+        for (const item of el2) {
+            item.style.backdropFilter = "blur(5px)";
         }
     }, 100);
 });
