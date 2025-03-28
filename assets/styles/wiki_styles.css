@@ -22,7 +22,7 @@ body {
     justify-content: left;
     align-items: center;
     font-family: '', sans-serif;
-    background: url("/assets/images/tech.webp");
+    background: url("/assets/images/bg.webp");
     transform: translateZ(0);
     background-position: center;
     background-size: cover;

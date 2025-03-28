@@ -10,7 +10,7 @@
   "use_background_image": true,
   "default_website_background_color": "rgb(0,0,0)",
   "default_container_background_color": "rgba(25, 25, 25, 0.6)",
-  "default_background_image_path": "/assets/images/tech.webp",
+  "default_background_image_path": "/assets/images/bg.webp",
   "default_border_color": "rgba(255, 255, 255, 0.14)",
   "default_border_fill_color": "rgba(255, 255, 255, 0.11)"
 }
