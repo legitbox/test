@@ -3,7 +3,7 @@
   "object_image_size": 64,
   "container_blur_amount": 5,
   "default_font_family": "",
-  "default_font_path": "/assets/fonts/SpaceGrotesk-VariableFont_wght.woff2",
+  "default_font_path": "",
   "default_font_type": "woff2",
   "default_text_color": "rgb(250, 248, 246)",
   "default_header_color": "#ceb6ff",

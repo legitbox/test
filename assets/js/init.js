@@ -7,3 +7,5 @@ if (navigator.userAgent.indexOf('AppleWebKit') != -1) {
         element.style.fontFamily = 'sans-serif';
     });
 }
+let body = document.querySelector('body');
+body.style.filter = "saturate(1)";
