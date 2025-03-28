@@ -36,6 +36,30 @@
           </nav>
         </div>
         
+    <div class="container" style="height: 40vh; scroll-behavior: auto; overflow-y: scroll;">
+    <h1>Table of contents</h1>
+    <ul id="tocundefined" style="list-style: none;"></ul>
+    </div>
+    <script defer>
+    window.addEventListener('load', function() {
+      let headings = document.querySelectorAll('h1, h2, h3');
+      let ul = document.getElementById('tocundefined');
+      for (const item of headings) {
+          if (item.tagName == 'H1'){
+              if (item.innerHTML != "Table of contents"){
+                  ul.innerHTML += '<li><a style="color: #f2c6de; " href="#' + item.id + '">' + "" + item.innerHTML + '</a></li>';
+              }
+          }
+          if (item.tagName == 'H2'){
+              ul.innerHTML += '<li><a style="color: #97cbf4; margin-left: 4vh;" href="#' + item.id + '">' + "" + item.innerHTML + '</a></li>';
+          }
+          if (item.tagName == 'H3'){
+              ul.innerHTML += '<li><a style="color: #a0e8d8; margin-left: 8vh;" href="#' + item.id + '">' + "" + item.innerHTML + '</a></li>';
+          }
+      }
+    });
+</script>
+    
 <div class="container" id="title">
 <div class="description" style="all: revert;">
         <div class="object_name">

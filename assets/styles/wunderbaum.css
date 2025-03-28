@@ -110,7 +110,6 @@ div.wunderbaum div.wb-row {
   width: 100%;
   height: var(--wb-row-outer-height);
   line-height: var(--wb-row-outer-height);
-  border: 1px solid transparent;
 }
 div.wunderbaum.wb-fixed-col span.wb-col:first-of-type {
   position: sticky;

@@ -40,6 +40,7 @@ wb-title {
 .scroll {
     overflow-y: scroll;
     height: 100dvh;
+    scroll-padding-top: 16vh;
 }
 
 h1 {
@@ -367,6 +368,10 @@ div.wunderbaum{
     scrollbar-width: none;
     background-color: rgba(255, 255, 255, 0);
     border: none;
+}
+
+div.wunderbaum:focus-visible {
+  outline-style: none;
 }
 
 .recipe_list {
