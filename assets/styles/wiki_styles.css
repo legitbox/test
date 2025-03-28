@@ -322,7 +322,7 @@ a {
 
 @media screen and (max-width: 980px) {
     .container {
-        transition: backdrop-filter 0.2s ease-in-out, box-shadow 2s ease-in-out;
+        transition: backdrop-filter 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
         margin-left: 2vw;
         margin-right: 2vw;
     }
