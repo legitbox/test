@@ -30,7 +30,7 @@ body {
     background-attachment: scroll;
     background-size: cover;
     transition: filter 1s ease-in-out;
-    filter: saturate(0.5);
+    filter: saturate(0.8);
 }
 
 wb-title {
@@ -236,8 +236,9 @@ a {
     margin-right: 10vw;
     border-radius: 5px;
     scrollbar-width: none;
-    transition: backdrop-filter 1.5s ease-in-out, box-shadow 2s ease-in-out;
+    transition: backdrop-filter 1.5s ease-in-out, box-shadow 2s ease-in-out, filter 0.3s ease-in-out;
     backdrop-filter: none;
+    filter: blur(10px);
     will-change: backdrop-filter, box-shadow;
     border: 3px solid rgba(255, 255, 255, 0.05);
     content-visibility: auto;

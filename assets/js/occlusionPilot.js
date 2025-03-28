@@ -13,9 +13,11 @@ window.onload = () => {
     const pageData = document.getElementsByClassName("scroll");
     let blurTimeout;
     let el = pageData[0].querySelectorAll(
-
         ".container, .index_container, .inline_container, .navbar",
     );
+    for (let item of el) {
+        item.style.filter = "none";
+    }
 
     for (const item of el){
         item.style.backdropFilter = "blur(5px)";
