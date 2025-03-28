@@ -53,8 +53,7 @@
         new gridjs.Grid({
     columns: ["Name","Required?","Type","Description"],
     pagination: undefined,
-    data: [["minecraft:capped_surface","Object","Optional","Generates surface on blocks with non-solid blocks above or below."],["minecraft:climate","Object","Optional","Describes temperature, humidity, precipitation, and similar. Biomes without this component will have default values."],["minecraft:creature_spawn_probability","Object","Optional","Probability that creatures will spawn within the biome when a chunk is generated."],["minecraft:frozen_ocean_surface","Object","Optional","Similar to overworld_surface. Adds icebergs."],["minecraft:mesa_surface","Object","Optional","Similar to overworld_surface. Adds colored strata and optional pillars."],["minecraft:mountain_parameters","Object","Optional","Noise parameters used to drive mountain terrain generation in Overworld."],["minecraft:multinoise_generation_rules","Object","Optional","Controls how this biome is instantiated (and then potentially modified) during world generation of the nether."],["minecraft:overworld_generation_rules","Object","Optional","Controls how this biome is instantiated (and then potentially modified) during world generation of the overworld."],["minecraft:overworld_height","Object","Optional","Noise parameters used to drive terrain height in the Overworld."],["minecraft:surface_material_adjustments","Object","Optional","Specify fine-detail changes to blocks used in terrain generation (based on a noise function)."],["minecraft:surface_parameters","Object","Optional","Controls the blocks used for the default Minecraft Overworld terrain generation."],["minecraft:swamp_surface","Object","Optional","Similar to overworld_surface. Adds swamp surface details."],["minecraft:tags","Object","Optional","Attach arbitrary string tags to this biome."],["minecraft:the_end_surface","Object","Optional","Use default Minecraft End terrain generation."]],
-    search: true,
+    data: [["minecraft:capped_surface","Object","Optional","Generates surface on blocks with non-solid blocks above or below."],["minecraft:climate","Object","Optional","Describes temperature, humidity, precipitation, and similar. Biomes without this component will have default values."],["minecraft:creature_spawn_probability","Object","Optional","Probability that creatures will spawn within the biome when a chunk is generated."],["minecraft:frozen_ocean_surface","Object","Optional","Similar to overworld_surface. Adds icebergs."],["minecraft:mesa_surface","Object","Optional","Similar to overworld_surface. Adds colored strata and optional pillars."],["minecraft:mountain_parameters","Object","Optional","Noise parameters used to drive mountain terrain generation in Overworld."],["minecraft:multinoise_generation_rules","Object","Optional","Controls how this biome is instantiated (and then potentially modified) during world generation of the nether."],["minecraft:overworld_generation_rules","Object","Optional","Controls how this biome is instantiated (and then potentially modified) during world generation of the overworld."],["minecraft:overworld_height","Object","Optional","Noise parameters used to drive terrain height in the Overworld."],["minecraft:surface_material_adjustments","Object","Optional","Specify fine-detail changes to blocks used in terrain generation (based on a noise function)."],["minecraft:surface_parameters","Object","Optional","Controls the blocks used for the default Minecraft Overworld terrain generation."],["minecraft:swamp_surface","Object","Optional","Similar to overworld_surface. Adds swamp surface details."],["minecraft:tags","Object","Optional","Attach arbitrary string tags to this biome."],["minecraft:the_end_surface","Object","Optional","Use default Minecraft End terrain generation."]]
   }).render(document.getElementById("wrappernode_table_0_2_biome_components"));
 });
 </script>
@@ -69,8 +68,7 @@
         new gridjs.Grid({
     columns: ["Name","Required?","Type","Description"],
     pagination: undefined,
-    data: [["components","Object of type Biome Components","Required","Components for this Biome."],["description","Object of type Biome Description","Required","Non-component settings, including the Biome name."]],
-    search: true,
+    data: [["components","Object of type Biome Components","Required","Components for this Biome."],["description","Object of type Biome Description","Required","Non-component settings, including the Biome name."]]
   }).render(document.getElementById("wrappernode_table_1_2_biome_definition"));
 });
 </script>
@@ -85,8 +83,7 @@
         new gridjs.Grid({
     columns: ["Name","Required?","Type","Description"],
     pagination: undefined,
-    data: [["identifier","String","Required","The name of the Biome, used by other features like the '/locate biome' command."]],
-    search: true,
+    data: [["identifier","String","Required","The name of the Biome, used by other features like the '/locate biome' command."]]
   }).render(document.getElementById("wrappernode_table_2_2_biome_description"));
 });
 </script>
@@ -101,8 +98,7 @@
         new gridjs.Grid({
     columns: ["Name","Required?","Type","Description"],
     pagination: undefined,
-    data: [["format_version","String","Required","Version of the JSON schema used by this file"],["minecraft:biome","Object of type Biome Definition","Required","A single biome definition"]],
-    search: true,
+    data: [["format_version","String","Required","Version of the JSON schema used by this file"],["minecraft:biome","Object of type Biome Definition","Required","A single biome definition"]]
   }).render(document.getElementById("wrappernode_table_3_2_biome_json_file"));
 });
 </script>
@@ -117,8 +113,7 @@
         new gridjs.Grid({
     columns: ["Name","Required?","Type","Description"],
     pagination: undefined,
-    data: [["name","String","Required","Name of the block"],["states","Object","Optional","Contains members named after each state, with boolean, integer, or string values."]],
-    search: true,
+    data: [["name","String","Required","Name of the block"],["states","Object","Optional","Contains members named after each state, with boolean, integer, or string values."]]
   }).render(document.getElementById("wrappernode_table_4_2_block_specifier"));
 });
 </script>
@@ -142,8 +137,7 @@
         new gridjs.Grid({
     columns: ["Name","Required?","Type","Description"],
     pagination: undefined,
-    data: [["beach_material","Object of type Block Specifier","Optional","Material used to decorate surface near sea level."],["ceiling_materials","Array of Object of type Block Specifier","Required","Materials used for the surface ceiling."],["floor_materials","Array of Object of type Block Specifier","Required","Materials used for the surface floor."],["foundation_material","Object of type Block Specifier","Required","Material used to replace solid blocks that are not surface blocks."],["sea_material","Object of type Block Specifier","Required","Material used to replace air blocks below sea level."]],
-    search: true,
+    data: [["beach_material","Object of type Block Specifier","Optional","Material used to decorate surface near sea level."],["ceiling_materials","Array of Object of type Block Specifier","Required","Materials used for the surface ceiling."],["floor_materials","Array of Object of type Block Specifier","Required","Materials used for the surface floor."],["foundation_material","Object of type Block Specifier","Required","Material used to replace solid blocks that are not surface blocks."],["sea_material","Object of type Block Specifier","Required","Material used to replace air blocks below sea level."]]
   }).render(document.getElementById("wrappernode_table_6_2_minecraft:capped_surface"));
 });
 </script>
@@ -158,8 +152,7 @@
         new gridjs.Grid({
     columns: ["Name","Required?","Type","Description"],
     pagination: undefined,
-    data: [["ash","Float","Optional","Density of ash precipitation visuals"],["blue_spores","Float","Optional","Density of blue spore precipitation visuals"],["downfall","Float","Optional","Amount that precipitation affects colors and block changes"],["red_spores","Float","Optional","Density of blue spore precipitation visuals"],["snow_accumulation","Array of 2 Floats","Optional","Minimum and maximum snow level, each multiple of 0.125 is another snow layer"],["temperature","Float","Optional","Temperature affects a variety of visual and behavioral things, including snow and ice placement, sponge drying, and sky color"],["white_ash","Float","Optional","Density of white ash precipitation visuals"]],
-    search: true,
+    data: [["ash","Float","Optional","Density of ash precipitation visuals"],["blue_spores","Float","Optional","Density of blue spore precipitation visuals"],["downfall","Float","Optional","Amount that precipitation affects colors and block changes"],["red_spores","Float","Optional","Density of blue spore precipitation visuals"],["snow_accumulation","Array of 2 Floats","Optional","Minimum and maximum snow level, each multiple of 0.125 is another snow layer"],["temperature","Float","Optional","Temperature affects a variety of visual and behavioral things, including snow and ice placement, sponge drying, and sky color"],["white_ash","Float","Optional","Density of white ash precipitation visuals"]]
   }).render(document.getElementById("wrappernode_table_7_2_minecraft:climate"));
 });
 </script>
@@ -174,8 +167,7 @@
         new gridjs.Grid({
     columns: ["Name","Required?","Type","Description"],
     pagination: undefined,
-    data: [["probability","Float","Optional","Probabiltity between [0.0, 0.75] of creatures spawning within the biome on chunk generation."]],
-    search: true,
+    data: [["probability","Float","Optional","Probabiltity between [0.0, 0.75] of creatures spawning within the biome on chunk generation."]]
   }).render(document.getElementById("wrappernode_table_8_2_minecraft:creature_spawn_probability"));
 });
 </script>
@@ -190,8 +182,7 @@
         new gridjs.Grid({
     columns: ["Name","Required?","Type","Description"],
     pagination: undefined,
-    data: [["foundation_material","Object of type Block Specifier","Required","Controls the block type used deep underground in this biome"],["mid_material","Object of type Block Specifier","Required","Controls the block type used in a layer below the surface of this biome"],["sea_floor_depth","Integer","Required","Controls how deep below the world water level the floor should occur"],["sea_floor_material","Object of type Block Specifier","Required","Controls the block type used as a floor for bodies of water in this biome"],["sea_material","Object of type Block Specifier","Required","Controls the block type used for the bodies of water in this biome"],["top_material","Object of type Block Specifier","Required","Controls the block type used for the surface of this biome"]],
-    search: true,
+    data: [["foundation_material","Object of type Block Specifier","Required","Controls the block type used deep underground in this biome"],["mid_material","Object of type Block Specifier","Required","Controls the block type used in a layer below the surface of this biome"],["sea_floor_depth","Integer","Required","Controls how deep below the world water level the floor should occur"],["sea_floor_material","Object of type Block Specifier","Required","Controls the block type used as a floor for bodies of water in this biome"],["sea_material","Object of type Block Specifier","Required","Controls the block type used for the bodies of water in this biome"],["top_material","Object of type Block Specifier","Required","Controls the block type used for the surface of this biome"]]
   }).render(document.getElementById("wrappernode_table_9_2_minecraft:frozen_ocean_surface"));
 });
 </script>
@@ -206,8 +197,7 @@
         new gridjs.Grid({
     columns: ["Name","Required?","Type","Description"],
     pagination: undefined,
-    data: [["bryce_pillars","Boolean","Required","Whether the mesa generates with pillars"],["clay_material","Object of type Block Specifier","Required","Base clay block to use"],["foundation_material","Object of type Block Specifier","Required","Controls the block type used deep underground in this biome"],["hard_clay_material","Object of type Block Specifier","Required","Hardened clay block to use"],["has_forest","Boolean","Required","Places coarse dirt and grass at high altitudes"],["mid_material","Object of type Block Specifier","Required","Controls the block type used in a layer below the surface of this biome"],["sea_floor_depth","Integer","Required","Controls how deep below the world water level the floor should occur"],["sea_floor_material","Object of type Block Specifier","Required","Controls the block type used as a floor for bodies of water in this biome"],["sea_material","Object of type Block Specifier","Required","Controls the block type used for the bodies of water in this biome"],["top_material","Object of type Block Specifier","Required","Controls the block type used for the surface of this biome"]],
-    search: true,
+    data: [["bryce_pillars","Boolean","Required","Whether the mesa generates with pillars"],["clay_material","Object of type Block Specifier","Required","Base clay block to use"],["foundation_material","Object of type Block Specifier","Required","Controls the block type used deep underground in this biome"],["hard_clay_material","Object of type Block Specifier","Required","Hardened clay block to use"],["has_forest","Boolean","Required","Places coarse dirt and grass at high altitudes"],["mid_material","Object of type Block Specifier","Required","Controls the block type used in a layer below the surface of this biome"],["sea_floor_depth","Integer","Required","Controls how deep below the world water level the floor should occur"],["sea_floor_material","Object of type Block Specifier","Required","Controls the block type used as a floor for bodies of water in this biome"],["sea_material","Object of type Block Specifier","Required","Controls the block type used for the bodies of water in this biome"],["top_material","Object of type Block Specifier","Required","Controls the block type used for the surface of this biome"]]
   }).render(document.getElementById("wrappernode_table_10_2_minecraft:mesa_surface"));
 });
 </script>
@@ -222,8 +212,7 @@
         new gridjs.Grid({
     columns: ["Name","Required?","Type","Description"],
     pagination: undefined,
-    data: [["peaks_factor","Float","Optional","Does nothing"],["steep_material_adjustment","Object of type minecraft:mountain_parameters - steep_material_adjustment settings","Optional","Defines surface material for steep slopes"],["top_slide","Object of type minecraft:mountain_parameters - top_slide settings","Optional","Controls the density tapering that happens at the top of the world to prevent terrain from reaching too high"]],
-    search: true,
+    data: [["peaks_factor","Float","Optional","Does nothing"],["steep_material_adjustment","Object of type minecraft:mountain_parameters - steep_material_adjustment settings","Optional","Defines surface material for steep slopes"],["top_slide","Object of type minecraft:mountain_parameters - top_slide settings","Optional","Controls the density tapering that happens at the top of the world to prevent terrain from reaching too high"]]
   }).render(document.getElementById("wrappernode_table_11_2_minecraft:mountain_parameters"));
 });
 </script>
@@ -238,8 +227,7 @@
         new gridjs.Grid({
     columns: ["Name","Required?","Type","Description"],
     pagination: undefined,
-    data: [["east_slopes","Boolean","Optional","Enable for east-facing slopes"],["material","Object of type Block Specifier","Optional","Block type use as steep material"],["north_slopes","Boolean","Optional","Enable for north-facing slopes"],["south_slopes","Boolean","Optional","Enable for south-facing slopes"],["west_slopes","Boolean","Optional","Enable for west-facing slopes"]],
-    search: true,
+    data: [["east_slopes","Boolean","Optional","Enable for east-facing slopes"],["material","Object of type Block Specifier","Optional","Block type use as steep material"],["north_slopes","Boolean","Optional","Enable for north-facing slopes"],["south_slopes","Boolean","Optional","Enable for south-facing slopes"],["west_slopes","Boolean","Optional","Enable for west-facing slopes"]]
   }).render(document.getElementById("wrappernode_table_12_2_minecraft:mountain_parameters_-_steep_material_adjustment_settings"));
 });
 </script>
@@ -254,8 +242,7 @@
         new gridjs.Grid({
     columns: ["Name","Required?","Type","Description"],
     pagination: undefined,
-    data: [["enabled","Boolean","Required","If false, top slide will be disabled. If true, other parameters will be taken into account."]],
-    search: true,
+    data: [["enabled","Boolean","Required","If false, top slide will be disabled. If true, other parameters will be taken into account."]]
   }).render(document.getElementById("wrappernode_table_13_2_minecraft:mountain_parameters_-_top_slide_settings"));
 });
 </script>
@@ -270,8 +257,7 @@
         new gridjs.Grid({
     columns: ["Name","Required?","Type","Description"],
     pagination: undefined,
-    data: [["target_altitude","Float","Optional","Altitude with which this biome should be generated, relative to other biomes."],["target_humidity","Float","Optional","Humidity with which this biome should be generated, relative to other biomes."],["target_temperature","Float","Optional","Temperature with which this biome should be generated, relative to other biomes."],["target_weirdness","Float","Optional","Weirdness with which this biome should be generated, relative to other biomes."],["weight","Float","Optional","Weight with which this biome should be generated, relative to other biomes."]],
-    search: true,
+    data: [["target_altitude","Float","Optional","Altitude with which this biome should be generated, relative to other biomes."],["target_humidity","Float","Optional","Humidity with which this biome should be generated, relative to other biomes."],["target_temperature","Float","Optional","Temperature with which this biome should be generated, relative to other biomes."],["target_weirdness","Float","Optional","Weirdness with which this biome should be generated, relative to other biomes."],["weight","Float","Optional","Weight with which this biome should be generated, relative to other biomes."]]
   }).render(document.getElementById("wrappernode_table_14_2_minecraft:multinoise_generation_rules"));
 });
 </script>
@@ -286,8 +272,7 @@
         new gridjs.Grid({
     columns: ["Name","Required?","Type","Description"],
     pagination: undefined,
-    data: [["generate_for_climates","Array of Object of type minecraft:overworld_generation_rules - Weighted climate categories settings","Optional","Controls the world generation climate categories that this biome can spawn for. A single biome can be associated with multiple categories with different weightings."],["hills_transformation","Object of type minecraft:overworld_generation_rules - Weighted biome names settings","Optional","What biome to switch to when converting to a hilly biome"],["mutate_transformation","Object of type minecraft:overworld_generation_rules - Weighted biome names settings","Optional","What biome to switch to when converting to a mutated biome"],["river_transformation","Object of type minecraft:overworld_generation_rules - Weighted biome names settings","Optional","What biome to switch to when converting to a river biome (if not the Vanilla 'river' biome)"],["shore_transformation","Object of type minecraft:overworld_generation_rules - Weighted biome names settings","Optional","What biome to switch to when adjacent to an ocean biome"]],
-    search: true,
+    data: [["generate_for_climates","Array of Object of type minecraft:overworld_generation_rules - Weighted climate categories settings","Optional","Controls the world generation climate categories that this biome can spawn for. A single biome can be associated with multiple categories with different weightings."],["hills_transformation","Object of type minecraft:overworld_generation_rules - Weighted biome names settings","Optional","What biome to switch to when converting to a hilly biome"],["mutate_transformation","Object of type minecraft:overworld_generation_rules - Weighted biome names settings","Optional","What biome to switch to when converting to a mutated biome"],["river_transformation","Object of type minecraft:overworld_generation_rules - Weighted biome names settings","Optional","What biome to switch to when converting to a river biome (if not the Vanilla 'river' biome)"],["shore_transformation","Object of type minecraft:overworld_generation_rules - Weighted biome names settings","Optional","What biome to switch to when adjacent to an ocean biome"]]
   }).render(document.getElementById("wrappernode_table_15_2_minecraft:overworld_generation_rules"));
 });
 </script>
@@ -320,8 +305,7 @@
         new gridjs.Grid({
     columns: ["Name","Required?","Type","Description"],
     pagination: undefined,
-    data: [["noise_params","Array of 2 Floats","Optional","First value is depth - more negative means deeper underwater, while more positive means higher. Second value is scale, which affects how much noise changes as it moves from the surface."],["noise_type","\"default\", \"default_mutated\", \"river\", \"ocean\", \"deep_ocean\", \"lowlands\", \"taiga\", \"mountains\", \"highlands\", \"extreme\", \"less_extreme\", \"beach\", \"stone_beach\", \"mushroom\", \"swamp\"","Optional","Specifies a preset based on a built-in setting rather than manually using noise_params"]],
-    search: true,
+    data: [["noise_params","Array of 2 Floats","Optional","First value is depth - more negative means deeper underwater, while more positive means higher. Second value is scale, which affects how much noise changes as it moves from the surface."],["noise_type","\"default\", \"default_mutated\", \"river\", \"ocean\", \"deep_ocean\", \"lowlands\", \"taiga\", \"mountains\", \"highlands\", \"extreme\", \"less_extreme\", \"beach\", \"stone_beach\", \"mushroom\", \"swamp\"","Optional","Specifies a preset based on a built-in setting rather than manually using noise_params"]]
   }).render(document.getElementById("wrappernode_table_18_2_minecraft:overworld_height"));
 });
 </script>
@@ -336,8 +320,7 @@
         new gridjs.Grid({
     columns: ["Name","Required?","Type","Description"],
     pagination: undefined,
-    data: [["adjustments","Array of Object of type minecraft:surface_material_adjustments - surface adjustment settings","Optional","All adjustments that match the column's noise values will be applied in the order listed."]],
-    search: true,
+    data: [["adjustments","Array of Object of type minecraft:surface_material_adjustments - surface adjustment settings","Optional","All adjustments that match the column's noise values will be applied in the order listed."]]
   }).render(document.getElementById("wrappernode_table_19_2_minecraft:surface_material_adjustments"));
 });
 </script>
@@ -352,8 +335,7 @@
         new gridjs.Grid({
     columns: ["Name","Required?","Type","Description"],
     pagination: undefined,
-    data: [["foundation_material","Object of type Block Specifier","Optional","Controls the block type used deep underground in this biome when this adjustment is active."],["mid_material","Object of type Block Specifier","Optional","Controls the block type used in a layer below the surface of this biome when this adjustment is active."],["sea_floor_material","Object of type Block Specifier","Optional","Controls the block type used as a floor for bodies of water in this biome when this adjustment is active."],["sea_material","Object of type Block Specifier","Optional","Controls the block type used in the bodies of water in this biome when this adjustment is active."],["top_material","Object of type Block Specifier","Optional","Controls the block type used for the surface of this biome when this adjustment is active."]],
-    search: true,
+    data: [["foundation_material","Object of type Block Specifier","Optional","Controls the block type used deep underground in this biome when this adjustment is active."],["mid_material","Object of type Block Specifier","Optional","Controls the block type used in a layer below the surface of this biome when this adjustment is active."],["sea_floor_material","Object of type Block Specifier","Optional","Controls the block type used as a floor for bodies of water in this biome when this adjustment is active."],["sea_material","Object of type Block Specifier","Optional","Controls the block type used in the bodies of water in this biome when this adjustment is active."],["top_material","Object of type Block Specifier","Optional","Controls the block type used for the surface of this biome when this adjustment is active."]]
   }).render(document.getElementById("wrappernode_table_20_2_minecraft:surface_material_adjustments_-_surface_adjustment_materials_settings"));
 });
 </script>
@@ -368,8 +350,7 @@
         new gridjs.Grid({
     columns: ["Name","Required?","Type","Description"],
     pagination: undefined,
-    data: [["height_range","Array of 2 Molang expressions","Optional","Defines a range of noise values [min, max] for which this adjustment should be applied."],["materials","Object of type minecraft:surface_material_adjustments - surface adjustment materials settings","Required",""],["noise_frequency_scale","Float","Optional","The scale to multiply by the position when accessing the noise value for the material adjustments."],["noise_range","Array of 2 Floats","Optional","Defines a range of noise values [min, max] for which this adjustment should be applied."]],
-    search: true,
+    data: [["height_range","Array of 2 Molang expressions","Optional","Defines a range of noise values [min, max] for which this adjustment should be applied."],["materials","Object of type minecraft:surface_material_adjustments - surface adjustment materials settings","Required",""],["noise_frequency_scale","Float","Optional","The scale to multiply by the position when accessing the noise value for the material adjustments."],["noise_range","Array of 2 Floats","Optional","Defines a range of noise values [min, max] for which this adjustment should be applied."]]
   }).render(document.getElementById("wrappernode_table_21_2_minecraft:surface_material_adjustments_-_surface_adjustment_settings"));
 });
 </script>
@@ -384,8 +365,7 @@
         new gridjs.Grid({
     columns: ["Name","Required?","Type","Description"],
     pagination: undefined,
-    data: [["foundation_material","Object of type Block Specifier","Required","Controls the block type used deep underground in this biome."],["mid_material","Object of type Block Specifier","Required","Controls the block type used in a layer below the surface of this biome."],["sea_floor_depth","Integer","Required","Controls how deep below the world water level the floor should occur."],["sea_floor_material","Object of type Block Specifier","Required","Controls the block type used as a floor for bodies of water in this biome."],["sea_material","Object of type Block Specifier","Required","Controls the block type used for the bodies of water in this biome."],["top_material","Object of type Block Specifier","Required","Controls the block type used for the surface of this biome."]],
-    search: true,
+    data: [["foundation_material","Object of type Block Specifier","Required","Controls the block type used deep underground in this biome."],["mid_material","Object of type Block Specifier","Required","Controls the block type used in a layer below the surface of this biome."],["sea_floor_depth","Integer","Required","Controls how deep below the world water level the floor should occur."],["sea_floor_material","Object of type Block Specifier","Required","Controls the block type used as a floor for bodies of water in this biome."],["sea_material","Object of type Block Specifier","Required","Controls the block type used for the bodies of water in this biome."],["top_material","Object of type Block Specifier","Required","Controls the block type used for the surface of this biome."]]
   }).render(document.getElementById("wrappernode_table_22_2_minecraft:surface_parameters"));
 });
 </script>
@@ -400,8 +380,7 @@
         new gridjs.Grid({
     columns: ["Name","Required?","Type","Description"],
     pagination: undefined,
-    data: [["foundation_material","Object of type Block Specifier","Required","Controls the block type used deep underground in this biome."],["mid_material","Object of type Block Specifier","Required","Controls the block type used in a layer below the surface of this biome."],["sea_floor_depth","Integer","Required","Controls how deep below the world water level the floor should occur."],["sea_floor_material","Object of type Block Specifier","Required","Controls the block type used as a floor for bodies of water in this biome."],["sea_material","Object of type Block Specifier","Required","Controls the block type used for the bodies of water in this biome."],["top_material","Object of type Block Specifier","Required","Controls the block type used for the surface of this biome."]],
-    search: true,
+    data: [["foundation_material","Object of type Block Specifier","Required","Controls the block type used deep underground in this biome."],["mid_material","Object of type Block Specifier","Required","Controls the block type used in a layer below the surface of this biome."],["sea_floor_depth","Integer","Required","Controls how deep below the world water level the floor should occur."],["sea_floor_material","Object of type Block Specifier","Required","Controls the block type used as a floor for bodies of water in this biome."],["sea_material","Object of type Block Specifier","Required","Controls the block type used for the bodies of water in this biome."],["top_material","Object of type Block Specifier","Required","Controls the block type used for the surface of this biome."]]
   }).render(document.getElementById("wrappernode_table_23_2_minecraft:swamp_surface"));
 });
 </script>
@@ -416,8 +395,7 @@
         new gridjs.Grid({
     columns: ["Name","Required?","Type","Description"],
     pagination: undefined,
-    data: [["tags","Array of String","Required","Array of string tags used by other systems such as entity spawning"]],
-    search: true,
+    data: [["tags","Array of String","Required","Array of string tags used by other systems such as entity spawning"]]
   }).render(document.getElementById("wrappernode_table_24_2_minecraft:tags"));
 });
 </script>
@@ -450,57 +428,55 @@
         <link rel="stylesheet" href="/assets/styles/github-dark.css">
         <script src="/assets/libraries/index.min.js"></script>
                 <script>
-                window.onload = function () {
-                    let searchBarResult = document.getElementById("searchbar_result");
-                    let searchResultsDivMade = false
+                  let searchBarResult = document.getElementById("searchbar_result");
+                  let searchResultsDivMade = false
 
-                    let searchData = null;
-                    async function LoadData() {
-                        if (searchData !== null) {
-                            return searchData;
+                  let searchData = null;
+                  async function LoadData() {
+                      if (searchData !== null) {
+                          return searchData;
+                      }
+                      const res = await fetch('/assets/index_list.json');
+                      searchData = await res.json();
+                      return searchData;
+                  }
+                  
+                  async function main() {
+                    let miniSearch = new MiniSearch({
+                      fields: ['title', "category"],
+                      storeFields: ['href', 'title'],
+                      searchOptions: {
+                          prefix: true
+                      }
+                    })
+                    searchData = await LoadData();
+                        const parsedSearchData = searchData.flatMap(parent => 
+                          parent.children.map(child => ({
+                            id: child.href,
+                            title: child.title,
+                            category: parent.title,
+                            href: child.href,
+                            icon: child.icon
+                          }))
+                        );
+                    miniSearch.addAll(parsedSearchData);
+                    let dataLoaded = false;
+                    const searchbar = document.getElementById("search");
+                    searchbar.addEventListener("input", async function() {
+                        try {
+                            const searchResults = miniSearch.search(searchbar.value, { fuzzy: 0.2 });
+                            if (searchResults.length > 0) {
+                                if (!searchResultsDivMade){
+                                    searchBarResult.textContent = searchResults[0].title
+                                    searchBarResult.href = searchResults[0].id
+                                }
                         }
-                        const res = await fetch('/assets/index_list.json');
-                        searchData = await res.json();
-                        return searchData;
-                    }
-                    
-                    async function main() {
-                      let miniSearch = new MiniSearch({
-                        fields: ['title', "category"],
-                        storeFields: ['href', 'title'],
-                        searchOptions: {
-                            prefix: true
+                        } catch (error) {
+                            console.warn("the search container is still empty :3");
                         }
-                      })
-                      searchData = await LoadData();
-                          const parsedSearchData = searchData.flatMap(parent => 
-                            parent.children.map(child => ({
-                              id: child.href,
-                              title: child.title,
-                              category: parent.title,
-                              href: child.href,
-                              icon: child.icon
-                            }))
-                          );
-                      miniSearch.addAll(parsedSearchData);
-                      let dataLoaded = false;
-                      const searchbar = document.getElementById("search");
-                      searchbar.addEventListener("input", async function() {
-                          try {
-                              const searchResults = miniSearch.search(searchbar.value, { fuzzy: 0.2 });
-                              if (searchResults.length > 0) {
-                                  if (!searchResultsDivMade){
-                                      searchBarResult.textContent = searchResults[0].title
-                                      searchBarResult.href = searchResults[0].id
-                                  }
-                          }
-                          } catch (error) {
-                              console.warn("the search container is still empty :3");
-                          }
-                      })
-                    }
-                    main();
-                }
+                    })
+                  }
+                  main();
                 </script>
         </div>
     </body>

@@ -98,57 +98,55 @@
         <link rel="stylesheet" href="/assets/styles/github-dark.css">
         <script src="/assets/libraries/index.min.js"></script>
                 <script>
-                window.onload = function () {
-                    let searchBarResult = document.getElementById("searchbar_result");
-                    let searchResultsDivMade = false
+                  let searchBarResult = document.getElementById("searchbar_result");
+                  let searchResultsDivMade = false
 
-                    let searchData = null;
-                    async function LoadData() {
-                        if (searchData !== null) {
-                            return searchData;
+                  let searchData = null;
+                  async function LoadData() {
+                      if (searchData !== null) {
+                          return searchData;
+                      }
+                      const res = await fetch('/assets/index_list.json');
+                      searchData = await res.json();
+                      return searchData;
+                  }
+                  
+                  async function main() {
+                    let miniSearch = new MiniSearch({
+                      fields: ['title', "category"],
+                      storeFields: ['href', 'title'],
+                      searchOptions: {
+                          prefix: true
+                      }
+                    })
+                    searchData = await LoadData();
+                        const parsedSearchData = searchData.flatMap(parent => 
+                          parent.children.map(child => ({
+                            id: child.href,
+                            title: child.title,
+                            category: parent.title,
+                            href: child.href,
+                            icon: child.icon
+                          }))
+                        );
+                    miniSearch.addAll(parsedSearchData);
+                    let dataLoaded = false;
+                    const searchbar = document.getElementById("search");
+                    searchbar.addEventListener("input", async function() {
+                        try {
+                            const searchResults = miniSearch.search(searchbar.value, { fuzzy: 0.2 });
+                            if (searchResults.length > 0) {
+                                if (!searchResultsDivMade){
+                                    searchBarResult.textContent = searchResults[0].title
+                                    searchBarResult.href = searchResults[0].id
+                                }
                         }
-                        const res = await fetch('/assets/index_list.json');
-                        searchData = await res.json();
-                        return searchData;
-                    }
-                    
-                    async function main() {
-                      let miniSearch = new MiniSearch({
-                        fields: ['title', "category"],
-                        storeFields: ['href', 'title'],
-                        searchOptions: {
-                            prefix: true
+                        } catch (error) {
+                            console.warn("the search container is still empty :3");
                         }
-                      })
-                      searchData = await LoadData();
-                          const parsedSearchData = searchData.flatMap(parent => 
-                            parent.children.map(child => ({
-                              id: child.href,
-                              title: child.title,
-                              category: parent.title,
-                              href: child.href,
-                              icon: child.icon
-                            }))
-                          );
-                      miniSearch.addAll(parsedSearchData);
-                      let dataLoaded = false;
-                      const searchbar = document.getElementById("search");
-                      searchbar.addEventListener("input", async function() {
-                          try {
-                              const searchResults = miniSearch.search(searchbar.value, { fuzzy: 0.2 });
-                              if (searchResults.length > 0) {
-                                  if (!searchResultsDivMade){
-                                      searchBarResult.textContent = searchResults[0].title
-                                      searchBarResult.href = searchResults[0].id
-                                  }
-                          }
-                          } catch (error) {
-                              console.warn("the search container is still empty :3");
-                          }
-                      })
-                    }
-                    main();
-                }
+                    })
+                  }
+                  main();
                 </script>
         </div>
     </body>

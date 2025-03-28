@@ -973,8 +973,7 @@
         new gridjs.Grid({
     columns: ["Name","Required?","Type","Description"],
     pagination: undefined,
-    data: [["xyz","\"xyz\", \"xzy\", \"yxz\", \"yzx\", \"zxy\", \"zyx\"","Optional",""],["xzy","\"xyz\", \"xzy\", \"yxz\", \"yzx\", \"zxy\", \"zyx\"","Optional",""],["yxz","\"xyz\", \"xzy\", \"yxz\", \"yzx\", \"zxy\", \"zyx\"","Optional",""],["yzx","\"xyz\", \"xzy\", \"yxz\", \"yzx\", \"zxy\", \"zyx\"","Optional",""],["zxy","\"xyz\", \"xzy\", \"yxz\", \"yzx\", \"zxy\", \"zyx\"","Optional",""],["zyx","\"xyz\", \"xzy\", \"yxz\", \"yzx\", \"zxy\", \"zyx\"","Optional",""]],
-    search: true,
+    data: [["xyz","\"xyz\", \"xzy\", \"yxz\", \"yzx\", \"zxy\", \"zyx\"","Optional",""],["xzy","\"xyz\", \"xzy\", \"yxz\", \"yzx\", \"zxy\", \"zyx\"","Optional",""],["yxz","\"xyz\", \"xzy\", \"yxz\", \"yzx\", \"zxy\", \"zyx\"","Optional",""],["yzx","\"xyz\", \"xzy\", \"yxz\", \"yzx\", \"zxy\", \"zyx\"","Optional",""],["zxy","\"xyz\", \"xzy\", \"yxz\", \"yzx\", \"zxy\", \"zyx\"","Optional",""],["zyx","\"xyz\", \"xzy\", \"yxz\", \"yzx\", \"zxy\", \"zyx\"","Optional",""]]
   }).render(document.getElementById("wrappernode_table_0_2_coordinate_evaluation_order"));
 });
 </script>
@@ -989,8 +988,7 @@
         new gridjs.Grid({
     columns: ["Name","Required?","Type","Description"],
     pagination: undefined,
-    data: [["distribution","\"uniform\", \"gaussian\", \"inverse_gaussian\", \"triangle\", \"fixed_grid\", \"jittered_grid\"","Required","Type of distribution. Supported distributions are defined by \"Random Distribution Type\"."],["extent","Array","Required","Lower and upper bound (inclusive) of the scatter range, as an offset from the input point to scatter around."],["grid_offset","Integer","Optional","When the distribution type is grid, defines the offset along this axis."],["step_size","Integer","Optional","When the distribution type is grid, defines the distance between steps along this axis."]],
-    search: true,
+    data: [["distribution","\"uniform\", \"gaussian\", \"inverse_gaussian\", \"triangle\", \"fixed_grid\", \"jittered_grid\"","Required","Type of distribution. Supported distributions are defined by \"Random Distribution Type\"."],["extent","Array","Required","Lower and upper bound (inclusive) of the scatter range, as an offset from the input point to scatter around."],["grid_offset","Integer","Optional","When the distribution type is grid, defines the offset along this axis."],["step_size","Integer","Optional","When the distribution type is grid, defines the distance between steps along this axis."]]
   }).render(document.getElementById("wrappernode_table_1_2_coordinate_range"));
 });
 </script>
@@ -1005,8 +1003,7 @@
         new gridjs.Grid({
     columns: ["Name","Required?","Type","Description"],
     pagination: undefined,
-    data: [["minecraft:biome_filter","Object of type Filter Group","Optional","List of filter tests to determine which biomes this rule will attach to."],["placement_pass","String","Required","When the feature should be placed relative to others. Earlier passes in the list are guaranteed to occur before later passes. Order is not guaranteed within each pass."]],
-    search: true,
+    data: [["minecraft:biome_filter","Object of type Filter Group","Optional","List of filter tests to determine which biomes this rule will attach to."],["placement_pass","String","Required","When the feature should be placed relative to others. Earlier passes in the list are guaranteed to occur before later passes. Order is not guaranteed within each pass."]]
   }).render(document.getElementById("wrappernode_table_2_2_feature_rule_conditions"));
 });
 </script>
@@ -1021,8 +1018,7 @@
         new gridjs.Grid({
     columns: ["Name","Required?","Type","Description"],
     pagination: undefined,
-    data: [["conditions","Object of type Feature Rule Conditions","Required","Parameters to control where and when the feature will be placed."],["description","Object of type Feature Rule Description","Required","Identifier for the Feature Rule and Feture to place."],["distribution","Object of type Scatter Params","Optional","Parameters controlling the initial scatter of the feature."]],
-    search: true,
+    data: [["conditions","Object of type Feature Rule Conditions","Required","Parameters to control where and when the feature will be placed."],["description","Object of type Feature Rule Description","Required","Identifier for the Feature Rule and Feture to place."],["distribution","Object of type Scatter Params","Optional","Parameters controlling the initial scatter of the feature."]]
   }).render(document.getElementById("wrappernode_table_3_2_feature_rule_definition"));
 });
 </script>
@@ -1037,8 +1033,7 @@
         new gridjs.Grid({
     columns: ["Name","Required?","Type","Description"],
     pagination: undefined,
-    data: [["identifier","String","Required","The name of this feature rule in the format 'namespace_name:rule_name'. 'rule_name' must match the filename."],["places_feature","String","Required","Named reference to the feature controlled by this rule."]],
-    search: true,
+    data: [["identifier","String","Required","The name of this feature rule in the format 'namespace_name:rule_name'. 'rule_name' must match the filename."],["places_feature","String","Required","Named reference to the feature controlled by this rule."]]
   }).render(document.getElementById("wrappernode_table_4_2_feature_rule_description"));
 });
 </script>
@@ -1053,8 +1048,7 @@
         new gridjs.Grid({
     columns: ["Name","Required?","Type","Description"],
     pagination: undefined,
-    data: [["AND","Object of type Filter Group","Optional","Evaluates all tests in the group, all must pass in order for the group to pass."],["NOT","Object of type Filter Group","Optional","Evaluates all tests in the group, all must fail in order for the group to pass."],["OR","Object of type Filter Group","Optional","Evaluates tests in the group, one or more must pass in order for the group to pass."],["all","Object of type Filter Group","Optional","Evaluates all tests in the group, all must pass in order for the group to pass."],["all_of","Object of type Filter Group","Optional","Evaluates all tests in the group, all must pass in order for the group to pass."],["any","Object of type Filter Group","Optional","Evaluates tests in the group, one or more must pass in order for the group to pass."],["any_of","Object of type Filter Group","Optional","Evaluates tests in the group, one or more must pass in order for the group to pass."],["none_of","Object of type Filter Group","Optional","Evaluates all tests in the group, all must fail in order for the group to pass."]],
-    search: true,
+    data: [["AND","Object of type Filter Group","Optional","Evaluates all tests in the group, all must pass in order for the group to pass."],["NOT","Object of type Filter Group","Optional","Evaluates all tests in the group, all must fail in order for the group to pass."],["OR","Object of type Filter Group","Optional","Evaluates tests in the group, one or more must pass in order for the group to pass."],["all","Object of type Filter Group","Optional","Evaluates all tests in the group, all must pass in order for the group to pass."],["all_of","Object of type Filter Group","Optional","Evaluates all tests in the group, all must pass in order for the group to pass."],["any","Object of type Filter Group","Optional","Evaluates tests in the group, one or more must pass in order for the group to pass."],["any_of","Object of type Filter Group","Optional","Evaluates tests in the group, one or more must pass in order for the group to pass."],["none_of","Object of type Filter Group","Optional","Evaluates all tests in the group, all must fail in order for the group to pass."]]
   }).render(document.getElementById("wrappernode_table_5_2_filter_group"));
 });
 </script>
@@ -1069,8 +1063,7 @@
         new gridjs.Grid({
     columns: ["Name","Required?","Type","Description"],
     pagination: undefined,
-    data: [["domain","Boolean or Integer or Float or String","Optional","The domain the test should be performed in."],["operator","Boolean or Integer or Float or String","Optional","The comparison to apply with 'value'."],["subject","Boolean or Integer or Float or String","Optional","The subject of this filter test."],["test","String","Required","The name of the test to apply."],["value","Boolean or Integer or Float or String","Optional","The value being compared with the test."]],
-    search: true,
+    data: [["domain","Boolean or Integer or Float or String","Optional","The domain the test should be performed in."],["operator","Boolean or Integer or Float or String","Optional","The comparison to apply with 'value'."],["subject","Boolean or Integer or Float or String","Optional","The subject of this filter test."],["test","String","Required","The name of the test to apply."],["value","Boolean or Integer or Float or String","Optional","The value being compared with the test."]]
   }).render(document.getElementById("wrappernode_table_6_2_filter_test"));
 });
 </script>
@@ -1085,8 +1078,7 @@
         new gridjs.Grid({
     columns: ["Name","Required?","Type","Description"],
     pagination: undefined,
-    data: [["fixed_grid","\"uniform\", \"gaussian\", \"inverse_gaussian\", \"triangle\", \"fixed_grid\", \"jittered_grid\"","Optional",""],["gaussian","\"uniform\", \"gaussian\", \"inverse_gaussian\", \"triangle\", \"fixed_grid\", \"jittered_grid\"","Optional",""],["inverse_gaussian","\"uniform\", \"gaussian\", \"inverse_gaussian\", \"triangle\", \"fixed_grid\", \"jittered_grid\"","Optional",""],["jittered_grid","\"uniform\", \"gaussian\", \"inverse_gaussian\", \"triangle\", \"fixed_grid\", \"jittered_grid\"","Optional",""],["triangle","\"uniform\", \"gaussian\", \"inverse_gaussian\", \"triangle\", \"fixed_grid\", \"jittered_grid\"","Optional",""],["uniform","\"uniform\", \"gaussian\", \"inverse_gaussian\", \"triangle\", \"fixed_grid\", \"jittered_grid\"","Optional",""]],
-    search: true,
+    data: [["fixed_grid","\"uniform\", \"gaussian\", \"inverse_gaussian\", \"triangle\", \"fixed_grid\", \"jittered_grid\"","Optional",""],["gaussian","\"uniform\", \"gaussian\", \"inverse_gaussian\", \"triangle\", \"fixed_grid\", \"jittered_grid\"","Optional",""],["inverse_gaussian","\"uniform\", \"gaussian\", \"inverse_gaussian\", \"triangle\", \"fixed_grid\", \"jittered_grid\"","Optional",""],["jittered_grid","\"uniform\", \"gaussian\", \"inverse_gaussian\", \"triangle\", \"fixed_grid\", \"jittered_grid\"","Optional",""],["triangle","\"uniform\", \"gaussian\", \"inverse_gaussian\", \"triangle\", \"fixed_grid\", \"jittered_grid\"","Optional",""],["uniform","\"uniform\", \"gaussian\", \"inverse_gaussian\", \"triangle\", \"fixed_grid\", \"jittered_grid\"","Optional",""]]
   }).render(document.getElementById("wrappernode_table_7_2_random_distribution_type"));
 });
 </script>
@@ -1101,8 +1093,7 @@
         new gridjs.Grid({
     columns: ["Name","Required?","Type","Description"],
     pagination: undefined,
-    data: [["denominator","Integer","Required","Denominator for scatter probability."],["numerator","Integer","Required","Numerator for scatter probability."]],
-    search: true,
+    data: [["denominator","Integer","Required","Denominator for scatter probability."],["numerator","Integer","Required","Numerator for scatter probability."]]
   }).render(document.getElementById("wrappernode_table_8_2_scatter_chance"));
 });
 </script>
@@ -1117,8 +1108,7 @@
         new gridjs.Grid({
     columns: ["Name","Required?","Type","Description"],
     pagination: undefined,
-    data: [["coordinate_eval_order","\"xyz\", \"xzy\", \"yxz\", \"yzx\", \"zxy\", \"zyx\"","Optional","The order in which coordinates will be evaluated. Should be used when a coordinate depends on another. If omitted, defaults to \"xzy\". Supported orders are defined by \"Coordinate Evaluation Order\"."],["iterations","Object of type struct SharedTypes::Legacy::ExpressionNode","Required","Number of scattered positions to generate."],["scatter_chance","Object of type Scatter Chance","Optional","Probability that this scatter will occur. Not evaluated each iteration; either no iterations will run, or all will."],["x","Object of type Coordinate Range","Required","Distribution for the coordinate (evaluated each iteration)."],["y","Object of type Coordinate Range","Required","Distribution for the coordinate (evaluated each iteration)."],["z","Object of type Coordinate Range","Required","Distribution for the coordinate (evaluated each iteration)."]],
-    search: true,
+    data: [["coordinate_eval_order","\"xyz\", \"xzy\", \"yxz\", \"yzx\", \"zxy\", \"zyx\"","Optional","The order in which coordinates will be evaluated. Should be used when a coordinate depends on another. If omitted, defaults to \"xzy\". Supported orders are defined by \"Coordinate Evaluation Order\"."],["iterations","Object of type struct SharedTypes::Legacy::ExpressionNode","Required","Number of scattered positions to generate."],["scatter_chance","Object of type Scatter Chance","Optional","Probability that this scatter will occur. Not evaluated each iteration; either no iterations will run, or all will."],["x","Object of type Coordinate Range","Required","Distribution for the coordinate (evaluated each iteration)."],["y","Object of type Coordinate Range","Required","Distribution for the coordinate (evaluated each iteration)."],["z","Object of type Coordinate Range","Required","Distribution for the coordinate (evaluated each iteration)."]]
   }).render(document.getElementById("wrappernode_table_9_2_scatter_params"));
 });
 </script>
@@ -1142,57 +1132,55 @@
         <link rel="stylesheet" href="/assets/styles/github-dark.css">
         <script src="/assets/libraries/index.min.js"></script>
                 <script>
-                window.onload = function () {
-                    let searchBarResult = document.getElementById("searchbar_result");
-                    let searchResultsDivMade = false
+                  let searchBarResult = document.getElementById("searchbar_result");
+                  let searchResultsDivMade = false
 
-                    let searchData = null;
-                    async function LoadData() {
-                        if (searchData !== null) {
-                            return searchData;
+                  let searchData = null;
+                  async function LoadData() {
+                      if (searchData !== null) {
+                          return searchData;
+                      }
+                      const res = await fetch('/assets/index_list.json');
+                      searchData = await res.json();
+                      return searchData;
+                  }
+                  
+                  async function main() {
+                    let miniSearch = new MiniSearch({
+                      fields: ['title', "category"],
+                      storeFields: ['href', 'title'],
+                      searchOptions: {
+                          prefix: true
+                      }
+                    })
+                    searchData = await LoadData();
+                        const parsedSearchData = searchData.flatMap(parent => 
+                          parent.children.map(child => ({
+                            id: child.href,
+                            title: child.title,
+                            category: parent.title,
+                            href: child.href,
+                            icon: child.icon
+                          }))
+                        );
+                    miniSearch.addAll(parsedSearchData);
+                    let dataLoaded = false;
+                    const searchbar = document.getElementById("search");
+                    searchbar.addEventListener("input", async function() {
+                        try {
+                            const searchResults = miniSearch.search(searchbar.value, { fuzzy: 0.2 });
+                            if (searchResults.length > 0) {
+                                if (!searchResultsDivMade){
+                                    searchBarResult.textContent = searchResults[0].title
+                                    searchBarResult.href = searchResults[0].id
+                                }
                         }
-                        const res = await fetch('/assets/index_list.json');
-                        searchData = await res.json();
-                        return searchData;
-                    }
-                    
-                    async function main() {
-                      let miniSearch = new MiniSearch({
-                        fields: ['title', "category"],
-                        storeFields: ['href', 'title'],
-                        searchOptions: {
-                            prefix: true
+                        } catch (error) {
+                            console.warn("the search container is still empty :3");
                         }
-                      })
-                      searchData = await LoadData();
-                          const parsedSearchData = searchData.flatMap(parent => 
-                            parent.children.map(child => ({
-                              id: child.href,
-                              title: child.title,
-                              category: parent.title,
-                              href: child.href,
-                              icon: child.icon
-                            }))
-                          );
-                      miniSearch.addAll(parsedSearchData);
-                      let dataLoaded = false;
-                      const searchbar = document.getElementById("search");
-                      searchbar.addEventListener("input", async function() {
-                          try {
-                              const searchResults = miniSearch.search(searchbar.value, { fuzzy: 0.2 });
-                              if (searchResults.length > 0) {
-                                  if (!searchResultsDivMade){
-                                      searchBarResult.textContent = searchResults[0].title
-                                      searchBarResult.href = searchResults[0].id
-                                  }
-                          }
-                          } catch (error) {
-                              console.warn("the search container is still empty :3");
-                          }
-                      })
-                    }
-                    main();
-                }
+                    })
+                  }
+                  main();
                 </script>
         </div>
     </body>

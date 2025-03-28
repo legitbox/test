@@ -9,29 +9,31 @@ if ('serviceWorker' in navigator) {
             });
     });
 }
+window.onload = () => {
+    const pageData = document.getElementsByClassName("scroll");
+    let blurTimeout;
+    let el = pageData[0].querySelectorAll(
 
-const pageData = document.getElementsByClassName("scroll");
-let blurTimeout;
-let el = pageData[0].querySelectorAll(
+        ".container, .index_container, .inline_container, .navbar",
+    );
 
-    ".container, .index_container, .inline_container, .navbar",
-);
-
-for (const item of el){
-    item.style.backdropFilter = "blur(5px)";
-    item.style.boxShadow = "3px 3px 1px 1px rgba(0, 0, 0, 0.5)";
-}
-
-pageData[0].addEventListener("scroll", function () {
-    for (const item of el) {
-        item.style.backdropFilter = "blur(0px)";
-        item.style.boxShadow = "none";
-        clearTimeout(blurTimeout);
+    for (const item of el){
+        item.style.backdropFilter = "blur(5px)";
+        item.style.boxShadow = "3px 3px 1px 1px rgba(0, 0, 0, 0.5)";
     }
-    blurTimeout = setTimeout(() => {
+
+    pageData[0].addEventListener("scroll", function () {
         for (const item of el) {
-            item.style.backdropFilter = "blur(5px)";
-            item.style.boxShadow = "3px 3px 1px 1px rgba(0, 0, 0, 0.5)";
+            item.style.backdropFilter = "none";
+            item.style.boxShadow = "none";
         }
-    }, 150);
-});
+        clearTimeout(blurTimeout);
+
+        blurTimeout = setTimeout(() => {
+            for (const item of el) {
+                item.style.backdropFilter = "blur(5px)";
+                item.style.boxShadow = "3px 3px 1px 1px rgba(0, 0, 0, 0.5)";
+            }
+        }, 150);
+    });
+}
