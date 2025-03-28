@@ -14,7 +14,7 @@ const pageData = document.getElementsByClassName("scroll");
 let blurTimeout;
 let el = pageData[0].querySelectorAll(
 
-    ".container, .index_container, .inline_container",
+    ".container, .index_container, .inline_container, .navbar",
 );
 
 for (const item of el){
