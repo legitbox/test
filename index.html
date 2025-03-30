@@ -47,7 +47,7 @@ like Spadix, Shrimple Docs, PanSpark and outside projects like Endstone</p>
         </div>
         </div>
 
-        <div class="container" style="min-height: auto; max-height: 100vh">    
+        <div class="container" data-tilt style="min-height: auto; max-height: 100vh">    
     <link
       rel="stylesheet"
       href="/assets/styles/wunderbaum.css"
@@ -68,10 +68,6 @@ like Spadix, Shrimple Docs, PanSpark and outside projects like Endstone</p>
   new mar10.Wunderbaum({
     element: document.getElementById(ID),
     source: treeData,
-    // keyboard: false,
-    init: (e)=>{
-      e.tree.setFocus();
-    },
     activate: (e)=>{
       const nodeHref = e.node.data.href;
       if (nodeHref !== undefined) {

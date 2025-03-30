@@ -17,6 +17,280 @@
     ]
   },
   {
+    "title": "Blocks",
+    "expanded": false,
+    "icon": "/assets/images/wunderbaum/folder.svg",
+    "children": [
+      {
+        "title": "Banana Block",
+        "href": "/assets/pages/blocks/spadix_banana_block__Banana_Block.html",
+        "icon": "/assets/images/spadix/spadix_banana_block.png"
+      },
+      {
+        "title": "Canvas Block",
+        "href": "/assets/pages/blocks/neoreva_canvas_block__Canvas_Block.html",
+        "icon": "/assets/images/spadix/neoreva_canvas_block.png"
+      },
+      {
+        "title": "Part Table",
+        "href": "/assets/pages/blocks/tool_construction_part_table__Part_Table.html",
+        "icon": "/assets/images/spadix/tool_construction_part_table_side.png"
+      }
+    ]
+  },
+  {
+    "title": "Items",
+    "expanded": false,
+    "icon": "/assets/images/wunderbaum/folder.svg",
+    "children": [
+      {
+        "title": "Paint Brush",
+        "href": "/assets/pages/items/photoblock_brush_000000__Paint_Brush.html",
+        "icon": "/assets/images/spadix/photoblock_brush_000000.png"
+      },
+      {
+        "title": "Diamond Binding",
+        "href": "/assets/pages/items/tool_construction_diamond_binding__Diamond_Binding.html",
+        "icon": "/assets/images/spadix/tool_construction_diamond_binding.png"
+      },
+      {
+        "title": "Wooden Rod",
+        "href": "/assets/pages/items/tool_construction_wooden_rod__Wooden_Rod.html",
+        "icon": "/assets/images/spadix/tool_construction_wooden_rod.png"
+      },
+      {
+        "title": "Wooden Pickaxe Head",
+        "href": "/assets/pages/items/tool_construction_wooden_pickaxe_head__Wooden_Pickaxe Head.html",
+        "icon": "/assets/images/spadix/tool_construction_wooden_pickaxe.png"
+      },
+      {
+        "title": "Stone Binding",
+        "href": "/assets/pages/items/tool_construction_stone_binding__Stone_Binding.html",
+        "icon": "/assets/images/spadix/tool_construction_stone_binding.png"
+      },
+      {
+        "title": "item.pumpkin_seeds.name",
+        "href": "/assets/pages/items/spadix_pumpkin_seed__item.pumpkin_seeds.name.html",
+        "icon": "/assets/images/spadix/spadix_icon.png"
+      },
+      {
+        "title": "Iron Hoe Head",
+        "href": "/assets/pages/items/tool_construction_iron_hoe_head__Iron_Hoe Head.html",
+        "icon": "/assets/images/spadix/tool_construction_iron_hoe.png"
+      },
+      {
+        "title": "Wooden Axe Head",
+        "href": "/assets/pages/items/tool_construction_wooden_axe_head__Wooden_Axe Head.html",
+        "icon": "/assets/images/spadix/tool_construction_wooden_axe.png"
+      },
+      {
+        "title": "Diamond Pickaxe Head",
+        "href": "/assets/pages/items/tool_construction_diamond_pickaxe_head__Diamond_Pickaxe Head.html",
+        "icon": "/assets/images/spadix/tool_construction_diamond_pickaxe.png"
+      },
+      {
+        "title": "Netherite Hoe Head",
+        "href": "/assets/pages/items/tool_construction_netherite_hoe_head__Netherite_Hoe Head.html",
+        "icon": "/assets/images/spadix/tool_construction_netherite_hoe.png"
+      },
+      {
+        "title": "Golden Shovel Head",
+        "href": "/assets/pages/items/tool_construction_gold_shovel_head__Golden_Shovel Head.html",
+        "icon": "/assets/images/spadix/tool_construction_gold_shovel.png"
+      },
+      {
+        "title": "Gold Hoe Head",
+        "href": "/assets/pages/items/tool_construction_gold_hoe_head__Gold_Hoe Head.html",
+        "icon": "/assets/images/spadix/tool_construction_gold_hoe.png"
+      },
+      {
+        "title": "Iron Pickaxe Head",
+        "href": "/assets/pages/items/tool_construction_iron_pickaxe_head__Iron_Pickaxe Head.html",
+        "icon": "/assets/images/spadix/tool_construction_iron_pickaxe.png"
+      },
+      {
+        "title": "Netherite Rod",
+        "href": "/assets/pages/items/tool_construction_netherite_rod__Netherite_Rod.html",
+        "icon": "/assets/images/spadix/tool_construction_netherite_rod.png"
+      },
+      {
+        "title": "Iron Rod",
+        "href": "/assets/pages/items/tool_construction_iron_rod__Iron_Rod.html",
+        "icon": "/assets/images/spadix/tool_construction_iron_rod.png"
+      },
+      {
+        "title": "Netherite Shovel Head",
+        "href": "/assets/pages/items/tool_construction_netherite_shovel_head__Netherite_Shovel Head.html",
+        "icon": "/assets/images/spadix/tool_construction_netherite_shovel.png"
+      },
+      {
+        "title": "item.melon_seeds.name",
+        "href": "/assets/pages/items/spadix_melon__item.melon_seeds.name.html",
+        "icon": "/assets/images/spadix/spadix_icon.png"
+      },
+      {
+        "title": "Golden Pickaxe Head",
+        "href": "/assets/pages/items/tool_construction_golden_pickaxe_head__Golden_Pickaxe Head.html",
+        "icon": "/assets/images/spadix/tool_construction_golden_pickaxe.png"
+      },
+      {
+        "title": "Golden Binding",
+        "href": "/assets/pages/items/tool_construction_gold_binding__Golden_Binding.html",
+        "icon": "/assets/images/spadix/tool_construction_gold_binding.png"
+      },
+      {
+        "title": "Stone Axe Head",
+        "href": "/assets/pages/items/tool_construction_stone_axe_head__Stone_Axe Head.html",
+        "icon": "/assets/images/spadix/tool_construction_stone_axe.png"
+      },
+      {
+        "title": "Part Hammer",
+        "href": "/assets/pages/items/tool_construction_part_hammer__Part_Hammer.html",
+        "icon": "/assets/images/spadix/tool_construction_part_hammer.png"
+      },
+      {
+        "title": "Diamond Axe Head",
+        "href": "/assets/pages/items/tool_construction_diamond_axe_head__Diamond_Axe Head.html",
+        "icon": "/assets/images/spadix/tool_construction_diamond_axe.png"
+      },
+      {
+        "title": "Diamond Shovel Head",
+        "href": "/assets/pages/items/tool_construction_diamond_shovel_head__Diamond_Shovel Head.html",
+        "icon": "/assets/images/spadix/tool_construction_diamond_shovel.png"
+      },
+      {
+        "title": "Netherite Binding",
+        "href": "/assets/pages/items/tool_construction_netherite_binding__Netherite_Binding.html",
+        "icon": "/assets/images/spadix/tool_construction_netherite_binding.png"
+      },
+      {
+        "title": "Iron Binding",
+        "href": "/assets/pages/items/tool_construction_iron_binding__Iron_Binding.html",
+        "icon": "/assets/images/spadix/tool_construction_iron_binding.png"
+      },
+      {
+        "title": "Stone Shovel Head",
+        "href": "/assets/pages/items/tool_construction_stone_shovel_head__Stone_Shovel Head.html",
+        "icon": "/assets/images/spadix/tool_construction_stone_shovel.png"
+      },
+      {
+        "title": "Iron Shovel Head",
+        "href": "/assets/pages/items/tool_construction_iron_shovel_head__Iron_Shovel Head.html",
+        "icon": "/assets/images/spadix/tool_construction_iron_shovel.png"
+      },
+      {
+        "title": "item.beef.name",
+        "href": "/assets/pages/items/spadix_beef__item.beef.name.html",
+        "icon": "/assets/images/spadix/spadix_icon.png"
+      },
+      {
+        "title": "item.baked_potato.name",
+        "href": "/assets/pages/items/spadix_baked_potato__item.baked_potato.name.html",
+        "icon": "/assets/images/spadix/spadix_icon.png"
+      },
+      {
+        "title": "Wooden Hoe Head",
+        "href": "/assets/pages/items/tool_construction_wooden_hoe_head__Wooden_Hoe Head.html",
+        "icon": "/assets/images/spadix/tool_construction_wooden_hoe.png"
+      },
+      {
+        "title": "item.torchflower_seeds.name",
+        "href": "/assets/pages/items/spadix_torch_flower_seed__item.torchflower_seeds.name.html",
+        "icon": "/assets/images/spadix/spadix_icon.png"
+      },
+      {
+        "title": "Iron Axe Head",
+        "href": "/assets/pages/items/tool_construction_iron_axe_head__Iron_Axe Head.html",
+        "icon": "/assets/images/spadix/tool_construction_iron_axe.png"
+      },
+      {
+        "title": "Stone Pickaxe Head",
+        "href": "/assets/pages/items/tool_construction_stone_pickaxe_head__Stone_Pickaxe Head.html",
+        "icon": "/assets/images/spadix/tool_construction_stone_pickaxe.png"
+      },
+      {
+        "title": "item.wheat_seeds.name",
+        "href": "/assets/pages/items/spadix_wheat_seed__item.wheat_seeds.name.html",
+        "icon": "/assets/images/spadix/spadix_icon.png"
+      },
+      {
+        "title": "item.beetroot_seeds.name",
+        "href": "/assets/pages/items/spadix_beetroot_seeds__item.beetroot_seeds.name.html",
+        "icon": "/assets/images/spadix/spadix_icon.png"
+      },
+      {
+        "title": "Netherite Pickaxe Head",
+        "href": "/assets/pages/items/tool_construction_netherite_pickaxe_head__Netherite_Pickaxe Head.html",
+        "icon": "/assets/images/spadix/tool_construction_netherite_pickaxe.png"
+      },
+      {
+        "title": "Golden Rod",
+        "href": "/assets/pages/items/tool_construction_gold_rod__Golden_Rod.html",
+        "icon": "/assets/images/spadix/tool_construction_gold_rod.png"
+      },
+      {
+        "title": "Stone Rod",
+        "href": "/assets/pages/items/tool_construction_stone_rod__Stone_Rod.html",
+        "icon": "/assets/images/spadix/tool_construction_stone_rod.png"
+      },
+      {
+        "title": "Copper Pickaxe Head",
+        "href": "/assets/pages/items/copper_parts_copper_pickaxe_head__Copper_Pickaxe Head.html",
+        "icon": "/assets/images/spadix/copper_parts_copper_pickaxe_head.png"
+      },
+      {
+        "title": "Golden Cool Banana",
+        "href": "/assets/pages/items/spadix_golden_banana__Golden_Cool Banana.html",
+        "icon": "/assets/images/spadix/spadix_golden_banana.png"
+      },
+      {
+        "title": "Golden Axe Head",
+        "href": "/assets/pages/items/tool_construction_gold_axe_head__Golden_Axe Head.html",
+        "icon": "/assets/images/spadix/tool_construction_gold_axe.png"
+      },
+      {
+        "title": "Wooden Shovel Head",
+        "href": "/assets/pages/items/tool_construction_wooden_shovel_head__Wooden_Shovel Head.html",
+        "icon": "/assets/images/spadix/tool_construction_wooden_shovel.png"
+      },
+      {
+        "title": "Wooden Binding",
+        "href": "/assets/pages/items/tool_construction_wooden_binding__Wooden_Binding.html",
+        "icon": "/assets/images/spadix/tool_construction_wooden_binding.png"
+      },
+      {
+        "title": "Netherite Axe Head",
+        "href": "/assets/pages/items/tool_construction_netherite_axe_head__Netherite_Axe Head.html",
+        "icon": "/assets/images/spadix/tool_construction_netherite_axe.png"
+      },
+      {
+        "title": "Stone Hoe Head",
+        "href": "/assets/pages/items/tool_construction_stone_hoe_head__Stone_Hoe Head.html",
+        "icon": "/assets/images/spadix/tool_construction_stone_hoe.png"
+      },
+      {
+        "title": "Diamond Hoe Head",
+        "href": "/assets/pages/items/tool_construction_diamond_hoe_head__Diamond_Hoe Head.html",
+        "icon": "/assets/images/spadix/tool_construction_diamond_hoe.png"
+      },
+      {
+        "title": "Diamond Rod",
+        "href": "/assets/pages/items/tool_construction_diamond_rod__Diamond_Rod.html",
+        "icon": "/assets/images/spadix/tool_construction_diamond_rod.png"
+      },
+      {
+        "title": "Cool Banana",
+        "href": "/assets/pages/items/minecraft_apple__Cool_Banana.html",
+        "icon": "/assets/images/spadix/spadix_banana.png"
+      },
+      {
+        "title": "Stick",
+        "href": "/assets/pages/items/stick__Stick.html",
+        "icon": "/assets/bedrock_samples/resource_pack/textures/items/stick.png"
+      }
+    ]
+  },
+  {
     "title": "Endstone",
     "expanded": false,
     "icon": "/assets/images/wunderbaum/folder.svg",
@@ -124,18 +398,6 @@
         "title": "Entity Timeline Events",
         "href": "/assets/pages/documentation/entity timeline events__Entity_Timeline Events.html",
         "icon": "/assets/images/melon.png"
-      }
-    ]
-  },
-  {
-    "title": "Items",
-    "expanded": false,
-    "icon": "/assets/images/wunderbaum/folder.svg",
-    "children": [
-      {
-        "title": "Stick",
-        "href": "/assets/pages/items/stick__Stick.html",
-        "icon": "/assets/bedrock_samples/resource_pack/textures/items/stick.png"
       }
     ]
   },
